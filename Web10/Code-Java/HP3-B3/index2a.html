@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách lớp</title>
+    <link rel="shortcut icon" href="../Libary/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <style>
+        .bt-change, .bt-change:hover
+            {
+                color: #00A4B6;
+            }
+        .bt-delete, .bt-delete:hover
+            {
+                color: #EA2845;
+            }
+        a:hover
+            {
+                cursor: pointer;
+            }
+
+        .delete-form 
+            {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 320px;
+                height: 100px;
+                display: none;
+                justify-content: center;
+                flex-wrap: wrap;
+                background-color: #00A751;
+                padding-top: 10px;
+                border-radius: 3px;
+                position: fixed;
+            }
+        .delete-form-text 
+            {
+                color: white;
+                width: 100%;
+                text-align: center;
+            }
+        .delete-group-btn 
+            {
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                padding: 5px;
+            }
+        .delete-group-btn button 
+            {
+                width: 100%;
+                height: 30px;
+                color: black;
+                background-color: white;
+                outline: none;
+                border: none;
+                border-radius: 3px;
+                margin: 5px;
+            }
+        .delete-group-btn button:hover 
+            {
+                background-color:  #e9ebec;
+            }
+    </style>
+
+
+
+  </head>
+
+  <body>
+    <!-- Đây là phần hiển thị Table -->
+    <div class="container mt-3 mb-5" id="dayLaCaiBang">
+        <h2 class="table-name mb-3 text-center">Danh sách học viên</h2>
+        <a class="btn btn-success mb-3" href="index2b(add).html" role="button"><i class="fas fa-plus-circle"></i> Thêm học viên</a>
+
+        <!-- Thông báo xác thực xóa dữ liệu -->
+        <!-- ------------------------------------------------------------------------------- -->
+        <div class="delete-form">
+            <div class="delete-form-text"><p>Bạn chắc chắn sẽ xóa người này chứ :?</p></div>
+    
+            <div class="delete-group-btn">
+              <button class="confirm-btn" onclick="realDelete()">Yes</button>
+              <button class="cancel-btn" onclick="cancelDelete()">Cancel</button>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------- -->
+
+        <table class="table table table-striped table-hover mb-3">
+            <thead class="thead-dark">
+                <tr>
+                <!-- <th scope="col" class="text-center">STT</th> -->
+                <th scope="col">Họ tên</th>
+                <th scope="col" class="text-right">Năm sinh</th>
+                <th scope="col">Email</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Đây là phần hiển thị Loading -->
+    <div class="loadingGif justify-content-center" id="dayLaCaiLoading">
+        <img src="./Spinner-1s-200px.gif" alt="">
+    </div>
+
+
+
+    <!-- Dĩ nhiên đây là Thư viện -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" 
+    crossorigin="anonymous"></script> 
+    
+    
+
+    <!-- Code script luôn để dưới thư viện -->
+    <script>
+        // Khai báo
+        const idPrefix = "student-";
+        let containerDisplay = document.getElementById("dayLaCaiBang");
+        let gifDisplay = document.getElementById("dayLaCaiLoading");
+
+
+
+        // Đảm bảo khi load trang xong thì code bên dưới sẽ chạy luôn
+        $(() => 
+            {
+                themSinhVien();
+            });
+
+
+
+        // Thêm sinh viên-----------------------------------------------------------------------------------------------------------
+        function themSinhVien ()
+            {
+                // Bật loading...
+                containerDisplay.style.display = "none";
+                gifDisplay.style.display = "flex";
+
+                // Bắt đầu gọi request lên server để lấy danh sách học viên
+                    $.ajax
+                        ({
+                            method: "GET",
+                            url: "https://server-dungbu.herokuapp.com/users"
+                        })
+                    .done ( function(data) 
+                    // Đã thực hiện xong request
+
+                    // Tắt loading ...
+
+                    // Render giao diện dựa vào data lấy được
+                        {
+                            containerDisplay.style.display = "block";
+                            gifDisplay.style.display = "none";
+
+                            let content = ``;
+
+                            for (let i = 0; i < data.length; i++) 
+                                {
+                                    content += `<tr>
+                                                <td> ${data[i].name}</td>
+                                                <td class="text-right"> ${data[i].birthday}</td>
+                                                <td> ${data[i].email}</td>
+                                                <td> ${data[i].phone}</td>
+
+                                                <td><a href="index2c(edit).html?id=${data[i].id}" class="bt-change"><i class="far fa-edit"></i> Chỉnh sửa</a> | 
+                                                <a href="#" class="bt-delete" id="${idPrefix}${data[i].id}" onclick="deleteStudent(${data[i].id}, this)"><i class="fas fa-trash-alt"></i> Xóa</a></td>
+                                                </tr>`;
+                                }
+
+                            $('#data-table').html(content);
+                            addEventDeleteStudent();
+                        });
+            }
+
+
+            
+        // Xóa sinh viên-----------------------------------------------------------------------------------------------------------
+        // function addEventDeleteStudent() 
+        //     {
+        //         let deleteArrayButton = $(".bt-delete");
+
+        //         for (let i = 0; i < deleteArrayButton.length; i++) 
+        //             {
+        //                 $(deleteArrayButton[i]).click(function () 
+        //                     {
+        //                         $.ajax
+        //                             ({
+        //                                 method: "DELETE",
+        //                                 url: "https://server-dungbu.herokuapp.com/users/" + `${deleteArrayButton[i].id.replace(idPrefix, "")}`,
+        //                             })
+        //                         .done(function (data) 
+        //                             {
+        //                                 // Sau khi xóa xong thì render lại giao diện
+        //                                 themSinhVien();
+        //                             });
+        //                     });
+        //             }
+        //     }
+
+        function deleteStudent(id, element) 
+            {
+                // Bật hộp thoại confirm
+                $(".delete-form").css("display", "flex");
+                
+                deleteId = id;
+                deleteElement = $(element).parent().parent();
+            }
+
+        // Xác thực hành động xóa sinh viên-----------------------------------------------------------------------------------------------------------
+        function realDelete() 
+            {
+                $.ajax
+                    ({
+                        method: "DELETE",
+                        url: `https://server-dungbu.herokuapp.com/users/${deleteId}`,
+                    })
+                .done(() => 
+                    {
+                        // Xóa thành công trên server thì xóa trên DOM
+                        deleteElement.remove();
+                    });
+
+                $(".delete-form").css("display", "none");
+            }
+
+        function cancelDelete() 
+            {
+                $(".delete-form").css("display", "none");
+            }
+    </script>
+  </body>
+</html>

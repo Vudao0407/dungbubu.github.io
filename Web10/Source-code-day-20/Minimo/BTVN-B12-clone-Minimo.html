@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimo • Landing Page</title>
+
+    <link rel="shortcut icon" href="/Source-code-day-20/Minimo/IMG/Logo-icon.jpg" type="image/x-icon">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"/>
+
+    <!-- Font Awesome 5.14 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- Font Playfair_Display -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Font Inconsolata -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <!-- Font Ubuntu -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+
+    
+    <style>
+      html
+        {
+          font-size: 62.5%;
+        }
+      body
+        {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.4rem;
+          color: #626262;
+        }
+      a, a:visited, a:hover
+        {
+          text-decoration: none;
+          color: inherit;
+        }
+      h5
+        {
+          font-size: 3rem;
+        }
+      h6
+        {
+          margin-bottom: 3rem;
+
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          color: #b4ad9e;
+        }
+      .color-000
+        {
+          color: #000000;
+        }
+
+      /* Header */
+      .navbar
+        {
+          width: 100%;
+          padding: 5.41rem 0 5.81rem 0;
+        }
+      .navbar-brand
+        {
+          font-family: 'Inconsolata', monospace;
+          font-size: 3rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5rem;
+        }
+      .nav-link 
+        {
+          padding: .5rem 5rem .5rem 0;
+        }
+
+      /* Section ------------------------------------------------------------------------ */
+      .banner
+        {
+          margin-bottom: 6.6rem; /* Cộng với margin thẻ card-subtitle bên dưới để thành 98px */
+        }
+      .row
+        {
+          margin-left: 5.2rem;
+          margin-right: 5.2rem;
+        }
+      .col-md-6, .col-md-12
+        {
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
+      .card
+        {
+          margin-bottom: 12rem;
+          border: none;
+        }
+      .card-img-top-fix
+        {
+          height: 28rem;
+          object-fit: cover;
+        }
+      .card-body
+        {
+          padding: 0;
+        }
+      .card-subtitle
+        {
+          margin-top: 3.2rem;
+        }
+      .card-title
+        {
+          margin-top: 3rem;
+        }
+      .card-note
+        {
+          margin-top: 5.2rem;
+        }
+
+      /* Ads ------------------------------------------------------------------------ */
+      .ads
+        {
+          width: 100%;
+          height: 28.7rem;
+          margin-bottom: 10.5rem;
+          padding: 7.2rem 2rem 5.9rem 2rem;
+          background-color: #f0f0f0;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+      .input-group
+        {
+          max-width: 40rem;
+        }
+      .input-group-text
+        {
+          background-color: inherit;
+        }
+      .form-control
+        {
+          background-color: inherit;
+        }
+
+      .deco-horizontal
+        {
+          border-style: none;
+          border-width: 0;
+          width: 40rem;
+          height: 0.1rem;
+          margin: 0;
+          background-color: black;
+        }
+
+      /* Readmore ------------------------------------------------------------------------ */
+      .btn
+        {
+          width: 14.2rem;
+          height: 6rem;
+          /* margin-bottom: 1372px; Margin chuẩn */
+          margin-bottom: 10.5rem;
+          border-color: #626262;
+
+          font-size: 2rem;
+
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+      /* Footer ------------------------------------------------------------------------ */
+      .footer
+        {
+          width: 100%;
+          background-color: #f0f0f0;
+        }
+      .nav-tabs 
+        {
+          border: none;
+          padding: 3.06rem 8.2rem;
+        }
+
+      @media (max-width: 576px)
+        {
+          .banner, .navbar
+            {
+              padding-left: 2rem;
+              padding-right: 2rem;
+            }
+          .card
+            {
+              width: 100%;
+              text-align: center;
+            }
+          .card-title
+            {
+              font-size: 2.4rem;
+              margin-top: 1rem;
+            }
+          .card-subtitle
+            {
+              font-size: 1.2rem;
+              margin-top: 0.5rem;
+            }
+          .card-note
+            {
+              font-size: 1.2rem;
+              margin-top: 1rem;
+              margin-bottom: 0.5rem;
+            }
+          .card p
+            {
+              text-align: justify;
+              font-size: 1rem;
+            }
+          .col-md-6, .col-md-12
+            {
+              padding-left: 0;
+              padding-right: 0;
+            }
+          .col-md-6 a, .col-md-12 a
+            {
+              margin-bottom: 5rem;
+            }
+          .nav-tabs
+            {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+          .nav-tabs li
+            {
+              margin: auto;
+            }
+          .nav-link
+            {
+              padding-right: 0;
+              text-align: center;
+            }
+        }
+
+      @media (min-width: 992px)
+        {
+          .navbar-expand-lg .navbar-nav .nav-link
+            {
+              padding-right: 0;
+              padding-left: 6rem;
+            }
+        }
+
+      @media (min-width: 1200px)
+        {
+          .container, .container-lg, .container-md, .container-sm, .container-xl 
+            {
+              max-width: 109.3rem; /* Là 1063 + padding mỗi bên 15px */
+            }
+        }
+    </style>
+
+  </head>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+  <body>
+    <header class="container p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="/Source-code-day-20/Minimo/BTVN-B12-clone-Minimo.html">Minimø</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Lifestyle <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photodiary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Music</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Travel</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container p-0">
+      <div class="banner">
+        <img src="/Source-code-day-20/Minimo/IMG/Minimo-banner-img.jpg" class="card-img-top" alt="...">
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <a href="" class="card">
+             <div class="card-body">
+               <h6 class="card-subtitle">Photodiary</h6>
+               <h5 class="card-title">The perfect weekend getaway</h5>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+               <h6 class="card-note">Leave a comment</h6>
+             </div>
+          </a>
+        </div>
+
+        <div class="col-md-6">
+          <a href="/Source-code-day-20/Minimo/Minimo-OnePage.html" class="card">
+             <img src="/Source-code-day-20/Minimo/IMG/Blog 1.jpg" class="card-img-top card-img-top-fix" alt="...">
+             <div class="card-body">
+               <h6 class="card-subtitle">Lifestyle</h6>
+               <h5 class="card-title">More than just a music festival</h5>
+               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+             </div>
+          </a>
+        </div>
+
+        <div class="col-md-6">
+          <a href="/Source-code-day-20/Minimo/Minimo-OnePage.html" class="card">
+            <img src="/Source-code-day-20/Minimo/IMG/Blog 2.jpg" class="card-img-top card-img-top-fix" alt="...">
+            <div class="card-body">
+              <h6 class="card-subtitle">Lifestyle</h6>
+              <h5 class="card-title">Life tastes better with coffee</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            </div>
+          </a>
+        </div>
+          
+        <div class="col-md-6">
+          <a href="/Source-code-day-20/Minimo/Minimo-OnePage.html" class="card">
+            <img src="/Source-code-day-20/Minimo/IMG/Blog 3.jpg" class="card-img-top card-img-top-fix" alt="...">
+            <div class="card-body">
+              <h6 class="card-subtitle">Photodiary</h6>
+              <h5 class="card-title">American dream</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            </div>
+          </a>
+        </div>
+          
+        <div class="col-md-6">
+          <a href="/Source-code-day-20/Minimo/Minimo-OnePage.html" class="card">
+            <img src="/Source-code-day-20/Minimo/IMG/Blog 4.jpg" class="card-img-top card-img-top-fix" alt="...">
+            <div class="card-body">
+              <h6 class="card-subtitle">Photodiary</h6>
+              <h5 class="card-title">A day exploring the Alps</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ads">
+      <h5 class="card-title m-0 text-center">Sign up for our newsletter!</h5>
+      
+      <div class="input-group mb-3 ">
+        <input type="text" class="form-control border-0" placeholder="Enter a valid email address" aria-label="Username" aria-describedby="basic-addon1">
+        <div class="input-group-prepend">
+          <span class="input-group-text border-0" id="basic-addon1"><i class="far fa-paper-plane"></i></span>
+        </div>
+        <div class="deco-horizontal"></div>
+      </div>
+    </div>
+
+    <section class="container p-0">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="/Source-code-day-20/Minimo/Minimo-Sidebar.html" class="card">
+             <img src="/Source-code-day-20/Minimo/IMG/Blog 5.jpg" class="card-img-top card-img-top-fix" alt="...">
+             <div class="card-body">
+               <h6 class="card-subtitle">Lifestyle</h6>
+               <h5 class="card-title">Top 10 song for running</h5>
+               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+             </div>
+          </a>
+        </div>
+
+        <div class="col-md-6">
+          <a href="/Source-code-day-20/Minimo/Minimo-Sidebar.html" class="card">
+            <img src="/Source-code-day-20/Minimo/IMG/Blog 6.jpg" class="card-img-top card-img-top-fix" alt="...">
+            <div class="card-body">
+              <h6 class="card-subtitle">Lifestyle</h6>
+              <h5 class="card-title">Cold winter days</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <button type="button" class="btn">Load more</button>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="container p-0">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active color-000 bg-transparent border-0" href="#">Terms and conditions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active color-000 bg-transparent border-0" href="#">Privacy</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link d-inline-block active pr-2 color-000 bg-transparent border-0" href="#">Follow</a>
+            <a class="nav-link d-inline-block active pr-0 color-000 bg-transparent border-0" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="nav-link d-inline-block active pr-0 color-000 bg-transparent border-0" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="nav-link d-inline-block active pr-0 color-000 bg-transparent border-0" href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+    crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" 
+    crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

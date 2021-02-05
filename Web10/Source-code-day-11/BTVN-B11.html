@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN-B11</title>
+</head>
+<body>
+    <script>
+        //Bài 1:
+        document.write("1. Cho một mảng số nguyên. Viết hàm kiểm tra nếu trong mảng có phần tử âm thì thay thế nó bằng 0. <br/>");
+        document.write(`Hàm Bai1(x) <br/>`)
+        document.write(`<br/>`)
+        function Bai1(xxx)
+            {
+                for (i=0; i < xxx.length; i++)
+                    {
+                        if (xxx[i] < 0)
+                            {
+                                xxx[i] = 0;
+                            }
+                    }
+                return ("Mảng mới là " + xxx);
+            }
+
+        //Bài 2:
+        document.write("2. Viết hàm tìm số nhỏ nhất và lớn nhất trong mảng số nguyên. <br/>");
+        document.write(`Hàm Bai2(x) <br/>`)
+        document.write(`<br/>`)
+        function Bai2(xxx)
+            {
+                let max = xxx[0];
+                let min = xxx[0];
+                for (i=0; i < xxx.length; i++)
+                    {
+                        if (xxx[i] < min)
+                            {
+                                min = xxx[i];
+                            }
+                        if (xxx[i] > max)
+                            {
+                                max = xxx[i];
+                            }
+                    }
+                return ("Số lớn nhất là " + max + " và số bé nhất là " + min)
+            }
+
+        //Bài 3:
+        document.write("3. Viết hàm trả về vị trí đầu tiên của số lẻ, vị trí cuối cùng của số chẵn trong mảng bất kì. <br/>");
+        document.write(`Hàm Bai3(x) <br/>`)
+        document.write(`<br/>`)
+        function Bai3(xxx)
+            {
+                let soChan;
+                let soLe;
+                soChan = xxx.filter(number => (number % 2) == 0 );
+                soLe = xxx.filter(number => (number % 2) != 0 );
+                // return soLe[0];
+                // return soChan[soLe.length-1];
+                return ("Số Lẻ đầu tiên là " + soLe[0] + " và số Chẵn cuối cùng là " + soChan[soLe.length-1]);
+            }
+    </script>
+</body>
+</html>

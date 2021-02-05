@@ -1,0 +1,413 @@
+/* reset css browser */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end */
+*
+    {
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+
+.icon-up
+    {
+        font-size: 40px;
+        color: #464646;
+        /* vị trí neo cố định */
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+    }
+.container
+    {
+        height: 10000px;
+    }
+
+.navbar
+    {
+        width: 100%;
+        height: 60px;
+        background-color: #34465c;
+        /* Ứng với top right bottom left */
+        padding:0px 16px 0px 16px; 
+        display: flex;
+        justify-content: space-between;
+    }
+
+/* Gọi kiểu block để bỏ chấm */
+li
+    {
+        display: block;
+        margin: 0px 15px;
+    }
+body   
+    {
+        font-family: 'Roboto', sans-serif;
+    }
+
+/* LOGO --------------------------------------------- */
+/* Gọi tất cả thể img trong div logo mới được gọi */
+.logo img
+    {
+         width: 120px;
+    }
+    
+.logo
+    {
+        width: 150px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+/* MENU navbar--------------------------------------------- */
+.menu
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* Để nó trừ đi diện tích của avatar */
+        width: 100%;
+        margin-right: 20px;
+    }
+.listmenu 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Relative: So với tọa độ nó đang đứng */
+        position: relative;
+    }
+.listmenu li
+    {
+        height: 60px;
+        line-height: 60px;
+    }
+.listmenu a
+    {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+.sub-menu1
+    {   
+        min-width: 200px;
+        background-color: tomato;
+        position: absolute;
+        top: 100%;
+        display: none;
+    }
+.sub-menu1 li
+    {
+        margin: 0;
+    }
+.sub-menu1 li
+    {   
+        padding: 0 10px;
+        /* background-color: white; */
+        position: relative;
+    }
+.listmenu li:hover .sub-menu1
+    {
+        display: block;
+        background-color: white;
+    }
+.sub-menu1 li:hover
+    {
+        background-color: grey;
+    }
+.sub-menu1 li:hover > a
+    {
+        color: #ffffff;
+    }
+
+
+.sub-menu2
+    {   
+        min-width: 200px;
+        background-color: tomato;
+        position: absolute;
+        top: 0px;
+        left:100%;
+        display: none;
+        z-index: 1;
+    }
+.sub-menu3
+    {   
+        min-width: 200px;
+        background-color: tomato;
+        position: absolute;
+        top: 0px;
+        left:100%;
+        display: none;
+        z-index: 1;
+    }
+.sub-menu1 li a, .sub-menu2 li a, .sub-menu3 li a
+    {
+       color: teal;
+       text-transform: none;
+    }
+
+.sub-menu1 li:hover .sub-menu2
+    {
+        display: block;
+        background-color:  white;
+    }
+.sub-menu2 li:hover .sub-menu3
+    {
+        display: block;
+        background-color:  white;
+    }
+
+
+/* AVATAR --------------------------------------------- */
+.avatar
+    {
+        width: 60px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.avatar img
+    {
+        width: 40px;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+/* Hàng 1--------------------------------------------- */
+.Hang1
+    {
+        width: 80%;
+        margin: 80px auto auto auto;
+        display: flex;
+        justify-content: space-between;
+    }
+.banner
+    {
+        /* width: 70%; */
+        height: 500px;
+        margin-right: 10px;
+        /* Xóa phần thừa bị chèn ra ngoài box */
+        overflow: hidden;
+    }
+.list-blog
+    {
+        width: 40%;
+        height: 500px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+.shadow
+    {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        background-color: #fff;
+    }
+.banner img
+    {
+        height: 100%;
+        object-fit: contain;
+    }
+.widget
+    {
+        height: 21.5%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+.columnL
+    {    
+        /* height: 100%;    */
+        width: 20%; 
+        display: flex;    
+    }
+.columnL img
+    {
+        height: 100%;
+        width: 100%; 
+        object-fit: cover;
+        overflow: hidden;
+    }
+.columnR
+    {    
+        width: 80%;   
+        margin: auto 20px auto 20px 
+        /* display: flex;    
+        justify-content: space-around;
+        align-items: center; */
+    }
+
+/* Hàng 2--------------------------------------------- */
+.Hang2
+    {
+        width: 75%;
+        margin: 80px auto 80px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+.box
+    {
+        height: 180px;
+        width: 21.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+.box img
+    {
+        width: 40%; 
+        object-fit: contain;
+        /* overflow: hidden; */
+        margin-bottom: 5%;
+    }
+.box h2
+    {
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+.box p 
+    {
+        width: 80%;
+        font-size: 14px;
+        font-size: small;
+        color: rgb(156, 154, 152);
+        text-align: center;
+    }
+.box a
+    {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* Hàng 2--------------------------------------------- */
+.Sale{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px
+}
+.sale-item{
+    /* Chia làm 4 cột đều nhau */
+    height: 500px;
+    /* flex: 0 0 24%;
+    max-width: 24%; */
+    width: 24%;
+    padding: 10px;
+}
+.sale-item .ITEM > img{
+    width: 100%;
+}
+.sale-item .ITEM{
+    position: relative;
+}
+.sale-item .SALE, .sale-item .TAG{
+    position: absolute;
+}
+.sale-item .SALE{
+    top: 0;
+    right: 0;
+}
+.sale-item .TAG{
+    bottom: 0;
+    left: 0;
+}
+.COST
+    {   
+        width: 100%;
+        color: orange;
+        font-size: 28px;
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+    }
+.SOLD
+    {
+        font-size: 20px;
+        margin-top: 4px;
+        margin: auto;
+        text-align: center;
+        display: block;
+        background-color: #FEBDA8;
+        border-color: #FEBDA8;
+        border-radius: 10px;
+        color: white;
+        width: 60%;
+        position: relative;
+    }
+/* .SOLD:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 2px solid red;
+} */

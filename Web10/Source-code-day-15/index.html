@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="guess-number" name="number" placeholder="Mời nhập số" type="text">
+    <button id="check" onclick="check()">Kiểm tra</button>
+    <br/>
+    <br/>
+
+    <form action="#">
+        <input id="user-name" name="text" placeholder="Nhập username" type="text">
+        <br/>
+        <input id="pass-word1" name="password" placeholder="Nhập password" type="text">
+        <input id="pass-word2" name="password" placeholder="Nhập lại password" type="text">
+        <button id="check2" onclick="check2()" type="submit">Kiểm tra</button>
+        <br/>
+        <br/>
+    </form>
+
+
+    <button onclick="hello()" type="button">Xin chào</button>
+    <br/>
+    <br/>   
+
+
+    <input id="so-tien" name="text" placeholder="Nhập Số tiền" type="text">
+    <br/> 
+    <input type="radio" id="dola" name="currency" value="dola">USD<br/>
+    <input type="radio" id="euro" name="currency" value="euro">EUR<br/>   
+    <button onclick="quidoi()" type="button">Đổi xèng</button>
+    <br/>
+    <br/>   
+
+
+    <script>
+        let x = Math.floor(Math.random() * 100) + 1;
+        function check()
+            {
+                let guessNumber = document.getElementById("guess-number").value;
+                if (guessNumber == "" || guessNumber < 1 || guessNumber > 100)
+                    {
+                        alert("Mời nhập lại số");
+                        return
+                    }
+                if (guessNumber == x)
+                    {
+                        alert("Chúc mừng");
+                    }
+                else if (guessNumber > x)
+                    {
+                        alert("Quá lớn");
+                    }
+                else
+                    {
+                        alert("Quá bé");
+                    }
+            }
+
+        function check2()
+            {
+                let username = document.getElementById("user-name").value;
+                let password1 = document.getElementById("pass-word1").value;
+                let password2 = document.getElementById("pass-word2").value;
+                if (username == "" || username.length > 20)
+                    {
+                        alert("Mời nhập lại username");
+                        return
+                    }
+                if (password1 == "" || password1.length > 32 || password1.length < 6)
+                    {
+                        alert("Mời nhập lại password");
+                        return
+                    }
+                if (password2 == "" || password2.length > 32 || password2.length < 6 || password2 != password1)
+                    {
+                        alert("Mời confirm lại password");
+                        return
+                    }
+                else
+                    {
+                        alert("Check ok");
+                    }
+            }
+
+        function hello()
+            {
+                let value = prompt("Bạn đến từ quốc gia nào: Anh, Hàn, Trung, Nhật, Ấn");
+                switch (value)
+                    {
+                        case "Anh":
+                            alert("Hello");
+                            return
+                        case "Hàn":
+                            alert("An-nyeong-ha-se-yo");
+                            return
+                        case "Trung":
+                            alert("Nee how");
+                            return
+                        case "Nhật":
+                            alert("Konnichiwa");
+                            return
+                        case "Ấn":
+                            alert("Namaste");
+                            return
+                        default:
+                            alert("Xin chào");
+                            return
+                    }
+            }
+
+    </script>
+</body>
+</html>

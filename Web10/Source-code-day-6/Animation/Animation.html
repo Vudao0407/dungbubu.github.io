@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        *
+            {
+                margin: 0px;
+                box-sizing: border-box;
+            }
+        body
+            {
+                background-color: grey;
+            }
+        .shadow
+            {
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+                background-color: #fff;
+            }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        .div1
+            {
+                width: 100px;
+                height: 100px;
+                background-color: green;
+
+                /* transition-property: width height border-radius;
+                transition-duration: 2s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 100ms; */
+                transition: background-color 0s 2s linear;
+
+                animation-name: many-color;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        .div1:hover
+            {
+                width: 200px;
+                height: 200px;
+                border-radius: 100px;
+                background-color: red;
+            }
+        @keyframes change-color
+            {
+                form
+                    {
+                        background-color: red;
+                    }
+                to
+                    {
+                        background-color: green;
+                    }
+            }
+        @keyframes many-color
+            {
+                10%
+                    {
+                        background-color: red;
+                    }
+                20%
+                    {
+                        background-color: green;
+                    }
+                30%
+                    {
+                        background-color: blue;
+                    }
+                40%
+                    {
+                        background-color: yellow;
+                    }
+                50%
+                    {
+                        background-color: black;
+                    }
+            }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        .div2 img
+            {
+                width: 40%;
+                margin:0 auto;
+                display: flex;
+                animation-name: heart-beat;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        @keyframes heart-beat
+            {
+                10%
+                    {
+                        transform: scale(1.1);
+                    }
+                20%
+                    {
+                        transform: scale(1.1);
+                    }
+                30%
+                    {
+                        transform: scale(1.3);
+                    }
+                40%
+                    {
+                        transform: scale(1.1);
+                    }
+                50%
+                    {
+                        transform: scale(1.5);
+                    }
+            }
+
+        /* ------------------------------------------------------------------------------------ */
+        .gallery
+            {
+                width: 80%;
+                height: 500px;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                background-color: rgb(233, 227, 227);
+            }
+        .Anh1, .Anh2, .Anh3
+            {
+                width: 30%;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                background-color:white;
+                transition-property: all;
+                transition-duration: 2s;
+            }
+        figure  
+            {
+                width: 100%;
+                height: 80%;
+                overflow: hidden;
+            }
+        img 
+            {
+                width: 100%;
+                transition-property: all;
+                transition-duration: 2s;
+                object-fit: cover;
+            }
+        figcaption 
+            {
+                height: 20%;
+                font-size: 20px;
+                font-weight: 500;
+                color: gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-property: all;
+                transition-duration: 2s;
+            }
+
+        /* Ảnh 1 */
+        .Anh1:hover img
+            {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+        .Anh1:hover figcaption
+            {
+                color:teal;
+            }
+
+        /* Ảnh 2 */
+        .Anh2:hover
+            {
+                border-radius: 100px;
+            }
+        .Anh2:hover img
+            {
+                border-radius: 100px;
+            }
+        .Anh2:hover figcaption
+            {
+                color:navy;
+            }
+
+         /* Ảnh 3 */
+        .Anh3:hover img
+            {
+                border-radius: 100px;
+            }
+        .Anh3:hover figcaption
+            {
+                color:navy;
+            }
+
+    </style>
+</head>
+<!-- ------------------------------------------------------------------------ -->
+<body>
+    <div class="div1"></div>
+    <div class="div2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" alt="">
+    </div>
+    <div class="gallery">
+        <div class="Anh1 shadow">
+            <figure>
+                <img src="https://www.sanxuatsotay.com.vn/wp-content/uploads/2016/07/f05a6d01dc4123fa31e3aeacbd9e27f5.jpg" alt="Ảnh Instagram" title="Doodle">
+            </figure>
+            <figcaption>Source:Google</figcaption>
+        </div>
+        <div class="Anh2 shadow">
+            <figure>
+                <img src="https://www.sanxuatsotay.com.vn/wp-content/uploads/2016/07/f05a6d01dc4123fa31e3aeacbd9e27f5.jpg" alt="Ảnh Instagram" title="Doodle">
+            </figure>
+            <figcaption>Source:Google</figcaption>
+        </div>
+        <div class="Anh3 shadow">
+            <figure>
+                <img src="https://www.sanxuatsotay.com.vn/wp-content/uploads/2016/07/f05a6d01dc4123fa31e3aeacbd9e27f5.jpg" alt="Ảnh Instagram" title="Doodle">
+            </figure>
+            <figcaption>Source:Google</figcaption>
+        </div>
+    </div>
+</body>
+</html>

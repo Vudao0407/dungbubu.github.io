@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Đổi Ngoại tệ sang VNĐ</h2>
+    <input type="text" placeholder="Nhập tố tiền" id="input-money">
+    <select name="" id="select-currency">
+        <option value="dola">$</option>
+        <option value="euro">€</option>
+    </select><br/><br/>
+    <!-- <input id="dola-currency" type="radio" name="currency" value="dola"><label for="dola">$</label>
+    <input id="euro-currency" type="radio" name="currency" value="euro"><label for="euro">€</label> -->
+
+    <button type="button" onclick="convert()">Chuyển đổi sang VNĐ</button>
+
+    <script>
+        function convert()
+            {
+                let value = document.getElementById("input-money").value;
+            
+                let currency = document.getElementById("select-currency").value;
+
+                let convertMoney
+                console.log(value,currency)
+
+                switch(currency)
+                    {
+                        case "dola":
+                            convertMoney = value*23060;
+                            alert(`${value} $ = ${convertMoney} ₫`);
+                            break;
+                        case "euro":
+                            convertMoney = value*26719;
+                            alert(`${value} € = ${convertMoney} ₫`);
+                            break;
+                    }
+
+                // let currency1 = document.getElementById("dola-currency").value;
+                // let currency2 = document.getElementById("euro-currency").value;
+
+                // if(currency1 == "dola")
+                //     {
+                //         let convertMoney = value*23060;
+                //         alert(`${value} $ = ${convertMoney} ₫`);
+                //         return;
+                //     }
+
+                // if (currency2 == "euro")
+                //     {
+                //         let convertMoney = value*26719;
+                //         alert(`${value} € = ${convertMoney} ₫`);
+                //         return;
+                //     }
+            }
+    </script>
+</body>
+</html>

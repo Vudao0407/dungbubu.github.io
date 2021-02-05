@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write(`Bài 2 <br/>`)
+        document.write(`Tìm số lớn thứ 2 trong mảng <br/>`)
+        document.write(`Hàm sapxep1(arr) <br/>`)
+        document.write(`<br/>`)
+        function sapxep1(arr)
+            {
+                arr.sort( function (a, b) {return a - b} );
+                return arr[arr.length - 2];
+            }
+        //-----------------------------------------------------------------------------------------
+        document.write(`Bài 3 <br/>`)
+        document.write(`Tìm chuỗi có độ dài lớn nhất <br/>`)
+        document.write(`Hàm sapxep2cach1(arr) hoặc sapxep2cach2(arr) <br/>`)
+        document.write(`<br/>`)
+        function sapxep2cach1(arr)
+            {
+                let soKiTu = arr[0].length;
+                let tenMang = arr[0];
+                let viTri = 0;
+                for (i=1 ; i < arr.length ; i++)
+                    {
+                        if (soKiTu < arr[i].length)
+                            {
+                                soKiTu = arr[i].length;
+                                tenMang = arr[i];
+                                viTri = i+1;
+                            }
+                    }
+                return "Mảng dài nhất là: " + tenMang + " ở vị trí thứ " + viTri + " với độ dài là " + soKiTu;
+            }
+
+            function sapxep2cach2(arr)
+                {
+                    arr.sort( function (a, b) {return a.length - b.length} );
+                    return arr[arr.length - 1];
+                }
+        //-----------------------------------------------------------------------------------------
+        document.write(`Bài 4 <br/>`)
+        document.write(`Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng <br/>`)
+        document.write(`kiểm tra chuỗi string có kết thúc bởi chuỗi target hay không <br/>`)
+        document.write(`Hàm kiemtracach1(str,kytu) kiemtracach2(str,kytu) <br/>`)
+        document.write(`<br/>`)
+        function kiemtracach1(str,kytu)
+            {
+                return str.substr(str.length - kytu.length) === kytu
+                ? true
+                : false;
+            }
+         function kiemtracach2(str,kytu)
+            {
+                return str.endsWith(kytu);
+            }
+        //-----------------------------------------------------------------------------------------  
+        document.write(`Bài 5 <br/>`)
+        document.write(`Cho 1 mảng chỉ chứa các phần tử có kiểu dữ liệu number, string và boolean <br/>`)
+        document.write(`kiểm tra trong mảng đó có phần tử nào bị lặp lại hay không <br/>`)
+        document.write(`Hàm kiemtralap(arr) <br/>`)
+        document.write(`<br/>`)
+        function kiemtralapcach1(arr)
+            {
+                let flag = false;
+                for (i = 0; i < arr.length; i++) 
+                    {
+                        if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i]))
+                            {
+                                flag = true;
+                            }
+                    }
+                return flag;
+            }
+        function kiemtralapcach2(arr)
+            {
+                for (i = 0; i < arr.length; i++) 
+                    {
+                        for (j = i + 1; j < arr.length; j++) 
+                            {
+                                if (arr[i] === arr[j])
+                                    {
+                                        return true;
+                                    }
+                            }
+                    }
+                return false;
+            }
+        //-----------------------------------------------------------------------------------------   
+
+    </script>
+</body>
+</html>

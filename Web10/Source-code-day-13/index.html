@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Kiểm tra x là số dương,0,âm
+        function soNguyen(x)
+            {
+                if (typeof x != "string")
+                    {
+                        if (x>0)
+                            {
+                                return x + " là số dương";
+                            }
+                        else if (x<0)
+                            {
+                                return x + " là số âm";
+                            }
+                        else
+                            {
+                                return x;
+                            }
+                    }
+                else
+                    {
+                       return "Mời nhập lại số";
+                    }
+            }
+
+        // Cho điểm 3 môn Toán, Lý, Hoá. Tính điểm trung bình các môn và xếp loại học lực
+        function xepLoai(x)
+            {
+                let tong=0;
+                let trungbinh=0;
+                let xeploai;
+                for (i=0; i<x.length; i++)
+                    {
+                        if (x[i]<0 || x[i]>10)
+                            {
+                                return "Mời nhập lại điểm thứ" + (i+1);
+                            }
+
+                        tong = tong + x[i];
+                        trungbinh = tong / x.length;
+
+                        if (trungbinh >= 0 && trungbinh < 3)
+                            {
+                                xeploai = "Yếu";
+                            }
+                        else if (trungbinh >= 3 && trungbinh < 6.5)
+                            {
+                                xeploai = "Trung Bình";
+                            }
+                        else if (trungbinh >= 6.5 && trungbinh < 8)
+                            {
+                                xeploai = "Khá";
+                            }
+                        else
+                            {
+                                xeploai = "Giỏi";
+                            }
+                    }
+                return "Tổng điểm bằng " + tong + " và điểm trung bình bằng " + trungbinh + ", Xếp loại: " + xeploai;
+            }
+
+        switch (new Date().getDay()) 
+            {
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+            }
+    </script>
+</body>
+</html>

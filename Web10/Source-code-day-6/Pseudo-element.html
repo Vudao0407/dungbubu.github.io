@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .doan-van-1::first-letter
+            {
+                font-size: 50px;
+            }
+        .doan-van-1::first-line
+            {
+                color: darkcyan;
+            }
+        
+        .money::before
+            {
+                content: "Tôi ";
+            }
+        .money::after
+            {
+                content: " VND";
+            }
+
+        p::after
+            {
+                content: "";
+                width: 50px;
+                height: 10px;
+                background-color: darkkhaki;
+            }
+
+        /* Bôi đen đến đâu, đổ màu đến đấy */
+        p::selection
+            {
+                background-color: grey;
+            }
+
+        .money
+            {
+                position: relative;
+            }
+        .money::after
+            {
+                position: absolute;
+            }
+    </style>
+</head>
+
+<!-- ------------------------------------------------------------------------ -->
+<body>
+    <p class="doan-van-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, fugit! Numquam rem, provident amet assumenda
+        soluta obcaecati possimus consequatur hic esse ad odit distinctio nobis cupiditate sit maiores sequi reiciendis!
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, fugit! Numquam rem, provident amet assumenda
+        soluta obcaecati possimus consequatur hic esse ad odit distinctio nobis cupiditate sit maiores sequi reiciendis!
+    </p>
+    <p class="money">Lorem ipsum dolor sit amet consectetur adipisicing elit 10.000</p>
+    <p class="money">Lorem ipsum dolor sit amet consectetur adipisicing elit 20.000</p>
+    <p class="money">Lorem ipsum dolor sit amet consectetur adipisicing elit 30.000</p>
+
+</body>
+
+</html>

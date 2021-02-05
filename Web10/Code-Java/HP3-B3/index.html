@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>
+    .container
+      {
+        width: 1000px;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+    .roundshape
+      {
+        width: 200px;
+        height: 200px;
+        border: 6px solid transparent;
+        border-radius: 50%;
+      }
+
+    .border-cl
+      {
+        border: 6px solid #262626;
+      }
+
+    .button
+      {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="roundshape"></div>
+    <div class="roundshape"></div>
+    <div class="roundshape"></div>
+    <div class="roundshape"></div>
+    <div class="roundshape"></div>
+    <div class="roundshape"></div>
+    <div class="roundshape"></div>
+    <div class="roundshape"></div>
+  </div>
+  <div>
+    <button class="button" id="destroyall">Button</button>
+  </div>
+  <script>
+    var mamau = ['#CCCCCC', '#FF0000', '#FF6600', '#336699', '#666666', '#003366', '#000000', '#FFCC00'];
+
+    let shapecolor = document.getElementsByClassName("roundshape");
+    for (let i=0; i<mamau.length; i++)
+      {
+        shapecolor[i].style.background = mamau[i];
+        shapecolor[i].addEventListener("click" ,function()
+          {
+            // shapecolor[i].style.display = "none";
+            shapecolor[i].classList.toggle("border-cl");
+          });
+      }
+
+    let destroy = document.getElementById("destroyall");
+    destroy.addEventListener("click",function()
+      {
+        for (let i=0; i<mamau.length; i++)
+          {
+            if (shapecolor[i].classList.contains("border-cl"))
+              {
+                shapecolor[i].style.display = "none";
+              }
+          }
+      });
+  </script>
+</body>
+</html>

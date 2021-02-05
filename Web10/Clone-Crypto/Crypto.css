@@ -1,0 +1,717 @@
+   html
+      {
+        font-size: 62.5%;
+      }
+    body 
+      {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.7rem;
+        color: #6B7C93;
+      }
+    a, a:hover
+      {
+        color:inherit;
+        text-decoration: none;
+      }
+
+    .color-010101
+      {
+        color: #010101;
+      }
+
+
+
+    /* Phần nền chuyển màu ------------------------------------------------------------------------ */
+    .bg-gradient
+      {
+        background: linear-gradient(135deg, #0FB786 0%, #B0DF77 100%);
+      }
+
+
+
+    /* Section-1 ------------------------------------------------------------------------ */
+    /* Phần header ------------------------------------------------------------------------ */
+    .navbar
+      {
+        padding: 1.5rem 0 11.5rem 0;
+      }
+    .nav-link:hover
+      {
+        /* color: #28BD84; */
+        color: white;
+        /* background: rgba(255, 255, 255, 0.35); */
+        border-radius: 2px;
+        border-top: 4px solid white;
+      }
+    .navbar-toggler
+      {
+        width: 6rem;
+        display: block;
+        color: rgba(0,0,0,.5);
+        border-color: rgba(255,255,255,.8);
+        border-radius: 4px;
+      }
+    .navbar-toggler:checked /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+      {
+        background-color: rgba(255, 255, 255, 0.35);
+      }
+    .navbar-toggler-icon
+      {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.1rem;
+        letter-spacing: 0.55px;
+        color: white;
+      }
+
+
+
+    /* Phần ứng dụng bên trái ------------------------------------------------------------------------ */
+    .card-1
+      {
+        max-width: 50rem;
+        /* height: 44.4rem; */
+        background: none;
+        border: none;
+      }
+
+    /* Trang trí ở đầu ------------------------------------------------------------------------ */
+    .deco-big
+      {
+        max-width: 49.2rem;
+        height: 2.7rem;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.35);
+        mix-blend-mode: normal;
+        border-radius: 10rem;
+      }
+    .deco-big:hover .text-400-white-14
+      {
+        font-weight: 600;
+      }
+    .deco-small
+      {
+        min-width: 4rem;
+        height: 1.6rem;
+        margin-left: 0.5rem;
+        margin-right: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #28BD84;
+        border-radius: 10rem;
+      }
+    .text-400-white-14 
+      {
+        height: 1.8rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.8rem;
+        letter-spacing: 0.55px;
+        color: white;
+      }
+    .text-600-white-13
+      {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+      }
+
+    /* Nội dung ------------------------------------------------------------------------ */
+    h1
+      {
+        margin-top: 5.2rem;
+        font-size: 4.2rem;
+        font-weight: 600;
+        line-height: 5.3rem;
+        letter-spacing: 0.06px;
+        color: white;
+      }
+    .white-17
+      {
+        max-width: 48.3rem;
+        margin-top: 1.4rem;
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.042rem;
+        color: #D9FCFF;
+      }
+    #btn-creataccount:hover
+      {
+        color: #3DC281;
+        font-size: 1.64rem;
+        box-shadow: 0px 2px 4px rgba(243, 231, 231, 0.5);
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+      }
+    .btn-white
+      {
+        width: 16.4rem;
+        height: 4rem;
+        margin-top: 6.3rem;
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(100, 100, 100, 0.5);
+        border-radius: 4px;
+      }
+    .text-600-green-16
+      {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08rem;
+        color: #3DC281;
+      }
+
+
+
+    /* Phần ứng dụng bên phải ------------------------------------------------------------------------ */
+    .card-2
+      {
+        max-width: 46.3rem;
+        /* height: 44.4rem; */
+        margin-bottom: 15.8rem;
+        padding-right: 4.1rem;
+        padding-left: 4.3rem;
+        border: none;
+        border-radius: 0.4rem;
+      }
+
+    /* Thanh trượt ------------------------------------------------------------------------ */
+    .custom-range
+      {
+        max-width: 37.8rem;
+        height: 2.3rem;
+        margin: 4.9rem 0 0.4rem 0;
+      }
+    .custom-range::-webkit-slider-thumb /* Dùng cho Đa số trình duyệt */
+      {
+        width: 2.3rem;
+        height: 2.3rem;
+        margin-top: -0.5rem;
+        background: #71D07D;
+        box-shadow: 0px 0px 10px rgba(113, 208, 125, 0.453493);
+        border-radius: 50%;
+      }
+    .custom-range::-moz-range-thumb /* Dùng cho Firefox */
+      {
+        width: 2.3rem;
+        height: 2.3rem;
+        margin-top: -0.5rem;
+        background: #71D07D;
+        box-shadow: 0px 0px 10px rgba(113, 208, 125, 0.453493);
+        border-radius: 50%;
+      }
+    /* Hover */
+    .custom-range::-webkit-slider-thumb:hover
+      {
+        background:  #a1f0ab;
+      }
+    .custom-range::-moz-range-thumb:hover
+      {
+        background:  #a1f0ab;
+      }
+
+    .custom-range::-webkit-slider-runnable-track /* Dùng cho Đa số trình duyệt */
+      {
+        width: 100%;
+        height: 1.3rem;
+        cursor: pointer;
+      }
+    .custom-range::-moz-range-track /* Dùng cho Firefox */
+      {
+        width: 100%;
+        height: 1.3rem;
+        cursor: pointer;
+      }
+
+    .sym1
+      {
+        width: calc(100% - 2.3rem);
+        margin: auto;
+        /* margin: 0 5.25rem 0 5.55rem; */
+        font-size: 0.3rem;
+        color: #9B9B9B;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    .sym2
+      {
+        width: calc(100% - 2.3rem + 1.566rem);
+        margin: auto;
+        /* margin: 0 4.467rem 4.1rem 4.767rem; */
+        font-size: 0.9rem;
+        color: #9B9B9B;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+    /* Nhập liệu ------------------------------------------------------------------------ */
+    .input-group-container
+      {
+        max-width: 37.9rem;
+        height: 6.7rem;
+        padding: 0 1.1rem 0 1.45rem;
+        display: flex;
+        align-items: center;
+      }
+    .form-control[readonly]
+      {
+        background-color: #fff;
+      }
+    .text-600-black-16
+      {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #010101;
+
+        height: 4rem;
+      }
+    .text-600-black-12
+      {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #010101;
+
+        /* width: 8.9rem;  */ /* Không cần thiết nữa */
+        height: 4rem;
+        background-color: #E2F6EB;
+      }
+    .input-group-container-2
+      {
+        max-width: 37.9rem;
+        height: 6.2rem;
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+      }
+    .text-600-gray-12
+      {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #9B9B9B;
+      }
+
+      .btn-outline-secondary:not(:disabled):not(.disabled).active, 
+      .btn-outline-secondary:not(:disabled):not(.disabled):active, 
+      .show>.btn-outline-secondary.dropdown-toggle, 
+
+      .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, 
+      .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, 
+      .show>.btn-outline-secondary.dropdown-toggle:focus,
+
+      .btn-outline-secondary:hover
+      {
+        background-color: #E2F6EB;
+        border-color: white;
+        box-shadow: none;
+        color: #010101;
+      }
+    
+    .currency-img
+      {
+        margin-right: 0.6rem;
+        margin-left: 0.8rem;
+      }
+    .dropdown-toggle::after 
+      {
+        margin-right: 1rem;
+        margin-left: 1.8rem;
+      }
+
+    /* Nút bấm ------------------------------------------------------------------------ */
+    .btn-green
+      {
+        width: 100%;
+        height: 4.7rem;
+        margin-top: 2.3rem;
+        margin-bottom: 4.4rem;
+        font-size: 1.6rem;
+        background: #99D979;
+        box-shadow: 0px 0px 10px rgba(71, 71, 71, 0.1);
+      }
+    #btn-continue:hover
+      {
+        /* color: #3DC281; */
+        font-weight: 600;
+        font-size: 1.64rem;
+        box-shadow: 0px 2px 4px rgba(100, 100, 100, 0.5);
+        /* transition-duration: 0.4s; */
+        /* transition-timing-function: ease-out; */
+      }
+
+
+
+    /* Section-2 ------------------------------------------------------------------------ */
+    /* Phần Thân bài ------------------------------------------------------------------------ */
+    .section-2-mg
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    .section-2-content
+        {
+            width: 44.8rem;
+            padding-top: 7.7rem;
+            padding-bottom: 7.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    .text-600-green-17
+        {
+            margin-top: 2.5rem;
+            font-weight: 600;
+            font-size: 1.7rem;
+            line-height: 2.1rem;
+            letter-spacing: 0.155rem;
+            color: #24B47E;
+        }
+    .text-400-gray-17-3
+        {   
+            margin-top: 1.8rem;
+            margin-bottom: 1.9rem;
+            font-size: 1.7rem;
+            line-height: 2.6rem;
+            letter-spacing: 0.04rem;
+            color: #6B7C93;
+        }
+    .text-400-green-17
+        {
+            font-size: 1.7rem;
+            line-height: 2.1rem;
+            text-decoration: none;
+            letter-spacing: 0.05rem;
+            color: #24B47E;
+        }
+    .hr-vertical
+        {
+            width: 0.2rem;
+            height: 44.56rem;
+            /* margin-left: 12rem; */ /* Không cần thiết */
+            /* margin-right: 13.1rem; */ /* Không cần thiết */
+            background: #F6F9FC;
+        }
+    .hr-horizontal
+        {
+            width: 100%;
+            height: 0.2rem;
+            background: #F6F9FC;
+        }
+
+
+
+    /* Section-3 ------------------------------------------------------------------------ */
+    /* Phần footer ------------------------------------------------------------------------ */
+    .section-3-1row-content
+        {
+            margin-top: 5.8rem;
+            margin-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    .text-600-green-2
+        {
+            font-weight: 600;
+            font-size: 2.2rem;
+            line-height: 3.3rem;
+            letter-spacing: 0.2rem;
+            color: #24B47E;
+        }
+    .margin-30
+        {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+    .text-400-gray-17
+        {
+            max-width: 72.9rem;
+            font-size: 1.7rem;
+            line-height: 2.6rem;
+            text-align: center;
+            letter-spacing: 0.05rem;
+            color: #6B7C93;
+        }
+
+    .section-3-table-content
+        {
+            margin-bottom: 6.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    .table-content-item
+        {
+            width: 54.6rem;
+            height: 19.6rem;
+            padding-right: 4.4rem;
+            display: flex;
+            align-items: center;
+        }
+    .tc-item-img
+        {
+            margin-right: 3.7rem;
+            padding-top: 4.2rem;
+        }
+    .tc-item-text
+        {
+            padding-top: 6.2rem;
+        }
+    .text-700-green-17
+        {
+            font-weight: 700;
+            font-size: 1.7rem;
+            line-height: 2.1rem;
+            letter-spacing: 0.11rem;
+            color: #24B47E;
+        }
+    .text-400-gray-17-2
+        {
+            font-size: 1.7rem;
+            line-height: 2.6rem;
+            letter-spacing: 0.04rem;
+            color: #6B7C93;
+        }
+
+
+
+    /* Section-4 ------------------------------------------------------------------------ */
+    /* Phần footer ------------------------------------------------------------------------ */
+    .bg-gray
+        {
+            min-height: 22rem;
+            padding-top: 2.8rem;
+            background: #F6F9FC;
+            display: flex;
+            align-items: center;
+        }
+
+    /* Phần nội dung ------------------------------------------------------------------------ */
+    .section-4-content
+        {
+            display: flex;
+            flex-direction: column;
+        }
+    .text-400-green-30
+        {
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 3.8rem;
+            letter-spacing: 0.091rem;
+            color: #24B47E;
+        }
+    .text-400-gray-30
+        {
+            font-size: 3rem;
+            line-height: 3.8rem;
+            letter-spacing: 0.091rem;
+            color: #32325D;
+        }
+
+    /* Phần nút bấm ------------------------------------------------------------------------ */
+    .section-4-button
+        {
+            max-width: 39.3rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    .btn-creatlogo
+        {
+            width: 21.7rem;
+            height: 4rem;
+            margin-right: 2.8rem;
+            background: #24B47E;
+            box-shadow: 0px 2px 4px rgba(100, 100, 100, 0.5);
+            border-radius: 4px;
+        }
+    .text-600-white-16
+        {
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            letter-spacing: 0.0395294rem;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+    .btn-buynow
+        {
+            width: 14.6rem;
+            height: 4rem;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 4px rgba(100, 100, 100, 0.5);
+            border-radius: 4px;
+        }
+    .text-600-green-16-normal
+        {
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            letter-spacing: 0.08rem;
+            color: #24B47E;
+        }
+
+    /* Phần thông tin phụ ------------------------------------------------------------------------ */
+    .bg-white
+        {
+           height: 9.5rem;
+           display: flex;
+           align-items: center;
+        }
+    .text-600-gray-14
+        {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            letter-spacing: 0.05rem;
+            text-decoration: none;
+            color: #6B7C93;
+        }
+
+
+
+/* Responsive */
+@media (min-width: 1200px)
+    {
+        .container
+            {
+                max-width: 115rem;
+            }
+    }
+
+@media (max-width: 992px)
+    {
+        /* Navigation bar */
+        .navbar
+            {
+              padding-bottom: 4.2rem;
+            }
+
+        /* Section-1 */
+        #landing-page
+            {
+                flex-direction: column;
+                align-items: center;
+            }
+        .card-1 > button
+            {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        .card-1
+            {
+                margin-bottom: 4rem;
+            }
+
+        /* Section-2 */
+        .white-17
+            {
+                text-align: center;
+            }
+        .hr-vertical, .hr-horizontal
+            {
+                display: none;
+            }
+        #hr-horizontal-res
+            {
+                display: block;
+                margin-top: 2.6rem;
+            }
+        .section-2-mg
+            {
+                flex-direction: column;
+            }
+        .section-2-content
+            {
+                width: 100%;
+                padding-top: 3.7rem;
+                padding-bottom: 3.2rem;
+                align-items: center;
+                text-align: center;
+            }
+
+        /* Section-3 */
+        .table-content-item
+            {
+                width: 100%;
+                padding-right: 0;
+            }
+
+        /* Section-4 */
+        #footer-container
+            {
+                flex-direction: column;
+            }
+        .section-4-content
+            {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+    }
+
+@media (max-width: 576px)
+    {
+        html
+            {
+              font-size: 38%;
+            }
+        .container
+            {
+              padding-left: 2rem !important;
+              padding-right: 2rem !important;
+            }
+
+        /* Section-1 */
+        h1
+            {
+              text-align: center;
+            }
+        .card-1, .card-2
+            {
+              width: 100%;
+              margin-bottom: 4rem;
+            }
+        .deco-big
+            {
+              width: 100%;
+              /* padding-left: 1rem; */
+              /* padding-right: 1rem; */
+            }
+        .btn-white
+            {
+              margin-top: 2rem;
+            }
+        
+        /* Section-3 */
+        .tc-item-img img
+            {
+                width: 100%;
+            }
+        
+        /* Section-4 */
+        .section-4-button
+            {
+              flex-direction: column;
+              align-items: center;
+            }
+        .section-4-button button
+            {
+              margin-bottom: 2rem;
+            }
+        .btn-creatlogo
+            {
+              margin-right: 0;
+            }
+        #footer-menu-content
+            {
+              flex-direction: column;
+              align-items: center;
+            }
+    }

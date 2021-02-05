@@ -1,0 +1,260 @@
+/* CONTAINER BACKGROUND------------------------------------------------------------------------------------------------------------ */
+.container
+    {
+        width: 350px;
+        margin: 12px auto 10px;
+        padding: 0px 0px 32px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+/* SIGN UP------------------------------------------------------------------------------------------------------------ */
+.sign-up
+    {
+        width: 350px;
+        height: 540px;
+        border: 1px solid #dfe0e2;
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.watermark-img img
+    {
+        width: 175px;
+        margin: 22px auto 0px;
+    }
+
+
+/* SLOGAN------------------------------------------------------------------------------------------------------------ */
+.slogan
+    {
+        width: 266px;
+
+        font-size: 17px;
+        font-weight: 600;
+        text-align: center;
+        color: #928BA1;
+    }
+
+
+/* LOG IN FACEBOOK------------------------------------------------------------------------------------------------------------ */
+.log-in-button-fb
+    {
+        width: 266px;
+        height: 30px;
+        margin-top: 15px;
+
+        border: none;
+    }
+.log-in-button-fb button
+    {
+        width: 266px;
+        height: 30px;
+        background-color: #0095F6;
+
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 500;
+        color: white;
+
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+    }
+.log-in-button-fb a:visited button
+    {
+        outline: none;
+    }
+.log-in-button-fb img
+    {
+        width: 14px;
+        height: 14px;
+        margin: 0px;
+    }
+
+
+/* DECOR------------------------------------------------------------------------------------------------------------ */
+.div-decor
+    {
+        width: 266px;
+        height: 30px;
+        margin-top: 15px;
+        background-color: white;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+.div-decor hr
+    {
+        border-style: none;
+        border-width: 0px;
+        width: 110px;
+        height: 1px;
+        background-color:#dfe0e2;
+    }
+.div-decor p
+    {
+        width: 46px;
+        height: 30px;
+
+        font-size: 13px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #928BA1;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+/* SIGN IN (continue)------------------------------------------------------------------------------------------------------------ */
+.div-account, .div-fullname, .div-username, .div-password
+    {
+        width: 266px;
+        height: 36px;
+        margin-top: 6px;
+    }
+.div-account input, .div-fullname input, .div-username input, .div-password input
+    {
+        width: 100%;
+        height: 36px;
+        padding: 9px 0px 7px 8px;
+        background-color: #FAFAFA;
+
+        font-size: 12px;
+        color: #928BA1;
+
+        border-radius: 2px;
+        border: 1px solid #dfe0e2;
+    }
+
+
+/* SIGN UP BUTTON------------------------------------------------------------------------------------------------------------ */
+.sign-up-button
+    {
+        width: 266px;
+        height: 30px;
+        margin-top: 12px;
+
+        border: none;
+    }
+.sign-up-button button
+    {
+        width: 266px;
+        height: 30px;
+        background-color: #0095F6;
+        
+        color: white;
+
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+    }
+.sign-up-button a
+    {
+        font-size: 14px;
+        font-weight: 500;
+    }
+.sign-up a:visited button
+    {
+        outline: none;
+    }
+
+
+/* POLICY------------------------------------------------------------------------------------------------------------ */
+.policy
+    {
+        width: 266px;
+        margin-top: 10px;
+    }
+.policy p
+    {
+        width: 266px;
+        margin: 15px auto 10px;
+
+        font-size: 12px;
+        text-align: center;
+        color: #928BA1;
+    }
+.policy a
+    {
+        text-transform: none;
+        font-weight: 600;
+        color: #928BA1;
+    }
+
+
+/* SIGN IN------------------------------------------------------------------------------------------------------------ */
+.sign-in
+    {
+        width: 350px;
+        height: 60px;
+        border: 1px solid #dfe0e2;
+        margin-top: 10px;
+        padding: 10px 0px;
+        background-color: white;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+.sign-in p
+    {
+        width: 266px;
+        height: 30px;
+        margin: auto;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #383838;
+        text-align: center;
+    }
+.sign-in a
+    {
+        font-weight: lighter;
+        color: #0095F6;
+    }
+.sign-in a:visited
+    {
+        color: #0095F6;
+    }
+
+
+/* GET THE APP ICON------------------------------------------------------------------------------------------------------------ */
+.get-the-app
+    {
+        width: 350px;
+        margin-top: 10px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+.get-the-app p
+    {
+        width: 266px;
+        height: 30px;
+        margin-top: 10px;
+
+        font-size: 14px;
+        line-height: 30px;
+        color: #383838;
+        text-align: center;
+    }
+.get-the-app a, .get-the-app img
+    {
+        width: 136px;
+        height: 40px;
+        margin-top: 8px;
+    }

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 7</title>
+
+    <style>
+        body
+            {
+                margin: 0;
+                padding: 0;
+            }
+
+        .container 
+            {   
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+        .header
+            {
+                width: 100%;
+                height: 40px;
+                margin: 10px 15px 10px 15px;
+
+                display: flex;
+            }
+
+        .logo-block, .logo-block-res
+            {
+                width: 80px;
+                height: 40px;
+                margin-right: auto;
+                background-color: mediumspringgreen;
+
+                text-align: center;
+                line-height: 40px;
+                font-size: 20px;
+                font-weight: bolder;
+                text-transform: uppercase;
+                color: white;
+            }
+
+        .menu
+            {
+                width: 250px;
+                height: 40px;
+                margin: auto;
+
+                display: flex;
+            }
+
+        .sign-menu
+            {
+                width: 165px;
+                height: 40px;
+                margin-left: auto;
+
+                display: flex;
+            }
+        
+        .menu-block, .deco
+            {
+                width: 80px;
+                height: 30px;
+                margin: 5px 0 5px 0;
+                background-color: mediumspringgreen;
+
+                text-align: center;
+                line-height: 30px;
+                font-size: 20px;
+                color: white;
+            }
+        .deco
+            {
+                width: 5px;
+            }
+
+        .footer
+            {
+                width: 100%;
+                height: 415px;
+                margin: 7.5px;
+
+                display: flex;
+                flex-wrap: wrap;
+
+                text-align: center;
+                line-height: 400px;
+                font-size: 20px;
+                color: white;
+            }
+        .block1
+            {
+                width: calc((100% - 30px) * 2 / 3);
+                height: 400px;
+                margin: 7.5px;
+                background-color: mediumspringgreen;
+            }
+
+        .block2
+            {
+                width: calc((100% - 30px) * 1 / 3);
+                height: 400px;
+                margin: 7.5px;
+                background-color: mediumspringgreen;
+            }
+
+        /* Res */
+        .header-res
+            {
+                width: 100%;
+                margin: 10px 15px 10px 15px;
+
+                display: none;
+                flex-direction: column;
+            }
+        .banner
+            {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                position: relative;
+            }
+            
+        #menu-list
+            {
+                display: none;
+                width: 100%;
+                margin: 10px 0 0 0;
+                padding: 0;
+            }
+            
+        #menu-list.active
+            {
+                display:block;
+            }
+
+        li
+            {
+                display: block;
+                list-style: none;
+                background-color: mediumspringgreen;
+
+                margin: 1px;
+
+                text-align: center;
+                line-height: 30px;
+                font-size: 20px;
+                color: white;
+            }
+
+        #menu-icon
+            {
+                width: 40px;
+                height: 40px;
+                background-color: mediumspringgreen;
+
+                border-style: none;
+                cursor: pointer;
+
+                text-align: center;
+                line-height: 40px;
+                font-size: 20px;
+                color: white;
+            }
+        #menu-icon:hover 
+            {
+                font-weight: bold;
+                font-size: 24px;
+                background-color: whitesmoke;
+                color: grey;
+            }
+        #menu-icon:active 
+            {
+                background-color: white;
+            }
+        #menu-icon:focus
+            {
+                outline-color:gray;
+            }
+
+        .menu-list
+            {
+                display: none;
+            }
+
+        @media (max-width: 768px) 
+            {
+                .header
+                    {
+                        display: none;
+                    }
+
+                .logo-block-res
+                    {
+                        display: block;
+
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+
+                .header-res
+                    {
+                        display: flex;
+                    }
+
+                .footer
+                    {
+                        margin: 0;
+                    }
+                .block1
+                    {
+                        width: 100%;
+                        margin: 0;
+                    }
+                .block2
+                    {
+                        width: 100%;
+                        margin: 15px 0 0 0;
+                    }
+            }
+            
+      </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="logo-block">Logo</div>
+
+            <div class="menu">
+                    <div class="menu-block">Menu 1</div>
+                    
+                    <div class="deco">|</div>
+
+                    <div class="menu-block">Menu 2</div>
+
+                    <div class="deco">|</div>
+                
+                    <div class="menu-block">Menu 3</div>
+            </div>
+
+            <div class="sign-menu">
+                <div class="menu-block">Login</div>
+                
+                <div class="deco">|</div>
+
+                <div class="menu-block">Register</div>
+            </div>
+        </div>
+
+        <div class="header-res">
+            <div class="banner">
+                <button id="menu-icon" onclick = "hienmenu()">&#9776</button>
+
+                <div class="logo-block-res">Logo</div>
+            </div>
+
+            <ul id="menu-list">
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3</li>
+                <li>Login</li>
+                <li>Register</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <div class="block1">4</div>
+
+            <div class="block2">5</div>
+        </div>
+
+    </div>
+
+    <script>
+        function hienmenu()
+        {
+            var element = document.getElementById('menu-list');
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

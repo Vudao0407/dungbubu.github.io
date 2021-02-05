@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Bai1
+        document.write(`Đếm số nguyên tố trong đoạn [a, b] <br/>`)
+        document.write(`Hàm songuyento(a,b) <br/>`)
+        document.write(`<br/>`)
+        function songuyento(a,b)
+            {
+                
+                var arr = [];
+                for (x=a; x<=b; x++)
+                    {
+                        var flag = false;
+                        if (x<2)
+                            {
+                                flag = false;
+                            }
+                        else if (x==2 || x==3)
+                            {
+                                flag = true;
+                            }
+                        else
+                            {
+                                for (i=2; i<=x/2; i++)
+                                    {
+                                        if (x % i == 0)
+                                            {
+                                                flag = false;
+                                                break;
+                                            }
+                                        else
+                                            {
+                                                flag = true;
+                                            }
+                                    }
+                            }
+
+                        if (flag == true)
+                            {
+                                arr.push(x);
+                            }
+                    }
+                return arr.length;
+            }
+
+        //Bai2
+        document.write(`Hiển thị số ngày của tháng. Với tháng 2 có 29 ngày nếu là năm nhuận, 28 ngày nếu là năm không nhuận <br/>`)
+        document.write(`Hàm demngay(m,y) <br/>`)
+        document.write(`<br/>`)
+        function demngay(m,y)
+            {
+                switch (m) 
+                    {
+                        case 1:
+                            return 31;
+                        case 2:
+                            if ((y % 4 == 0 && y % 100 != 0) || (y % 100 == 0 && y % 400 == 0)) 
+                                {
+                                    return 29;
+                                }
+                            else 
+                                {
+                                    return 28;
+                                }
+                        case 3:
+                            return 31;
+                        case 4:
+                            return 30;
+                        case 5:
+                            return 31;
+                        case 6:
+                            return 30;
+                        case 7:
+                            return 31;
+                        case 8:
+                            return 31;
+                        case 9:
+                            return 30;
+                        case 10:
+                            return 31;
+                        case 11:
+                            return 30;
+                        case 12:
+                            return 31;
+                        default:
+                            return "Error";
+                    }
+            }
+        
+        //Bai4
+        document.write(`Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng <br/>`)
+        document.write(`Hàm addmax(arr,x) <br/>`)
+        document.write(`<br/>`)
+        function addmax(arr,x)
+            {
+                let max = 0;
+                for (let i = 0; i <= arr.length; i++) 
+                    {
+                        if (max < arr[i]) 
+                            {
+                                max = arr[i];
+                            }
+                    }
+                let indexMax = arr.indexOf(max);
+                arr.splice((indexMax + 1), 0, x);
+                return arr;
+            }
+
+        //Bai5
+        document.write(`Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần <br/>`)
+        document.write(`Hàm addandsort(arr,x) <br/>`)
+        document.write(`<br/>`)
+        function addandsort(arr,x)
+            {
+                arr.push(x);
+                arr.sort( function (a, b) {return a - b} );
+                return arr;
+            }
+
+        //Bai6
+        document.write(`Tính tổng các chữ số trong 1 số nguyên dương <br/>`)
+        document.write(`Hàm sumx(x) <br/>`)
+        document.write(`<br/>`)
+        function sumx(x)
+            {
+                let sum = 0;
+                let digit = 0;
+                if (x < 10) 
+                    {
+                        sum = x;
+                        return sum;
+                    }
+                else 
+                    {
+                        while ( x != 0 ) 
+                            {
+                                digit = Math.floor(x % 10);
+                                sum = sum + digit;
+                                x = x / 10;
+                            }
+                        return sum;
+                    }
+            }
+
+        //Bai7
+        document.write(`Kiểm tra tính đối xứng của một số nguyên <br/>`)
+        document.write(`Hàm check(x) <br/>`)
+        document.write(`<br/>`)
+        function check(x)
+            {
+                let num = x;
+                let reverseNum = 0;
+                let checkx;
+                
+                if(num < 10)
+                    {
+                        return("Số đối xứng với chính nó")
+                    }
+                while(num != 0)
+                    {
+                        checkx = Math.floor(num % 10);
+                        reverseNum = Math.floor((reverseNum * 10) + checkx);
+                        num = Math.floor(num/10);
+                    }
+                if(reverseNum == x)
+                    {
+                        return `Số đối xứng`;
+                    }
+                else
+                    {
+                        return `Không phải số đối xứng`;
+                    }
+            }
+
+        //Bai8
+        document.write(`Giải phương trình bậc 2: ax^2 + bx + c = 0 <br/>`)
+        document.write(`Hàm ptrinhbac2(a,b,c) <br/>`)
+        document.write(`<br/>`)
+        function ptrinhbac2(a,b,c)
+            {   
+                if (a==0)
+                    {
+                        return "Phương trình có nghiệm là: " + (-(c/b));
+                    }
+                else if (a!=0 && a+b+c==0)
+                    {
+                        return "Phương trình có nghiệm x1 là: " + "1" + " và x2 là: " + (c/a);
+                    }
+                else if (a!=0 && a-b+c==0)
+                    {
+                        return "Phương trình có nghiệm x1 là: " + "-1" + " và x2 là: " + (-(c/a));
+                    }
+                else
+                    {
+                        let delta = b*b - 4*a*c;
+                        let candelta = Math.sqrt(delta);
+                        if (delta == 0)
+                            {
+                                return "Phương trình có nghiệm kép là: " + (-b/(2*a));
+                            }
+                        else if (delta > 0)
+                            {
+                                return "Phương trình có nghiệm phân biệt với x1 là: " + ((-b + candelta)/(2*a)) + " và x2 là: " + + ((-b - candelta)/(2*a));
+                            }
+                        else
+                            {
+                                return "Phương trình vô nghiệm";
+                            }
+                    }
+            }
+
+        //Bai9
+        document.write(`Vẽ hình chữ nhật rỗng kích thước m, n <br/>`)
+        document.write(`Hàm vehcn(m,n) <br/>`)
+        document.write(`<br/>`)
+        function vehcn(m,n)
+            {   
+                if (m<1 || n<1)
+                    {
+                        return "Mời nhập lại số";
+                    }
+                else
+                    {   
+                        for (i=1; i<=m; i++)
+                            {
+                                if (i==1 || i==m)
+                                    {
+                                        for (y=1; y<=n; y++)
+                                            {
+                                                document.write(`*`);
+                                            }
+                                            document.write(`<br/>`);
+                                    }
+                                else
+                                    {
+                                        for (y=1; y<=n; y++)
+                                            {
+                                                if (y==1 || y==n)
+                                                    {
+                                                        document.write(`*`);
+                                                    }
+                                                else
+                                                    {
+                                                        document.write(`.`);
+                                                    }
+                                            }
+                                            document.write(`<br/>`);
+                                    }
+                            }
+                    }
+            }
+
+        //Bai10
+        document.write(` Vẽ tam giác vuông chiều cao h bằng các dấu * <br/>`)
+        document.write(`Hàm vetgvuong(h) <br/>`)
+        document.write(`<br/>`)
+        function vetgvuong(h)
+            {
+                for (i=1; i<=h; i++)
+                    {
+                        for (y=1; y<=h; y++)
+                            {
+                                if (y>=1 && y<=i)
+                                    {
+                                        document.write(`*`);
+                                    }
+                                else
+                                    {
+                                        document.writeln(`&nbsp`);
+                                    }
+                            }
+                            document.write(`<br/>`);
+                    }
+            }
+
+        //Bai11
+        document.write(` Vẽ tam giác cân ngược bằng các dấu * <br/>`)
+        document.write(`Hàm vetgnguoc(h) <br/>`)
+        document.write(`<br/>`)
+        function vetgnguoc(h)
+            {
+                for (i=1; i<=h; i++)
+                    {
+                        for (y=1; y<=2*h-1; y++)
+                            {
+                                if (y>=i && y<=2*h-i)
+                                    {
+                                        document.write(`*`);
+                                    }
+                                else
+                                    {
+                                        document.writeln(`&nbsp`);
+                                    }
+                            }
+                            document.write(`<br/>`);
+                    }
+            }
+            
+        //Bai12
+        document.write(`Vẽ hình chữ X bằng các dấu * <br/>`)
+        document.write(`Hàm vechux(h) <br/>`)
+        document.write(`<br/>`)
+        function vechux(h)
+            {
+                for (i=1; i<=h; i++)
+                    {
+                        for (y=1; y<=h; y++)
+                            {
+                                if (y==i || y==h-i+1)
+                                    {
+                                        document.write(`*`);
+                                    }
+                                else
+                                    {
+                                        document.writeln(`&nbsp`);
+                                    }
+                            }
+                            document.write(`<br/>`);
+                    }
+            }
+
+        //Bai12A
+        document.write(`Vẽ hình thoi bằng các dấu * <br/>`)
+        document.write(`Hàm vethoi(n) <br/>`)
+        document.write(`<br/>`)
+        function vethoi(n) 
+        {
+            // let a = 0;
+            for (h=1; h<=2*n-1; h++)
+                {
+                for (c=1; c<=2*n-1; c++)
+                    {
+                        if (c==n || (c>=Math.abs(h-n)+1 && c<=2*n-Math.abs(n-h)-1))
+                        {
+                            document.write(`*`);
+                        }
+                        else
+                        {
+                            document.write(`&nbsp&nbsp`);
+                        }
+                    }
+                document.write(`<br/>`);
+                }
+        }
+
+    </script>
+</body>
+</html>

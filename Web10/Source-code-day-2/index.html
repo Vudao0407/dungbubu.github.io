@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- thẻ lang để thay đổi ngôn ngữ -->
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <!-- kiểm tra trang web có zoom được không -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://i.ytimg.com/vi/ETutyldFTbU/maxresdefault.jpg" type="image/x-icon">
+        <title>Document</title>
+        <!-- dùng thẻ link:css -->
+        <link rel="stylesheet" href="main.css">
+
+        <style>
+            /* Cú pháp gọi bộ chọn, trong đó h2 là selector element */
+            h2 
+                {
+                color: white;
+                background-color: red;
+                }
+            /* Cú pháp gọi bộ chọn theo ID, class*/
+            #monday, #tuesday 
+                {
+                color: red;
+                font-size: 30px;
+                }
+            /* Nên dùng cách bên dưới này hơn */
+            .mau-nen
+                {
+                background-color: greenyellow;
+                }
+            .decoration
+                {
+                text-align: center;
+                text-decoration: underline;
+                }
+        </style>
+    </head>
+
+    <body>
+        <!-- cách nhúng inline style css -->
+        <h1 style="color: darkcyan; background-color: rgb(238, 222, 222);">Hom nay la thu 7</h1>
+        <!-- cách áp dụng internal style css -->
+        <h2>Hom nay la cuoi tuan</h2>
+        <h2>Ngay mai la chu nhat</h2>
+        <!-- khi đặt ID không được trùng nhau -->
+        <!-- tên các class cách nhau bởi 1 khoảng trắng -->
+        <p id="monday" class="mau-nen decoration">Thu 2</p>
+        <p id="tuesday" class="mau-nen">Thu 3</p>
+        <p id="wendsday" class="mau-nen">Thu 4</p>
+
+        <!-- cách áp dụng external style css -->
+        <a href="#">Day la the a</a>
+    </body>
+</html>

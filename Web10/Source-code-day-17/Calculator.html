@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Online</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/GNOME_Calculator_icon_2018.svg/1200px-GNOME_Calculator_icon_2018.svg.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c185f616a6.js" crossorigin="anonymous"></script>
+
+    <style>
+        body 
+            {
+                font-family: "Source Sans Pro",sans-serif;
+                margin: 0;
+                padding: 80px 0 10px;
+                background-image: url(https://www.chromethemer.com/download/hd-wallpapers/mountain-landscape-3840x2160.jpg);
+            }
+
+        .calculator
+            {
+                font-size: 28px;
+                margin: 0 auto;
+                width: 288px;
+                height: 465px;
+                background-color: white;
+                border-radius: 6px;
+                border: 2px solid #262626;
+            }
+
+        .viewer 
+            {
+                color: #242424;
+                float: left;
+                line-height: 80px;
+                text-align: right;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 200px;
+                height: 72px;
+            }
+        .mini-bar
+            {
+                height: 20px;
+                margin-top: 5px;
+                padding: 0 10px;
+
+                display: flex;
+                justify-content: space-between;
+
+                font-size: 12px;
+            }
+            .theme 
+                {
+                    cursor: pointer;
+                }
+
+        button
+            {
+                border: 0;
+                float: left;
+                margin: 6px;
+                width: 60px;
+                height: 60px;
+                border-radius: 20%;
+
+                font-size: 20px;
+                line-height: 60px;
+                text-align: center;
+            }
+        button:focus
+            {
+                outline: none;
+            }
+
+        .ops
+            {
+                background-color: #FE9505;
+                color: white;
+            }
+        .num, .equals
+            {
+                background-color: #343434;
+                color: white;
+            }
+        .func, .clear
+            {
+                background-color: #eeeeee;
+                color: #262626;
+            }
+
+
+        
+        /* Thay đổi theme */
+        .calculator.change-style
+            {
+                background-color: #000000;
+            }
+        .change-style .viewer, .change-style .mini-bar
+            {
+                color: white;
+            }
+    </style>
+</head>
+
+
+<body>
+    <div class="bg-img"></div>
+    <div id="calculator" class="calculator">
+        <div class="mini-bar">
+            <div class="time">
+                <span class="hour">24</span>
+                : 
+                <span class="minutes">06</span>
+            </div>
+            <div class="theme">
+                <span onclick="theme()">Theme</span>
+            </div>
+            <div class="battery">
+                <span class="batterypercent">96</span>
+                %
+            </div>
+        </div>
+        <button id="clear" class="clear">C</button>
+        <div id="viewer" class="viewer">Mời nhập số</div>
+
+        <button class="func" data-func="deg">Deg</button>
+        <button class="func" data-func="rad">Rad</button>
+        <button class="ops" data-ops="can">&#8730;</button>
+        <button class="ops" data-ops="luythua">&#8743;</button>
+
+        <button class="num" data-num="7">7</button>
+        <button class="num" data-num="8">8</button>
+        <button class="num" data-num="9">9</button>
+        <button class="ops" data-ops="plus"><i class="fas fa-plus" aria-hidden="true"></i></button>
+
+        <button class="num" data-num="4">4</button>
+        <button class="num" data-num="5">5</button>
+        <button class="num" data-num="6">6</button>
+        <button class="ops" data-ops="minus"><i class="fas fa-minus" aria-hidden="true"></i></button>
+
+        <button class="num" data-num="1">1</button>
+        <button class="num" data-num="2">2</button>
+        <button class="num" data-num="3">3</button>
+        <button class="ops" data-ops="times"><i class="fas fa-times" aria-hidden="true"></i></button>
+
+        <button class="num" data-num="0">0</button>
+        <button class="num" data-num=".">.</button>
+        <button class="equals" id="equals"><i class="fas fa-equals" aria-hidden="true"></i></button>
+        <button class="ops" data-ops="divided by"><i class="fas fa-divide" aria-hidden="true"></i></button>
+    </div>
+
+    <script>
+        var nums = document.getElementsByClassName("num"),
+            ops = document.getElementsByClassName("ops"),
+            func = document.getElementsByClassName("func"),
+            theNum = "", // Khai báo một biến để lưu và hiển thị kết quả
+            oldNum = "", // Khai báo một biến để lưu số đang hiển thị lại (sau khi ấn nút phép tính)
+            resultNum, // Biến hiển thị kết quả sau khi tính
+            operatorFunc,
+            operator; // Khai báo một biến để lưu phép tính lại
+
+        // Click số
+        var setNum = function () // Khai báo một hàm dùng để lưu và hiển thị các số được click chọn
+            {
+                if (resultNum) // Kiểm tra xem màn hình có đang hiển thị kết quả không
+                    { 
+                        theNum = this.getAttribute("data-num");
+                        resultNum = "";
+                    } 
+                else 
+                    { 
+                        theNum += this.getAttribute("data-num");
+                    }
+                viewer.innerHTML = theNum;
+            }
+
+        for (let i = 0; i < nums.length; i++) // Khai báo một vòng lặp cứ nhấn nút là chạy function hiển thị
+            {
+                nums[i].onclick = setNum;
+            }
+
+        // Click phép tính ----------------------------------------------------------------------------------------------------
+        var setOps = function () // Khai báo một hàm dùng để lưu và hiển thị các số được click chọn
+            {
+                operator = this.getAttribute("data-ops");
+                oldNum = theNum;
+                theNum = "";
+            }
+        
+        for (let i = 0; i < ops.length; i++) // Khai báo một vòng lặp cứ nhấn nút là chạy function hiển thị
+            {
+                ops[i].onclick = setOps;
+            }
+
+        // Click dấu "=" ------------------------------------------------------------------------------------------------------
+        var displayNum = function() 
+            {
+                // Chuyển các chuỗi thu được thành dạng số học
+                oldNum = parseFloat(oldNum);
+                theNum = parseFloat(theNum);
+
+                switch (operator) 
+                    {
+                        case "plus":
+                            resultNum = oldNum + theNum;
+                            break;
+
+                        case "minus":
+                            resultNum = oldNum - theNum;
+                            break;
+
+                        case "times":
+                            resultNum = oldNum * theNum;
+                            break;
+
+                        case "divided by":
+                            resultNum = oldNum / theNum;
+                            break;
+
+                        case "can":
+                            resultNum = Math.pow(oldNum,1/(theNum));
+                            break;
+
+                        case "luythua":
+                            resultNum = Math.pow(oldNum,theNum);
+                            break;
+
+                        default:
+                            resultNum = theNum;
+                    }
+
+                viewer.innerHTML = resultNum; // Hiển thị kết quả
+
+                // Khởi tạo lại giá trị các biến
+                oldNum = 0;
+                theNum = resultNum;
+            }
+        equals.onclick = displayNum;
+
+        // Click hàm tính nhanh ------------------------------------------------------------------------------------------------------
+        var displayNumFunc = function ()
+            {
+                operatorFunc = this.getAttribute("data-func");
+                theNum = parseFloat(theNum);
+                switch (operatorFunc) 
+                    {
+                        case "deg":
+                            resultNum = theNum * 1.57;
+                            break;
+
+                        case "rad":
+                            resultNum = theNum / 1.57;
+                            break;
+
+                        default:
+                            resultNum = theNum;
+                    }
+                viewer.innerHTML = resultNum;
+                theNum = resultNum;
+            }
+
+        for (let i = 0; i < func.length; i++)
+            {
+                func[i].onclick = displayNumFunc;
+            }
+
+        // Click dấu "C" ----------------------------------------------------------------------------------------------------
+        var clearViewer = function() 
+            {
+                viewer.innerHTML = "Mời nhập số";
+                oldNum = 0;
+                theNum = "";
+            }
+        clear.onclick = clearViewer;
+
+
+
+        //Set Time:
+        let show_hour = document.querySelector(".hour");
+        let show_minutes = document.querySelector(".minutes");
+
+        function updateTime() 
+            {
+                let now = new Date();
+                let hour = now.getHours();
+                let minutes = now.getMinutes();
+
+                if (minutes < 10) 
+                    {
+                        minutes = "0" + minutes;
+                    }
+
+                if (hour < 10) 
+                    {
+                        hour = "0" + hour;
+                    }
+
+                show_hour.innerText = hour;
+                show_minutes.innerText = minutes;
+            }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+
+
+        //Set Battery Level
+        navigator.getBattery().then(function(battery) 
+            {
+                var batterypercent = battery.level;
+                document.querySelector(".batterypercent").textContent = batterypercent * 100;
+            });
+
+
+
+        //Change Theme:
+        function theme() 
+            {
+                document.querySelector(".calculator").classList.toggle("change-style");
+            }
+    </script>
+</body>
+</html>

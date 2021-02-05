@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Học phần 3 - Buổi 1</title>
+  </head>
+  <body>
+    <script>
+      //Bai1
+      document.write(`Bài 1: Đếm tổng số nguyên dương trong đoạn (a,b) <br/>`);
+      document.write(`Hàm tongduong(a,b) <br/>`);
+      document.write(`<br/><br/>`);
+      function tongduong(a,b)
+        {
+            return "Tổng bằng: " + (tong=(a+b)/2*(Math.abs(a-b)-1));
+            // Math.abs(a-b)-1 để lấy số số hạng trong khoảng a đến b
+            // biết (a+b) luôn bằng (a+1)+(b-1)
+            // nếu số số hạng là lẻ thì số ở giữa luôn bằng (a+b)/2
+        }
+
+
+
+      //Bai2
+      document.write(`Bài 2: Đếm tổng ước (a) <br/>`);
+      document.write(`Hàm tonguoc(a) <br/>`);
+      document.write(`<br/><br/>`);
+      function tonguoc(a)
+        {
+            let tonguoc = 0;
+            // let uoc = []
+
+            if (a <= 0)
+                {
+                    return "Mời nhập lại số nguyên dương";
+                }
+
+            else
+                {
+                    for (let i=0; i<=a; i++)
+                        {
+                            if ( a % i == 0 )
+                                {
+                                    // uoc.push(i);
+                                    // console.log(uoc);
+                                    tonguoc += i;
+                                }
+                        }
+                }
+                
+            return "Tổng ước bằng: " + tonguoc;
+        }
+
+
+
+      //Bai3
+      document.write(`Bài 3: Kiểm tra số nguyên tố (a) <br/>`);
+      document.write(`Hàm kiemtrasonguyento(a) <br/>`);
+      document.write(`<br/><br/>`);
+      function kiemtrasonguyento(a)
+        {
+            let tonguoc = 0;
+
+            if (a <= 1)
+                {
+                    return false;
+                }
+
+            else
+                {
+                    for (let i=1; i<=a; i++)
+                        {
+                            if (a % i == 0)
+                                {
+                                    tonguoc += i;
+                                }
+                        }
+                    if (tonguoc == a+1)
+                        {
+                            return true;
+                        }
+                    else
+                        {
+                            return false;
+                        }
+                }
+        }
+
+
+
+      //Bai4
+      document.write(`Bài 4: Tính tổng số nguyên tố nhỏ hơn hoặc bằng (n) <br/>`);
+      document.write(`Hàm tongsonguyento(n) <br/>`);
+      document.write(`<br/><br/>`);
+      function tongsonguyento(n)
+        {
+            tong = 0;
+            for (let j=0; j<=n; j++) 
+                {
+                    if (kiemtra(j)) 
+                        {
+                            tong+=j;
+                        }
+                }
+            return tong;
+        }
+
+      function kiemtra(a)
+        {
+            if (a<2) 
+                {
+                    return false;
+                }
+
+            for (let i=2; i<=Math.sqrt(a); i++) 
+                {
+                    if (a % i == 0) 
+                        {
+                            return false;
+                        }
+                }
+
+            return true;
+        }
+
+
+
+      //Bai5
+      document.write(`Bài 5: Chuyển 1 chuỗi gồm nhiều từ thành chuỗi mới viết hoa các chữ cái đầu tiên của mỗi từ <br/>`);
+      document.write(`Hàm viethoa(a) <br/>`);
+      document.write(`<br/><br/>`);
+      function viethoa(a)
+        {
+            let str;
+            str = a.split(" ");
+
+            let str2 = [];
+            for (i=0; i<str.length; i++)
+                {
+                    str2.push(str[i].charAt(0).toUpperCase() + str[i].substring(1).toLowerCase());
+                }
+
+            return str2.join(" ");
+        }
+
+
+
+      //Bai6
+      document.write(`Bài 6: Chuyển 1 chuỗi gồm nhiều từ thành dạng Spinal case <br/>`);
+      document.write(`Hàm spinalcase(a) <br/>`);
+      document.write(`<br/><br/>`);
+      function spinalcase(a)
+        {
+            return a.replaceAll(' ','-').toLowerCase();
+        }
+
+
+
+      //Bai7
+      document.write(`Bài 7: Kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không <br/>`);
+      document.write(`Hàm doixung(a) <br/>`);
+      document.write(`<br/><br/>`);
+      function doixung(a)
+        {
+            let str;
+            let flag;
+            str = a.replaceAll(' ','').toLowerCase();
+
+            for (i=0; i<str.length; i++)
+                {
+                    if (str[i] != str[str.length-i-1])
+                        {
+                            return false;
+                        }
+                    else
+                        {
+                            flag = true;
+                        }
+                }
+
+            if (flag == true)
+                {
+                    return true;
+                }
+        }
+    </script>
+  </body>
+</html>

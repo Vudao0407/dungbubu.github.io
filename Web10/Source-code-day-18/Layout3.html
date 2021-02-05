@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 3</title>
+
+    <style>
+        body
+            {
+                margin: 0;
+                padding: 0;
+            }
+
+        .container 
+            {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 30px 20px 20px 20px;
+            }
+
+        .containerL
+            {
+                width: calc(100% / 3 * 2 - 20px);
+                height: 430px;
+                margin-right: 5px;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                text-align: center;
+                line-height: 200px;
+                font-size: 40px;
+                color: white;
+            }
+
+        .containerR
+            {
+                width: calc(100% / 3 * 1 + 15px);
+
+                text-align: center;
+                line-height: 800px;
+                font-size: 40px;
+                color: white;
+            }
+
+        .blockL 
+            {
+                width : calc(100% / 2 - 15px);
+                height: 200px;
+                background-color: mediumspringgreen;
+                margin: 0 15px 15px 0;
+            }
+            
+        .blockR
+            {
+                width : 100%;
+                height: 800px;
+                background-color: mediumspringgreen;
+            }
+  
+        @media (max-width: 768px) 
+            {
+                .container
+                    {
+                        margin: 15px 15px 0 15px;
+                    }
+                .containerL
+                    {
+                        width: 100%;
+                        margin: 0;
+                    }
+                .blockL
+                    {
+                        width : calc((100% - 15px) / 2);
+                    }
+                .blockL:nth-child(2n)
+                    {
+                        margin-right: 0;
+                    }
+
+                .containerR
+                    {
+                        width: 100%;
+                        margin: 0;
+                    }
+                .blockR
+                    {
+                        margin-top: 5px;
+                    }
+                    
+            }
+      </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="containerL">
+            <div class="blockL">1</div>
+  
+            <div class="blockL">2</div>
+    
+            <div class="blockL">3</div>
+    
+            <div class="blockL">4</div>
+        </div>
+
+        <div class="containerR">
+            <div class="blockR">5</div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function demo()
+            {
+                var x=10;
+                let y=5;
+
+                console.log(x);
+                console.log(y);
+            }
+
+        let person1 =
+            {
+                name:'Dũng',
+                age:24,
+                hobby: 'Draw',
+                run: () => {console.log('run')}
+                //person1["run"]()
+            }
+        person1["address"]="Việt Nam"
+        for (const key in person1)
+            {
+                console.log(key, person1[key]);
+            }
+
+        // var person2 = 
+        //     {
+        //         firstName: "John",
+        //         lastName : "Doe",
+        //         id       : 5566,
+        //         fullName : function() {return this.firstName + " " + this.lastName;}
+        //     };
+
+        // const student =
+        //     {
+        //         firstName:'Tèo',
+        //         lastName: 'Nguyễn',
+        //         age: 20
+        //     }
+        // for (const key in student)
+        //     {
+        //         console.log(student[key]);
+        //     }
+
+        let numbers = [1,2,3,4,5,6,7,8,9,10]
+        let names = ["Quỳnh", "Việt", "Dũng","Đạt", "Dũng"]
+        let checks = [true, true, false, true, false, false]
+        // Truy cập phần tử theo index
+        numbers [3]
+
+        console.log(numbers.length)
+        console.log(names.length)
+        console.log(checks.length)
+
+        //Thêm phần tử vào cuối mảng
+        numbers.push(246)
+        numbers.push(222)
+        numbers.pop()
+
+        //Thêm phần tử vào đầu mảng
+        numbers.unshift('Hoa')
+        numbers.unshift('Hải')
+        numbers.unshift('Đường')
+        numbers.shift()
+
+        //Tìm phần tử trong mảng
+        console.log("Index of values 'Dũng'", names.indexOf('Dũng'));
+        
+        //In ra màn hình các đối tượng trong mảng
+        for (let index=0; index < names.length; index++)
+            {
+                console.log(names[index]);
+            }
+        for (let item of checks)
+            {
+                console.log(item)
+            }
+
+        //Truyền vào một mảng và tính tổng
+        function tinhtong(arrs)
+            {
+                let tong=0;
+                 for (let i of arrs)
+                    {
+                        tong = tong + i;
+                    }
+                return tong;
+            }
+
+        //Truyền vào một mảng và tính tổng bình phương
+        function tinhtongbp(arrs)
+            {
+                let tongbp=0;
+                 for (let m of arrs)
+                    {
+                        //tongbp = tongbp + m*m;
+                        tongbp = tongbp + Math.pow(m,2);
+                    }
+                return tongbp;
+            }
+
+        //Map
+        const mangSo = [2, 3, 4, 5];
+        const doubles = mangSo.map(number => number * 2);
+
+        //Map viết cách 2
+        // let brrs;
+        // for (let items of mangSo)
+        //     {
+        //         brrs.push(item*2);
+        //     }
+
+        //Mảng số nguyên bất kỳ, dùng Map tạo mảng mới là số dư của mảng cũ chia cho 2
+        const mangGoc = [1,3,5,7,9];
+        const mangMoi = mangGoc.map(number => number % 2);
+
+        //Tìm số chẵn trong mảng với filter
+        function timSoChan(crrs)
+            {
+                let soChan;
+                soChan = crrs.filter(number => (number % 2) == 0);
+                return soChan;
+            }
+
+        //Tìm tên
+        function timTen(drrs)
+            {
+                let tenD;
+                tenD = drrs.filter(number => (number.substring(0,1) == "D" || number.substring(0,1) == "d" ));
+                return tenD;
+            }
+        //Tìm tên
+        function timTen2(drrs,kytu)
+            {
+                let tenD;
+                tenD = drrs.filter(number => (number.substring(0,1) == kytu));
+                return tenD;
+            }
+
+    </script>
+</body>
+</html>

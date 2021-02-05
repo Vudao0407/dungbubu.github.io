@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico" type="image/x-icon">
+    <title>Facebook Register</title>
+
+    <style>
+        *
+            {
+                margin: 0px;
+                box-sizing: border-box;
+            }
+        body   
+            {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: #F0F2F5;
+            }
+        .shadow
+            {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+                border-radius: 4px;
+                background-color: #fff;
+            }
+        .icon-close
+            {
+                font-size: 20px;
+                color: #b1aaaa;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            } 
+        /* POP-UP------------------------------------------------------------------------ */
+        .background
+            {
+                width: 100%;
+                height: 100%;
+
+                /* background-color: rgba(255, 255, 255, .8); */
+                background-color: #F0F2F5;
+
+                position: fixed;
+                top: 0px;
+                left: 0px;
+
+                z-index: 1;
+                /* display: none; */
+            }
+        .container2
+            {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                z-index: 2;
+                /* display: none; */
+            }
+        /* ------------------------------------------------------------------------ */
+        .register-content1
+            {
+                width: 500px;
+                margin-bottom: 4px;
+                padding: 20px 14px;
+                background-color: white;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        .div-content
+            {
+                width: 100%;
+                height: 46px;
+            }
+        .div-content h2
+            {
+                width: 100%;
+            }
+        .div-content p
+            {
+                width: 100%;
+                margin-top: 10px;
+            }
+        /* ------------------------------------------------------------------------ */
+        .register-content2
+            {
+                width: 500px;
+                /* height: 400px; */
+                padding: 0 10px;
+                background-color: white;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        .div-name 
+            {
+                width: 100%;
+                margin-top: 20px;
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        .div-lastname, .div-firstname
+            {
+                width: 49%;
+                height: 46px;
+            }
+        .div-lastname input, .div-firstname input
+            {
+                width: 100%;
+                height: 40px;
+                padding-left: 18px;
+
+                border-radius: 6px;
+                border: 1px solid #dfe0e2;
+            }
+        /* ------------------------------------------------------------------------ */
+        .div-username2, .div-password2
+            {
+                width: 100%;
+                height: 46px;
+                margin-top: 10px;
+            }
+        .div-username2 input, .div-password2 input
+            {
+                width: 100%;
+                height: 40px;
+                padding-left: 18px;
+
+                border-radius: 6px;
+                border: 1px solid #dfe0e2;
+            }
+        /* ------------------------------------------------------------------------ */
+        h3
+            {   
+                width: 100%;
+                margin: 10px 0px;
+                padding-left: 5px;
+
+                font-size: 14px;
+                font-weight: 500;
+                color: #606770;
+            }
+        .div-DOB
+            {
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }  
+        .div-day, .div-month, .div-year
+            {
+                width: 32%;
+                height: 46px;
+            } 
+        .div-day select, .div-month select, .div-year select
+            {
+                width: 100%;
+                height: 40px;
+                padding-left: 18px;
+
+                border-radius: 6px;
+                border: 1px solid #dfe0e2;
+            }
+        /* ------------------------------------------------------------------------ */
+        .div-gender
+            {
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }  
+        .div-male, .div-female, .div-other-male
+            {
+                width: 32%;
+                height: 46px;
+                padding-left: 18px;
+                padding-right: 18px;
+
+                border-radius: 6px;
+                border: 1px solid #dfe0e2;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        /* ------------------------------------------------------------------------ */
+        .button-create2
+            {
+                width: 70%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border: none;
+            }
+        .button-create2 button
+            {
+                width: 100%;
+                height: 50px;
+                background-color: #42B72A;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                border-radius: 6px;
+                border: none;
+            }
+        /* ------------------------------------------------------------------------ */
+        .note2
+            {
+                width: 100%;
+                margin-top: 10px;
+            }
+        .note2 p
+            {
+                width: 100%;
+                text-align: justify;
+                font-size: 14px;
+            }
+        /* ------------------------------------------------------------------------ */
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container2">
+        <!-- ------------------------------------------------------------------------------------ -->
+        <div class="register-content1 shadow">
+            <div class="content">
+                <h2>Đăng ký</h2>
+                <p>Nhanh chóng và dễ dàng</p>
+            </div>
+            <a href="BTVN-B8-Clone-FB.html"><i class="far fa-times-circle icon-close"></i></a>
+        </div>
+        <!-- ------------------------------------------------------------------------------------ -->
+        <div class="register-content2 shadow">
+            <div class="div-name">
+                <div class="div-lastname">
+                    <form action="#" method="POST">
+                        <input id="lastname" type="text" placeholder="Họ" name="lastname" required>
+                    </form>
+                </div>  
+                <div class="div-firstname">
+                    <form action="#" method="POST">
+                        <input id="firstname" type="text" placeholder="Tên" name="firstname" required>
+                    </form>
+                </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="div-username2">
+                <form action="#" method="POST">
+                    <input id="username2" type="text" placeholder="Số di động hoặc email" name="username2" required>
+                </form>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="div-password2">
+                <form action="#" method="POST">
+                    <input id="password2" type="text" placeholder="Mật khẩu mới" name="password2" required>
+                </form>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <h3>Ngày sinh</h3>
+            <div class="div-DOB">
+                <div class="div-day">
+                    <select name="day" id="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="27">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </div>
+                <div class="div-month">
+                    <select name="month" id="month">
+                        <option value="Jan">Tháng 1</option>
+                        <option value="Feb">Tháng 2</option>
+                        <option value="Mar">Tháng 3</option>
+                        <option value="Apr">Tháng 4</option>
+                        <option value="May">Tháng 5</option>
+                        <option value="Jun">Tháng 6</option>
+                        <option value="Jul">Tháng 7</option>
+                        <option value="Aug">Tháng 8</option>
+                        <option value="Sep">Tháng 9</option>
+                        <option value="Oct">Tháng 10</option>
+                        <option value="Nov">Tháng 11</option>
+                        <option value="Dec">Tháng 12</option>
+                    </select>
+                </div>
+                <div class="div-year">
+                    <select name="year" id="year">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                    </select>
+                </div>
+            </div>
+            <h3>Giới tính</h3>
+            <div class="div-gender">
+                <div class="div-male"><label for="male">Nam</label><input id="male" type="radio" name="gender"></div>
+                <div class="div-female"><label for="female">Nữ</label><input id="female" type="radio" name="gender"></div>
+                <div class="div-other-male"><label for="other-male">Khác</label><input id="other-male" type="radio" name="gender"></div>
+            </div>
+            <div class="note2">
+                <p>Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản, Chính sách dữ liệu và
+                Chính sách cookie của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi
+                qua SMS và hủy nhận bất kỳ lúc nào.</p>
+            </div>
+            <div class="button-create2"><button type="submit">Đăng ký</button></div>
+        </div>
+        <!-- ------------------------------------------------------------------------------------ -->
+    </div>
+</body>
+</html>

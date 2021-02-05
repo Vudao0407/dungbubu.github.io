@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .wrapper_image{
+        position: relative;
+    }
+    .wrapper_image:before{
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        display: none;
+    }
+    .wrapper_image:hover:before{
+        display: block;
+    }
+</style>
+<body>
+    <div class="gallery-row margin-bottom-0px">
+        <div class="wrapper_image">
+            <img src="./IG-IMG/Pic1.jpg" alt="Pic1" title="Instagram picture"/>
+         </div>
+    </div>
+</body>
+</html>

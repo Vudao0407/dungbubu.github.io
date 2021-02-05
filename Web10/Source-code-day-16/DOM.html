@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">
+        =Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptates impedit doloremque officiis odit
+        dolores labore at. Tenetur, officia sit numquam ipsum rem, vitae id quas architecto voluptas est animi?
+        
+    </p>
+    <p id="p2">
+        =Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptates impedit doloremque officiis odit
+        dolores labore at. Tenetur, officia sit numquam ipsum rem, vitae id quas architecto voluptas est animi?
+        =Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptates impedit doloremque officiis odit
+        dolores labore at. Tenetur, officia sit numquam ipsum rem, vitae id quas architecto voluptas est animi?
+    </p>
+    <p id="p3">
+        =Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptates impedit doloremque officiis odit
+        dolores labore at. Tenetur, officia sit numquam ipsum rem, vitae id quas architecto voluptas est animi?
+        =Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptates impedit doloremque officiis odit
+        dolores labore at. Tenetur, officia sit numquam ipsum rem, vitae id quas architecto voluptas est animi?
+        =Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptates impedit doloremque officiis odit
+        dolores labore at. Tenetur, officia sit numquam ipsum rem, vitae id quas architecto voluptas est animi?
+    </p>
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+    <script>
+        document.write(`function <b>changeColor()</b>: Đổi màu chữ của 3 đoạn văn theo thứ tự xanh, vàng, đỏ <br/>`)
+        document.write(`function <b>changeBgColor(color)</b>: Thay đổi màu nền của trang thành màu color <br/>`)
+        document.write(`function <b>copyContent(paragraph1, paragraph2)</b>: Thay đổi nội dung của đoạn văn paragraph1 thành giống nội dung của đoạn văn paragraph2 (tham số truyền vào là id của 2 đoạn văn hoặc thứ tự của đoạn văn) <br/>`)
+        document.write(`function <b>changeFontSize(x)</b> : Thay đổi kích thước font chữ của cả 3 đoạn văn thành x pixels (x là một số nguyên) <br/>`)
+        document.write(`function <b>increaseFontSize(paragraph)</b>: Tăng kích thước font chữ của đoạn văn mong muốn (tham số truyền vào là id đoạn văn hoặc thứ tự đoạn văn) lên 1 pixel so với kích thước hiện tại, kích thước tăng lên không được vượt quá 30 pixels <br/>`)
+        document.write(`function <b>decreaseFontSize(paragraph)</b>: Giảm kích thước font chữ của đoạn văn mong muốn (tham số truyền vào là id đoạn văn hoặc thứ tự đoạn văn) xuống 1 pixels so với kích thước hiện tại, kích thước giảm xuống không vượt quá 10 pixels <br/>`)
+
+        function changeColor() 
+            {
+                let p1 = document.getElementById("p1");
+                let p2 = document.getElementById("p2");
+                let p3 = document.getElementById("p3");
+
+                p1.style.color = "blue";
+                p2.style.color = "yellow";
+                p3.style.color = "red";
+            }
+
+        function changeBgColor(color) 
+            {
+                document.body.style.background = color;
+            }
+
+        function copyContent(paragraph1, paragraph2) 
+            {
+                let noidung1 = document.getElementById(paragraph1);
+                let noidung2 = document.getElementById(paragraph2);
+                noidung1.innerHTML = noidung2.innerHTML;
+            }
+
+        function changeFontSize(x) 
+            {
+                document.body.style.fontSize = x + "px";
+            }
+
+        function increaseFontSize(paragraph) 
+            {
+                let noidung3 = document.getElementById(paragraph);
+                let noidung3style = window.getComputedStyle(noidung3).getPropertyValue("font-size");
+                let noidung3sizeHienTai = parseFloat(noidung3style);
+
+                if (noidung3sizeHienTai < 30)
+                    {
+                        noidung3.style.fontSize = noidung3sizeHienTai + 1 + "px";
+                    }
+                else
+                    {
+                        noidung3.style.fontSize = noidung3sizeHienTai + "px";
+                    }
+                console.log(noidung3sizeHienTai);
+            }
+
+        function decreaseFontSize(paragraph) 
+            {
+                let noidung3 = document.getElementById(paragraph);
+                let noidung3style = window.getComputedStyle(noidung3).getPropertyValue("font-size");
+                let noidung3sizeHienTai = parseFloat(noidung3style);
+
+                if (noidung3sizeHienTai > 10)
+                    {
+                        noidung3.style.fontSize = noidung3sizeHienTai - 1 + "px";
+                    }
+                else
+                    {
+                        noidung3.style.fontSize = noidung3sizeHienTai + "px";
+                    }
+                console.log(noidung3sizeHienTai);
+            }
+
+    </script>
+</body>
+
+</html>

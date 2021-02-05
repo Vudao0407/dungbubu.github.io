@@ -1,0 +1,84 @@
+html 
+    {
+        font-size: 62.5%;
+    }
+body
+    {
+        font-family: 'Montserrat', sans-serif;
+        /* font-family: 'Raleway', sans-serif; */
+        font-size: 1.4rem;
+        color: #b4b4b4;
+        cursor: url('./Images/cursor-img1.png'), auto;	/* Tùy chỉnh con trỏ chuột */
+        
+        /* Copy CSS từ .theme-bg */
+        background: linear-gradient(135deg, #843ACC 0%, #9E3BBE 40%, #C63AA6 80%), #f6f6f6;
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-size: 100% 36rem, 100%;
+    }
+h2
+    {
+        font-weight: 800;   
+        font-size: 4.2rem;
+        margin-bottom: 1.5rem;
+    }
+a
+    {
+        color: inherit;
+    }
+
+
+
+/* Đổi màu Nền và màu chữ theo từng Theme */
+.theme-bg
+    {
+        color: white;
+        background: linear-gradient(135deg, #843ACC 0%, #9E3BBE 50%, #C63AA6 100%);
+    }
+.theme-tx
+    {
+        background: -webkit-linear-gradient(#843ACC, #9E3BBE, #C63AA6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    
+/* Đổ bóng nhiều cấp độ (Neumorphism) */
+.bxsd-concave:hover
+    {
+        background: white;
+        box-shadow: inset 4px 4px 8px #ededed,
+                    inset -4px -4px 2px white;
+
+        /* Copy CSS từ .theme-tx */
+        background: -webkit-linear-gradient(#843ACC, #9E3BBE, #C63AA6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: translateX(2.4px);
+
+        transition: all 0.2s ease-in-out;
+
+        cursor: url('./Images/cursor-img2.png'), auto !important;
+    }
+.bxsd-convex
+    {
+        border-color: transparent;
+        box-shadow:  4px 4px 4px #d2d2d260,
+                    0px 0px 8px #ffffff;
+    }
+.bxsd-convex:hover
+    {
+        /* color: currentColor; */
+        color: white;
+        animation: pulse 1.2s infinite cubic-bezier(0.66, 0, 0, 1);
+
+        cursor: url('./Images/cursor-img2.png'), auto !important;
+    }
+@keyframes pulse 
+    {
+        to 
+        {
+            box-shadow: 0 0 0 28px rgba(252, 154, 236, 0);
+        }
+    }

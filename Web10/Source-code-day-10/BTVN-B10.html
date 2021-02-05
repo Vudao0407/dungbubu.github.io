@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN B10</title>
+</head>
+<body>
+    <script>
+        document.write(`Bài tập 1. <br/>`)
+        document.write(`Viết hàm chuyển đổi nhiệt độ từ độ C sang độ F <br/>`)
+        document.write(`Hàm FunctionCtoF(x) và FunctionFtoC(x) <br/>`)
+        document.write(`<br/>`)
+        function FunctionCtoF(x)
+            {
+                if (x >= 0)
+                    {
+                        F=(1.8*x+32);
+                        return `${F}\xB0F`;
+                    }
+                else
+                    {
+                        return ("Mời nhập lại");
+                    }
+            }
+        function FunctionFtoC(x)
+            {
+                if (x >= 0)
+                    {
+                        C=(x-32)/1.8;
+                        return `${C}\xB0C`;
+                    }
+                else
+                    {
+                        return ("Mời nhập lại");
+                    }
+            }
+        // ----------------------------------------------------------------------
+        document.write(`Bài tập 2. <br/>`)
+        document.write(`Viết function tính thế kỷ của 1 năm, biết thế kỷ thứ nhất tính từ năm 1 đến 100 <br/>`)
+        document.write(`Hàm FunctionTime(x) <br/>`)
+        document.write(`<br/>`)
+        function FunctionTime(x)
+            {
+                if (x > 0)
+                    {
+                        Time=(x/100);
+                        return Math.ceil(Math.abs(Time));
+                    }
+                else
+                    {
+                        return ("Mời nhập lại");
+                    }
+            }
+        // ----------------------------------------------------------------------
+        document.write(`Bài tập 3. <br/>`)
+        document.write(`Cho 1 chuỗi dài hơn 15 ký tự. Viết 1 function cắt chuỗi, lấy ra 10 ký tự đầu tiên và thêm vào dấu "..." ở cuối chuỗi <br/>`)
+        document.write(`Hàm FunctionSlice(x) <br/>`)
+        document.write(`<br/>`)
+        function FunctionSlice(x)
+            {
+                let str = String(x);
+                let res = str.substring(0,10);
+                // return res + "...";
+                console.log(res + "...");
+            }
+        // ----------------------------------------------------------------------
+        document.write(`Bài tập 4. <br/>`)
+        document.write(`Viết 1 function có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên <br/>`)
+        document.write(`Hàm FunctionUpper(x) <br/>`)
+        document.write(`<br/>`)
+        function FunctionUpper(x)
+            {
+                let str = String(x);
+                let res = str.substring(0,1).toUpperCase()+str.substring(1).toLowerCase();
+                return res;
+            }
+        // ----------------------------------------------------------------------
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+*
+    {
+        margin: 0px;
+        /* Không bị chồng các phần đệm lên nhau */
+        box-sizing: border-box;
+    }
+
+.Header
+    {
+        width: 88%;
+        height: 240px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: antiquewhite;
+    }
+.Navigation-Bar
+    {
+        width: 88%;
+        height: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+        background-color: aliceblue;
+    }
+.Content
+    {
+        width: 88%;
+        height: 800px;
+        margin: auto;
+        margin-bottom: 10px;
+        background-color: whitesmoke;
+        padding: 10px;
+    }
+.Sidebar
+    {
+        width: 30%;
+        height: 100%;
+        background-color: azure;
+        float: left;
+    }
+.Article
+    {
+        width: 70%;
+        height: 100%;
+        background-color: navajowhite;
+        float: left;
+        /* clear: both; để xóa hết float */
+    }
+.Footer
+    {
+        width: 88%;
+        height: 240px;
+        margin: auto;
+        margin-bottom: 10px;
+        background-color: antiquewhite;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+.Footer-Devide-3
+    {
+        width: 20%;
+        height: 100%;
+        margin-right: 20px;
+        background-color: palegreen;
+
+    }

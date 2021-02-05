@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+
+    <style>
+        body
+            {
+                margin: 0;
+                padding: 0;
+            }
+
+        .container 
+            {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 15px 20% 0 20%;
+
+                text-align: center;
+                line-height: 400px;
+                font-size: 40px;
+                color: white;
+            }
+
+        .block 
+            {
+                width : calc(100% / 3 - 10px);
+                height: 400px;
+                background-color: mediumspringgreen;
+                margin: 15px 15px 0 0;
+            }
+        .margin-right-0
+            {
+                margin-right: 0;
+            }
+  
+        @media (max-width: 768px) 
+            {
+                .container
+                    {
+                        margin: 15px 20px 0 20px;
+                    }
+                    
+                .block 
+                    {
+                        width: 100%;
+                        margin: 15px 0 0 0;
+                    }
+                    
+            }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block">1</div>
+  
+        <div class="block">2</div>
+  
+        <div class="block margin-right-0">3</div>
+  
+        <div class="block">4</div>
+  
+        <div class="block">5</div>
+
+        <div class="block margin-right-0">6</div>
+
+        <div class="block" >7</div>
+  
+        <div class="block" >8</div>
+
+        <div class="block margin-right-0">9</div>
+      </div>
+</body>
+</html>

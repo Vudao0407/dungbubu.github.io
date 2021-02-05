@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ------------------------------------------------------------------------ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN-B6</title>
+
+    <style>
+        *
+            {
+                margin: 0px;
+                box-sizing: border-box;
+            }
+        body
+            {
+                background-color: rgb(236, 235, 235);
+            }
+        .shadow
+            {
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+                background-color: #fff;
+            }
+        /* ------------------------------------------------------------------------ */
+        .BT1
+            {
+                width: 30%;
+                height: 200px;
+                margin: 40px auto;
+                background-color: rgb(97, 97, 221);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                transition-property: background-color border-radius;
+                transition-duration: 1s;
+                transition-timing-function: ease-in-out;
+            }
+        .BT1:hover
+            {
+                border-radius: 80px;
+                background-color: rgb(89, 187, 89);
+            }
+        /* ------------------------------------------------------------------------ */
+        .BT2
+            {
+                width: 1000px;
+                height: 1000px;
+                margin: 40px auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        .BT2 img
+            {
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+
+                display: flex;
+
+                transition-property: all;
+                transition-duration: 100ms;
+            }
+        .Anh1:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh2:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh3:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh4:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh5:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh6:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh7:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh8:hover img
+            {
+                transform: scale(1.1);
+            }
+        .Anh9:hover img
+            {
+                transform: scale(1.1);
+            }
+        /* ------------------------------------------------------------------------ */
+        .BT3 img
+            {
+                width: 300px;
+                margin: 40px auto;
+
+                display: flex;
+
+                animation-name: heart-beat;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        @keyframes heart-beat
+            {
+                10%
+                    {
+                        transform: scale(1.3);
+                    }
+                20%
+                    {
+                        transform: scale(1.1);
+                    }
+                30%
+                    {
+                        transform: scale(1.3);
+                    }
+                40%
+                    {
+                        transform: scale(1.1);
+                    }
+                50%
+                    {
+                        transform: scale(1.3);
+                    }
+                60%
+                    {
+                        transform: scale(1.1);
+                    }
+            }
+        /* ------------------------------------------------------------------------ */
+        .BT4
+            {
+                width: 80%;
+                height: 500px;
+                margin: auto;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                background-color: rgb(233, 227, 227);
+            }
+            .Anh11, .Anh22, .Anh33
+            {
+                width: 30%;
+                height: 300px;
+                margin: auto;
+
+                display: flex;
+                flex-direction: column;
+                background-color:white;
+
+                transition-property: all;
+                transition-duration: 2s;
+            }
+        figure  
+            {
+                width: 100%;
+                height: 80%;
+                overflow: hidden;
+            }
+        img 
+            {
+                width: 100%;
+                transition-property: all;
+                transition-duration: 2s;
+                object-fit: cover;
+            }
+        figcaption 
+            {
+                height: 20%;
+                font-size: 20px;
+                font-weight: 500;
+                color: gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition-property: all;
+                transition-duration: 2s;
+            }
+
+        /* Ảnh 11 */
+        .Anh11:hover img
+            {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+        .Anh11:hover figcaption
+            {
+                color:teal;
+            }
+
+        /* Ảnh 22 */
+        .Anh22:hover
+            {
+                border-radius: 100px;
+            }
+        .Anh22:hover figure
+            {
+                border-radius: 100px;
+            }
+        .Anh22:hover figcaption
+            {
+                color:navy;
+            }
+
+         /* Ảnh 33 */
+        .Anh33:hover
+            {
+                transform: rotate(90deg);
+            }
+        .Anh33:hover figcaption
+            {
+                color:tomato;
+            }
+        
+    </style>
+
+</head>
+<!-- ------------------------------------------------------------------------ -->
+<body>
+    <div class="BT1"><p style="font-size: 60px; color: white;">LOGIN</p></div>
+    <div class="BT2">
+        <div class="Anh1"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh2"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh3"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh4"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh5"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh6"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh7"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh8"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+        <div class="Anh9"><img src="https://bloomandgrow.in/wp-content/uploads/2020/07/dood-e1595296329165.jpeg" alt=""></div>
+    </div>
+    <div class="BT3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" alt=""></div>
+    <div class="BT4">
+        <div class="Anh11 shadow">
+            <figure>
+                <img src="https://www.sanxuatsotay.com.vn/wp-content/uploads/2016/07/f05a6d01dc4123fa31e3aeacbd9e27f5.jpg" alt="Ảnh Instagram" title="Doodle">
+            </figure>
+            <figcaption>Source:Google</figcaption>
+        </div>
+        <div class="Anh22 shadow">
+            <figure>
+                <img src="https://www.sanxuatsotay.com.vn/wp-content/uploads/2016/07/f05a6d01dc4123fa31e3aeacbd9e27f5.jpg" alt="Ảnh Instagram" title="Doodle">
+            </figure>
+            <figcaption>Source:Google</figcaption>
+        </div>
+        <div class="Anh33 shadow">
+            <figure>
+                <img src="https://www.sanxuatsotay.com.vn/wp-content/uploads/2016/07/f05a6d01dc4123fa31e3aeacbd9e27f5.jpg" alt="Ảnh Instagram" title="Doodle">
+            </figure>
+            <figcaption>Source:Google</figcaption>
+    </div>
+</body>
+<!-- ------------------------------------------------------------------------ -->
+</html>

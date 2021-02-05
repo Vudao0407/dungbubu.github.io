@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body
+            {
+                font-family: 'Roboto', sans-serif;
+                font-weight: bolder;
+            }
+        table, td, th, .table-2
+            {
+                border: 1px solid gray;
+                border-collapse: collapse;
+            }
+        .table-2 .no-border
+            {   
+                width: 10px;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                /* border-collapse: collapse; */
+            }
+        table, .table-2
+            {
+                margin:20px auto;
+            }
+        caption
+            {
+                text-align: center;
+                padding: 10px 0px;
+                /* caption-side: bottom; */
+            }
+        td
+            {
+                padding: 2px 10px;
+                width: 80px;
+                height: 20px;
+                text-align: center;
+            }
+        .table-2 td
+            {
+                padding: 2px 10px;
+                width: 110px;
+                height: 20px;
+                text-align: center;
+            }
+        th
+            {
+                padding: 2px 10px;
+                width: 90px;
+                height: 20px;
+                text-align: center;
+            }
+        .span-red
+            {
+                color: #F60C1A;
+            }
+        .background-grey
+            {
+                background-color: #e3e7e7;
+            }
+        .big-red
+            {
+                color: #F60C1A;
+                font-size: 28px;
+            }
+
+        /* Đổ màu dùng seudo */
+        /* tr:nth-child(4)
+            {
+                background-color: #e3e7e7;
+            } */
+    </style>
+</head>
+<body>
+    <table>
+        <caption style="background-color: #FFF1BF;">
+            <span class="span-red">Kết quả xổ số miền Bắc</span> ngày 25/09/2020
+        </caption>
+        
+        <tr>
+            <td colspan="16"><span class="span-red">3QV - 9QV - 4QV - 12QV - 13QV - 14QV</span></td>
+        </tr>
+
+        <tr>
+            <th>Đặc biệt</th>
+            <td colspan="12" class="big-red">98018</td>
+        </tr>
+
+        <tr>
+            <th class="background-grey">Giải nhất</th>
+            <td class="background-grey" colspan="12">47391</td>
+        </tr>
+
+        <tr>
+            <th>Giải nhì</th>
+            <td colspan="6">46411</td>
+            <td colspan="6">34513</td>
+        </tr>
+
+        <tr>
+            <th class="background-grey" rowspan="2">Giải ba</th>
+            <td class="background-grey" colspan="4">02594</td>
+            <td class="background-grey" colspan="4">91533</td>
+            <td class="background-grey" colspan="4">20134</td>
+        </tr>
+        <tr>
+            <td class="background-grey" colspan="4">73795</td>
+            <td class="background-grey" colspan="4">31040</td>
+            <td class="background-grey" colspan="4">19707</td>
+        </tr>
+
+        <tr>
+            <th>Giải tư</th>
+            <td colspan="3">6049</td>
+            <td colspan="3">1001</td>
+            <td colspan="3">4034</td>
+            <td colspan="3">5340</td>
+        </tr>
+
+        <tr>
+            <th class="background-grey" rowspan="2">Giải năm</th>
+            <td class="background-grey" colspan="4">0915</td>
+            <td class="background-grey" colspan="4">8701</td>
+            <td class="background-grey" colspan="4">5417</td>
+        </tr>
+        <tr>
+            <td class="background-grey" colspan="4">9493</td>
+            <td class="background-grey" colspan="4">1237</td>
+            <td class="background-grey" colspan="4">7007</td>
+        </tr>
+
+        <tr>
+            <th>Giải sáu</th>
+            <td colspan="4">672</td>
+            <td colspan="4">078</td>
+            <td colspan="4">318</td>
+        </tr>
+
+        <tr>
+            <th class="background-grey">Giải bảy</th>
+            <td class="background-grey big-red" colspan="3">02</td>
+            <td class="background-grey big-red" colspan="3">77</td>
+            <td class="background-grey big-red" colspan="3">78</td>
+            <td class="background-grey big-red" colspan="3">65</td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <table class="table-2">
+        <tr>
+            <th style="text-align: center; background-color: #D8E3E5;">Đầu</th>
+            <td style="text-align: left; background-color: #D8E3E5;">Đuôi</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right; background-color: #D8E3E5;">Đầu</td>
+            <th style="text-align: center; background-color: #D8E3E5;">Đuôi</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">0</th>
+            <td style="text-align: left;">1,1,2,7,7</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">4,4</td>
+            <th style="text-align: center; color: #F60C1A;">0</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">1</th>
+            <td style="text-align: left;">1,3,5,7,<span style="color: #F60C1A;">8</span>,8</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">0,0,1,9</td>
+            <th style="text-align: center; color: #F60C1A;">1</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">2</th>
+            <td style="text-align: left;"></td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">0,7</td>
+            <th style="text-align: center; color: #F60C1A;">2</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">3</th>
+            <td style="text-align: left;">3,4,4,7</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">1,3,9</td>
+            <th style="text-align: center; color: #F60C1A;">3</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">4</th>
+            <td style="text-align: left;">0,0,9</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">3,3,9</td>
+            <th style="text-align: center; color: #F60C1A;">4</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">5</th>
+            <td style="text-align: left;"></td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">1,6,9</td>
+            <th style="text-align: center; color: #F60C1A;">5</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">6</th>
+            <td style="text-align: left;">5</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;"></td>
+            <th style="text-align: center; color: #F60C1A;">6</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">7</th>
+            <td style="text-align: left;">2,7,8,8</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">0,0,1,3,7</td>
+            <th style="text-align: center; color: #F60C1A;">7</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">8</th>
+            <td style="text-align: left;"></td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;"><span style="color: #F60C1A;">1</span>,1,7,7</td>
+            <th style="text-align: center; color: #F60C1A;">8</th>
+        </tr>
+
+        <tr>
+            <th style="text-align: center; color: #F60C1A;">9</th>
+            <td style="text-align: left;">1,3,4,5</td>
+            <td style="text-align: center;" class="no-border"> </td>
+            <td style="text-align: right;">4</td>
+            <th style="text-align: center; color: #F60C1A;">9</th>
+        </tr>
+        
+    </table>
+</body>
+</html>
