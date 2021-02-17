@@ -1,3 +1,4 @@
+/* --GENERAL-- ------------ */
 html
   {
     font-size: 62.5%;
@@ -12,6 +13,7 @@ body
     background-color: #7051EF;
   }
 
+/* --HEADER-- ------------ */
 .header-42-46
   {
     font-family: 'Poppins', sans-serif;
@@ -43,6 +45,7 @@ body
     color: #7051EF;
   }
 
+/* --PARAGRAPH-- ------------ */
 .paragraph-14-24
   {
     font-family: 'Montserrat', sans-serif;
@@ -50,6 +53,7 @@ body
     line-height: 2.4rem;
   }
 
+/* --DECOR-- ------------ */
 .decor
   {
     margin-right: 2rem;
@@ -59,6 +63,7 @@ body
     background-color: #7051EF;
   }
 
+/* --BUTTON-- ------------ */
 .btn
   {
     padding: 1.6rem 4.2rem;
@@ -113,6 +118,7 @@ body
     color: #7051EF;
   }
 
+/* --BREAK-- ------------ */
 .break-8
   {
     height: 0.8rem;
@@ -145,7 +151,9 @@ body
   {
     height: 24rem;
   }
-.break-328
+.break-328 /* for QUOTE only */
   {
     height: 32.8rem;
+    box-shadow: inset 6rem 6rem 6rem #6549d7,
+                inset -6rem -6rem 6rem #7b59ff;
   }
