@@ -1,0 +1,302 @@
+/* --Vertical navigation bar-- ------ */
+.vertical-navbar
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+  }
+
+.logo-MD
+  {
+    width: 4.4rem;
+    height: 4.4rem;
+    margin: 2.8rem;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+.navbar
+  {
+    margin: 3.3rem !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    transform: rotate(-90deg);
+  }
+.navbar-item
+  {
+    margin-left: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.nav-link
+  {
+    margin: 0 0 0.6rem 0 !important;
+    padding: 0 !important;
+    color: #B2B2B2;
+  }
+.decor-mini
+  {
+    width: 4rem;
+    height: 0.4rem;
+    background-color: #7051EF;
+    opacity: 0;
+  }
+
+.navbar-item:hover >.nav-link, 
+.active .nav-link
+  {
+    color: #7051EF;
+  }
+.navbar-item:hover >.decor-mini, 
+.active .decor-mini
+  {
+    opacity: 100;
+  }
+
+/* --Landing Page-- ------ */
+.landing-page
+  {
+    width: 100%;
+    height: 100vh;
+    padding-left: 10rem;
+    background-image: url("./Images/Home/LandingPageBackground.png");
+    background-color: #FAFAFA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.landing-page-bg
+  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.menu-social
+  {
+    padding-top: 2.8rem;
+    display: flex;
+    flex-direction: row;
+  }
+.social-icon
+  {
+
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 2rem;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+.landing-page-content
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+.landing-page-content .btn-primary:hover, 
+.landing-page-content .btn-secondary:hover
+  {
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3rem 3rem rgb(0 0 0 / 16%);
+    opacity: .85;
+    transition: 
+    transform .2s cubic-bezier(.02,.01,.47,1),opacity .2s cubic-bezier(.02,.01,.47,1),box-shadow .4s cubic-bezier(.02,.01,.47,1);
+  }
+
+.credit-info
+  {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+  }
+.credit-item
+  {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+/* --Background 1-- ------ */
+.bg1 
+  {
+    padding-left: 10rem;
+    background-image: url("./Images/Home/BG1.png");
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 20px 40px 6px rgba(0, 0, 0, 0.2);
+  }
+
+    /* --Expertise-- ------ */
+    .expertise-menu
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+    .expertise-item
+      {
+        padding: 0 2.6rem 6rem 2.6rem;
+        max-width: 25.6rem;
+        height: 35rem;
+        background-color: #FFFFFF;
+        box-shadow: 4px 6px 12px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    .expertise-item-img
+      {
+        margin-top: -6rem;
+        width: 14rem;
+        height: 14rem;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+    .expertise-item:hover
+      {
+        background-color: #7051EF;
+      }
+    .expertise-item:hover >span
+      {
+        color: #FFFFFF;
+      }
+
+    /* --Projects-- ------ */
+    .grid-container
+      {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: auto auto auto;
+      }
+    .grid-item
+      {
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+/* --Quote-- ------ */
+.quote
+  {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 5rem);
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10rem);
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+/* --Background 2-- ------ */
+.bg2
+  {
+    padding-left: 10rem;
+    background-image: url("./Images/Home/BG2.png");
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px -20px 40px 6px rgba(0, 0, 0, 0.2);
+  }
+
+    /* --Profile-- ------ */
+    .profile-menu, .profile-credit-info
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    .profile-img
+      {
+        width: 44rem;
+        height: 34.2rem;
+        object-fit: cover;
+        overflow: hidden;
+      }
+    .profile-content
+      {
+        width: 53.2rem;
+      }
+
+    /* --Contact-- ------ */
+    .contact-menu
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    .contact-info
+      {
+        width: 44rem;
+      }
+    .contact-form
+      {
+        padding: 6rem 7.2rem;
+        width: 53.2rem;
+        border-radius: 8px;
+        background-color: #FAFAFA;
+      }
+    .form-control, .contact-input
+      {
+        padding: 0;
+        margin: 0;
+        height: calc(2.4rem + 1px);
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: #B2B2B2;
+        background-color: #FAFAFA;
+        border: none;
+        border-bottom: 1px solid #B2B2B2;
+        border-radius: 0;
+      }
+    .fix-area
+      {
+        height: calc(8rem + 2.4rem + 1px);
+        resize: none;
+        text-align: start;
+      }
+
+/* --Footer-- ------ */
+.footer
+  {
+    padding-left: 10rem;
+    background-color: #EFEBFF;
+  }
+.footer-menu
+  {
+    padding: 2.8rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */  
+@media (min-width: 1200px)
+  {
+    .container
+      {
+        width: 108.4rem;
+        padding: 0 !important;
+      }
+  }
