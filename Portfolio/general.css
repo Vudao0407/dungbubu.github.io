@@ -1,0 +1,246 @@
+/* --GENERAL-- ------------ */
+html
+  {
+    font-size: 62.5%;
+  }
+body
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #303030;
+    background-color: #7051EF;
+  }
+
+
+/* --HEADER-- ------------ */
+.header-42-46
+  {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 4.2rem;
+    line-height: 4.6rem;
+  }
+.header-32-36
+  {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+.header-24-30
+  {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: #7051EF;
+  }
+.header-16-24
+  {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #7051EF;
+  }
+
+
+/* --PARAGRAPH-- ------------ */
+.paragraph-14-24
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+
+/* --DECOR-- ------------ */
+.decor
+  {
+    margin-right: 2rem;
+    width: 7.2rem;
+    height: 0.6rem;
+    display: inline-block;
+    background-color: #7051EF;
+  }
+
+
+/* --BUTTON-- ------------ */
+.btn
+  {
+    padding: 1.6rem 4.2rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+.btn-primary, .btn-primary:hover
+  {
+    background-color: #7051EF;
+    border: 2px solid #7051EF;
+    color: #FFFFFF;
+  }
+.btn-secondary, .btn-secondary:hover
+  {
+    background-color: #FFFFFF;
+    border: 2px solid #7051EF;
+    color: #7051EF;
+  }
+
+.btn-CTA
+  {
+    margin: 2.8rem;
+    padding: 1rem 3.2rem;
+    border: none;
+    border-radius: 22px;
+    display: inline;
+    white-space:nowrap;
+    transform: rotate(-90deg);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+.btn-CTA, .btn-CTA:hover
+  {
+    background-color: #7051EF;
+    color: #FFFFFF;
+  }
+
+.btn-more, .btn-more:hover
+  {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    border: 2px solid #7051EF;
+    color: #7051EF;
+  }
+
+
+/* --BREAK-- ------------ */
+.break-8
+  {
+    height: 0.8rem;
+  }
+.break-20
+  {
+    height: 2rem;
+  }  
+.break-28
+  {
+    height: 2.8rem;
+  } 
+.break-40
+  {
+    height: 4rem;
+  }
+.break-60
+  {
+    height: 6rem;
+  }
+.break-80
+  {
+    height: 8rem;
+  }
+.break-120
+  {
+    height: 12rem;
+  }
+.break-240
+  {
+    height: 24rem;
+  }
+.break-328 /* for QUOTE only */
+  {
+    height: 32.8rem;
+    box-shadow: inset 6rem 6rem 6rem #6549d7,
+                inset -6rem -6rem 6rem #7b59ff;
+  }
+
+
+/* --Vertical navigation bar-- ------ */
+.vertical-navbar
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 100vh;
+    padding-bottom: 4.8rem; /* !!!!!! Help !!!!!! */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+  }
+
+.logo-MD
+  {
+    width: 4.4rem;
+    height: 4.4rem;
+    margin: 2.8rem;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+.navbar
+  {
+    margin: 3.3rem !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    transform: rotate(-90deg);
+  }
+.navbar-item
+  {
+    margin-left: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.nav-link
+  {
+    margin: 0 0 0.6rem 0 !important;
+    padding: 0 !important;
+    color: #B2B2B2;
+  }
+.decor-mini
+  {
+    width: 4rem;
+    height: 0.4rem;
+    background-color: #7051EF;
+    opacity: 0;
+  }
+
+.navbar-item:hover >.nav-link, 
+.active .nav-link
+  {
+    color: #7051EF;
+  }
+.navbar-item:hover >.decor-mini, 
+.active .decor-mini
+  {
+    opacity: 1;
+  }
+
+
+/* --Footer-- ------ */
+.footer
+  {
+    padding-left: 10rem;
+    background-color: #EFEBFF;
+  }
+.footer-menu
+  {
+    padding: 2.8rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
