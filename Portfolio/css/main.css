@@ -18,6 +18,21 @@ a:hover
   }
 
 
+/* --FONTS-- ------------ */
+@font-face
+  {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+    font-weight: 600;
+  }
+@font-face
+  {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+    font-weight: 400;
+  }
+
+
 /* --HEADER-- ------------ */
 .header-42-46
   {
@@ -160,6 +175,10 @@ a:hover
   {
     height: 16rem;
   }
+.break-200
+  {
+    height: 20rem;
+  }
 .break-240
   {
     height: 24rem;
@@ -205,14 +224,14 @@ a:hover
     flex-flow: row-reverse nowrap;
     transform: rotate(-90deg);
   }
-.navbar-item
+.menu-item
   {
     margin-left: 2.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-.nav-link
+.menu-title
   {
     margin: 0 0 0.6rem 0 !important;
     padding: 0 !important;
@@ -225,13 +244,13 @@ a:hover
     background-color: rgba(112,81,239,0); /* #7051EF */
   }
 
-.navbar-item:hover >.nav-link, 
-.active .nav-link
+.menu-item:hover >.menu-title,
+.menu-title.active
   {
     color: #7051EF;
   }
-.navbar-item:hover >.decor-mini, 
-.active .decor-mini
+.menu-item:hover >.decor-mini,
+.decor-mini.active
   {
     background-color: rgba(112,81,239,1); /* #7051EF */
   }
