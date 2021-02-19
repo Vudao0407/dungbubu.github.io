@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DungBu • Portfolio</title>
+    <link rel="shortcut icon" href="./Images/Favicon.jpg" type="image/x-icon">
+
+    <!-- Boootstrap CSS library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"/>
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@@400;500;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font Montserrat -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet"/>
+
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- CSS Riêng -->
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+
+  <body>
+    <header> <!-- //////////// //////////// //////////// //////////// -->
+      <!-- Navbar - General Css------------------------------------------------------------------------------------------------ -->
+      <div class="vertical-navbar">
+        <div class="logo-MD"><img src="./Images/Logo.png" alt="MD Logo"></div>
+
+        <nav class="navbar">
+          <div class="navbar-item active">
+            <a class="nav-link" href="#">home</a>
+            <div class="decor-mini"></div>
+          </div>
+          <div class="navbar-item">
+            <a class="nav-link" href="#">services</a>
+            <div class="decor-mini"></div>
+          </div>
+          <div class="navbar-item">
+            <a class="nav-link" href="#">projects</a>
+            <div class="decor-mini"></div>
+          </div>
+          <div class="navbar-item">
+            <a class="nav-link" href="#">about</a>
+            <div class="decor-mini"></div>
+          </div>
+        </nav>
+
+        <button type="button" class="btn-CTA">Contact me</button>
+      </div>
+
+      <!-- Toggle Navbar (RESPONSIVE Only) - General Css------------------------------------------------------------------------------------------------ -->
+      <div class="btn-toggle">
+        <div class="burger-menu" onclick="toggleMenuShow()"></div>
+        <div class="menu-toggle">
+          <span>home</span>
+          <div class="break-20"></div>
+          <span>services</span>
+          <div class="break-20"></div>
+          <span>projects</span>
+          <div class="break-20"></div>
+          <span>about me</span>
+        </div>
+        <div class="blackscreen"></div>
+      </div>
+    </header> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <main> <!-- //////////// //////////// //////////// //////////// -->
+      <!-- Landing Page------------------------------------------------------------------------------------------------ -->
+      <div class="landing-page">
+        <div class="container landing-page-bg">
+          <div class="menu-social">
+            <a class="social-icon" target="_blank" href="https://www.facebook.com/NguyenManhDung1996/"><img src="./Images/Home/Icon-FB.png" alt=""></a>
+            <a class="social-icon" target="_blank" href="https://www.m.me/NguyenManhDung1996/"><img src="./Images/Home/Icon-Mess.png" alt=""></a>
+            <a class="social-icon" target="_blank" href="https://www.instagram.com/dungbubu/"><img src="./Images/Home/Icon-IG.png" alt=""></a>
+          </div>
+
+          <div class="landing-page-content">
+            <div style="display: flex; flex-direction: row; align-items: center;">
+              <div class="decor"></div>
+              <span>Hi there</span>
+            </div>
+            <div class="break-8"></div>
+            <span class="header-42-46">I am a Freelancer</span>
+            <div class="break-28"></div>
+            <span>Welcome to my Portfolio Website</span>
+            <div class="break-28"></div>
+            <div>
+              <button type="button" class="btn btn-primary" style="margin-right: 2rem;">My projects</button>
+              <button type="button" class="btn btn-secondary">About me</button>
+            </div>
+          </div>
+    
+          <div class="credit-info">
+            <div class="credit-item">
+              <span class="header-16-24">Email Address</span>
+              <span class="paragraph-14-24">nguyenmanhdung1996@gmail.com</span>
+            </div>
+            <div class="credit-item">
+              <span class="header-16-24">Messenger</span>
+              <span class="paragraph-14-24">m.me/NguyenManhDung1996</span>
+            </div>
+            <div class="credit-item">
+              <span class="header-16-24">Phone number</span>
+              <span class="paragraph-14-24">(+84) - 346 - 189 - 173</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background 1------------------------------------------------------------------------------------------------ -->
+      <div class="bg1">
+
+        <div class="container">
+          <!-- My Expertise -->
+          <div class="break-240"></div>
+          <div class="decor"></div>
+          <div class="break-8"></div>
+          <span class="header-32-36">my expertise</span>
+          <div class="break-20"></div>
+          <span>I Have Worked With A Number Of Clients.</span>
+
+          <div class="break-120"></div>
+          <div class="expertise-menu">
+            <div class="expertise-item">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise1.png" alt="Expertise: Presentation"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">presentation</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise2.png" alt="Expertise: Web Design"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">web design</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise3.png" alt="Expertise: UI / UX Design"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">ui/ux design</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+            <div class="expertise-item">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise4.png" alt="Expertise: HTML & CSS"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">html, css</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+          </div>
+
+          <!-- My Projects -->
+          <div class="break-240"></div>
+          <div class="decor"></div>
+          <div class="break-8"></div>
+          <span class="header-32-36">my projects</span>
+          <div class="break-20"></div>
+          <span>A Latest Creative Works In Design.</span>
+
+          <div class="break-60"></div>
+          <div class="grid-container">
+            <div class="grid-item projects-item1">
+              <a href="#"><div class="grid-item-hover-bg"></div></a>
+              <img src="./Images/Home/Projects1.png" alt="Project 1">
+              <div class="grid-item-name header-16-24" style="color: #FFFFFF;">#PP01</div>
+            </div>
+            <div class="grid-item projects-item2">
+              <a href="#"><div class="grid-item-hover-bg"></div></a>
+              <img src="./Images/Home/Projects2.png" alt="Project 2">
+              <div class="grid-item-name header-16-24" style="color: #FFFFFF;">#PP02</div>
+            </div>
+            <div class="grid-item projects-item3">
+              <a href="#"><div class="grid-item-hover-bg"></div></a>
+              <img src="./Images/Home/Projects3.png" alt="Project 3">
+              <div class="grid-item-name header-16-24" style="color: #FFFFFF;">#PP03</div>
+            </div>
+            <div class="grid-item projects-item4">
+              <a href="#"><div class="grid-item-hover-bg"></div></a>
+              <img src="./Images/Home/Projects4.png" alt="Project 4">
+              <div class="grid-item-name header-16-24" style="color: #FFFFFF;">#PP04</div>
+            </div>
+            <div class="grid-item projects-item5">
+              <a href="#"><div class="grid-item-hover-bg"></div></a>
+              <img src="./Images/Home/Projects5.png" alt="Project 5">
+              <div class="grid-item-name header-16-24" style="color: #FFFFFF;">#PP05</div>
+            </div>
+            <div class="grid-item projects-item6">
+              <a href="#"><div class="grid-item-hover-bg"></div></a>
+              <img src="./Images/Home/Projects6.png" alt="Project 6">
+              <div class="grid-item-name header-16-24" style="color: #FFFFFF;">#PP06</div>
+            </div>
+          </div>
+
+          <div class="break-60"></div>
+          <button type="button" class="btn btn-more">All my projects</button>
+          <div class="break-120"></div>
+        </div>
+      </div>
+
+      <!-- Quote------------------------------------------------------------------------------------------------ -->
+      <div class="break-328"></div>
+      <div class="quote">
+        <span>I prefer drawing to talking.</span>
+        <div class="break-8"></div>
+        <span>Drawing is faster and leaves less room for lies.</span>
+        <div class="break-8"></div>
+        <span>(Le Corbusier)</span>
+      </div>
+
+      <!-- Background 2------------------------------------------------------------------------------------------------ -->
+      <div class="bg2">
+
+        <div class="container">
+          <!-- My Profile -->
+          <div class="break-120"></div>
+          <div class="decor"></div>
+          <div class="break-8"></div>
+          <span class="header-32-36">my profile</span>
+          <div class="break-20"></div>
+          <span>Main Informations About Me And What I Love To Do.</span>
+          
+          <div class="break-60"></div>
+          <div class="profile-menu">
+            <div class="profile-img"><img src="./Images/Home/Profile.png" alt="Profile picture"></div>
+            <div class="profile-content">
+              <span class="header-24-30">Hello, I’m Dungbubu</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer 
+                sit amet iaculis ex, ut tempus lorem. Sed malesuada augue ante, 
+                sit amet pharetra eros sagittis lobortis. Phasellus tincidunt vel 
+                mauris in tincidunt. Maecenas fermentum non felis id consequat. 
+                Aliquam pulvinar convallis ante. Integer in erat diam.</span>
+              <div class="break-28"></div>
+              <div class="profile-credit-info">
+                <div>
+                  <span class="header-16-24">Name:</span> <span>Nguyen Manh Dung</span>
+                  <div class="break-8"></div>
+                  <span class="header-16-24">Dob:</span> <span>24 / 06/ 1996</span>
+                </div>
+                <div>
+                  <span class="header-16-24">Location:</span> <span>HaNoi, Vietnam</span>
+                  <div class="break-8"></div>
+                  <span class="header-16-24">Freelancer:</span> <span>Available</span>
+                </div>
+              </div>
+              <div class="break-28"></div>
+              <button type="button" class="btn btn-secondary">More about me</button>
+            </div>
+          </div>
+
+          <!-- My Contact -->
+          <div class="break-240"></div>
+          <div class="decor"></div>
+          <div class="break-8"></div>
+          <span class="header-32-36">my contact</span>
+          <div class="break-20"></div>
+          <span>Feel Free To Contact Me Any Time.</span>
+          
+          <div class="break-60"></div>
+          <div class="contact-menu">
+            <div class="contact-info">
+              <span class="header-24-30">Let's talk about everything!</span>
+              <div class="break-20"></div>
+              <span>If you like my work, feel free to contact me.
+                Here below are my contact.
+                Let's talk about what you want,
+                I am ready to create it for you. Thank you.</span>
+              <div class="break-20"></div>
+              <span class="header-16-24" style="color: #303030;">Phone:</span>
+              <div>
+                <img src="./Images/Home/Contact-icon1.png" alt="Phone icon">
+                <span>(+84) - 346 - 189 - 713</span>
+              </div>
+
+              <div class="break-8"></div>
+              <span class="header-16-24" style="color: #303030;">Email:</span>
+              <div>
+                <img src="./Images/Home/Contact-icon2.png" alt="Email icon">
+                <span>nguyenmanhdung1996@gmail.com</span>
+              </div>
+
+              <div class="break-8"></div>
+              <span class="header-16-24" style="color: #303030;">Messenger:</span>
+              <div>
+                <img src="./Images/Home/Contact-icon3.png" alt="Messenger icon">
+                <span>m.me/NguyenManhDung1996</span>
+              </div>
+            </div>
+            <div class="contact-form">
+              <input class="form-control contact-input" type="text" placeholder="Name">
+              <div class="break-20"></div>
+              <input class="form-control contact-input" type="text" placeholder="Email">
+              <div class="break-20"></div>
+              <input class="form-control contact-input" type="number" placeholder="Phone">
+              <div class="break-20"></div>
+              <textarea class="form-control" id="fix-area" rows="4">Message</textarea>
+              <div class="break-80"></div>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+          <div class="break-80"></div>
+        </div>
+      </div>
+    </main> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+    
+    <footer> <!-- //////////// //////////// //////////// //////////// -->
+      <!-- Footer - General Css------------------------------------------------------------------------------------------------ -->
+      <div class="footer">
+        <div class="container">
+          <div class="footer-menu">
+            <span>Map</span>
+            <span style="margin-left: 2rem;">Style Guide</span>
+            <span style="margin-left: 2rem;">Liscense</span>
+          </div>
+        </div>
+      </div>
+    </footer> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- Bootstrap + Ajax + Jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"></script>
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- Javascript ------------------------------------------------------------------------------------------------ -->
+    <script>
+      function toggleMenuShow() 
+        {
+          document.querySelector(".burger-menu").classList.toggle("toggle-show");
+          document.querySelector(".menu-toggle").classList.toggle("toggle-show");
+          document.querySelector(".blackscreen").classList.toggle("toggle-show");
+        }
+    </script>
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+  </body>
+</html>

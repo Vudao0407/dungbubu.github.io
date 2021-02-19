@@ -172,7 +172,7 @@ body
     left: 0;
     width: 10rem;
     height: 100vh;
-    padding-bottom: 4.8rem; /* !!!!!! Help !!!!!! */
+    padding-bottom: 6rem; /* !!!!!! Help !!!!!! */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,8 +194,7 @@ body
     margin: 3.3rem !important;
     padding: 0 !important;
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
+    flex-flow: row-reverse nowrap;
     transform: rotate(-90deg);
   }
 .navbar-item
@@ -215,8 +214,7 @@ body
   {
     width: 4rem;
     height: 0.4rem;
-    background-color: #7051EF;
-    opacity: 0;
+    background-color: rgba(112,81,239,0); /* #7051EF */
   }
 
 .navbar-item:hover >.nav-link, 
@@ -227,7 +225,7 @@ body
 .navbar-item:hover >.decor-mini, 
 .active .decor-mini
   {
-    opacity: 1;
+    background-color: rgba(112,81,239,1); /* #7051EF */
   }
 
 
@@ -241,7 +239,7 @@ body
     width: 24px;
     height: 24px;
     background-color: rgba(0,0,0,0);
-    background-image: url(./Images/Toggle-menu-active.png);
+    background-image: url(../Images/Toggle-menu-active.png);
   }
 .menu-toggle
   {
@@ -254,7 +252,7 @@ body
     width: 60vw;
     height: 100vh;
     color: #FFFFFF !important;
-    background-color: #7051EF;
+    background-color: rgba(112,81,239,0); /* #7051EF */
   }
 .btn-toggle .blackscreen
   {
@@ -269,19 +267,17 @@ body
 
 .burger-menu, .menu-toggle, .btn-toggle .blackscreen
   {
-    transition-property: all;
-    transition-timing-function: ease-out;
-    transition-duration: 400ms;
+    transition: all 400ms ease-out;
   }
 .burger-menu.toggle-show
   {
     right: calc(60vw + 28px);
-    background-image: url(./Images/Toggle-menu-close.png);
+    background-image: url(../Images/Toggle-menu-close.png);
   }
 .menu-toggle.toggle-show
   {
     right: 0;
-    opacity: 1;
+    background-color: rgba(112,81,239,1); /* #7051EF */
   }
 .btn-toggle .blackscreen.toggle-show
   {

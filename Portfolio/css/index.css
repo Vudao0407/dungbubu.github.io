@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     padding-left: 10rem;
-    background-image: url("./Images/Home/LandingPageBackground.png");
+    background-image: url(../Images/Home/LandingPageBackground.png);
     background-color: #FAFAFA;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,9 +45,11 @@
   {
     transform: translateY(-1.2rem);
     box-shadow: 0 3rem 3rem rgb(0 0 0 / 16%);
-    opacity: .85;
+    opacity: 0.8;
     transition: 
-    transform .2s cubic-bezier(.02,.01,.47,1),opacity .2s cubic-bezier(.02,.01,.47,1),box-shadow .4s cubic-bezier(.02,.01,.47,1);
+    transform .2s cubic-bezier(.02,.01,.47,1),
+    opacity .2s cubic-bezier(.02,.01,.47,1),
+    box-shadow .4s cubic-bezier(.02,.01,.47,1);
   }
 
 .credit-info
@@ -68,7 +70,7 @@
 .bg1 
   {
     padding-left: 10rem;
-    background-image: url("./Images/Home/BG1.png");
+    background-image: url(../Images/Home/BG1.png);
     background-color: #FFFFFF;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,9 +140,7 @@
         bottom: 0;
         background-color: #7051EF;
 
-        transition-property: all;
-        transition-timing-function: ease-out;
-        transition-duration: 400ms;
+        transition: all 400ms ease-out;
       }
     .grid-item-name
       {
@@ -148,14 +148,8 @@
         position: absolute;
         display: none;
 
-        transition-property: all;
-        transition-timing-function: ease-out;
-        transition-duration: 2s;
-
-        animation-name: float-up;
-        animation-duration: 400ms;
-        animation-timing-function: ease-out; 
-        animation-fill-mode: forwards;
+        transition: all 400ms ease-out;
+        animation: float-up 400ms ease-out forwards;
       }
 
     .grid-item:hover .grid-item-hover-bg
@@ -199,7 +193,7 @@
 .bg2
   {
     padding-left: 10rem;
-    background-image: url("./Images/Home/BG2.png");
+    background-image: url(../Images/Home/BG2.png);
     background-color: #FFFFFF;
     background-position: center;
     background-repeat: no-repeat;
