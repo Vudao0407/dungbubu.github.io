@@ -28,6 +28,9 @@
 
     <!-- CSS Riêng -->
     <link rel="stylesheet" href="./css/index.css">
+
+    <!-- CSS Riêng - Hamburger menu -->
+    <link rel="stylesheet" href="./lib/burger-menu.css">
   </head>
 
   <body>
@@ -58,10 +61,14 @@
         <a class="btn-CTA" href="#home-contact" role="button">Contact me</a>
       </div>
 
-      <!-- Toggle Navbar (RESPONSIVE Only) - General Css------------------------------------------------------------------------------------------------ -->
-      <div class="btn-toggle">
-        <div class="burger-menu" onclick="toggleMenuShow()"></div>
-        <div class="menu-toggle">
+      <!-- Hamburger menu (RESPONSIVE Only) - Humburger menu css ------------------------------------------------------------------------------------------------ -->
+      <div class="hamburger">
+        <div class="burger-menu" onclick="hamburgerFunction()">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+        <div class="burger-menu-content">
           <a href="#home-landing-page">home</a>
           <div class="break-20"></div>
           <a href="#home-expertise">services</a>
@@ -72,7 +79,7 @@
           <div class="break-20"></div>
           <a href="#home-contact">contact</a>
         </div>
-        <div class="blackscreen"></div>
+        <div class="burger-menu-blackscreen"></div>
       </div>
     </header> <!-- //////////// //////////// //////////// //////////// -->
 
@@ -366,11 +373,14 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- Javascript ------------------------------------------------------------------------------------------------ -->
     <script>
-      function toggleMenuShow() 
+      function hamburgerFunction() 
         {
-          document.querySelector(".burger-menu").classList.toggle("toggle-show");
-          document.querySelector(".menu-toggle").classList.toggle("toggle-show");
-          document.querySelector(".blackscreen").classList.toggle("toggle-show");
+          document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
+          document.querySelector(".line-1").classList.toggle("burger-menu-toggle");
+          document.querySelector(".line-2").classList.toggle("burger-menu-toggle");
+          document.querySelector(".line-3").classList.toggle("burger-menu-toggle");
+          document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
+          document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");
         }
 
       // function activeStatus() 
