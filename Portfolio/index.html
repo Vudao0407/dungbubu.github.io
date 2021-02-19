@@ -34,41 +34,43 @@
     <header> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Navbar - General Css------------------------------------------------------------------------------------------------ -->
       <div class="vertical-navbar">
-        <div class="logo-MD"><img src="./Images/Logo.png" alt="MD Logo"></div>
+        <a class="logo-MD" href="./index.html"><img src="./Images/Logo.png" alt="MD Logo"></a>
 
         <nav class="navbar">
           <div class="navbar-item active">
-            <a class="nav-link" href="#">home</a>
+            <a class="nav-link" href="#home-landing-page">home</a>
             <div class="decor-mini"></div>
           </div>
           <div class="navbar-item">
-            <a class="nav-link" href="#">services</a>
+            <a class="nav-link" href="#home-expertise">services</a>
             <div class="decor-mini"></div>
           </div>
           <div class="navbar-item">
-            <a class="nav-link" href="#">projects</a>
+            <a class="nav-link" href="#home-projects">projects</a>
             <div class="decor-mini"></div>
           </div>
           <div class="navbar-item">
-            <a class="nav-link" href="#">about</a>
+            <a class="nav-link" href="#home-profile">about</a>
             <div class="decor-mini"></div>
           </div>
         </nav>
 
-        <button type="button" class="btn-CTA">Contact me</button>
+        <a class="btn-CTA" href="#home-contact" role="button">Contact me</a>
       </div>
 
       <!-- Toggle Navbar (RESPONSIVE Only) - General Css------------------------------------------------------------------------------------------------ -->
       <div class="btn-toggle">
         <div class="burger-menu" onclick="toggleMenuShow()"></div>
         <div class="menu-toggle">
-          <span>home</span>
+          <a href="#home-landing-page">home</a>
           <div class="break-20"></div>
-          <span>services</span>
+          <a href="#home-expertise">services</a>
           <div class="break-20"></div>
-          <span>projects</span>
+          <a href="#home-projects">projects</a>
           <div class="break-20"></div>
-          <span>about me</span>
+          <a href="#home-profile">about me</a>
+          <div class="break-20"></div>
+          <a href="#home-contact">contact</a>
         </div>
         <div class="blackscreen"></div>
       </div>
@@ -79,7 +81,7 @@
 
     <main> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Landing Page------------------------------------------------------------------------------------------------ -->
-      <div class="landing-page">
+      <div class="landing-page" id="home-landing-page">
         <div class="container landing-page-bg">
           <div class="menu-social">
             <a class="social-icon" target="_blank" href="https://www.facebook.com/NguyenManhDung1996/"><img src="./Images/Home/Icon-FB.png" alt=""></a>
@@ -125,7 +127,8 @@
 
         <div class="container">
           <!-- My Expertise -->
-          <div class="break-240"></div>
+          <div class="break-160"></div>
+          <div class="break-80" id="home-expertise"></div>
           <div class="decor"></div>
           <div class="break-8"></div>
           <span class="header-32-36">my expertise</span>
@@ -165,7 +168,8 @@
           </div>
 
           <!-- My Projects -->
-          <div class="break-240"></div>
+          <div class="break-160"></div>
+          <div class="break-80" id="home-projects"></div>
           <div class="decor"></div>
           <div class="break-8"></div>
           <span class="header-32-36">my projects</span>
@@ -227,7 +231,8 @@
 
         <div class="container">
           <!-- My Profile -->
-          <div class="break-120"></div>
+          <div class="break-80"></div>
+          <div class="break-40" id="home-profile"></div>
           <div class="decor"></div>
           <div class="break-8"></div>
           <span class="header-32-36">my profile</span>
@@ -264,7 +269,8 @@
           </div>
 
           <!-- My Contact -->
-          <div class="break-240"></div>
+          <div class="break-160"></div>
+          <div class="break-80" id="home-contact"></div>
           <div class="decor"></div>
           <div class="break-8"></div>
           <span class="header-32-36">my contact</span>
@@ -366,6 +372,12 @@
           document.querySelector(".menu-toggle").classList.toggle("toggle-show");
           document.querySelector(".blackscreen").classList.toggle("toggle-show");
         }
+
+      // function activeStatus() 
+      //   {
+      //     document.querySelector(".nav-link").classList.add("active-status");
+      //     document.querySelector(".decor-mini").classList.add("active-status");
+      //   }
     </script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
   </body>

@@ -12,6 +12,10 @@ body
     color: #303030;
     background-color: #7051EF;
   }
+a:hover
+  {
+    text-decoration: none;
+  }
 
 
 /* --HEADER-- ------------ */
@@ -152,6 +156,10 @@ body
   {
     height: 12rem;
   }
+.break-160
+  {
+    height: 16rem;
+  }
 .break-240
   {
     height: 24rem;
@@ -254,6 +262,10 @@ body
     color: #FFFFFF !important;
     background-color: rgba(112,81,239,0); /* #7051EF */
   }
+.menu-toggle a
+  {
+    color: #FFFFFF;
+  }
 .btn-toggle .blackscreen
   {
     z-index: 1;
@@ -264,11 +276,13 @@ body
     height: 100vh;
     background-color: rgba(48,48,48,0);
   }
-
-.burger-menu, .menu-toggle, .btn-toggle .blackscreen
+.burger-menu,
+.menu-toggle,
+.btn-toggle .blackscreen
   {
     transition: all 400ms ease-out;
   }
+
 .burger-menu.toggle-show
   {
     right: calc(60vw + 28px);
