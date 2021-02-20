@@ -104,7 +104,8 @@ a:hover
     border: 2px solid #7051EF;
     color: #FFFFFF;
   }
-.btn-secondary, .btn-secondary:hover
+.btn-secondary, .btn-secondary:hover, .btn-secondary:focus,
+.btn-secondary:visited, .btn-secondary:active
   {
     background-color: #FFFFFF;
     border: 2px solid #7051EF;
