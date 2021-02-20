@@ -131,16 +131,6 @@ a:hover
     color: #FFFFFF;
   }
 
-.btn-more, .btn-more:hover
-  {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #FFFFFF;
-    border: 2px solid #7051EF;
-    color: #7051EF;
-  }
-
 
 /* --BREAK-- ------------ */
 .break-8
