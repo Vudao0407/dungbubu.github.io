@@ -38,19 +38,19 @@
     transform-origin: 0% 50%;
   }
 
-.line-1.burger-menu-toggle
+.burger-menu.burger-menu-toggle .line-1
   {
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
     rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
   }
-.line-2.burger-menu-toggle
+.burger-menu.burger-menu-toggle .line-2
   {
     transform: translate3d(0px, 0px, 0px) scale3d(0, 1, 1)
     rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
   }
-.line-3.burger-menu-toggle
+.burger-menu.burger-menu-toggle .line-3
   {
     width: 100%;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
@@ -77,13 +77,9 @@
   {
     background-color: #7051EF;
   }
-/* .burger-menu.burger-menu-toggle
-  {
-    right: calc(60vw + 28px);
-  } */
-.line-1.burger-menu-toggle,
-.line-2.burger-menu-toggle,
-.line-3.burger-menu-toggle
+.burger-menu.burger-menu-toggle .line-1,
+.burger-menu.burger-menu-toggle .line-2,
+.burger-menu.burger-menu-toggle .line-3
   {
     background-color: #FFFFFF;
   }
@@ -142,9 +138,6 @@
 function hamburgerFunction() 
   {
     document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
-    document.querySelector(".line-1").classList.toggle("burger-menu-toggle");
-    document.querySelector(".line-2").classList.toggle("burger-menu-toggle");
-    document.querySelector(".line-3").classList.toggle("burger-menu-toggle");
     
     document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
     document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");

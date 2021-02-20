@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./lib/AOS-Animation-On-Scroll/dist/aos.css">
   </head>
 
-  <body>
+  <body onload="activeStateOnLoad()" onload="activeStateOnScroll()">
     <header> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Navbar - General Css------------------------------------------------------------------------------------------------ -->
       <div class="vertical-navbar">
@@ -383,56 +383,46 @@
           mirror: true,
         });
 
-      function hamburgerFunction() 
+      // Hàm thêm trạng thái Active cho nút Home ngay khi tải trang xong
+      let menuItemActive = [...document.getElementsByClassName("menu-item")];
+      function activeStateOnLoad()
         {
-          document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
-          document.querySelector(".line-1").classList.toggle("burger-menu-toggle");
-          document.querySelector(".line-2").classList.toggle("burger-menu-toggle");
-          document.querySelector(".line-3").classList.toggle("burger-menu-toggle");
-          document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
-          document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");
+          menuItemActive[0].classList.add("active");
         }
 
-      // Khai bao bien menuItemActive la 1 array gom cac element thuoc navbar
-      // [...HTMLCollection] => Array
-      let menuItemActive = [...document.getElementsByClassName("menu-item")];
-      // vong lap cac element thuoc navbar
+      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu
       menuItemActive.forEach(function(element) 
         {
-          // add su kien click
           element.addEventListener("click" ,function()
             {
-              // chon cac phan tu con ben trong
-              [...element.children].forEach(function(child) 
-                {
-                  // them class
-                  child.classList.add("active");
-                });
-              // khai bao bien sibling la phan tu dau tien cua navbar
+              element.classList.add("active");
+              
               var sibling = menuItemActive[0];
-              // vong lap cac sibling, chay tu phan tu dau tien cua navbar den cuoi cung
               while (sibling) 
                 {
-                  // neu sibling ton tai va ko phai la element dang bi click
                   if (sibling.nodeType === 1 && sibling !== element) 
                     {
-                      // thi chon cac phan tu con ben trong va remove class
-                      [...sibling.children].forEach(function(child) 
-                        {
-                          child.classList.remove("active");
-                        });
+                      sibling.classList.remove("active");
                     }
-                  // gan sibling la phan tu tiep theo cua navbar
                   sibling = sibling.nextSibling
                 }
             });
         });
       
+      // Hàm add/remove trạng thái Active khi "scroll" qua các vị trí trên trang
       let idOffSet = [document.getElementById("home-landing-page").offsetTop,
                       document.getElementById("home-expertise").offsetTop,
                       document.getElementById("home-projects").offsetTop,
                       document.getElementById("home-profile").offsetTop];
-      console.log(window.pageYOffset)
+      console.log(window.pageYOffset);
+
+      // Hàm tạo hiệu ứng cho Humburger menu
+      function hamburgerFunction() 
+        {
+          document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
+          document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
+          document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");
+        }
     </script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
   </body>

@@ -98,14 +98,17 @@ a:hover
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
-.btn-primary, .btn-primary:hover
+.btn-primary, .btn-primary:hover,
+.btn-primary:visited,
+.btn-primary:not(:disabled):not(.disabled):active
   {
     background-color: #7051EF;
     border: 2px solid #7051EF;
     color: #FFFFFF;
   }
-.btn-secondary, .btn-secondary:hover, .btn-secondary:focus,
-.btn-secondary:visited, .btn-secondary:active
+.btn-secondary, .btn-secondary:hover,
+.btn-secondary:visited,
+.btn-secondary:not(:disabled):not(.disabled):active
   {
     background-color: #FFFFFF;
     border: 2px solid #7051EF;
@@ -236,12 +239,12 @@ a:hover
   }
 
 .menu-item:hover >.menu-title,
-.menu-title.active
+.menu-item.active .menu-title
   {
     color: #7051EF;
   }
 .menu-item:hover >.decor-mini,
-.decor-mini.active
+.menu-item.active .decor-mini
   {
     background-color: rgba(112,81,239,1); /* #7051EF */
   }
