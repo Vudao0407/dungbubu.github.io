@@ -21,10 +21,12 @@
   </head>
 
   <body>
+    <!-- //////////// //////////// //////////// //////////// -->
     <!-- Loading GIF -->
     <div class="loadingGif" id="loadingGifID">
       <img src="./Images/Spinner.gif" alt="Loading GIF">
     </div>
+    <!-- //////////// //////////// //////////// //////////// -->
 
 
 
@@ -220,7 +222,7 @@
           <div style="text-align: center;" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="600">
             <button type="button" class="btn btn-secondary">All my projects</button>
           </div>
-          <div class="break-120"></div>
+          <div class="break-200"></div> <!-- Khác Figma -->
         </div>
       </div>
 
@@ -239,7 +241,7 @@
 
         <div class="container">
           <!-- My Profile -->
-          <div class="break-80"></div>
+          <div class="break-200"></div> <!-- Khác Figma -->
           <div class="break-40" id="home-profile"></div>
           <div data-aos="fade-up" data-aos-offset="400">
             <div class="decor"></div>
@@ -336,7 +338,7 @@
               <div class="break-20"></div>
               <input class="form-control contact-input" id="data-phone" type="number" placeholder="Phone">
               <div class="break-20"></div>
-              <textarea class="form-control fix-arena" id="data-message" rows="4">Message</textarea>
+              <textarea class="form-control fix-arena" id="data-message" rows="4" placeholder="Message"></textarea>
               <div class="break-80"></div>
               <button type="button" class="btn btn-primary" id="btn-sendMessage">Send message</button>
             </div>
@@ -393,6 +395,7 @@
         });
 
 
+      // ------------ ------------ ------------ ------------ ------------ ------------
       // Đảm bảo khi load trang xong thì code bên dưới sẽ chạy luôn ------------ ------------
       $(() => 
             {
@@ -418,7 +421,7 @@
           $.ajax
             ({
                 method: "GET",
-                url: "https://portfolio-dungbu.herokuapp.com/users"
+                url: "https://server-dungbu.herokuapp.com/users"
             })
             .done ( function(data)
               {
@@ -432,13 +435,14 @@
         }
       
 
+      // ------------ ------------ ------------ ------------ ------------ ------------
       // Đẩy dữ liệu lên server ------------ ------------
       $('#btn-sendMessage').click(function()
           {
             $.ajax
               ({
                 method: "POST",
-                url: "https://portfolio-dungbu.herokuapp.com/users",
+                url: "https://server-dungbu.herokuapp.com/users",
                 data:
                   {
                     name: $('#data-name').val(),
@@ -451,6 +455,7 @@
           });
 
 
+      // ------------ ------------ ------------ ------------ ------------ ------------
       // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu ------------ ------------
       menuItemActive.forEach(function(element) 
         {
@@ -471,15 +476,54 @@
         });
       
 
+      // ------------ ------------ ------------ ------------ ------------ ------------
       // Hàm add/remove trạng thái Active khi "scroll" qua các vị trí trên trang ------------ ------------
-      let idOffSet = [document.getElementById("home-landing-page").offsetTop,
-                      document.getElementById("home-expertise").offsetTop,
-                      document.getElementById("home-projects").offsetTop,
-                      document.getElementById("home-profile").offsetTop];
-      console.log(window.pageYOffset);
+      // let idOffSet = [document.getElementById("home-landing-page").getBoundingClientRect().top + document.documentElement.scrollTop,
+      //                 document.getElementById("home-expertise").getBoundingClientRect().top + document.documentElement.scrollTop,
+      //                 document.getElementById("home-projects").getBoundingClientRect().top + document.documentElement.scrollTop,
+      //                 document.getElementById("home-profile").getBoundingClientRect().top + document.documentElement.scrollTop];
+                      
+      // $(document).ready(function() 
+      //   {
+      //     $(window).scroll(function(event)
+      //       {
+      //         if (0 <= window.pageYOffset < idOffSet[1])
+      //           {
+      //             menuItemActive[0].classList.add("active");
+      //             menuItemActive[1].classList.remove("active");
+      //             menuItemActive[2].classList.remove("active");
+      //             menuItemActive[3].classList.remove("active");
+      //           }
+
+      //         if (idOffSet[1] <= window.pageYOffset < idOffSet[2])
+      //           {
+      //             menuItemActive[0].classList.remove("active");
+      //             menuItemActive[1].classList.add("active");
+      //             menuItemActive[2].classList.remove("active");
+      //             menuItemActive[3].classList.remove("active");
+      //           }
+
+      //         if (idOffSet[2] <= window.pageYOffset < idOffSet[3])
+      //           {
+      //             menuItemActive[0].classList.remove("active");
+      //             menuItemActive[1].classList.remove("active");
+      //             menuItemActive[2].classList.add("active");
+      //             menuItemActive[3].classList.remove("active");
+      //           }
+              
+      //         if (idOffSet[3] <= window.pageYOffset)
+      //           {
+      //             menuItemActive[0].classList.remove("active");
+      //             menuItemActive[1].classList.remove("active");
+      //             menuItemActive[2].classList.remove("active");
+      //             menuItemActive[3].classList.add("active");
+      //           } 
+      //       });
+      //   });
 
 
-      // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
+      // // ------------ ------------ ------------ ------------ ------------ ------------
+      // // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
       function hamburgerFunction() 
         {
           document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
