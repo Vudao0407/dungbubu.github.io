@@ -20,8 +20,16 @@
     <link rel="stylesheet" href="./lib/AOS-Animation-On-Scroll/dist/aos.css">
   </head>
 
-  <body onload="activeStateOnLoad()" onload="activeStateOnScroll()">
-    <header> <!-- //////////// //////////// //////////// //////////// -->
+  <body>
+    <!-- Loading GIF -->
+    <div class="loadingGif" id="loadingGifID">
+      <img src="./Images/Spinner.gif" alt="Loading GIF">
+    </div>
+
+
+
+
+    <header id="headerID"> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Navbar - General Css------------------------------------------------------------------------------------------------ -->
       <div class="vertical-navbar">
         <a class="logo-MD" href="./index.html"><img src="./Images/Logo.png" alt="MD Logo"></a>
@@ -73,7 +81,7 @@
 
 
 
-    <main> <!-- //////////// //////////// //////////// //////////// -->
+    <main id="mainID"> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Landing Page------------------------------------------------------------------------------------------------ -->
       <div class="landing-page" id="home-landing-page">
         <div class="container landing-page-bg">
@@ -322,15 +330,15 @@
             </div>
 
             <div class="contact-form" data-aos="fade-up" data-aos-offset="300" data-aos-delay="400">
-              <input class="form-control contact-input" type="text" placeholder="Name">
+              <input class="form-control contact-input" id="data-name" type="text" placeholder="Name">
               <div class="break-20"></div>
-              <input class="form-control contact-input" type="text" placeholder="Email">
+              <input class="form-control contact-input" id="data-email" type="text" placeholder="Email">
               <div class="break-20"></div>
-              <input class="form-control contact-input" type="number" placeholder="Phone">
+              <input class="form-control contact-input" id="data-phone" type="number" placeholder="Phone">
               <div class="break-20"></div>
-              <textarea class="form-control" id="fix-area" rows="4">Message</textarea>
+              <textarea class="form-control fix-arena" id="data-message" rows="4">Message</textarea>
               <div class="break-80"></div>
-              <button type="button" class="btn btn-primary">Send message</button>
+              <button type="button" class="btn btn-primary" id="btn-sendMessage">Send message</button>
             </div>
           </div>
           <div class="break-80"></div>
@@ -341,7 +349,7 @@
 
 
     
-    <footer> <!-- //////////// //////////// //////////// //////////// -->
+    <footer id="footerID"> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Footer - General Css------------------------------------------------------------------------------------------------ -->
       <div class="footer">
         <div class="container">
@@ -374,6 +382,7 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- Javascript ------------------------------------------------------------------------------------------------ -->
     <script>
+      // Cài đặt thư viện hiệu ứng AOS ------------ ------------
       AOS.init(
         {
           offset: 200,
@@ -383,14 +392,66 @@
           mirror: true,
         });
 
-      // Hàm thêm trạng thái Active cho nút Home ngay khi tải trang xong
+
+      // Đảm bảo khi load trang xong thì code bên dưới sẽ chạy luôn ------------ ------------
+      $(() => 
+            {
+              activeStateOnLoad();
+            });
+
+      let htmlDisplay = [document.getElementById("headerID"),
+                         document.getElementById("mainID"),
+                         document.getElementById("footerID")];
+      let gifDisplay = document.getElementById("loadingGifID");
+
       let menuItemActive = [...document.getElementsByClassName("menu-item")];
       function activeStateOnLoad()
         {
-          menuItemActive[0].classList.add("active");
-        }
+          // Bật loading, Ẩn HTML
+          htmlDisplay.forEach(function(element)
+            {
+              element.style.display = "none";
+            });
+          gifDisplay.style.display = "flex";
 
-      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu
+          // Tắt loading, Bật HTML và thêm trạng thái Active cho nút Home
+          $.ajax
+            ({
+                method: "GET",
+                url: "https://portfolio-dungbu.herokuapp.com/users"
+            })
+            .done ( function(data)
+              {
+                htmlDisplay.forEach(function(element)
+                  {
+                    element.style.display = "block";
+                  });
+                gifDisplay.style.display = "none";
+                menuItemActive[0].classList.add("active");
+              });
+        }
+      
+
+      // Đẩy dữ liệu lên server ------------ ------------
+      $('#btn-sendMessage').click(function()
+          {
+            $.ajax
+              ({
+                method: "POST",
+                url: "https://portfolio-dungbu.herokuapp.com/users",
+                data:
+                  {
+                    name: $('#data-name').val(),
+                    email: $('#data-email').val(),
+                    phone: $('#data-phone').val(),
+                    message: $('#data-message').val()
+                  },
+              })
+            location.href = 'index.html'
+          });
+
+
+      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu ------------ ------------
       menuItemActive.forEach(function(element) 
         {
           element.addEventListener("click" ,function()
@@ -409,14 +470,16 @@
             });
         });
       
-      // Hàm add/remove trạng thái Active khi "scroll" qua các vị trí trên trang
+
+      // Hàm add/remove trạng thái Active khi "scroll" qua các vị trí trên trang ------------ ------------
       let idOffSet = [document.getElementById("home-landing-page").offsetTop,
                       document.getElementById("home-expertise").offsetTop,
                       document.getElementById("home-projects").offsetTop,
                       document.getElementById("home-profile").offsetTop];
       console.log(window.pageYOffset);
 
-      // Hàm tạo hiệu ứng cho Humburger menu
+
+      // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
       function hamburgerFunction() 
         {
           document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");

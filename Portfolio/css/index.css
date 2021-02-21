@@ -149,7 +149,7 @@
         display: none;
 
         transition: all 400ms ease-out;
-        animation: float-up 400ms ease-out forwards;
+        animation: peak-in 400ms ease-out forwards;
       }
 
     .grid-item:hover .grid-item-hover-bg
@@ -160,7 +160,7 @@
       {
         display: flex;
       }
-    @keyframes float-up
+    @keyframes peak-in
       {
         from
           {
@@ -258,11 +258,11 @@
         border-bottom: 1px solid #B2B2B2;
         border-radius: 0;
       }
-    #fix-area
+    .fix-area
       {
         font-size: 1.6rem;
         line-height: 2.4rem;
-        color: #B2B2B2;
+        color: #B2B2B2 !important;
       }
 
 

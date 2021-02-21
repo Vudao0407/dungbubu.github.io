@@ -185,6 +185,15 @@ a:hover
   }
 
 
+/* --Loading GIF-- ------ */
+.loadingGif
+  {
+    margin-top: 80px;
+    display: none;
+    justify-content: center;
+  }
+
+
 /* --Vertical navigation bar-- ------ */
 .vertical-navbar
   {

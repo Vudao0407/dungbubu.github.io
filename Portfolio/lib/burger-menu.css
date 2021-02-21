@@ -1,8 +1,17 @@
-/* Source: Craig Roush */
+/* //////////// //////////// //////////// //////////// */
+/* ------------ --Source: Craig Roush-- ------------ */
+/* //////////// //////////// //////////// //////////// */
+
+
+
 
 /* Burger menu ------------ ------------ */
 .burger-menu
   {
+    z-index: 3;
+    position: fixed;
+    top: 28px;
+    right: 28px;
     width: 32px;
     height: 24px;
     display: flex;
@@ -11,11 +20,13 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-box-pack: justify;
+    transition: all 400ms ease-out;
   }
 .line-1, .line-2, .line-3
   {
     margin-left: auto;
     height: 2px;
+    background-color: #7051EF;
 
     transition: all 240ms ease-out;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
@@ -42,47 +53,26 @@
   {
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
     rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
   }
 .burger-menu.burger-menu-toggle .line-2
   {
     transform: translate3d(0px, 0px, 0px) scale3d(0, 1, 1)
     rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
   }
 .burger-menu.burger-menu-toggle .line-3
   {
-    width: 100%;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
     rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-  }
-
-
-
-
-/* //////////// //////////// //////////// //////////// */
-/* Customize - Tùy biến ------------ ------------ */
-/* Burger menu ------------ ------------ */
-.burger-menu
-  {
-    z-index: 3;
-    position: fixed;
-    top: 28px;
-    right: 28px;
-
-    transition: all 400ms ease-out;
-  }
-.line-1, .line-2, .line-3
-  {
-    background-color: #7051EF;
   }
 .burger-menu.burger-menu-toggle .line-1,
 .burger-menu.burger-menu-toggle .line-2,
 .burger-menu.burger-menu-toggle .line-3
   {
+    width: 100%;
     background-color: #FFFFFF;
+    transform-style: preserve-3d;
   }
+
 
 /* Burger menu content ------------ ------------ */
 .burger-menu-content
@@ -104,12 +94,14 @@
   {
     color: #FFFFFF;
   }
+
 .burger-menu-content.burger-menu-toggle
   {
     right: 0;
     background-color: rgba(112,81,239,1); /* #7051EF */
   }
 
+  
 /* Burger menu blackscreen ------------ ------------ */
 .burger-menu-blackscreen
   {
@@ -123,11 +115,39 @@
 
     transition: all 400ms ease-out;
   }
+
 .burger-menu-blackscreen.burger-menu-toggle
   {
     left: 0;
     background-color: rgba(48,48,48,0.8);
   }
+
+
+
+
+/* //////////// //////////// //////////// //////////// */
+/* Thêm đoạn body sau vào trang html ------------ ------------ */
+/*
+<div class="hamburger">
+  <div class="burger-menu" onclick="hamburgerFunction()">
+    <div class="line-1"></div>
+    <div class="line-2"></div>
+    <div class="line-3"></div>
+  </div>
+  <div class="burger-menu-content">
+    <a href="#home-landing-page">home</a>
+    <div class="break-20"></div>
+    <a href="#home-expertise">services</a>
+    <div class="break-20"></div>
+    <a href="#home-projects">projects</a>
+    <div class="break-20"></div>
+    <a href="#home-profile">about me</a>
+    <div class="break-20"></div>
+    <a href="#home-contact">contact</a>
+  </div>
+  <div class="burger-menu-blackscreen"></div>
+</div>
+*/
 
 
 
