@@ -8,7 +8,7 @@
 /* Burger menu ------------ ------------ */
 .burger-menu
   {
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     top: 28px;
     right: 28px;
@@ -77,7 +77,7 @@
 /* Burger menu content ------------ ------------ */
 .burger-menu-content
   {
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 0;
     right: -60vw;
@@ -105,7 +105,7 @@
 /* Burger menu blackscreen ------------ ------------ */
 .burger-menu-blackscreen
   {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: -100vw;
