@@ -87,9 +87,9 @@
 
     .expertise-item
       {
-        padding: 0 2.6rem 6rem 2.6rem;
-        max-width: 25.6rem;
-        height: 35rem;
+        padding: 0 2.2rem 4rem 2.2rem;
+        width: 28rem;
+        min-height: 32rem;
         background-color: #FFFFFF;
         box-shadow: 4px 6px 12px 4px rgba(0, 0, 0, 0.06);
         border-radius: 12px;
@@ -101,10 +101,11 @@
     .expertise-item-img
       {
         margin-top: -6rem;
-        width: 14rem;
-        height: 14rem;
-        object-fit: cover;
-        overflow: hidden;
+        width: 12rem;
+      }
+    .expertise-item-img img
+      {
+        width: 100%;
       }
 
     .expertise-item:hover
@@ -114,6 +115,15 @@
     .expertise-item:hover >span
       {
         color: #FFFFFF;
+      }
+    /* --Owl Carousel-- ------ */
+    .owl-stage-outer
+      {
+        padding: 6rem 2rem 2rem 0;
+      }
+    .owl-nav, .owl-dot
+      {
+        display: none;
       }
 
     /* --Projects-- ------ */
@@ -209,15 +219,18 @@
       }
     .profile-img
       {
-        width: 44rem;
-        height: 34.2rem;
+        margin-right: 20px;
+        max-width: 44rem;
         object-fit: cover;
         overflow: hidden;
+      }
+    .profile-img img
+      {
+        height: 100%;
       }
     .profile-content
       {
         width: 53.2rem;
-        
       }
     .profile-credit-info
       {
@@ -229,6 +242,7 @@
     /* --Contact-- ------ */
     .contact-menu
       {
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -268,11 +282,146 @@
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */  
-@media (min-width: 1200px)
+.container
+  {
+    width: calc(109.4rem - 10rem);
+    padding: 0;
+  }
+
+@media (max-width: 1200px)
   {
     .container
       {
-        width: 108.4rem;
-        padding: 0 !important;
+        width: calc(96rem - 10rem);
+      }
+
+    /* --Expertise-- ------ */
+    .expertise-item
+      {
+        width: 24rem;
+      }
+    
+    /* --Projects-- ------ */
+    .grid-container
+      {
+        grid-template-columns: auto auto;
+      }
+    .projects-item5, .projects-item6
+      {
+        display: none;
+      }
+
+    /* --Profile-- ------ */
+    .profile-content
+      {
+        width: 48rem;
+      }
+
+    /* --Contact-- ------ */
+    .contact-info
+      {
+        width: 40rem;
+      }
+    .contact-form
+      {
+        padding: 4rem 4.8rem;
+        width: 42rem;
+      }
+  }
+
+@media (max-width: 992px)
+  {
+    .container
+      {
+        width: calc(72rem - 10rem);
+      }
+
+    /* --Landing Page-- ------ */
+    .credit-item1
+      {
+        display: none;
+      }
+
+    /* --Profile-- ------ */
+    .profile-credit-info
+      {
+        flex-direction: column;
+      }
+
+    /* --Contact-- ------ */
+    .contact-menu
+      {
+        flex-direction: column-reverse;
+      }
+    .contact-form .responsiveStyle
+      {
+        text-align: center;
+      }
+    .contact-info
+      {
+        margin-top: 2rem;
+      }
+  }
+
+@media (max-width: 768px)
+  {
+    .container
+      {
+        width: 54rem;
+      }
+
+    /* --Landing Page-- ------ */
+    .landing-page, .bg1, .bg2
+      {
+        padding-left: 0;
+      }
+    .landing-page
+      {
+        background-image: none;
+      }
+
+    /* --Projects-- ------ */
+    .grid-container
+      {
+        grid-template-columns: 100%;
+      }
+    .projects-item3, .projects-item4
+      {
+        display: none;
+      }
+
+    /* --Quote-- ------ */
+    .quote
+      {
+        left: 50%;
+        width: 100%;
+      }
+
+    /* --Profile-- ------ */
+    .profile-menu
+      {
+        flex-direction: column;
+        align-items: center;
+      }
+    .profile-menu .responsiveStyle
+      {
+        text-align: center;
+      }
+    .profile-content
+      {
+        margin-top: 4rem;
+      }
+    .profile-credit-info
+      {
+        flex-direction: row;
+      }
+  }
+
+@media (max-width: 576px)
+  {
+    .container
+      {
+        width: 100%;
+        padding: 0 4rem;
       }
   }

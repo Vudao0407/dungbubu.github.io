@@ -10,14 +10,17 @@
 
     <!-- Boootstrap CSS library -->
     <link rel="stylesheet" href="./lib/Bootstrap-4.5.3/css/bootstrap.css">
+    <!-- CSS Chung - AOS -->
+    <link rel="stylesheet" href="./lib/AOS-Animation-On-Scroll/dist/aos.css">
+    <!-- CSS Chung - Owl Carousel -->
+    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <!-- CSS Chung -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- CSS Riêng -->
     <link rel="stylesheet" href="./css/index.css">
     <!-- CSS Chung - Hamburger menu -->
     <link rel="stylesheet" href="./lib/burger-menu.css">
-    <!-- CSS Chung - AOS -->
-    <link rel="stylesheet" href="./lib/AOS-Animation-On-Scroll/dist/aos.css">
   </head>
 
   <body>
@@ -110,15 +113,15 @@
           </div>
     
           <div class="credit-info" data-aos="fade-up" data-aos-offset="0" data-aos-delay="600">
-            <a class="credit-item" href="mailto:nguyenmanhdung1996@gmail.com">
+            <a class="credit-item credit-item1" href="mailto:nguyenmanhdung1996@gmail.com">
               <span class="header-16-24">Email Address</span>
               <span class="paragraph-14-24" style="color: #303030;">nguyenmanhdung1996@gmail.com</span>
             </a>
-            <a class="credit-item" href="https://www.m.me/NguyenManhDung1996/" target="_blank">
+            <a class="credit-item credit-item2" href="https://www.m.me/NguyenManhDung1996/" target="_blank">
               <span class="header-16-24">Messenger</span>
               <span class="paragraph-14-24" style="color: #303030;">m.me/NguyenManhDung1996</span>
             </a>
-            <a class="credit-item" href="tel:(+84)346-189-173">
+            <a class="credit-item credit-item3" href="tel:(+84)346-189-173">
               <span class="header-16-24">Phone number</span>
               <span class="paragraph-14-24" style="color: #303030;">(+84) - 346 - 189 - 173</span>
             </a>
@@ -142,7 +145,7 @@
           </div>
 
           <div class="break-120"></div>
-          <div class="expertise-menu">
+          <div class="expertise-menu owl-carousel owl-theme">
             <div class="expertise-item" data-aos="fade-up" data-aos-delay="200">
               <div class="expertise-item-img"><img src="./Images/Home/Expertise1.png" alt="Expertise: Presentation"></div>
               <div class="break-40"></div>
@@ -267,7 +270,7 @@
                   Aliquam pulvinar convallis ante. Integer in erat diam.</span>
                 <div class="break-28"></div>
               </div>
-              <div class="profile-credit-info" data-aos="fade-up" data-aos-offset="400" data-aos-delay="350">
+              <div class="profile-credit-info" data-aos="fade-up" data-aos-offset="200" data-aos-delay="350">
                 <div>
                   <span class="header-16-24">Name:</span> <span>Nguyen Manh Dung</span>
                   <div class="break-8"></div>
@@ -280,7 +283,9 @@
                 </div>
               </div>
               <div class="break-28"></div>
-              <button type="button" class="btn btn-secondary" data-aos="fade-up" data-aos-offset="400" data-aos-delay="400">More about me</button>
+              <div class="responsiveStyle"> <!-- RESPONSIVE -->
+                <button type="button" class="btn btn-secondary" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">More about me</button>
+              </div>
             </div>
           </div>
 
@@ -340,8 +345,10 @@
               <div class="break-20"></div>
               <textarea class="form-control fix-arena" id="data-message" rows="4" placeholder="Message"></textarea>
               <div class="break-80"></div>
-              <button type="button" class="btn btn-primary" id="btn-sendMessage">Send message</button>
-            </div>
+              <div class="responsiveStyle"> <!-- RESPONSIVE -->
+                <button type="button" class="btn btn-primary" id="btn-sendMessage">Send message</button>
+              </div>
+              </div>
           </div>
           <div class="break-80"></div>
         </div>
@@ -370,12 +377,13 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuerry Ajax JS library -->
     <script src="./lib/jQuerry-Ajax-3.5.1/jquery-3.5.1.js"></script>
-    
     <!-- Boootstrap JS library -->
     <script src="./lib/Bootstrap-4.5.3/js/bootstrap.js"></script>
-
     <!-- AOS JS library -->
     <script src="./lib/AOS-Animation-On-Scroll/dist/aos.js"></script>
+    <!-- Owl Carousel JS library -->
+    <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
@@ -478,48 +486,70 @@
 
       // ------------ ------------ ------------ ------------ ------------ ------------
       // Hàm add/remove trạng thái Active khi "scroll" qua các vị trí trên trang ------------ ------------
-      // let idOffSet = [document.getElementById("home-landing-page").getBoundingClientRect().top + document.documentElement.scrollTop,
-      //                 document.getElementById("home-expertise").getBoundingClientRect().top + document.documentElement.scrollTop,
-      //                 document.getElementById("home-projects").getBoundingClientRect().top + document.documentElement.scrollTop,
-      //                 document.getElementById("home-profile").getBoundingClientRect().top + document.documentElement.scrollTop];
-                      
-      // $(document).ready(function() 
+      let idOffSet = [document.getElementById("home-landing-page").getBoundingClientRect().top + document.documentElement.scrollTop,
+                      document.getElementById("home-expertise").getBoundingClientRect().top + document.documentElement.scrollTop,
+                      document.getElementById("home-projects").getBoundingClientRect().top + document.documentElement.scrollTop,
+                      document.getElementById("home-profile").getBoundingClientRect().top + document.documentElement.scrollTop];
+      let windowViewpoint = window.pageYOffset + 400;
+
+      // let scrollItemActive = [document.getElementById("home-landing-page"),
+      //                         document.getElementById("home-expertise"),
+      //                         document.getElementById("home-projects"),
+      //                         document.getElementById("home-profile")];
+
+      // window.addEventListener("scroll", function()
       //   {
-      //     $(window).scroll(function(event)
+      //     if (idOffSet[1] > windowViewpoint && windowViewpoint >= idOffSet[0])
       //       {
-      //         if (0 <= window.pageYOffset < idOffSet[1])
-      //           {
-      //             menuItemActive[0].classList.add("active");
-      //             menuItemActive[1].classList.remove("active");
-      //             menuItemActive[2].classList.remove("active");
-      //             menuItemActive[3].classList.remove("active");
-      //           }
-
-      //         if (idOffSet[1] <= window.pageYOffset < idOffSet[2])
-      //           {
-      //             menuItemActive[0].classList.remove("active");
-      //             menuItemActive[1].classList.add("active");
-      //             menuItemActive[2].classList.remove("active");
-      //             menuItemActive[3].classList.remove("active");
-      //           }
-
-      //         if (idOffSet[2] <= window.pageYOffset < idOffSet[3])
-      //           {
-      //             menuItemActive[0].classList.remove("active");
-      //             menuItemActive[1].classList.remove("active");
-      //             menuItemActive[2].classList.add("active");
-      //             menuItemActive[3].classList.remove("active");
-      //           }
-              
-      //         if (idOffSet[3] <= window.pageYOffset)
-      //           {
-      //             menuItemActive[0].classList.remove("active");
-      //             menuItemActive[1].classList.remove("active");
-      //             menuItemActive[2].classList.remove("active");
-      //             menuItemActive[3].classList.add("active");
-      //           } 
-      //       });
+      //         menuItemActive[0].classList.add("active");
+      //         menuItemActive[1].classList.remove("active");
+      //         menuItemActive[2].classList.remove("active");
+      //         menuItemActive[3].classList.remove("active");
+      //       }
+      //     else if (idOffSet[2] > windowViewpoint && windowViewpoint >= idOffSet[1])
+      //       {
+      //         menuItemActive[0].classList.remove("active");
+      //         menuItemActive[1].classList.add("active");
+      //         menuItemActive[2].classList.remove("active");
+      //         menuItemActive[3].classList.remove("active");
+      //       }
+      //     else if (idOffSet[3] > windowViewpoint && windowViewpoint >= idOffSet[2])
+      //       {
+      //         menuItemActive[0].classList.remove("active");
+      //         menuItemActive[1].classList.remove("active");
+      //         menuItemActive[2].classList.add("active");
+      //         menuItemActive[3].classList.remove("active");
+      //       }
+      //     else if (windowViewpoint >= idOffSet[3])
+      //       {
+      //         menuItemActive[0].classList.remove("active");
+      //         menuItemActive[1].classList.remove("active");
+      //         menuItemActive[2].classList.remove("active");
+      //         menuItemActive[3].classList.add("active");
+      //       }
       //   });
+
+
+      // // ------------ ------------ ------------ ------------ ------------ ------------
+      // // Hàm chạy thư viện Owl Carousel ------------ ------------
+      $('.owl-carousel').owlCarousel(
+        {
+          margin:40,
+          loop:true,
+          nav:true,
+          autoWidth:true,
+          responsive:
+            {
+              0:
+                {items:1},
+              600:
+                {items:2},
+              1000:
+                {items:3},
+              1200:
+                {items:4}
+            }
+        })
 
 
       // // ------------ ------------ ------------ ------------ ------------ ------------

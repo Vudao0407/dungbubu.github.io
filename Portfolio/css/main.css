@@ -273,3 +273,30 @@ a:hover
     flex-direction: row;
     justify-content: flex-end;
   }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */
+@media (max-width: 768px)
+  {
+    /* --Vertical navigation bar-- ------ */
+    .vertical-navbar
+      {
+        display: none;
+      }
+
+    /* --Footer-- ------ */
+    .footer
+      {
+        padding-left: 0;
+      }
+    .footer-menu
+      {
+        justify-content: center;
+      }
+  }
+
+/* @media (max-width: 576px)
+  {
+    
+  } */

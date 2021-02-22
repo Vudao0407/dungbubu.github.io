@@ -10,82 +10,85 @@
 
     <!-- Boootstrap CSS library -->
     <link rel="stylesheet" href="./lib/Bootstrap-4.5.3/css/bootstrap.css" />
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="./css/main.css">
 
     <style>
-      a:hover 
+      body
         {
-          cursor: pointer;
-          text-decoration: none;
+          background-color: #FFFFFF;
+        }
+      a, a:hover
+        {
+          color: #7051EF;
         }
 
       .delete-form 
         {
-          position: absolute;
+          position: fixed;
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -50%);
+          padding-top: 10px;
           width: 320px;
           height: 100px;
           display: none;
           justify-content: center;
           flex-wrap: wrap;
+          border-radius: 4px;
           background-color: #7051ef;
-          padding-top: 10px;
-          border-radius: 3px;
-          position: fixed;
+          transform: translate(-50%, -50%);
         }
-      .delete-form-text 
+      .delete-form p
         {
-          color: white;
           width: 100%;
           text-align: center;
+          color: #FFFFFF;
         }
       .delete-group-btn 
         {
+          padding: 8px;
           width: 100%;
           display: flex;
           flex-wrap: nowrap;
-          padding: 5px;
         }
       .delete-group-btn button 
         {
+          margin: 5px;
           width: 100%;
           height: 30px;
-          color: black;
-          background-color: white;
           outline: none;
           border: none;
-          border-radius: 3px;
-          margin: 5px;
+          border-radius: 4px;
+          color: black;
+          background-color: white;
         }
       .delete-group-btn button:hover 
         {
-          background-color: #e9ebec;
+          background-color: #B2B2B2;
         }
     </style>
   </head>
 
   <body>
     <!-- Đây là phần hiển thị Table -->
-    <div class="container mt-5" id="dayLaCaiBang">
-      <h2 class="table-name text-center">Danh sách khách hàng</h2>
+    <div class="container" id="tableID">
+      <div class="break-40"></div>
+      <h2 class="header-32-36 text-center">Danh sách khách hàng</h2>
+      <div class="break-40"></div>
 
       <!-- Thông báo xác thực xóa dữ liệu -->
       <!-- ------------ ------------ ------------ ------------ ------------ ------------ -->
       <div class="delete-form">
-        <div class="delete-form-text">
-          <p>Đã hoàn thành đơn hàng</p>
-        </div>
-
+        <p>Đã hoàn thành đơn hàng</p>
         <div class="delete-group-btn">
-          <button class="confirm-btn" onclick="realDelete()">Yes</button>
-          <button class="cancel-btn" onclick="cancelDelete()">No</button>
+          <button onclick="realDelete()">Yes</button>
+          <button onclick="cancelDelete()">No</button>
         </div>
       </div>
 
       <!-- Thông tin bảng hiển thị -->
       <!-- ------------ ------------ ------------ ------------ ------------ ------------ -->
-      <table class="table table-striped table-hover mt-5">
+      <table class="table table-hover">
         <thead class="thead-dark">
           <tr>
             <th scope="col" class="text-center">ID</th>
@@ -103,17 +106,13 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuerry Ajax JS library -->
     <script src="./lib/jQuerry-Ajax-3.5.1/jquery-3.5.1.js"></script>
-
     <!-- Boootstrap JS library -->
     <script src="./lib/Bootstrap-4.5.3/js/bootstrap.js"></script>
-
-    <!-- AOS JS library -->
-    <script src="./lib/AOS-Animation-On-Scroll/dist/aos.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
     <script>
       const idPrefix = "cilent-";
-      let containerDisplay = document.getElementById("dayLaCaiBang");
+      let containerDisplay = document.getElementById("tableID");
 
       $(() => 
         {
@@ -132,7 +131,6 @@
             .done(function (data) 
               {
                 let content = ``;
-
                 for (let i = 0; i < data.length; i++) 
                   {
                     content += `<tr>
@@ -143,17 +141,17 @@
                                 <td> ${data[i].message}</td>
 
                                 <td><a href="#" class="bt-delete" id="${idPrefix}${data[i].id}"
-                                    onclick="deleteStudent(${data[i].id}, this)">Xóa</a></td>
+                                    onclick="deleteCilent(${data[i].id}, this)">Xóa</a></td>
                                 </tr>`;
                   }
                 $("#data-table").html(content);
-                addEventDeleteStudent();
+                addEventDeleteCilent();
               });
         }
 
       // Xác thực hành động xóa khách hàng
       // ------------ ------------ ------------ ------------ ------------ ------------
-      function deleteStudent(id, element) 
+      function deleteCilent(id, element) 
         {
           $(".delete-form").css("display", "flex");
           deleteId = id;
