@@ -281,20 +281,9 @@
 
 
 /* ------------ ------------ ------------ ------------ */
-/* --RESPONSIVE-- ------ */  
-.container
-  {
-    width: calc(109.4rem - 10rem);
-    padding: 0;
-  }
-
+/* --RESPONSIVE-- ------ */ 
 @media (max-width: 1200px)
   {
-    .container
-      {
-        width: calc(96rem - 10rem);
-      }
-
     /* --Expertise-- ------ */
     .expertise-item
       {
@@ -331,11 +320,6 @@
 
 @media (max-width: 992px)
   {
-    .container
-      {
-        width: calc(72rem - 10rem);
-      }
-
     /* --Landing Page-- ------ */
     .credit-item1
       {
@@ -365,11 +349,6 @@
 
 @media (max-width: 768px)
   {
-    .container
-      {
-        width: 54rem;
-      }
-
     /* --Landing Page-- ------ */
     .landing-page, .bg1, .bg2
       {
@@ -419,9 +398,71 @@
 
 @media (max-width: 576px)
   {
-    .container
+    /* --Landing Page-- ------ */
+    .credit-info
+      {
+        flex-direction: column;
+      }
+
+    /* --Expertise-- ------ */
+    .expertise-item
+      {
+        padding-bottom: 2.8rem;
+        min-height: 28rem;
+      }
+    .expertise-item-img
+      {
+        margin-top: -4rem;
+        width: 10rem;
+        height: 10rem;
+      }
+
+    /* --Quote-- ------ */
+    .quote span
+      {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+
+    /* --Profile-- ------ */
+    .profile-img, .profile-content
       {
         width: 100%;
-        padding: 0 4rem;
+      }
+    .profile-img img
+      {
+        height: unset;
+      }
+    .profile-credit-info
+      {
+        flex-direction: column;
+      }
+
+    /* --Contact-- ------ */
+    .contact-form, .contact-info
+      {
+        width: 100%;;
+      }
+    .contact-form
+      {
+        padding: 2.6rem 2.8rem;
+      }
+  }
+
+@media (max-width: 320px)
+  {
+    /* --Expertise-- ------ */
+    .expertise-item
+      {
+        padding: 1.8rem 2rem;
+        min-height: 24rem;
+      }
+
+    /* --Quote-- ------ */
+    .quote span
+      {
+        font-size: 1rem;
+        font-stretch: ultra-condensed;
+        line-height: 2rem;
       }
   }

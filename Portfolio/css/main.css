@@ -99,6 +99,10 @@ a:hover
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+.btn-primary
+  {
+    margin-right: 2rem;
+  }
 .btn-primary, .btn-primary:hover,
 .btn-primary:visited,
 .btn-primary:not(:disabled):not(.disabled):active
@@ -277,8 +281,40 @@ a:hover
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
+@media (min-width: 1200px)
+  {
+    .container
+      {
+        width: calc(109.4rem - 10rem);
+        padding: 0;
+      }
+  }
+
+@media (max-width: 1200px)
+  {
+    .container
+      {
+        width: calc(96rem - 10rem);
+      }
+
+  }
+
+@media (max-width: 992px)
+  {
+    .container
+      {
+        width: calc(72rem - 10rem);
+      }
+  }
+
 @media (max-width: 768px)
   {
+    .container
+      {
+        padding: 0 1.2rem;
+        width: 54rem;
+      }
+
     /* --Vertical navigation bar-- ------ */
     .vertical-navbar
       {
@@ -296,7 +332,152 @@ a:hover
       }
   }
 
-/* @media (max-width: 576px)
+@media (max-width: 576px)
   {
-    
-  } */
+    body
+      {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
+    .container
+      {
+        padding: 0 0.4rem;
+        width: 32rem;
+      }
+
+    /* --HEADER-- ------------ */
+    .header-42-46
+      {
+        font-size: 4.0rem;
+        line-height: 4.2rem;
+      }
+    .header-32-36
+      {
+        font-size: 3rem;
+        line-height: 3.4rem;
+      }
+    .header-24-30
+      {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
+    .header-16-24
+      {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
+
+    /* --PARAGRAPH-- ------------ */
+    .paragraph-14-24
+      {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      } 
+      
+    /* --BUTTON-- ------------ */
+    .btn
+      {
+        padding: 0.8rem 2.2rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
+    .btn-primary
+      {
+        margin-right: 0.8rem;
+      }
+
+    /* --BREAK-- ------------ */
+    .break-8
+      {
+        height: 0.4rem;
+      }
+    .break-20
+      {
+        height: 1rem;
+      }  
+    .break-28
+      {
+        height: 1.4rem;
+      } 
+    .break-40
+      {
+        height: 2rem;
+      }
+    .break-60
+      {
+        height: 3rem;
+      }
+    .break-80
+      {
+        height: 4rem;
+      }
+    .break-120
+      {
+        height: 6rem;
+      }
+    .break-160
+      {
+        height: 8rem;
+      }
+    .break-200
+      {
+        height: 10rem;
+      }
+    .break-240
+      {
+        height: 12rem;
+      }
+    .break-328
+      {
+        height: 24rem;
+      }
+  }
+
+@media (max-width: 320px)
+  {
+    body
+      {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    .container
+      {
+        padding: 0 0.4rem;
+        width: 100%;
+      }
+
+    /* --HEADER-- ------------ */
+    .header-42-46
+      {
+        font-size: 3.8rem;
+        line-height: 4rem;
+      }
+    .header-32-36
+      {
+        font-size: 2.8rem;
+        line-height: 3rem;
+      }
+    .header-24-30
+      {
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+    .header-16-24
+      {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+
+    /* --PARAGRAPH-- ------------ */
+    .paragraph-14-24
+      {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      } 
+
+    /* --BREAK-- ------------ */
+    .break-328
+      {
+        height: 18rem;
+      }
+  }

@@ -123,6 +123,25 @@
   }
 
 
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */ 
+@media (max-width: 576px)
+  {
+    .burger-menu-content
+      {
+        padding-left: 4rem;
+      }
+  }
+
+@media (max-width: 320px)
+  {
+    .burger-menu-content
+      {
+        padding-left: 2rem;
+      }
+  }
+
+
 
 
 /* //////////// //////////// //////////// //////////// */
@@ -158,7 +177,6 @@
 function hamburgerFunction() 
   {
     document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
-    
     document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
     document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");
   }
