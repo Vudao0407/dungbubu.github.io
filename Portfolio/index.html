@@ -136,7 +136,7 @@
           <!-- My Expertise -->
           <div class="break-200"></div>
           <div class="break-40" id="home-expertise"></div>
-          <div data-aos="fade-up">
+          <div class="titleContent" data-aos="fade-up">
             <div class="decor"></div>
             <div class="break-8"></div>
             <span class="header-32-36">my expertise</span>
@@ -179,7 +179,7 @@
           <!-- My Projects -->
           <div class="break-200"></div>
           <div class="break-40" id="home-projects"></div>
-          <div data-aos="fade-up">
+          <div class="titleContent" data-aos="fade-up">
             <div class="decor"></div>
             <div class="break-8"></div>
             <span class="header-32-36">my projects</span>
@@ -190,7 +190,7 @@
           <div class="break-60"></div>
           <div class="grid-container">
             <div class="grid-item projects-item1" data-aos="fade-up" data-aos-delay="200">
-              <a href="#"><div class="grid-item-hover-bg"></div></a>
+              <a href="./HTML-Projects/projectPPT01.html"><div class="grid-item-hover-bg"></div></a>
               <img src="./Images/Home/Projects1.png" alt="Project 1">
               <div class="grid-item-name header-16-24" style="color: #FFFFFF;">#PP01</div>
             </div>
@@ -223,7 +223,7 @@
 
           <div class="break-60"></div>
           <div style="text-align: center;" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="600">
-            <button type="button" class="btn btn-secondary">All my projects</button>
+            <a class="btn btn-secondary" href="./projects.html" role="button">All my projects</a>
           </div>
           <div class="break-200"></div> <!-- Khác Figma -->
         </div>
@@ -246,7 +246,7 @@
           <!-- My Profile -->
           <div class="break-200"></div> <!-- Khác Figma -->
           <div class="break-40" id="home-profile"></div>
-          <div data-aos="fade-up" data-aos-offset="400">
+          <div class="titleContent" data-aos="fade-up" data-aos-offset="400">
             <div class="decor"></div>
             <div class="break-8"></div>
             <span class="header-32-36">my profile</span>
@@ -284,7 +284,7 @@
               </div>
               <div class="break-28"></div>
               <div class="responsiveStyle"> <!-- RESPONSIVE -->
-                <button type="button" class="btn btn-secondary" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">More about me</button>
+                <a class="btn btn-secondary" href="./profile.html" role="button" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">More about me</a>
               </div>
             </div>
           </div>
@@ -292,7 +292,7 @@
           <!-- My Contact -->
           <div class="break-200"></div>
           <div class="break-40" id="home-contact"></div>
-          <div data-aos="fade-up">
+          <div class="titleContent" data-aos="fade-up">
             <div class="decor"></div>
             <div class="break-8"></div>
             <span class="header-32-36">my contact</span>
@@ -348,7 +348,7 @@
               <div class="responsiveStyle"> <!-- RESPONSIVE -->
                 <button type="button" class="btn btn-primary" id="btn-sendMessage">Send message</button>
               </div>
-              </div>
+            </div>
           </div>
           <div class="break-80"></div>
         </div>
@@ -392,6 +392,7 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- Javascript ------------------------------------------------------------------------------------------------ -->
     <script>
+      // ------------ ------------ ------------ ------------ ------------ ------------
       // Cài đặt thư viện hiệu ứng AOS ------------ ------------
       AOS.init(
         {
@@ -530,8 +531,8 @@
       //   });
 
 
-      // // ------------ ------------ ------------ ------------ ------------ ------------
-      // // Hàm chạy thư viện Owl Carousel ------------ ------------
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm chạy thư viện Owl Carousel ------------ ------------
       $('.owl-carousel').owlCarousel(
         {
           margin:40,
@@ -552,8 +553,8 @@
         })
 
 
-      // // ------------ ------------ ------------ ------------ ------------ ------------
-      // // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
       function hamburgerFunction() 
         {
           document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");

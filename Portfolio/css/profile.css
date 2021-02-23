@@ -1,0 +1,308 @@
+/* ------------ ------------ ------------ ------------ */
+/* --Landing Page-- ------ */
+.landing-page
+  {
+    width: 100%;
+    height: 100vh;
+    padding-left: 10rem;
+    background-image: url(../Images/Profile/ProfileBackground.png);
+    background-color: #FAFAFA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.landing-page-bg
+  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+.landing-page-content
+  {
+    margin-top: 24rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Background 1-- ------ */
+.bg1 
+  {
+    background-color: #FFFFFF;
+  }
+
+    /* --Profile-- ------ */
+    .profile-menu
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    .profile-img
+      {
+        margin-right: 20px;
+        max-width: 44rem;
+        object-fit: cover;
+        overflow: hidden;
+      }
+    .profile-img img
+      {
+        height: 100%;
+      }
+    .profile-content
+      {
+        width: 53.2rem;
+      }
+    .profile-credit-info
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+    /*-- My Profile - More information */
+    .profile-moreInfo
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    .moreInfo-content
+      {
+        padding: 6rem 2.2rem 10rem 2.2rem;
+        width: 52rem;
+        height: 42.4rem;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        box-shadow: 6px 12px 24px rgba(0, 0, 0, 0.06);
+      }
+    .moreInfo-decor
+      {
+        margin: 2px 20px 2px 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #7051EF;
+      }
+    .moreInfo-text
+      {
+        max-width: 36.8rem;
+      }
+
+    /* --Expertise-- ------ */
+    .expertise-menu
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+    .expertise-item
+      {
+        padding: 0 2.2rem 4rem 2.2rem;
+        width: 28rem;
+        min-height: 32rem;
+        background-color: #FFFFFF;
+        box-shadow: 4px 6px 12px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    .expertise-item-img
+      {
+        margin-top: -6rem;
+        width: 12rem;
+      }
+    .expertise-item-img img
+      {
+        width: 100%;
+      }
+
+    .expertise-item:hover
+      {
+        background-color: #7051EF;
+      }
+    .expertise-item:hover >span
+      {
+        color: #FFFFFF;
+      }
+    /* --Owl Carousel-- ------ */
+    .owl-stage-outer
+      {
+        padding: 6rem 2rem 2rem 0;
+      }
+    .owl-nav, .owl-dot
+      {
+        display: none;
+      }
+    
+
+/* ------------ ------------ ------------ ------------ */
+/* --Experience-- ------ */
+.experience-menu
+  {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 5rem);
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #FFFFFF;
+  }
+.experience-item
+  {
+    width: 25.6rem;
+    text-align: center;
+  }
+
+  
+/* ------------ ------------ ------------ ------------ */
+/* --Background 2-- ------ */
+.bg2
+  {
+    background-color: #FFFFFF;
+  }
+
+    /* --Profile-- ------ */
+
+    /* --Contact-- ------ */
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */ 
+@media (max-width: 1200px)
+  {
+    /* --Profile-- ------ */
+    .profile-content
+      {
+        width: 48rem;
+      }
+
+    /* --Expertise-- ------ */
+    .expertise-item
+      {
+        width: 24rem;
+      }
+  }
+
+@media (max-width: 992px)
+  {
+    /* --Landing Page-- ------ */
+    .credit-item1
+      {
+        display: none;
+      }
+
+    /* --Profile-- ------ */
+    .profile-credit-info
+      {
+        flex-direction: column;
+      }
+  }
+
+@media (max-width: 768px)
+  {
+    /* --Landing Page-- ------ */
+    .landing-page
+      {
+        padding-left: 0;
+      }
+    .landing-page
+      {
+        background-image: none;
+      }
+
+    /* --Experience-- ------ */
+    .experience-menu
+      {
+        left: 50%;
+        width: 100%;
+      }
+
+    /* --Profile-- ------ */
+    .profile-menu
+      {
+        flex-direction: column;
+        align-items: center;
+      }
+    .profile-menu .responsiveStyle
+      {
+        text-align: center;
+      }
+    .profile-content
+      {
+        margin-top: 4rem;
+      }
+    .profile-credit-info
+      {
+        flex-direction: row;
+      }
+  }
+
+@media (max-width: 576px)
+  {
+    /* --Landing Page-- ------ */
+    .credit-info
+      {
+        flex-direction: column;
+      }
+
+    /* --Expertise-- ------ */
+    .expertise-item
+      {
+        padding-bottom: 2.8rem;
+        min-height: 28rem;
+      }
+    .expertise-item-img
+      {
+        margin-top: -4rem;
+        width: 10rem;
+        height: 10rem;
+      }
+
+    /* --Experience-- ------ */
+    .experience-menu span
+      {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+
+    /* --Profile-- ------ */
+    .profile-img, .profile-content
+      {
+        width: 100%;
+      }
+    .profile-img img
+      {
+        height: unset;
+      }
+    .profile-credit-info
+      {
+        flex-direction: column;
+      }
+  }
+
+@media (max-width: 320px)
+  {
+    /* --Expertise-- ------ */
+    .expertise-item
+      {
+        padding: 1.8rem 2rem;
+        min-height: 24rem;
+      }
+
+    /* --Experience-- ------ */
+    .experience-menu span
+      {
+        font-size: 1rem;
+        font-stretch: ultra-condensed;
+        line-height: 2rem;
+      }
+  }

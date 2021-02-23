@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DungBu • Portfolio</title>
+    <link rel="shortcut icon" href="./Images/Favicon.jpg" type="image/x-icon">
+
+    <!-- Boootstrap CSS library -->
+    <link rel="stylesheet" href="./lib/Bootstrap-4.5.3/css/bootstrap.css">
+    <!-- CSS Chung - AOS -->
+    <link rel="stylesheet" href="./lib/AOS-Animation-On-Scroll/dist/aos.css">
+    <!-- CSS Chung - Owl Carousel -->
+    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- CSS Riêng -->
+    <link rel="stylesheet" href="./css/profile.css">
+    <!-- CSS Chung - Hamburger menu -->
+    <link rel="stylesheet" href="./lib/burger-menu.css">
+  </head>
+
+  <body>
+    <header id="headerID"> <!-- //////////// //////////// //////////// //////////// -->
+      <!-- Navbar - General Css------------------------------------------------------------------------------------------------ -->
+      <div class="vertical-navbar">
+        <a class="logo-MD" href="./index.html"><img src="./Images/Logo.png" alt="MD Logo"></a>
+
+        <nav class="navbar">
+          <a class="menu-item" href="./index.html">
+            <span class="menu-title">home</span>
+            <div class="decor-mini"></div>
+          </a>
+          <a class="menu-item" href="./projects.html">
+            <span class="menu-title">projects</span>
+            <div class="decor-mini"></div>
+          </a>
+          <a class="menu-item" href="./profile.html">
+            <span class="menu-title">about</span>
+            <div class="decor-mini"></div>
+          </a>
+        </nav>
+
+        <a class="btn-CTA" href="#home-contact" role="button">Contact me</a>
+      </div>
+
+      <!-- Hamburger menu (RESPONSIVE Only) - Humburger menu css ------------------------------------------------------------------------------------------------ -->
+      <div class="hamburger">
+        <div class="burger-menu" onclick="hamburgerFunction()">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+        <div class="burger-menu-content">
+          <a href="#home-landing-page">home</a>
+          <div class="break-20"></div>
+          <a href="#home-projects">projects</a>
+          <div class="break-20"></div>
+          <a href="#home-profile">about me</a>
+          <div class="break-20"></div>
+          <a href="#home-contact">contact</a>
+        </div>
+        <div class="burger-menu-blackscreen"></div>
+      </div>
+    </header> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <main id="mainID"> <!-- //////////// //////////// //////////// //////////// -->
+      <!-- Landing Page------------------------------------------------------------------------------------------------ -->
+      <div class="landing-page" id="home-landing-page">
+        <div class="container landing-page-bg">
+          <div class="landing-page-content" data-aos="fade-up" data-aos-offset="0" data-aos-delay="400">
+            <span class="header-42-46">Personal Portfolio</span>
+            <div class="break-8"></div>
+            <span class="header-42-46" style="color: #7051EF;">About me</span>
+            <div class="break-28"></div>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <span>Phasellus a sapien lobortis, luctus ipsum in, ultrices diam.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background 1------------------------------------------------------------------------------------------------ -->
+      <div class="bg1">
+
+        <div class="container">
+          <!-- My Profile -->
+          <div class="break-200"></div>
+          <div class="break-40" id="home-profile"></div>
+          <div class="titleContent" data-aos="fade-up" data-aos-offset="400">
+            <div class="decor"></div>
+            <div class="break-8"></div>
+            <span class="header-32-36">my profile</span>
+            <div class="break-20"></div>
+            <span>Main Informations About Me And What I Love To Do.</span>
+          </div>
+          
+          <div class="break-60"></div>
+          <div class="profile-menu">
+            <div class="profile-img" data-aos="fade-up" data-aos-offset="400" data-aos-delay="200">
+              <img src="./Images/Home/Profile.png" alt="Profile picture">
+            </div>
+            <div class="profile-content">
+              <div class="profile-content-info" data-aos="fade-up" data-aos-offset="400" data-aos-delay="300">
+                <span class="header-24-30">Hello, I’m Dungbubu</span>
+                <div class="break-20"></div>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer 
+                  sit amet iaculis ex, ut tempus lorem. Sed malesuada augue ante, 
+                  sit amet pharetra eros sagittis lobortis. Phasellus tincidunt vel 
+                  mauris in tincidunt. Maecenas fermentum non felis id consequat. 
+                  Aliquam pulvinar convallis ante. Integer in erat diam.</span>
+                <div class="break-28"></div>
+              </div>
+              <div class="profile-credit-info" data-aos="fade-up" data-aos-offset="200" data-aos-delay="350">
+                <div>
+                  <span class="header-16-24">Name:</span> <span>Nguyen Manh Dung</span>
+                  <div class="break-8"></div>
+                  <span class="header-16-24">Dob:</span> <span>24 / 06 / 1996</span>
+                </div>
+                <div>
+                  <span class="header-16-24">Location:</span> <span>HaNoi, Vietnam</span>
+                  <div class="break-8"></div>
+                  <span class="header-16-24">Freelancer:</span> <span>Available</span>
+                </div>
+              </div>
+              <div class="break-28"></div>
+              <div class="responsiveStyle"> <!-- RESPONSIVE -->
+                <a class="btn btn-secondary" href="profile.html" role="button" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">More about me</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Profile - More information -->
+          <div class="break-120"></div>
+          <div class="profile-moreInfo">
+            <div>
+              <div class="header-24-30" data-aos="fade-up" data-aos-offset="200">Work experience</div>
+              <div class="break-60"></div>
+              <div class="moreInfo-content" data-aos="fade-up" data-aos-offset="200">
+                <div style="display: flex; flex-direction: row;" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                  <div class="moreInfo-decor"></div>
+                  <div class="moreInfo-text">
+                    <span class="header-16-24">9Slide - Tutors</span>
+                    <div class="break-8"></div>
+                    <span style="color: #7051EF;">3 / 2018 - now</span>
+                    <div class="break-8"></div>
+                    <span>Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Phasellus a sapien lobortis.</span>
+                  </div>
+                </div>
+                <div class="break-40"></div>
+                <div style="display: flex; flex-direction: row;" data-aos="fade-up" data-aos-offset="200" data-aos-delay="250">
+                  <div class="moreInfo-decor"></div>
+                  <div class="moreInfo-text">
+                    <span class="header-16-24">CDIT - Intership</span>
+                    <div class="break-8"></div>
+                    <span style="color: #7051EF;">12 / 2017</span>
+                    <div class="break-8"></div>
+                    <span>Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Phasellus a sapien lobortis.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="header-24-30" data-aos="fade-up" data-aos-offset="200">Education</div>
+              <div class="break-60"></div>
+              <div class="moreInfo-content" data-aos="fade-up" data-aos-offset="200">
+                <div style="display: flex; flex-direction: row;" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                  <div class="moreInfo-decor"></div>
+                  <div class="moreInfo-text">
+                    <span class="header-16-24">University of Transport Technology</span>
+                    <div class="break-8"></div>
+                    <span style="color: #7051EF;">2014 - 2018</span>
+                    <div class="break-8"></div>
+                    <span>Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Phasellus a sapien lobortis.</span>
+                  </div>
+                </div>
+                <div class="break-40"></div>
+                <div style="display: flex; flex-direction: row;" data-aos="fade-up" data-aos-offset="200" data-aos-delay="250">
+                  <div class="moreInfo-decor"></div>
+                  <div class="moreInfo-text">
+                    <span class="header-16-24">Phan Dinh Phung High school</span>
+                    <div class="break-8"></div>
+                    <span style="color: #7051EF;">2011 - 2014</span>
+                    <div class="break-8"></div>
+                    <span>Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit. Phasellus a sapien lobortis.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Expertise -->
+          <div class="break-200"></div>
+          <div class="break-40" id="home-expertise"></div>
+          <div class="titleContent" data-aos="fade-up">
+            <div class="decor"></div>
+            <div class="break-8"></div>
+            <span class="header-32-36">my expertise</span>
+            <div class="break-20"></div>
+            <span>I Have Worked With A Number Of Clients.</span>
+          </div>
+
+          <div class="break-120"></div>
+          <div class="expertise-menu owl-carousel owl-theme">
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise1.png" alt="Expertise: Presentation"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">presentation</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise2.png" alt="Expertise: Web Design"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">web design</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise3.png" alt="Expertise: UI / UX Design"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">ui/ux design</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="expertise-item-img"><img src="./Images/Home/Expertise4.png" alt="Expertise: HTML & CSS"></div>
+              <div class="break-40"></div>
+              <span class="header-24-30">html, css</span>
+              <div class="break-20"></div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
+            </div>
+          </div>
+          <div class="break-200"></div> <!-- Khác Figma -->
+        </div>
+      </div>
+
+      <!-- Experience------------------------------------------------------------------------------------------------ -->
+      <div class="break-328"></div>
+      <div class="container experience-menu">
+        <div class="experience-item">
+          <span class="header-42-46">3</span>
+          <div class="break-8"></div>
+          <span>Years Experience</span>
+        </div>
+        <div class="experience-item">
+          <span class="header-42-46">2k+</span>
+          <div class="break-8"></div>
+          <span>Hours worked</span>
+        </div>
+        <div class="experience-item">
+          <span class="header-42-46">12</span>
+          <div class="break-8"></div>
+          <span>Happy Cilents</span>
+        </div>
+        <div class="experience-item">
+          <span class="header-42-46">1</span>
+          <div class="break-8"></div>
+          <span>Awards Won</span>
+        </div>
+      </div>
+
+      <!-- Background 2------------------------------------------------------------------------------------------------ -->
+      <div class="bg2">
+
+        <div class="container">
+          <!-- My abc -->
+
+          <!-- My abc -->
+          <div class="break-80"></div>
+        </div>
+      </div>
+    </main> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+    
+    <footer id="footerID"> <!-- //////////// //////////// //////////// //////////// -->
+      <!-- Footer - General Css------------------------------------------------------------------------------------------------ -->
+      <div class="footer">
+        <div class="container">
+          <div class="footer-menu">
+            <span>Map</span>
+            <span style="margin-left: 2rem;">Style Guide</span>
+            <span style="margin-left: 2rem;">Liscense</span>
+          </div>
+        </div>
+      </div>
+    </footer> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- jQuerry Ajax JS library -->
+    <script src="./lib/jQuerry-Ajax-3.5.1/jquery-3.5.1.js"></script>
+    <!-- Boootstrap JS library -->
+    <script src="./lib/Bootstrap-4.5.3/js/bootstrap.js"></script>
+    <!-- AOS JS library -->
+    <script src="./lib/AOS-Animation-On-Scroll/dist/aos.js"></script>
+    <!-- Owl Carousel JS library -->
+    <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- Javascript ------------------------------------------------------------------------------------------------ -->
+    <script>
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Cài đặt thư viện hiệu ứng AOS ------------ ------------
+      AOS.init(
+        {
+          offset: 200,
+          delay: 100,
+          duration: 1000,
+          easing: 'ease-out',
+          mirror: true,
+        });
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Đảm bảo khi load trang xong thì code bên dưới sẽ chạy luôn ------------ ------------
+      $(() => 
+            {
+              activeStateOnLoad();
+            });
+        
+      let menuItemActive = [...document.getElementsByClassName("menu-item")];
+      function activeStateOnLoad()
+        {
+          menuItemActive[2].classList.add("active");
+        }
+            
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm chạy thư viện Owl Carousel ------------ ------------
+      $('.owl-carousel').owlCarousel(
+        {
+          margin:40,
+          loop:true,
+          nav:true,
+          autoWidth:true,
+          responsive:
+            {
+              0:
+                {items:1},
+              600:
+                {items:2},
+              1000:
+                {items:3},
+              1200:
+                {items:4}
+            }
+        })
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
+      function hamburgerFunction() 
+        {
+          document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
+          document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
+          document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");
+        }
+    </script>
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+  </body>
+</html>
