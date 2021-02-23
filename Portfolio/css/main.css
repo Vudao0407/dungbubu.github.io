@@ -211,7 +211,7 @@ a:hover
 /* --BACKGROUND-- ------------ */
 .bg1, .bg2, .bg
   {
-    padding-left: 100px;
+    padding-left: 10rem;
   }
 
 
@@ -312,7 +312,7 @@ a:hover
   {
     .container
       {
-        width: 96rem;
+        width: 84rem;
       }
 
   }
@@ -321,7 +321,7 @@ a:hover
   {
     .container
       {
-        width: 72rem;
+        width: 64rem;
       }
   }
 

@@ -88,7 +88,7 @@
       }
     .moreInfo-text
       {
-        max-width: 36.8rem;
+        max-width: calc(52rem - 40px - 2.2rem - 2.2rem);
       }
 
     /* --Expertise-- ------ */
@@ -161,6 +161,14 @@
     width: 25.6rem;
     text-align: center;
   }
+.experience-item p
+  {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
 
   
 /* ------------ ------------ ------------ ------------ */
@@ -170,9 +178,29 @@
     background-color: #FFFFFF;
   }
 
-    /* --Profile-- ------ */
+    /* --My Cilent-- ------ */
+    .grid-container
+      {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: auto auto auto auto;
+      }
+    .grid-item
+      {
+        box-shadow: 6px 12px 24px rgba(0, 0, 0, 0.06);
+      }
+    .grid-item img
+      {
+        width: 100%;
+      }
 
-    /* --Contact-- ------ */
+    /* --Follow me-- ------ */
+    .grid-container2
+      {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: auto auto auto;
+      }
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -183,6 +211,16 @@
     .profile-content
       {
         width: 48rem;
+      }
+    /*-- My Profile - More information */
+    .moreInfo-content
+      {
+        padding: 6rem 2.2rem 10rem 2.2rem;
+        width: 40rem;
+      }
+    .moreInfo-text
+      {
+        max-width: calc(40rem - 40px - 2.2rem - 2.2rem);
       }
 
     /* --Expertise-- ------ */
@@ -205,6 +243,18 @@
       {
         flex-direction: column;
       }
+
+    /*-- My Profile - More information */
+    .moreInfo-content
+      {
+        padding: 2.8rem 2.2rem 4.4rem 2.2rem;
+        width: 30rem;
+        height: 50rem;
+      }
+    .moreInfo-text
+      {
+        max-width: calc(30rem - 40px - 2.2rem - 2.2rem);
+      }
   }
 
 @media (max-width: 768px)
@@ -218,12 +268,36 @@
       {
         background-image: none;
       }
+    
+    /*-- My Profile - More information */
+    .profile-moreInfo
+      {
+        flex-direction: column;
+      }
+    .profile-moreInfo .break
+      {
+        margin-top: 8rem;
+      }
+    .moreInfo-content
+      {
+        padding: 2.8rem 2.2rem 4rem 2.2rem;
+        width: 100%;
+        min-height: 36rem;
+      }
+    .moreInfo-text
+      {
+        max-width: calc(100% - 40px - 2.2rem - 2.2rem);
+      }
 
     /* --Experience-- ------ */
     .experience-menu
       {
         left: 50%;
         width: 100%;
+      }
+    .experience-item
+      {
+        width: 10rem;
       }
 
     /* --Profile-- ------ */
@@ -253,6 +327,16 @@
       {
         flex-direction: column;
       }
+    
+    /*-- My Profile - More information */
+    .profile-moreInfo .break
+      {
+        margin-top: 4rem;
+      }
+    .moreInfo-content
+      {
+        min-height: 46rem;
+      }
 
     /* --Expertise-- ------ */
     .expertise-item
@@ -268,10 +352,25 @@
       }
 
     /* --Experience-- ------ */
-    .experience-menu span
+    .experience-menu
       {
-        font-size: 1.2rem;
-        line-height: 2rem;
+        padding: 0 4rem;
+      }
+    .experience-item
+      {
+        width: 6.4rem;
+      }
+    .experience-item p
+      {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+        font-stretch: ultra-condensed;
+      } 
+    .experience-item span
+      {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        font-stretch: ultra-condensed;
       }
 
     /* --Profile-- ------ */
@@ -291,6 +390,12 @@
 
 @media (max-width: 320px)
   {
+    /*-- My Profile - More information */
+    .moreInfo-content
+      {
+        min-height: 32rem;
+      }
+
     /* --Expertise-- ------ */
     .expertise-item
       {
@@ -302,7 +407,6 @@
     .experience-menu span
       {
         font-size: 1rem;
-        font-stretch: ultra-condensed;
         line-height: 2rem;
       }
   }
