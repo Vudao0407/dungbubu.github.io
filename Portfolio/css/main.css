@@ -503,5 +503,7 @@ a:hover
     .break-328
       {
         height: 18rem;
+        box-shadow: inset 2.8rem 2.8rem 2.8rem #6549d7,
+                    inset -2.8rem -2.8rem 2.8rem #7b59ff;
       }
   }

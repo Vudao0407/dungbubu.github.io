@@ -150,7 +150,8 @@
     top: 50%;
     left: calc(50% + 5rem);
     transform: translate(-50%, -50%);
-    width: calc(100% - 10rem);
+    padding: 0 14rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -228,6 +229,12 @@
       {
         width: 24rem;
       }
+
+    /* --Experience-- ------ */
+    .experience-menu
+      {
+        padding: 0 10rem;
+      }
   }
 
 @media (max-width: 992px)
@@ -254,6 +261,12 @@
     .moreInfo-text
       {
         max-width: calc(30rem - 40px - 2.2rem - 2.2rem);
+      }
+
+    /* --Experience-- ------ */
+    .experience-item
+      {
+        width: 10rem;
       }
   }
 
@@ -293,11 +306,8 @@
     .experience-menu
       {
         left: 50%;
+        padding: 0 10rem;
         width: 100%;
-      }
-    .experience-item
-      {
-        width: 10rem;
       }
 
     /* --Profile-- ------ */
@@ -306,13 +316,17 @@
         flex-direction: column;
         align-items: center;
       }
-    .profile-menu .responsiveStyle
+    .profile-img
       {
-        text-align: center;
+        margin-right: 0;
       }
     .profile-content
       {
         margin-top: 4rem;
+      }
+    .profile-menu .responsiveStyle
+      {
+        text-align: center;
       }
     .profile-credit-info
       {
@@ -354,11 +368,11 @@
     /* --Experience-- ------ */
     .experience-menu
       {
-        padding: 0 4rem;
+        padding: 0 4.88rem;
       }
     .experience-item
       {
-        width: 6.4rem;
+        width: 6.2rem;
       }
     .experience-item p
       {
@@ -386,6 +400,18 @@
       {
         flex-direction: column;
       }
+
+    /* --My Cilent-- ------ */
+    .grid-container
+      {
+        grid-gap: 1rem;
+      }
+
+    /* --Follow me-- ------ */
+    .grid-container2
+      {
+        grid-gap: 1rem;
+      }
   }
 
 @media (max-width: 320px)
@@ -404,9 +430,25 @@
       }
 
     /* --Experience-- ------ */
+    .experience-menu
+      {
+        padding: 0 2.4rem;
+      }
     .experience-menu span
       {
         font-size: 1rem;
         line-height: 2rem;
+      }
+
+    /* --My Cilent-- ------ */
+    .grid-container
+      {
+        grid-gap: 0.4rem;
+      }
+
+    /* --Follow me-- ------ */
+    .grid-container2
+      {
+        grid-gap: 0.4rem;
       }
   }
