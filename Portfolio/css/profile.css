@@ -239,12 +239,6 @@
 
 @media (max-width: 992px)
   {
-    /* --Landing Page-- ------ */
-    .credit-item1
-      {
-        display: none;
-      }
-
     /* --Profile-- ------ */
     .profile-credit-info
       {
@@ -336,12 +330,6 @@
 
 @media (max-width: 576px)
   {
-    /* --Landing Page-- ------ */
-    .credit-info
-      {
-        flex-direction: column;
-      }
-    
     /*-- My Profile - More information */
     .profile-moreInfo .break
       {

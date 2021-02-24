@@ -363,7 +363,8 @@
       <div class="footer">
         <div class="container">
           <div class="footer-menu">
-            <span>Map</span>
+            <span>404</span>
+            <span style="margin-left: 2rem;">Map</span>
             <span style="margin-left: 2rem;">Style Guide</span>
             <span style="margin-left: 2rem;">Liscense</span>
           </div>
@@ -491,44 +492,39 @@
                       document.getElementById("home-expertise").getBoundingClientRect().top + document.documentElement.scrollTop,
                       document.getElementById("home-projects").getBoundingClientRect().top + document.documentElement.scrollTop,
                       document.getElementById("home-profile").getBoundingClientRect().top + document.documentElement.scrollTop];
-      let windowViewpoint = window.pageYOffset + 400;
 
-      // let scrollItemActive = [document.getElementById("home-landing-page"),
-      //                         document.getElementById("home-expertise"),
-      //                         document.getElementById("home-projects"),
-      //                         document.getElementById("home-profile")];
-
-      // window.addEventListener("scroll", function()
-      //   {
-      //     if (idOffSet[1] > windowViewpoint && windowViewpoint >= idOffSet[0])
-      //       {
-      //         menuItemActive[0].classList.add("active");
-      //         menuItemActive[1].classList.remove("active");
-      //         menuItemActive[2].classList.remove("active");
-      //         menuItemActive[3].classList.remove("active");
-      //       }
-      //     else if (idOffSet[2] > windowViewpoint && windowViewpoint >= idOffSet[1])
-      //       {
-      //         menuItemActive[0].classList.remove("active");
-      //         menuItemActive[1].classList.add("active");
-      //         menuItemActive[2].classList.remove("active");
-      //         menuItemActive[3].classList.remove("active");
-      //       }
-      //     else if (idOffSet[3] > windowViewpoint && windowViewpoint >= idOffSet[2])
-      //       {
-      //         menuItemActive[0].classList.remove("active");
-      //         menuItemActive[1].classList.remove("active");
-      //         menuItemActive[2].classList.add("active");
-      //         menuItemActive[3].classList.remove("active");
-      //       }
-      //     else if (windowViewpoint >= idOffSet[3])
-      //       {
-      //         menuItemActive[0].classList.remove("active");
-      //         menuItemActive[1].classList.remove("active");
-      //         menuItemActive[2].classList.remove("active");
-      //         menuItemActive[3].classList.add("active");
-      //       }
-      //   });
+      window.addEventListener("scroll", function()
+        {
+          let windowViewpoint = window.pageYOffset + 400;
+          if (idOffSet[1] > windowViewpoint && windowViewpoint >= idOffSet[0])
+            {
+              menuItemActive[0].classList.add("active");
+              menuItemActive[1].classList.remove("active");
+              menuItemActive[2].classList.remove("active");
+              menuItemActive[3].classList.remove("active");
+            }
+          else if (idOffSet[2] > windowViewpoint && windowViewpoint >= idOffSet[1])
+            {
+              menuItemActive[0].classList.remove("active");
+              menuItemActive[1].classList.add("active");
+              menuItemActive[2].classList.remove("active");
+              menuItemActive[3].classList.remove("active");
+            }
+          else if (idOffSet[3] > windowViewpoint && windowViewpoint >= idOffSet[2])
+            {
+              menuItemActive[0].classList.remove("active");
+              menuItemActive[1].classList.remove("active");
+              menuItemActive[2].classList.add("active");
+              menuItemActive[3].classList.remove("active");
+            }
+          else
+            {
+              menuItemActive[0].classList.remove("active");
+              menuItemActive[1].classList.remove("active");
+              menuItemActive[2].classList.remove("active");
+              menuItemActive[3].classList.add("active");
+            }
+        });
 
 
       // ------------ ------------ ------------ ------------ ------------ ------------
@@ -536,6 +532,9 @@
       $('.owl-carousel').owlCarousel(
         {
           margin:40,
+          autoplay:true,
+          autoplayTimeout:1000,
+          autoplayHoverPause:true,
           loop:true,
           nav:true,
           autoWidth:true,

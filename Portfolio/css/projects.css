@@ -1,10 +1,11 @@
+/* ------------ ------------ ------------ ------------ */
 /* --Landing Page-- ------ */
 .landing-page
   {
     width: 100%;
     height: 100vh;
     padding-left: 10rem;
-    background-image: url(../Images/Profile/ProfileBackground.png);
+    background-image: url(../Images/Projects/ProjectsBackground.png);
     background-color: #FAFAFA;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,107 +26,88 @@
   }
 
 
-/* --Background 1-- ------ */
-.bg1 
+/* ------------ ------------ ------------ ------------ */
+/* --Background-- ------ */
+.bg
   {
-    padding-left: 10rem;
-    background-image: url(../Images/Home/BG1.png);
     background-color: #FFFFFF;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
-    /* --Profile-- ------ */
-    .profile-menu
-      {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    .profile-img
-      {
-        margin-right: 20px;
-        max-width: 44rem;
-        object-fit: cover;
-        overflow: hidden;
-      }
-    .profile-img img
-      {
-        height: 100%;
-      }
-    .profile-content
-      {
-        width: 53.2rem;
-      }
-    .profile-credit-info
-      {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    
 
-/* --Quote-- ------ */
-.quote
+/* ------------ ------------ ------------ ------------ */
+/* --Projects-- ------ */
+.grid-container, .grid-container2
   {
-    z-index: -1;
-    position: fixed;
-    top: 50%;
-    left: calc(50% + 5rem);
-    transform: translate(-50%, -50%);
-    width: calc(100% - 10rem);
-    text-align: center;
-    color: #FFFFFF;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: auto auto auto;
   }
-
-  
-/* --Background 2-- ------ */
-.bg2
+.grid-item
   {
-    padding-left: 10rem;
-    background-image: url(../Images/Home/BG2.png);
-    background-color: #FFFFFF;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+  }
+.grid-item img
+  {
+    width: 100%;
+  }
+.grid-item-hover-bg
+  {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    bottom: 0;
+    background-color: #7051EF;
+
+    transition: all 400ms ease-out;
+  }
+.grid-item-name
+  {
+    z-index: 2;
+    position: absolute;
+    display: none;
+
+    transition: all 400ms ease-out;
+    animation: peak-in 400ms ease-out forwards;
   }
 
-    /* --Profile-- ------ */
-
-    /* --Contact-- ------ */
+.grid-item:hover .grid-item-hover-bg
+  {
+    height: 100%;
+  }
+.grid-item:hover .grid-item-name
+  {
+    display: flex;
+  }
+@keyframes peak-in
+  {
+    from
+      {
+        top: 100%;
+        left: 10%;
+      }
+    to
+      {
+        top: 80%;
+        left: 10%;
+      }
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */ 
-@media (max-width: 1200px)
+/* @media (max-width: 1200px)
   {
-    /* --Profile-- ------ */
-    .profile-content
-      {
-        width: 48rem;
-      }
-  }
+  } */
 
-@media (max-width: 992px)
+/* @media (max-width: 992px)
   {
-    /* --Landing Page-- ------ */
-    .credit-item1
-      {
-        display: none;
-      }
-
-    /* --Profile-- ------ */
-    .profile-credit-info
-      {
-        flex-direction: column;
-      }
-  }
+  } */
 
 @media (max-width: 768px)
   {
     /* --Landing Page-- ------ */
-    .landing-page, .bg1, .bg2
+    .landing-page, .bg
       {
         padding-left: 0;
       }
@@ -133,71 +115,22 @@
       {
         background-image: none;
       }
-
-    /* --Quote-- ------ */
-    .quote
-      {
-        left: 50%;
-        width: 100%;
-      }
-
-    /* --Profile-- ------ */
-    .profile-menu
-      {
-        flex-direction: column;
-        align-items: center;
-      }
-    .profile-menu .responsiveStyle
-      {
-        text-align: center;
-      }
-    .profile-content
-      {
-        margin-top: 4rem;
-      }
-    .profile-credit-info
-      {
-        flex-direction: row;
-      }
   }
 
 @media (max-width: 576px)
   {
-    /* --Landing Page-- ------ */
-    .credit-info
+    /* --Projects-- ------ */
+    .grid-container, .grid-container2
       {
-        flex-direction: column;
-      }
-
-    /* --Quote-- ------ */
-    .quote span
-      {
-        font-size: 1.2rem;
-        line-height: 2rem;
-      }
-
-    /* --Profile-- ------ */
-    .profile-img, .profile-content
-      {
-        width: 100%;
-      }
-    .profile-img img
-      {
-        height: unset;
-      }
-    .profile-credit-info
-      {
-        flex-direction: column;
+        grid-gap: 1rem;
       }
   }
 
 @media (max-width: 320px)
   {
-    /* --Quote-- ------ */
-    .quote span
+    /* --Projects-- ------ */
+    .grid-container, .grid-container2
       {
-        font-size: 1rem;
-        font-stretch: ultra-condensed;
-        line-height: 2rem;
+        grid-gap: 0.4rem;
       }
   }
