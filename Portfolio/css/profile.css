@@ -183,7 +183,7 @@
     .grid-container
       {
         display: grid;
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         grid-template-columns: auto auto auto auto;
       }
     .grid-item
@@ -199,8 +199,14 @@
     .grid-container2
       {
         display: grid;
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         grid-template-columns: auto auto auto;
+      }
+    .follow1:hover,
+    .follow2:hover,
+    .follow3:hover
+      {
+        background-image: url(../Images/Profile/Follow1-hover.png);
       }
 
 
@@ -387,18 +393,6 @@
     .profile-credit-info
       {
         flex-direction: column;
-      }
-
-    /* --My Cilent-- ------ */
-    .grid-container
-      {
-        grid-gap: 1rem;
-      }
-
-    /* --Follow me-- ------ */
-    .grid-container2
-      {
-        grid-gap: 1rem;
       }
   }
 

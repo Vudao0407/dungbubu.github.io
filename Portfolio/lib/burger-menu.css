@@ -94,6 +94,15 @@
   {
     color: #FFFFFF;
   }
+.burger-menu-content i
+  {
+    display: none;
+    margin-right: 1rem;
+  }
+.burger-menu-content a:hover i
+  {
+    display: inline;
+  }
 
 .burger-menu-content.burger-menu-toggle
   {
@@ -154,15 +163,15 @@
     <div class="line-3"></div>
   </div>
   <div class="burger-menu-content">
-    <a href="#home-landing-page">home</a>
+    <a href="#home-landing-page"><i class='fas fa-angle-right'></i>home</a>
     <div class="break-20"></div>
-    <a href="#home-expertise">services</a>
+    <a href="#home-expertise"><i class='fas fa-angle-right'></i>services</a>
     <div class="break-20"></div>
-    <a href="#home-projects">projects</a>
+    <a href="#home-projects"><i class='fas fa-angle-right'></i>projects</a>
     <div class="break-20"></div>
-    <a href="#home-profile">about me</a>
+    <a href="#home-profile"><i class='fas fa-angle-right'></i>about me</a>
     <div class="break-20"></div>
-    <a href="#home-contact">contact</a>
+    <a href="#home-contact"><i class='fas fa-angle-right'></i>contact</a>
   </div>
   <div class="burger-menu-blackscreen"></div>
 </div>

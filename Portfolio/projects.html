@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./css/projects.css">
     <!-- CSS Chung - Hamburger menu -->
     <link rel="stylesheet" href="./lib/burger-menu.css">
+    <!-- Font Awesome 5.14 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
 
   <body>
@@ -55,13 +57,13 @@
           <div class="line-3"></div>
         </div>
         <div class="burger-menu-content">
-          <a href="./index.html">home</a>
+          <a href="./index.html"><i class='fas fa-angle-right'></i>home</a>
           <div class="break-20"></div>
-          <a href="./projects.html">projects</a>
+          <a href="./projects.html"><i class='fas fa-angle-right'></i>projects</a>
           <div class="break-20"></div>
-          <a href="./profile.html">about me</a>
+          <a href="./profile.html"><i class='fas fa-angle-right'></i>about me</a>
           <div class="break-20"></div>
-          <a href="./contact.html">contact</a>
+          <a href="./contact.html"><i class='fas fa-angle-right'></i>contact</a>
         </div>
         <div class="burger-menu-blackscreen"></div>
       </div>
@@ -309,22 +311,22 @@
       $('.owl-carousel').owlCarousel(
         {
           margin:40,
-          autoplay:true,
-          autoplayTimeout:1000,
-          autoplayHoverPause:true,
           loop:true,
+          autoplay:true,
+          autoplayTimeout:2800,
+          autoplayHoverPause:true,
           nav:true,
           autoWidth:true,
           responsive:
             {
               0:
                 {items:1},
-              600:
+              576:
                 {items:2},
-              1000:
+              992:
                 {items:3},
               1200:
-                {items:3}
+                {items:4}
             }
         })
 

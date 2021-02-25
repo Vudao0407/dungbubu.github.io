@@ -27,30 +27,47 @@
   }
 .social-icon
   {
-
     width: 2.4rem;
     height: 2.4rem;
     margin-right: 2rem;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 4px;
+  }
+.social-icon:hover
+  {
+    box-shadow: 0 0 0 0 rgba(230, 237, 255, 0.7);
+    animation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+  }
+.social-icon1
+  {
+    background-image: url(../Images/Home/Icon-FB.png);
+  }
+.social-icon1:hover
+  {
+    background-image: url(../Images/Home/Icon-FB-hover.png);
+  }
+.social-icon2
+  {
+    background-image: url(../Images/Home/Icon-Mess.png);
+  }
+.social-icon2:hover
+  {
+    background-image: url(../Images/Home/Icon-Mess-hover.png);
+  }
+.social-icon3
+  {
+    background-image: url(../Images/Home/Icon-IG.png);
+  }
+.social-icon3:hover
+  {
+    background-image: url(../Images/Home/Icon-IG-hover.png);
   }
 
 .landing-page-content
   {
     display: flex;
     flex-direction: column;
-  }
-
-.landing-page-content .btn-primary:hover, 
-.landing-page-content .btn-secondary:hover
-  {
-    transform: translateY(-1.2rem);
-    box-shadow: 0 3rem 3rem rgb(0 0 0 / 16%);
-    opacity: 0.8;
-    transition: 
-    transform .2s cubic-bezier(.02,.01,.47,1),
-    opacity .2s cubic-bezier(.02,.01,.47,1),
-    box-shadow .4s cubic-bezier(.02,.01,.47,1);
   }
 
 .credit-info
@@ -260,6 +277,7 @@
         width: 53.2rem;
         border-radius: 8px;
         background-color: #FAFAFA;
+        box-shadow: 8px 12px 24px 8px rgba(0, 0, 0, 0.04);
       }
     .form-control, .contact-input
       {
@@ -453,6 +471,11 @@
       {
         padding: 2.6rem 2.8rem;
       }
+    .form-control, .fix-area
+      {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
   }
 
 @media (max-width: 320px)
@@ -469,6 +492,13 @@
       {
         font-size: 1rem;
         font-stretch: ultra-condensed;
+        line-height: 2rem;
+      }
+
+    /* --Contact-- ------ */
+    .form-control, .fix-area
+      {
+        font-size: 1.2rem;
         line-height: 2rem;
       }
   }

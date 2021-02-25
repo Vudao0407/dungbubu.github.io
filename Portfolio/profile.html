@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./css/profile.css">
     <!-- CSS Chung - Hamburger menu -->
     <link rel="stylesheet" href="./lib/burger-menu.css">
+    <!-- Font Awesome 5.14 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
 
   <body>
@@ -55,13 +57,13 @@
           <div class="line-3"></div>
         </div>
         <div class="burger-menu-content">
-          <a href="./index.html">home</a>
+          <a href="./index.html"><i class='fas fa-angle-right'></i>home</a>
           <div class="break-20"></div>
-          <a href="./projects.html">projects</a>
+          <a href="./projects.html"><i class='fas fa-angle-right'></i>projects</a>
           <div class="break-20"></div>
-          <a href="./profile.html">about me</a>
+          <a href="./profile.html"><i class='fas fa-angle-right'></i>about me</a>
           <div class="break-20"></div>
-          <a href="./contact.html">contact</a>
+          <a href="./contact.html"><i class='fas fa-angle-right'></i>contact</a>
         </div>
         <div class="burger-menu-blackscreen"></div>
       </div>
@@ -74,7 +76,7 @@
       <!-- Landing Page------------------------------------------------------------------------------------------------ -->
       <div class="landing-page" id="home-landing-page">
         <div class="container landing-page-bg">
-          <div class="landing-page-content" data-aos="fade-up" data-aos-offset="0" data-aos-delay="400">
+          <div class="landing-page-content" data-aos="fade-up">
             <span class="header-42-46">Personal Portfolio</span>
             <div class="break-8"></div>
             <span class="header-42-46" style="color: #7051EF;">About me</span>
@@ -92,7 +94,7 @@
           <!-- My Profile -->
           <div class="break-200"></div>
           <div class="break-40" id="home-profile"></div>
-          <div class="titleContent" data-aos="fade-up" data-aos-offset="400">
+          <div class="titleContent" data-aos="fade-up">
             <div class="decor"></div>
             <div class="break-8"></div>
             <span class="header-32-36">my profile</span>
@@ -102,11 +104,11 @@
           
           <div class="break-60"></div>
           <div class="profile-menu">
-            <div class="profile-img" data-aos="fade-up" data-aos-offset="400" data-aos-delay="200">
+            <div class="profile-img" data-aos="fade-up">
               <img src="./Images/Home/Profile.png" alt="Profile picture">
             </div>
             <div class="profile-content">
-              <div class="profile-content-info" data-aos="fade-up" data-aos-offset="400" data-aos-delay="300">
+              <div class="profile-content-info" data-aos="fade-up">
                 <span class="header-24-30">Hello, I’m Dungbubu</span>
                 <div class="break-20"></div>
                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer 
@@ -116,7 +118,7 @@
                   Aliquam pulvinar convallis ante. Integer in erat diam.</span>
                 <div class="break-28"></div>
               </div>
-              <div class="profile-credit-info" data-aos="fade-up" data-aos-offset="200" data-aos-delay="350">
+              <div class="profile-credit-info" data-aos="fade-up" data-aos-offset="-50" data-aos-delay="100">
                 <div>
                   <span class="header-16-24">Name:</span> <span>Nguyen Manh Dung</span>
                   <div class="break-8"></div>
@@ -129,8 +131,8 @@
                 </div>
               </div>
               <div class="break-28"></div>
-              <div class="responsiveStyle"> <!-- RESPONSIVE -->
-                <a class="btn btn-primary" href="./cv/CV-DungBu.pdf" target="_blank" role="button" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">Download my CV</a>
+              <div class="responsiveStyle" data-aos="fade-up" data-aos-offset="100"> <!-- RESPONSIVE -->
+                <a class="btn btn-primary" href="./cv/CV-DungBu.pdf" target="_blank" role="button">Download my CV</a>
               </div>
             </div>
           </div>
@@ -139,9 +141,9 @@
           <div class="break-120"></div>
           <div class="profile-moreInfo">
             <div>
-              <div class="header-24-30" data-aos="fade-up" data-aos-offset="200">Work experience</div>
+              <div class="header-24-30" data-aos="fade-up">Work experience</div>
               <div class="break-60"></div>
-              <div class="moreInfo-content" data-aos="fade-up" data-aos-offset="200">
+              <div class="moreInfo-content" data-aos="fade-up">
                 <div style="display: flex; flex-direction: row;" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
                   <div class="moreInfo-decor"></div>
                   <div class="moreInfo-text">
@@ -169,9 +171,9 @@
             </div>
 
             <div class="break">
-              <div class="header-24-30" data-aos="fade-up" data-aos-offset="200">Education</div>
+              <div class="header-24-30" data-aos="fade-up">Education</div>
               <div class="break-60"></div>
-              <div class="moreInfo-content" data-aos="fade-up" data-aos-offset="200">
+              <div class="moreInfo-content" data-aos="fade-up">
                 <div style="display: flex; flex-direction: row;" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
                   <div class="moreInfo-decor"></div>
                   <div class="moreInfo-text">
@@ -212,28 +214,28 @@
 
           <div class="break-120"></div>
           <div class="expertise-menu owl-carousel owl-theme">
-            <div class="expertise-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="expertise-item" data-aos="fade-up">
               <div class="expertise-item-img"><img src="./Images/Home/Expertise1.png" alt="Expertise: Presentation"></div>
               <div class="break-40"></div>
               <span class="header-24-30">presentation</span>
               <div class="break-20"></div>
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
             </div>
-            <div class="expertise-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="100">
               <div class="expertise-item-img"><img src="./Images/Home/Expertise2.png" alt="Expertise: Web Design"></div>
               <div class="break-40"></div>
               <span class="header-24-30">web design</span>
               <div class="break-20"></div>
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
             </div>
-            <div class="expertise-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="200">
               <div class="expertise-item-img"><img src="./Images/Home/Expertise3.png" alt="Expertise: UI / UX Design"></div>
               <div class="break-40"></div>
               <span class="header-24-30">ui/ux design</span>
               <div class="break-20"></div>
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A neque, mus pretium morbi eros venenatis, et maecenas.</span>
             </div>
-            <div class="expertise-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="300">
               <div class="expertise-item-img"><img src="./Images/Home/Expertise4.png" alt="Expertise: HTML & CSS"></div>
               <div class="break-40"></div>
               <span class="header-24-30">html, css</span>
@@ -284,28 +286,28 @@
           </div>
           <div class="break-60"></div>
           <div class="grid-container">
-            <div class="grid-item cilent1a" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid-item cilent1a" data-aos="fade-up">
               <img src="./Images/Profile/Cilent1a.png" alt="First Alliances">
             </div>
-            <div class="grid-item cilent2a" data-aos="fade-up" data-aos-delay="250">
+            <div class="grid-item cilent2a" data-aos="fade-up" data-aos-delay="150">
               <img src="./Images/Profile/Cilent2a.png" alt="Growell Vietnam">
             </div>
-            <div class="grid-item cilent3a" data-aos="fade-up" data-aos-delay="300">
+            <div class="grid-item cilent3a" data-aos="fade-up" data-aos-delay="200">
               <img src="./Images/Profile/Cilent3a.png" alt="KD Tech">
             </div>
-            <div class="grid-item cilent4a" data-aos="fade-up" data-aos-delay="350">
+            <div class="grid-item cilent4a" data-aos="fade-up" data-aos-delay="250">
               <img src="./Images/Profile/Cilent4a.png" alt="Netco Post">
             </div>
-            <div class="grid-item cilent5a" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid-item cilent5a" data-aos="fade-up" data-aos-delay="300">
               <img src="./Images/Profile/Cilent5a.png" alt="Techcombank">
             </div>
-            <div class="grid-item cilent6a" data-aos="fade-up" data-aos-delay="250">
+            <div class="grid-item cilent6a" data-aos="fade-up" data-aos-delay="350">
               <img src="./Images/Profile/Cilent6a.png" alt="Viettel Advanced Solution Track 2019">
             </div>
-            <div class="grid-item cilent7a" data-aos="fade-up" data-aos-delay="300">
+            <div class="grid-item cilent7a" data-aos="fade-up" data-aos-delay="400">
               <img src="./Images/Profile/Cilent7a.png" alt="Phan Dinh Phung high school">
             </div>
-            <div class="grid-item cilent8a" data-aos="fade-up" data-aos-delay="350">
+            <div class="grid-item cilent8a" data-aos="fade-up" data-aos-delay="450">
               <img src="./Images/Profile/Cilent8a.png" alt="University of Transport Technology">
             </div>
           </div>
@@ -318,28 +320,28 @@
           </div>
           <div class="break-60"></div>
           <div class="grid-container">
-            <div class="grid-item cilent1b" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid-item cilent1b" data-aos="fade-up">
               <img src="./Images/Profile/Cilent1b.png" alt="Viettinbank">
             </div>
-            <div class="grid-item cilent2b" data-aos="fade-up" data-aos-delay="250">
+            <div class="grid-item cilent2b" data-aos="fade-up" data-aos-delay="150">
               <img src="./Images/Profile/Cilent2b.png" alt="Techcombank">
             </div>
-            <div class="grid-item cilent3b" data-aos="fade-up" data-aos-delay="300">
+            <div class="grid-item cilent3b" data-aos="fade-up" data-aos-delay="200">
               <img src="./Images/Profile/Cilent3b.png" alt="Vin Commerce">
             </div>
-            <div class="grid-item cilent4b" data-aos="fade-up" data-aos-delay="350">
+            <div class="grid-item cilent4b" data-aos="fade-up" data-aos-delay="250">
               <img src="./Images/Profile/Cilent4b.png" alt="Vin Retail">
             </div>
-            <div class="grid-item cilent5b" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid-item cilent5b" data-aos="fade-up" data-aos-delay="300">
               <img src="./Images/Profile/Cilent5b.png" alt="FPT Software">
             </div>
-            <div class="grid-item cilent6b" data-aos="fade-up" data-aos-delay="250">
+            <div class="grid-item cilent6b" data-aos="fade-up" data-aos-delay="350">
               <img src="./Images/Profile/Cilent6b.png" alt="Aviation Logistics">
             </div>
-            <div class="grid-item cilent7b" data-aos="fade-up" data-aos-delay="300">
+            <div class="grid-item cilent7b" data-aos="fade-up" data-aos-delay="400">
               <img src="./Images/Profile/Cilent7b.png" alt="Electricity Vietnam">
             </div>
-            <div class="grid-item cilent8b" data-aos="fade-up" data-aos-delay="350">
+            <div class="grid-item cilent8b" data-aos="fade-up" data-aos-delay="450">
               <img src="./Images/Profile/Cilent8b.png" alt="SaigonHanoibank">
             </div>
           </div>
@@ -357,14 +359,14 @@
 
           <div class="break-60"></div>
           <div class="grid-container2">
-            <a href="https://www.facebook.com/NguyenManhDung1996/" target="_blank" class="grid-item follow1" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200">
+            <a href="https://www.facebook.com/NguyenManhDung1996/" target="_blank" class="grid-item follow1" data-aos="fade-up">
               <img src="./Images/Profile/Follow1.png" alt="facebook">
             </a>
-            <a href="https://www.instagram.com/dungbubu/" target="_blank" class="grid-item follow2" data-aos="fade-up" data-aos-offset="0" data-aos-delay="250">
-              <img src="./Images/Profile/Follow2.png" alt="instagram">
+            <a href="https://www.instagram.com/dungbubu/" target="_blank" class="grid-item follow2" data-aos="fade-up" data-aos-delay="150">
+              <img src="./Images/Profile/Follow2.png" alt="Instagram">
             </a>
-            <a href="https://www.pinterest.com/dungbubu/" target="_blank" class="grid-item follow3" data-aos="fade-up" data-aos-offset="0" data-aos-delay="300">
-              <img src="./Images/Profile/Follow3.png" alt="instagram">
+            <a href="https://www.pinterest.com/dungbubu/" target="_blank" class="grid-item follow3" data-aos="fade-up" data-aos-delay="200">
+              <img src="./Images/Profile/Follow3.png" alt="Pinterest">
             </a>
           </div>
           <div class="break-120"></div>
@@ -441,19 +443,19 @@
       $('.owl-carousel').owlCarousel(
         {
           margin:40,
-          autoplay:true,
-          autoplayTimeout:1000,
-          autoplayHoverPause:true,
           loop:true,
+          autoplay:true,
+          autoplayTimeout:2800,
+          autoplayHoverPause:true,
           nav:true,
           autoWidth:true,
           responsive:
             {
               0:
                 {items:1},
-              600:
+              576:
                 {items:2},
-              1000:
+              992:
                 {items:3},
               1200:
                 {items:4}
