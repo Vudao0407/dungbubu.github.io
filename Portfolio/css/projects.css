@@ -39,7 +39,7 @@
 .grid-container, .grid-container2
   {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     grid-template-columns: auto auto auto;
   }
 .grid-item
@@ -95,6 +95,19 @@
 
 
 /* ------------ ------------ ------------ ------------ */
+/* --Projects Items-- ------ */
+#projects-PPT04, #projects-PPT05, #projects-PPT06,
+#projects-PPT07, #projects-PPT08, #projects-PPT09,
+#projects-WEB04, #projects-WEB05, #projects-WEB06,
+#projects-WEB07, #projects-WEB08, #projects-WEB09,
+#projects-IG04, #projects-IG05, #projects-IG06,
+#projects-IG07, #projects-IG08, #projects-IG09
+  {
+    display: none;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */ 
 /* @media (max-width: 1200px)
   {
@@ -120,10 +133,6 @@
 @media (max-width: 576px)
   {
     /* --Projects-- ------ */
-    .grid-container, .grid-container2
-      {
-        grid-gap: 1rem;
-      }
   }
 
 @media (max-width: 320px)

@@ -109,18 +109,27 @@ a:hover
   {
     margin-right: 2rem;
   }
+.btn-primary, .btn-secondary
+  {
+    transition: 
+    transform .2s cubic-bezier(.02,.01,.47,1),
+    opacity .2s cubic-bezier(.02,.01,.47,1),
+    box-shadow .4s cubic-bezier(.02,.01,.47,1);
+  }
 .btn-primary, .btn-primary:hover,
-.btn-primary:visited,
+.btn-primary:visited, .btn-primary:focus,
 .btn-primary:not(:disabled):not(.disabled):active
   {
+    text-decoration: none;
     background-color: #7051EF;
     border: 2px solid #7051EF;
     color: #FFFFFF;
   }
 .btn-secondary, .btn-secondary:hover,
-.btn-secondary:visited,
+.btn-secondary:visited, .btn-secondary:focus,
 .btn-secondary:not(:disabled):not(.disabled):active
   {
+    text-decoration: none;
     background-color: #FFFFFF;
     border: 2px solid #7051EF;
     color: #7051EF;
@@ -131,10 +140,6 @@ a:hover
     transform: translateY(-1.2rem);
     box-shadow: 0 3rem 3rem rgb(0 0 0 / 16%);
     opacity: 0.8;
-    transition: 
-    transform .2s cubic-bezier(.02,.01,.47,1),
-    opacity .2s cubic-bezier(.02,.01,.47,1),
-    box-shadow .4s cubic-bezier(.02,.01,.47,1);
   }
 
 .btn-CTA

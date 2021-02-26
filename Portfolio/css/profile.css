@@ -202,11 +202,20 @@
         grid-gap: 1rem;
         grid-template-columns: auto auto auto;
       }
-    .follow1:hover,
-    .follow2:hover,
-    .follow3:hover
+    .grid-item-follow-hover
       {
-        background-image: url(../Images/Profile/Follow1-hover.png);
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+      }
+    .follow1:hover .grid-item-follow-hover,
+    .follow2:hover .grid-item-follow-hover,
+    .follow3:hover .grid-item-follow-hover
+      {
+        opacity: 1;
       }
 
 
