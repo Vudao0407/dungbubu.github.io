@@ -30,7 +30,11 @@
 /* --Background 1-- ------ */
 .bg1 
   {
+    background-image: url(../Images/Profile/BG1.png);
     background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
     /* --Profile-- ------ */
@@ -176,7 +180,11 @@
 /* --Background 2-- ------ */
 .bg2
   {
+    background-image: url(../Images/Profile/BG2.png);
     background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
     /* --My Cilent-- ------ */

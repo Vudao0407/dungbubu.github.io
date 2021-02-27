@@ -30,7 +30,11 @@
 /* --Background-- ------ */
 .bg
   {
+    background-image: url(../Images/Projects/BG.png);
     background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 
