@@ -5,16 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>DungBu • Portfolio</title>
+    <title>Project PPT06</title>
     <link rel="shortcut icon" href="../Images/Favicon.jpg" type="image/x-icon">
 
     <!-- Boootstrap CSS library -->
     <link rel="stylesheet" href="../lib/Bootstrap-4.5.3/css/bootstrap.css">
     <!-- CSS Chung - AOS -->
     <link rel="stylesheet" href="../lib/AOS-Animation-On-Scroll/dist/aos.css">
-    <!-- CSS Chung - Slick -->
-    <link rel="stylesheet" href="../lib/Slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../lib/Slick-1.8.1/slick/slick-theme.css">
     <!-- CSS Chung -->
     <link rel="stylesheet" href="../css/main.css">
     <!-- CSS Riêng -->
@@ -74,7 +71,7 @@
 
     <main id="mainID"> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Landing Page------------------------------------------------------------------------------------------------ -->
-      <div class="landing-page" id="home-landing-page"><img src="../Images/ProjectPPT01/ProjectPPT01Background.png" alt="Project PPT01"></div>
+      <div class="landing-page" id="home-landing-page"><img src="../Images/ProjectPPT06/ProjectPPT06Background.png" alt="Project PPT01"></div>
       </div>
 
       <!-- Background ------------------------------------------------------------------------------------------------ -->
@@ -111,27 +108,7 @@
 
           <!-- Gallery -->
           <div class="break-120"></div>
-          <div class="slider-for" data-aos="fade-up">
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-02.png" alt="Slide 2"></div>
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-03.png" alt="Slide 3"></div>
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-04.png" alt="Slide 4"></div>
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-05.png" alt="Slide 5"></div>
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-06.png" alt="Slide 6"></div>
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-07.png" alt="Slide 7"></div>
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-08.png" alt="Slide 8"></div>
-            <div class="slider1-item"><img src="../Images/ProjectPPT01/Slider1-item-09.png" alt="Slide 9"></div>
-          </div>
-          <div class="break-60"></div>
-          <div class="slider-nav" data-aos="fade-up">
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-02.png" alt="Slide 2"></div>
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-03.png" alt="Slide 3"></div>
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-04.png" alt="Slide 4"></div>
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-05.png" alt="Slide 5"></div>
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-06.png" alt="Slide 6"></div>
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-07.png" alt="Slide 7"></div>
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-08.png" alt="Slide 8"></div>
-            <div class="slider2-item"><img src="../Images/ProjectPPT01/Slider2-item-09.png" alt="Slide 9"></div>
-          </div>
+          <div>-----------------------------------------------------------------</div>
           
           <!-- Color Pallete -->
           <div class="break-120"></div>
@@ -233,8 +210,6 @@
     <script src="../lib/Bootstrap-4.5.3/js/bootstrap.js"></script>
     <!-- AOS JS library -->
     <script src="../lib/AOS-Animation-On-Scroll/dist/aos.js"></script>
-    <!-- Slick JS library -->
-    <script src="../lib/Slick-1.8.1/slick/slick.min.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
@@ -267,34 +242,6 @@
         {
           menuItemActive[1].classList.add("active");
         }
-            
-
-      // ------------ ------------ ------------ ------------ ------------ ------------
-      // Hàm chạy thư viện Slick ------------ ------------
-      $(document).ready(function()
-        {
-          $('.slider-for').slick(
-            {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: false,
-              arrows: false,
-              fade: true,
-              asNavFor: '.slider-nav'
-            });
-
-          $('.slider-nav').slick(
-            {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              autoplay: true,
-              autoplaySpeed: 2000,
-              dots: false,
-              arrows: false,
-              focusOnSelect: true,
-              asNavFor: '.slider-for'
-            });
-        });
 
 
       // ------------ ------------ ------------ ------------ ------------ ------------
