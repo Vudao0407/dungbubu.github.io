@@ -60,6 +60,22 @@
 
 
 /* ------------ ------------ ------------ ------------ */
+/* --Gallery-- ------ */
+.slider1-item:focus, .slider2-item:focus
+  {
+    outline: none;
+  }
+.slider1-item img
+  {
+    width: 100%;
+  }
+.slider2-item img
+  {
+    width: 92%;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --Color Pallete-- ------ */
 .grid-container
   {
