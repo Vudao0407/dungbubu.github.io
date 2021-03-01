@@ -6,39 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>DungBu • Portfolio</title>
-    <link rel="shortcut icon" href="./Images/Favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../Images/Favicon.jpg" type="image/x-icon">
 
     <!-- Boootstrap CSS library -->
-    <link rel="stylesheet" href="./lib/Bootstrap-4.5.3/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/Bootstrap-4.5.3/css/bootstrap.css">
     <!-- CSS Chung - AOS -->
-    <link rel="stylesheet" href="./lib/AOS-Animation-On-Scroll/dist/aos.css">
+    <link rel="stylesheet" href="../lib/AOS-Animation-On-Scroll/dist/aos.css">
     <!-- CSS Chung - Owl Carousel -->
-    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="./lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="../lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <!-- CSS Chung -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <!-- CSS Riêng -->
-    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="../css/project-item.css">
     <!-- CSS Chung - Hamburger menu -->
-    <link rel="stylesheet" href="./lib/burger-menu.css">
+    <link rel="stylesheet" href="../lib/burger-menu.css">
+    <!-- Font Awesome 5.14 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
 
   <body>
     <header id="headerID"> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Navbar - General Css------------------------------------------------------------------------------------------------ -->
       <div class="vertical-navbar">
-        <a class="logo-MD" href="./index.html"><img src="./Images/Logo.png" alt="MD Logo"></a>
+        <a class="logo-MD" href="../index.html"><img src="../Images/Logo.png" alt="MD Logo"></a>
 
         <nav class="navbar">
-          <a class="menu-item" href="./index.html">
+          <a class="menu-item" href="../index.html">
             <span class="menu-title">home</span>
             <div class="decor-mini"></div>
           </a>
-          <a class="menu-item" href="./projects.html">
+          <a class="menu-item" href="../projects.html">
             <span class="menu-title">projects</span>
             <div class="decor-mini"></div>
           </a>
-          <a class="menu-item" href="./profile.html">
+          <a class="menu-item" href="../profile.html">
             <span class="menu-title">about</span>
             <div class="decor-mini"></div>
           </a>
@@ -55,13 +57,13 @@
           <div class="line-3"></div>
         </div>
         <div class="burger-menu-content">
-          <a href="#home-landing-page">home</a>
+          <a href="../index.html"><i class='fas fa-angle-right'></i>home</a>
           <div class="break-20"></div>
-          <a href="#home-projects">projects</a>
+          <a href="../projects.html"><i class='fas fa-angle-right'></i>projects</a>
           <div class="break-20"></div>
-          <a href="#home-profile">about me</a>
+          <a href="../profile.html"><i class='fas fa-angle-right'></i>about me</a>
           <div class="break-20"></div>
-          <a href="#home-contact">contact</a>
+          <a href="../contact.html"><i class='fas fa-angle-right'></i>contact</a>
         </div>
         <div class="burger-menu-blackscreen"></div>
       </div>
@@ -72,93 +74,111 @@
 
     <main id="mainID"> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Landing Page------------------------------------------------------------------------------------------------ -->
-      <div class="landing-page" id="home-landing-page">
-        <div class="container landing-page-bg">
-          <div class="landing-page-content" data-aos="fade-up" data-aos-offset="0" data-aos-delay="400">
-            <span class="header-42-46">Personal Portfolio</span>
-            <div class="break-8"></div>
-            <span class="header-42-46" style="color: #7051EF;">About me</span>
-            <div class="break-28"></div>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            <span>Phasellus a sapien lobortis, luctus ipsum in, ultrices diam.</span>
-          </div>
-        </div>
+      <div class="landing-page" id="home-landing-page"><img src="../Images/ProjectPPT01/ProjectPPT01Background.png" alt="Project PPT01"></div>
       </div>
 
-      <!-- Background 1------------------------------------------------------------------------------------------------ -->
-      <div class="bg1">
+      <!-- Background ------------------------------------------------------------------------------------------------ -->
+      <div class="bg">
 
         <div class="container">
-          <!-- My Profile -->
-          <div class="break-200"></div> <!-- Khác Figma -->
-          <div class="break-40" id="home-profile"></div>
-          <div data-aos="fade-up" data-aos-offset="400">
-            <div class="decor"></div>
-            <div class="break-8"></div>
-            <span class="header-32-36">my profile</span>
-            <div class="break-20"></div>
-            <span>Main Informations About Me And What I Love To Do.</span>
+          <!-- Credit Infomation -->
+          <div class="break-120"></div>
+          <div class="credit-info">
+            <div class="credit-item credit-item1" data-aos="fade-up">
+              <span class="header-16-24" style="color: #303030;">Date:</span>
+              <span class="paragraph-14-24">2020</span>
+            </div>
+            <div class="credit-item credit-item2" data-aos="fade-up" data-aos-delay="150">
+              <span class="header-16-24" style="color: #303030;">Times:</span>
+              <span class="paragraph-14-24">3 days</span>
+            </div>
+            <div class="credit-item credit-item3" data-aos="fade-up" data-aos-delay="200">
+              <span class="header-16-24" style="color: #303030;">Cilent:</span>
+              <span class="paragraph-14-24">First Alliances</span>
+            </div>
+          </div>
+
+          <!-- Project Infomation -->
+          <div class="break-120"></div>
+          <div class="titleContent" data-aos="fade-up">
+            <span class="header-42-46" style="color: #7051EF;">First Alliances</span>
+            <div class="break-60"></div>
+            <div class="about-this-project">
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus a sapien lobortis, luctus ipsum in, ultrices diam.</span>
+            </div>
           </div>
           
+          <!-- Color Pallete -->
+          <div class="break-120"></div>
+          <div class="titleContent" data-aos="fade-up">
+            <span class="header-24-30" style="color: #303030;">Color Pallete</span>
+          </div>
           <div class="break-60"></div>
-          <div class="profile-menu">
-            <div class="profile-img" data-aos="fade-up" data-aos-offset="400" data-aos-delay="200">
-              <img src="./Images/Home/Profile.png" alt="Profile picture">
+          <div class="grid-container">
+            <div class="grid-item" data-aos="fade-up">
+              <div class="item-color primary-color"></div>
+              <div class="break-20"></div>
+              <div class="item-title">
+                <span class="header-16-24" style="color: #303030;">Primary</span>
+                <span>#EE6D0C</span>
+              </div>
             </div>
-            <div class="profile-content">
-              <div class="profile-content-info" data-aos="fade-up" data-aos-offset="400" data-aos-delay="300">
-                <span class="header-24-30">Hello, I’m Dungbubu</span>
-                <div class="break-20"></div>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer 
-                  sit amet iaculis ex, ut tempus lorem. Sed malesuada augue ante, 
-                  sit amet pharetra eros sagittis lobortis. Phasellus tincidunt vel 
-                  mauris in tincidunt. Maecenas fermentum non felis id consequat. 
-                  Aliquam pulvinar convallis ante. Integer in erat diam.</span>
-                <div class="break-28"></div>
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="150">
+              <div class="item-color secondary-color"></div>
+              <div class="break-20"></div>
+              <div class="item-title">
+                <span class="header-16-24" style="color: #303030;">Secondary</span>
+                <span>#F6D85E</span>
               </div>
-              <div class="profile-credit-info" data-aos="fade-up" data-aos-offset="200" data-aos-delay="350">
-                <div>
-                  <span class="header-16-24">Name:</span> <span>Nguyen Manh Dung</span>
-                  <div class="break-8"></div>
-                  <span class="header-16-24">Dob:</span> <span>24 / 06 / 1996</span>
-                </div>
-                <div>
-                  <span class="header-16-24">Location:</span> <span>HaNoi, Vietnam</span>
-                  <div class="break-8"></div>
-                  <span class="header-16-24">Freelancer:</span> <span>Available</span>
-                </div>
-              </div>
-              <div class="break-28"></div>
-              <div class="responsiveStyle"> <!-- RESPONSIVE -->
-                <a class="btn btn-secondary" href="profile.html" role="button" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400">More about me</a>
+            </div>
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="item-color ink-color"></div>
+              <div class="break-20"></div>
+              <div class="item-title">
+                <span class="header-16-24" style="color: #303030;">Ink</span>
+                <span>#585858</span>
               </div>
             </div>
           </div>
 
-          <!-- My abc -->
-          <div class="break-200"></div> <!-- Khác Figma -->
+          <!-- Heading -->
+          <div class="break-120"></div>
+          <div class="titleContent" data-aos="fade-up">
+            <span class="header-24-30" style="color: #303030;">Heading</span>
+          </div>
+          <div class="break-60"></div>
+          <div  data-aos="fade-up">
+            <span class="header-42-46 responsiveStyle1" style="text-transform: uppercase;">Heading 1 - Aa Bb Cc Dd  0 1 2 3 4</span>
+            <span class="header-42-46 responsiveStyle2" style="text-transform: uppercase;">Heading 1 - AaBbCc  0123</span>
+            <div class="break-8"></div>
+            <span style="color: #7051EF;">Bebas Neue / Bold  -  42pt</span>
+          </div>
+
+          <!-- Paragraph -->
+          <div class="break-120"></div>
+          <div class="titleContent" data-aos="fade-up">
+            <span class="header-24-30" style="color: #303030;">Paragraph</span>
+          </div>
+          <div class="break-60"></div>
+          <div  data-aos="fade-up">
+            <div class="project-paragraph">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et luctus enim. Ut fermentum, 
+                ligula facilisis ultricies feugiat, dui odio finibus mi, sed ornare augue justo vel dui. Mauris porta, 
+                nibh eget commodo lobortis, mauris augue ornare risus, eget condimentum libero sapien at 
+                justo. Quisque commodo, velit quis congue aliquet, risus lacus pharetra nunc, ac lobortis metus 
+                enim et purus. Nullam luctus, quam gravida feugiat lacinia, ipsum sem malesuada ante, vel 
+                tempus est lorem vitae eros.
+              </span>
+            </div>
+            <div class="break-8"></div>
+            <span style="color: #7051EF;">Philosopher / Medium  -  16pt - Letter spacing 4%</span>
+          </div>
+
+          <div class="break-120"></div>
         </div>
-      </div>
 
-      <!-- Quote------------------------------------------------------------------------------------------------ -->
-      <div class="break-328"></div>
-      <div class="quote">
-        <span>I prefer drawing to talking.</span>
-        <div class="break-8"></div>
-        <span>Drawing is faster and leaves less room for lies.</span>
-        <div class="break-8"></div>
-        <span>(Le Corbusier)</span>
-      </div>
-
-      <!-- Background 2------------------------------------------------------------------------------------------------ -->
-      <div class="bg2">
-
-        <div class="container">
-          <!-- My abc -->
-
-          <!-- My abc -->
-          <div class="break-80"></div>
-        </div>
       </div>
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
@@ -170,7 +190,8 @@
       <div class="footer">
         <div class="container">
           <div class="footer-menu">
-            <span>Map</span>
+            <span>404</span>
+            <span style="margin-left: 2rem;">Map</span>
             <span style="margin-left: 2rem;">Style Guide</span>
             <span style="margin-left: 2rem;">Liscense</span>
           </div>
@@ -183,14 +204,16 @@
 
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuerry Ajax JS library -->
-    <script src="./lib/jQuerry-Ajax-3.5.1/jquery-3.5.1.js"></script>
+    <script src="../lib/jQuerry-Ajax-3.5.1/jquery-3.5.1.js"></script>
     <!-- Boootstrap JS library -->
-    <script src="./lib/Bootstrap-4.5.3/js/bootstrap.js"></script>
+    <script src="../lib/Bootstrap-4.5.3/js/bootstrap.js"></script>
     <!-- AOS JS library -->
-    <script src="./lib/AOS-Animation-On-Scroll/dist/aos.js"></script>
+    <script src="../lib/AOS-Animation-On-Scroll/dist/aos.js"></script>
+    <!-- Slick JS library -->
+    <script src="../lib/Slick-1.8.1/slick/slick.min.js"></script>
     <!-- Owl Carousel JS library -->
-    <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
-    <script src="./lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="../lib/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script src="../lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
@@ -221,9 +244,13 @@
       let menuItemActive = [...document.getElementsByClassName("menu-item")];
       function activeStateOnLoad()
         {
-          menuItemActive[2].classList.add("active");
+          menuItemActive[1].classList.add("active");
         }
             
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm chạy thư viện Slick ------------ ------------
+
 
       // ------------ ------------ ------------ ------------ ------------ ------------
       // Hàm chạy thư viện Owl Carousel ------------ ------------
@@ -231,18 +258,19 @@
         {
           margin:40,
           loop:true,
+          autoplay:true,
+          autoplayTimeout:2800,
+          autoplayHoverPause:true,
           nav:true,
           autoWidth:true,
           responsive:
             {
               0:
                 {items:1},
-              600:
+              576:
                 {items:2},
-              1000:
-                {items:3},
-              1200:
-                {items:4}
+              992:
+                {items:3}
             }
         })
 

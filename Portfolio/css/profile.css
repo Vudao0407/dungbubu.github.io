@@ -298,6 +298,29 @@
       {
         background-image: none;
       }
+
+    /* --Profile-- ------ */
+    .profile-menu
+      {
+        flex-direction: column;
+        align-items: center;
+      }
+    .profile-img
+      {
+        margin-right: 0;
+      }
+    .profile-content
+      {
+        margin-top: 4rem;
+      }
+    .profile-menu .responsiveStyle
+      {
+        text-align: center;
+      }
+    .profile-credit-info
+      {
+        flex-direction: row;
+      }
     
     /*-- My Profile - More information */
     .profile-moreInfo
@@ -326,33 +349,16 @@
         padding: 0 10rem;
         width: 100%;
       }
-
-    /* --Profile-- ------ */
-    .profile-menu
-      {
-        flex-direction: column;
-        align-items: center;
-      }
-    .profile-img
-      {
-        margin-right: 0;
-      }
-    .profile-content
-      {
-        margin-top: 4rem;
-      }
-    .profile-menu .responsiveStyle
-      {
-        text-align: center;
-      }
-    .profile-credit-info
-      {
-        flex-direction: row;
-      }
   }
 
 @media (max-width: 576px)
   {
+    /* --Profile-- ------ */
+    .responsiveStyle .btn-primary
+      {
+        margin-top: 1.4rem;
+      }
+
     /*-- My Profile - More information */
     .profile-moreInfo .break
       {

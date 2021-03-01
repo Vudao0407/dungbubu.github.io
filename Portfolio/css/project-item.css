@@ -1,203 +1,235 @@
+/* ------------ ------------ ------------ ------------ */
+/* --FONTS-- ------------ */
+@font-face
+  {
+    font-family: Philosopher;
+    src: url(../fonts/Philosopher/Philosopher-Regular.ttf);
+    font-weight: 400;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --Landing Page-- ------ */
 .landing-page
   {
     width: 100%;
+    padding-left: 10rem;
+  }
+.landing-page img
+  {
+    width: 100%;
     height: 100vh;
-    padding-left: 10rem;
-    background-image: url(../Images/Profile/ProfileBackground.png);
-    background-color: #FAFAFA;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-.landing-page-bg
-  {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-.landing-page-content
-  {
-    margin-top: 24rem;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    object-fit: cover;
   }
 
 
-/* --Background 1-- ------ */
-.bg1 
+/* ------------ ------------ ------------ ------------ */
+/* --Background-- ------ */
+.bg
   {
-    padding-left: 10rem;
-    background-image: url(../Images/Home/BG1.png);
+    background-image: url(../Images/ProjectPPT01/BG.png);
     background-color: #FFFFFF;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-    /* --Profile-- ------ */
-    .profile-menu
-      {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    .profile-img
-      {
-        margin-right: 20px;
-        max-width: 44rem;
-        object-fit: cover;
-        overflow: hidden;
-      }
-    .profile-img img
-      {
-        height: 100%;
-      }
-    .profile-content
-      {
-        width: 53.2rem;
-      }
-    .profile-credit-info
-      {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    
 
-/* --Quote-- ------ */
-.quote
+/* ------------ ------------ ------------ ------------ */
+/* --Credit Infomation-- ------ */
+.credit-info
   {
-    z-index: -1;
-    position: fixed;
-    top: 50%;
-    left: calc(50% + 5rem);
-    transform: translate(-50%, -50%);
-    width: calc(100% - 10rem);
-    text-align: center;
-    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+  }
+.credit-item
+  {
+    margin-right: 8rem;
+    display: flex;
+    flex-direction: column;
   }
 
-  
-/* --Background 2-- ------ */
-.bg2
+
+/* ------------ ------------ ------------ ------------ */
+/* --Project Infomation-- ------ */
+.about-this-project
   {
-    padding-left: 10rem;
-    background-image: url(../Images/Home/BG2.png);
+    width: 71.6rem;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Color Pallete-- ------ */
+.grid-container
+  {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: auto auto auto;
+  }
+.grid-item
+  {
+    height: 31.6rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 4px 6px 12px 4px rgba(0, 0, 0, 0.06);
     background-color: #FFFFFF;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
+.item-color
+  {
+    height: 20rem;
+    border-radius: 8px 8px 0 0;
+  }
+.primary-color
+  {
+    background-color: #EE6D0C;
+  }
+.secondary-color
+  {
+    background-color: #F6D85E;
+  }
+.ink-color
+  {
+    background-color: #585858;
+  }
+.item-title
+  {
+    margin-left: 7.2rem;
+    display: flex;
+    flex-direction: column;
   }
 
-    /* --Profile-- ------ */
 
-    /* --Contact-- ------ */
+/* ------------ ------------ ------------ ------------ */
+/* --Heading-- ------ */
+.responsiveStyle2
+  {
+    display: none;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Paragraph-- ------ */
+.project-paragraph
+  {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+
+    width: 71.6rem;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */ 
 @media (max-width: 1200px)
   {
-    /* --Profile-- ------ */
-    .profile-content
+    /* --Landing Page-- ------ */
+    .landing-page img
       {
-        width: 48rem;
+        height: 100%;
       }
   }
 
 @media (max-width: 992px)
   {
-    /* --Landing Page-- ------ */
-    .credit-item1
+    /* --Project Infomation-- ------ */
+    .about-this-project
+      {
+        width: 100%;
+      }
+    
+    /* --Color Pallete-- ------ */
+    .item-title
+      {
+        margin-left: 4rem;
+      }
+
+    /* --Heading-- ------ */
+    .responsiveStyle1
       {
         display: none;
       }
-
-    /* --Profile-- ------ */
-    .profile-credit-info
+    .responsiveStyle2
       {
-        flex-direction: column;
+        display: inline;
+      }
+
+    /* --Paragraph-- ------ */
+    .project-paragraph
+      {
+        width: 100%;
       }
   }
 
 @media (max-width: 768px)
   {
     /* --Landing Page-- ------ */
-    .landing-page, .bg1, .bg2
+    .landing-page, .bg
       {
         padding-left: 0;
       }
-    .landing-page
+
+    /* --Credit Infomation-- ------ */
+    .credit-item
       {
-        background-image: none;
+        margin-right: 4rem;
       }
 
-    /* --Quote-- ------ */
-    .quote
+    /* --Color Pallete-- ------ */
+    .grid-item
       {
-        left: 50%;
-        width: 100%;
+        height: 18rem;
       }
-
-    /* --Profile-- ------ */
-    .profile-menu
+    .item-color
       {
-        flex-direction: column;
-        align-items: center;
+        height: 10rem;
       }
-    .profile-menu .responsiveStyle
+    .item-title
       {
-        text-align: center;
-      }
-    .profile-content
-      {
-        margin-top: 4rem;
-      }
-    .profile-credit-info
-      {
-        flex-direction: row;
+        margin-left: 2rem;
       }
   }
 
 @media (max-width: 576px)
   {
-    /* --Landing Page-- ------ */
+    /* --Credit Infomation-- ------ */
     .credit-info
       {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
+      }
+    .credit-item
+      {
+        margin: 0 1rem;
+        text-align: center;
       }
 
-    /* --Quote-- ------ */
-    .quote span
+    /* --Color Pallete-- ------ */
+    .grid-container
       {
-        font-size: 1.2rem;
-        line-height: 2rem;
+        grid-gap: 1rem;
       }
-
-    /* --Profile-- ------ */
-    .profile-img, .profile-content
+    .grid-item
       {
-        width: 100%;
+        height: 12rem;
       }
-    .profile-img img
+    .item-color
       {
-        height: unset;
+        height: 6rem;
       }
-    .profile-credit-info
+    .item-title
       {
-        flex-direction: column;
+        margin-left: 1.2rem;
       }
   }
 
 @media (max-width: 320px)
   {
-    /* --Quote-- ------ */
-    .quote span
+    /* --Color Pallete-- ------ */
+    .grid-container
       {
-        font-size: 1rem;
-        font-stretch: ultra-condensed;
-        line-height: 2rem;
+        grid-gap: 0.4rem;
       }
   }

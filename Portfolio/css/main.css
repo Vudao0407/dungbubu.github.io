@@ -481,6 +481,11 @@ a:hover
       {
         margin-right: 0.8rem;
       }
+    .btn-primary:hover,
+    .btn-secondary:hover
+      {
+        transform: translateY(0);
+      }
 
     /* --BREAK-- ------------ */
     .break-20

@@ -197,7 +197,7 @@
           }
         to
           {
-            top: 80%;
+            top: 60%;
             left: 10%;
           }
       }
@@ -460,6 +460,10 @@
     .profile-credit-info
       {
         flex-direction: column;
+      }
+    .responsiveStyle .btn-secondary
+      {
+        margin-top: 1.4rem;
       }
 
     /* --Contact-- ------ */
