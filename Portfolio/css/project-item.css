@@ -1,14 +1,4 @@
 /* ------------ ------------ ------------ ------------ */
-/* --FONTS-- ------------ */
-@font-face
-  {
-    font-family: Philosopher;
-    src: url(../fonts/Philosopher/Philosopher-Regular.ttf);
-    font-weight: 400;
-  }
-
-
-/* ------------ ------------ ------------ ------------ */
 /* --Landing Page-- ------ */
 .landing-page
   {
@@ -97,18 +87,6 @@
     height: 20rem;
     border-radius: 8px 8px 0 0;
   }
-.primary-color
-  {
-    background-color: #EE6D0C;
-  }
-.secondary-color
-  {
-    background-color: #F6D85E;
-  }
-.ink-color
-  {
-    background-color: #585858;
-  }
 .item-title
   {
     margin-left: 7.2rem;
@@ -129,11 +107,68 @@
 /* --Paragraph-- ------ */
 .project-paragraph
   {
-    font-family: 'Philosopher', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-
     width: 71.6rem;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --More Projects-- ------ */
+.more-projects
+  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+.more-item
+  {
+    position: relative;
+    width: 48%;
+  }
+.more-item img
+  {
+    width: 100%;
+  }
+.more-item-hover-bg
+  {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    bottom: 0;
+    background-color: #7051EF;
+
+    transition: all 400ms ease-out;
+  }
+.more-item-name
+  {
+    z-index: 2;
+    position: absolute;
+    display: none;
+
+    transition: all 400ms ease-out;
+    animation: peak-in 400ms ease-out forwards;
+  }
+
+.more-item:hover .more-item-hover-bg
+  {
+    height: 100%;
+  }
+.more-item:hover .more-item-name
+  {
+    display: flex;
+  }
+@keyframes peak-in
+  {
+    from
+      {
+        top: 100%;
+        left: 10%;
+      }
+    to
+      {
+        top: 60%;
+        left: 10%;
+      }
   }
 
 
