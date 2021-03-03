@@ -246,15 +246,9 @@
 @media (max-width: 576px)
   {
     /* --Credit Infomation-- ------ */
-    .credit-info
-      {
-        display: flex;
-        justify-content: center;
-      }
     .credit-item
       {
-        margin: 0 1rem;
-        text-align: center;
+        margin-right: 2rem;
       }
 
     /* --Color Pallete-- ------ */
