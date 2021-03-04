@@ -344,6 +344,11 @@ a, a:hover
 /* --RESPONSIVE-- ------ */
 @media (min-width: 1200px)
   {
+    iframe
+      {
+        width: 1084px;
+        height: 600px;
+      }
     .container-fluid
       {
         padding: 0;
@@ -357,6 +362,11 @@ a, a:hover
 
 @media (max-width: 1200px)
   {
+    iframe
+      {
+        width: 640px;
+        height: 354px;
+      }
     .container-fluid
       {
         padding: 0;
@@ -370,6 +380,11 @@ a, a:hover
 
 @media (max-width: 992px)
   {
+    iframe
+      {
+        width: 516px;
+        height: 286px;
+      }
     .container-fluid
       {
         padding: 0;
@@ -382,6 +397,11 @@ a, a:hover
 
 @media (max-width: 768px)
   {
+    iframe
+      {
+        width: 312px;
+        height: 173px;
+      }
     .container-fluid
       {
         padding: 0;
@@ -456,6 +476,11 @@ a, a:hover
 
 @media (max-width: 576px)
   {
+    iframe
+      {
+        width: calc(100% - 8px);
+        height: calc((100% - 8px) / 560px * 310px);
+      }
     body
       {
         font-size: 1.4rem;
@@ -567,6 +592,11 @@ a, a:hover
 
 @media (max-width: 320px)
   {
+    iframe
+      {
+        width: 100%;
+        height: calc(100% / 560px * 310px);
+      }
     body
       {
         font-size: 1.2rem;

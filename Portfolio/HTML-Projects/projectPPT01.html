@@ -329,29 +329,26 @@
 
       // ------------ ------------ ------------ ------------ ------------ ------------
       // Hàm chạy thư viện Slick ------------ ------------
-      $(document).ready(function()
+      $('.slider-for').slick(
         {
-          $('.slider-for').slick(
-            {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: false,
-              arrows: false,
-              fade: true,
-              asNavFor: '.slider-nav'
-            });
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          fade: true,
+          asNavFor: '.slider-nav'
+        });
 
-          $('.slider-nav').slick(
-            {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              autoplay: true,
-              autoplaySpeed: 2000,
-              dots: false,
-              arrows: false,
-              focusOnSelect: true,
-              asNavFor: '.slider-for'
-            });
+      $('.slider-nav').slick(
+        {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: false,
+          arrows: false,
+          focusOnSelect: true,
+          asNavFor: '.slider-for'
         });
 
 
