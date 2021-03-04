@@ -82,6 +82,12 @@ a, a:hover
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
+.paragraph-12-20
+  {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -338,6 +344,10 @@ a, a:hover
 /* --RESPONSIVE-- ------ */
 @media (min-width: 1200px)
   {
+    .container-fluid
+      {
+        padding: 0;
+      }
     .container
       {
         width: 108.4rem;
@@ -347,6 +357,10 @@ a, a:hover
 
 @media (max-width: 1200px)
   {
+    .container-fluid
+      {
+        padding: 0;
+      }
     .container
       {
         width: 84rem;
@@ -356,6 +370,10 @@ a, a:hover
 
 @media (max-width: 992px)
   {
+    .container-fluid
+      {
+        padding: 0;
+      }
     .container
       {
         width: 64rem;
@@ -364,6 +382,10 @@ a, a:hover
 
 @media (max-width: 768px)
   {
+    .container-fluid
+      {
+        padding: 0;
+      }
     .container
       {
         padding: 0 1.2rem;
@@ -439,6 +461,10 @@ a, a:hover
         font-size: 1.4rem;
         line-height: 2.4rem;
       }
+    .container-fluid
+      {
+        padding: 0;
+      }
     .container
       {
         padding: 0 0.4rem;
@@ -473,6 +499,11 @@ a, a:hover
         font-size: 1.2rem;
         line-height: 2rem;
       } 
+    .paragraph-12-20
+      {
+        font-size: 1rem;
+        line-height: 1.8rem;
+      }
       
     /* --BUTTON-- ------------ */
     .btn
@@ -541,6 +572,10 @@ a, a:hover
         font-size: 1.2rem;
         line-height: 2rem;
       }
+    .container-fluid
+      {
+        padding: 0;
+      }
     .container
       {
         padding: 0 0.4rem;
@@ -572,9 +607,14 @@ a, a:hover
     /* --PARAGRAPH-- ------------ */
     .paragraph-14-24
       {
-        font-size: 1.2rem;
-        line-height: 2rem;
+        font-size: 1rem;
+        line-height: 1.8rem;
       } 
+    .paragraph-12-20
+      {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+      }
 
     /* --BREAK-- ------------ */
     .break-328

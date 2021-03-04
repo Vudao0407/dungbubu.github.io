@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>404 • PAGE NOT FOUND</title>
+    <title>DungBu • Map</title>
     <link rel="shortcut icon" href="../Images/Favicon.jpg" type="image/x-icon">
 
     <!-- Boootstrap CSS library -->
@@ -22,43 +22,42 @@
       /* --Landing Page-- ------ */
       .landing-page
         {
+          padding-left: 10rem;
           width: 100%;
           height: calc(100vh - 5.6rem - 2.4rem); /* Gồm Footer + nội dung chữ */
-          padding-left: 10rem;
-          background-image: url(../Images/Error404/Error404Background.png);
-          background-color: #FAFAFA;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+          background-color: #FFFFFF;
         }
-      .landing-page-bg
+      .responsiveStyle
         {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-        }
-      .landing-page-image
-        {
-          width: 100%;
           display: none;
-        }
-      .landing-page-image img
-        {
           width: 100%;
-        }
-      .landing-page-content
-        {
-          margin-top: 54vh;
-        }
-      .landing-page-button
-        {
           text-align: center;
+        }
+      .mapImage
+        {
+          width: 90%;
+          height: 90%;
         }
 
 
       /* ------------ ------------ ------------ ------------ */
       /* --RESPONSIVE-- ------ */ 
+      @media (max-width: 1200px)
+        {
+          .responsiveStyle
+            {
+              display: block;
+              position: fixed;
+              left: 50%;
+              top: 40%;
+              transform: translate(-50%, -40%);
+            }
+          .mapImage
+            {
+              display: none;
+            }
+        }
+
       @media (max-width: 768px)
         {
           /* --Landing Page-- ------ */
@@ -66,16 +65,6 @@
             {
               padding-left: 0;
               height: calc(100vh - 4rem - 2.4rem);
-              background-image: url(../Images/Error404/BG.png);
-            }
-          .landing-page-image
-            {
-              margin-top: 10rem;
-              display: block;
-            }
-          .landing-page-content
-            {
-              margin-top: 0;
             }
         }
 
@@ -140,22 +129,8 @@
     <main id="mainID"> <!-- //////////// //////////// //////////// //////////// -->
       <!-- Landing Page------------------------------------------------------------------------------------------------ -->
       <div class="landing-page" id="home-landing-page">
-        <div class="container landing-page-bg">
-          <div class="landing-page-image">
-            <img src="../Images/Error404/Error404.png" alt="Contact me">
-          </div>
-
-          <div class="landing-page-content">
-            <div class="break-60"></div>
-            <span class="header-32-36" style="color: #7051EF;">PAGE NOT FOUND</span>
-          </div>
-
-          <div class="landing-page-button">
-            <div class="break-20"></div>
-            <a class="btn btn-primary" href="../index.html" role="button">go back home</a>
-          </div>
-        </div>
-        <div class="break-80"></div>
+        <span class="responsiveStyle">please use a desktop browser to connect this site</span>
+        <img class="mapImage" src="../Images/Map/Map.png" alt="Map">
       </div>
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
