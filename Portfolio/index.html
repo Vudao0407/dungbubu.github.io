@@ -71,21 +71,19 @@
           <div class="line-3"></div>
         </div>
         <div class="burger-menu-content">
-          <a href="#home-landing-page"><i class='fas fa-angle-right'></i>home</a>
+          <a href="#home-landing-page" class="burger-filling"><i class='fas fa-angle-right'></i>home</a>
           <div class="break-20"></div>
-          <a href="#home-expertise"><i class='fas fa-angle-right'></i>services</a>
+          <a href="#home-expertise" class="burger-filling"><i class='fas fa-angle-right'></i>services</a>
           <div class="break-20"></div>
-          <a href="#home-projects"><i class='fas fa-angle-right'></i>projects</a>
+          <a href="#home-projects" class="burger-filling"><i class='fas fa-angle-right'></i>projects</a>
           <div class="break-20"></div>
-          <a href="#home-profile"><i class='fas fa-angle-right'></i>about me</a>
+          <a href="#home-profile" class="burger-filling"><i class='fas fa-angle-right'></i>about me</a>
           <div class="break-20"></div>
-          <a href="#home-contact"><i class='fas fa-angle-right'></i>contact</a>
+          <a href="#home-contact" class="burger-filling"><i class='fas fa-angle-right'></i>contact</a>
         </div>
-        <div class="burger-menu-blackscreen"></div>
+        <div class="burger-menu-blackscreen" onclick="hamburgerFunction()"></div>
       </div>
     </header> <!-- //////////// //////////// //////////// //////////// -->
-
-
 
 
     <main id="mainID"> <!-- //////////// //////////// //////////// //////////// -->
@@ -242,7 +240,7 @@
       </div>
 
       <!-- Quote------------------------------------------------------------------------------------------------ -->
-      <div class="break-328"></div>
+      <div class="break-400"></div>
       <div class="quote">
         <span>I prefer drawing to talking.</span>
         <div class="break-8"></div>
@@ -419,6 +417,8 @@
       let gifDisplay = document.getElementById("loadingGifID");
 
       let menuItemActive = [...document.getElementsByClassName("menu-item")];
+      let burgerFilling = [...document.getElementsByClassName("burger-filling")];
+
       function activeStateOnLoad()
         {
           // Bật loading, Ẩn HTML
@@ -442,6 +442,7 @@
                   });
                 gifDisplay.style.display = "none";
                 menuItemActive[0].classList.add("active");
+                burgerFilling[0].classList.add("active");
 
 
                 // ------------ ------------ ------------ ------------ ------------ ------------
@@ -504,38 +505,46 @@
       let idOffSet = [document.getElementById("home-landing-page").getBoundingClientRect().top + document.documentElement.scrollTop,
                       document.getElementById("home-expertise").getBoundingClientRect().top + document.documentElement.scrollTop,
                       document.getElementById("home-projects").getBoundingClientRect().top + document.documentElement.scrollTop,
-                      document.getElementById("home-profile").getBoundingClientRect().top + document.documentElement.scrollTop];
+                      document.getElementById("home-profile").getBoundingClientRect().top + document.documentElement.scrollTop,
+                      document.getElementById("home-contact").getBoundingClientRect().top + document.documentElement.scrollTop];
 
       window.addEventListener("scroll", function()
         {
-          let windowViewpoint = window.pageYOffset + 400;
+          let windowViewpoint = window.pageYOffset + 200;
+
+          menuItemActive.forEach(function(element)
+            {
+              element.classList.remove("active");
+            });
+
+          burgerFilling.forEach(function(element)
+            {
+              element.classList.remove("active");
+            });
+
           if (idOffSet[1] > windowViewpoint && windowViewpoint >= idOffSet[0])
             {
               menuItemActive[0].classList.add("active");
-              menuItemActive[1].classList.remove("active");
-              menuItemActive[2].classList.remove("active");
-              menuItemActive[3].classList.remove("active");
+              burgerFilling[0].classList.add("active");
             }
           else if (idOffSet[2] > windowViewpoint && windowViewpoint >= idOffSet[1])
             {
-              menuItemActive[0].classList.remove("active");
               menuItemActive[1].classList.add("active");
-              menuItemActive[2].classList.remove("active");
-              menuItemActive[3].classList.remove("active");
+              burgerFilling[1].classList.add("active");
             }
           else if (idOffSet[3] > windowViewpoint && windowViewpoint >= idOffSet[2])
             {
-              menuItemActive[0].classList.remove("active");
-              menuItemActive[1].classList.remove("active");
               menuItemActive[2].classList.add("active");
-              menuItemActive[3].classList.remove("active");
+              burgerFilling[2].classList.add("active");
+            }
+          else if (idOffSet[4] > windowViewpoint && windowViewpoint >= idOffSet[3])
+            {
+              menuItemActive[3].classList.add("active");
+              burgerFilling[3].classList.add("active");
             }
           else
             {
-              menuItemActive[0].classList.remove("active");
-              menuItemActive[1].classList.remove("active");
-              menuItemActive[2].classList.remove("active");
-              menuItemActive[3].classList.add("active");
+              burgerFilling[4].classList.add("active");
             }
         });
 
@@ -573,6 +582,17 @@
           document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
           document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");
         }
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm ẩn Humburger menu khi ấn vào từng menu con ------------ ------------
+      document.querySelectorAll(".burger-menu-content a").forEach(function(element)
+        {
+          element.addEventListener("click" ,function()
+            {
+              setTimeout(function(){ hamburgerFunction(); }, 600);
+            });
+        });
     </script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
   </body>

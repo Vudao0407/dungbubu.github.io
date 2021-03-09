@@ -137,7 +137,11 @@
 
 @media (max-width: 576px)
   {
-    /* --Projects-- ------ */
+    /* --Landing Page-- ------ */
+    .landing-page-content
+      {
+        width: 100%;
+      }
   }
 
 @media (max-width: 320px)

@@ -108,7 +108,7 @@
       {
         padding: 0 2.2rem 4rem 2.2rem;
         width: 28rem;
-        min-height: 32rem;
+        min-height: 40rem;
         background-color: #FFFFFF;
         box-shadow: 4px 6px 12px 4px rgba(0, 0, 0, 0.06);
         border-radius: 12px;
@@ -155,8 +155,8 @@
     top: 50%;
     left: calc(50% + 5rem);
     transform: translate(-50%, -50%);
-    padding: 0 14rem;
-    width: 100%;
+    padding: 0;
+    width: 108.4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -257,7 +257,7 @@
     /* --Experience-- ------ */
     .experience-menu
       {
-        padding: 0 10rem;
+        width: 84rem;
       }
   }
 
@@ -282,6 +282,10 @@
       }
 
     /* --Experience-- ------ */
+    .experience-menu
+      {
+        width: 64rem;
+      }
     .experience-item
       {
         width: 10rem;
@@ -347,13 +351,18 @@
     .experience-menu
       {
         left: 50%;
-        padding: 0 10rem;
-        width: 100%;
+        padding: 0 1.2rem;
+        width: 54rem;
       }
   }
 
 @media (max-width: 576px)
   {
+    /* --Landing Page-- ------ */
+    .landing-page-content
+      {
+        width: 100%;
+      }
     /* --Profile-- ------ */
     .responsiveStyle .btn-primary
       {
@@ -386,7 +395,8 @@
     /* --Experience-- ------ */
     .experience-menu
       {
-        padding: 0 4.88rem;
+        padding: 0 0.4rem;
+        width: 32rem;
       }
     .experience-item
       {
@@ -438,7 +448,8 @@
     /* --Experience-- ------ */
     .experience-menu
       {
-        padding: 0 2.4rem;
+        padding: 0 0.4rem;
+        width: 100%;
       }
     .experience-menu span
       {

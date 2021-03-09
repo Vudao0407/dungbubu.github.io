@@ -94,16 +94,16 @@
 
     transition: all 400ms ease-out;
   }
-.burger-menu-content a
+.burger-filling
   {
     color: #FFFFFF;
   }
-.burger-menu-content i
+.burger-filling i
   {
     display: none;
     margin-right: 1rem;
   }
-.burger-menu-content a:hover i
+.burger-filling:hover i, .burger-filling.active i
   {
     display: inline;
   }
@@ -167,17 +167,17 @@
     <div class="line-3"></div>
   </div>
   <div class="burger-menu-content">
-    <a href="#home-landing-page"><i class='fas fa-angle-right'></i>home</a>
+    <a href="#home-landing-page" class="burger-filling"><i class='fas fa-angle-right'></i>home</a>
     <div class="break-20"></div>
-    <a href="#home-expertise"><i class='fas fa-angle-right'></i>services</a>
+    <a href="#home-expertise" class="burger-filling"><i class='fas fa-angle-right'></i>services</a>
     <div class="break-20"></div>
-    <a href="#home-projects"><i class='fas fa-angle-right'></i>projects</a>
+    <a href="#home-projects" class="burger-filling"><i class='fas fa-angle-right'></i>projects</a>
     <div class="break-20"></div>
-    <a href="#home-profile"><i class='fas fa-angle-right'></i>about me</a>
+    <a href="#home-profile" class="burger-filling"><i class='fas fa-angle-right'></i>about me</a>
     <div class="break-20"></div>
-    <a href="#home-contact"><i class='fas fa-angle-right'></i>contact</a>
+    <a href="#home-contact" class="burger-filling"><i class='fas fa-angle-right'></i>contact</a>
   </div>
-  <div class="burger-menu-blackscreen"></div>
+  <div class="burger-menu-blackscreen" onclick="hamburgerFunction()"></div>
 </div>
 */
 
@@ -187,10 +187,56 @@
 /* //////////// //////////// //////////// //////////// */
 /* Thêm đoạn script sau vào trang html ------------ ------------ */
 /*
+// ------------ ------------ ------------ ------------ ------------ ------------
+// Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
 function hamburgerFunction() 
   {
     document.querySelector(".burger-menu").classList.toggle("burger-menu-toggle");
     document.querySelector(".burger-menu-content").classList.toggle("burger-menu-toggle");
     document.querySelector(".burger-menu-blackscreen").classList.toggle("burger-menu-toggle");
   }
+
+// ------------ ------------ ------------ ------------ ------------ ------------
+// Hàm add/remove trạng thái Active khi "scroll" qua các vị trí trên trang ------------ ------------
+let burgerFilling = [...document.getElementsByClassName("burger-filling")];
+window.addEventListener("scroll", function()
+  {
+    let windowViewpoint = window.pageYOffset + 400;
+    
+    burgerFilling.forEach(function(element)
+      {
+        element.classList.remove("active");
+      });
+
+    if (idOffSet[1] > windowViewpoint && windowViewpoint >= idOffSet[0])
+      {
+        burgerFilling[0].classList.add("active");
+      }
+    else if (idOffSet[2] > windowViewpoint && windowViewpoint >= idOffSet[1])
+      {
+        burgerFilling[1].classList.add("active");
+      }
+    else if (idOffSet[3] > windowViewpoint && windowViewpoint >= idOffSet[2])
+      {
+        burgerFilling[2].classList.add("active");
+      }
+    else if (idOffSet[4] > windowViewpoint && windowViewpoint >= idOffSet[3])
+      {
+        burgerFilling[3].classList.add("active");
+      }
+    else
+      {
+        burgerFilling[4].classList.add("active");
+      }
+  });
+
+  // ------------ ------------ ------------ ------------ ------------ ------------
+  // Hàm ẩn Humburger menu khi ấn vào từng menu con ------------ ------------
+  document.querySelectorAll(".burger-menu-content a").forEach(function(element)
+    {
+      element.addEventListener("click" ,function()
+        {
+          setTimeout(function(){ hamburgerFunction(); }, 600);
+        });
+    });
 */

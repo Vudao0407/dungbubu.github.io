@@ -147,7 +147,7 @@ a, a:hover
 .btn-primary:hover,
 .btn-secondary:hover
   {
-    transform: translateY(-1.2rem);
+    transform: translateY(-0.4rem);
     box-shadow: 0 3rem 3rem rgb(0 0 0 / 16%);
     opacity: 0.8;
   }
@@ -227,9 +227,9 @@ a, a:hover
   {
     height: 24rem;
   }
-.break-328 /* for QUOTE only */
+.break-400 /* for QUOTE only */
   {
-    height: 32.8rem;
+    height: 42rem;
     box-shadow: inset 6rem 6rem 6rem #6549d7,
                 inset -6rem -6rem 6rem #7b59ff;
   }
@@ -544,7 +544,7 @@ a, a:hover
     .btn-primary:hover,
     .btn-secondary:hover
       {
-        transform: translateY(0);
+        transform: translateY(-0.2rem);
       }
 
     /* --BREAK-- ------------ */
@@ -584,7 +584,7 @@ a, a:hover
       {
         height: 8rem;
       }
-    .break-328
+    .break-400
       {
         height: 24rem;
       }
@@ -647,9 +647,9 @@ a, a:hover
       }
 
     /* --BREAK-- ------------ */
-    .break-328
+    .break-400
       {
-        height: 18rem;
+        height: 20rem;
         box-shadow: inset 2.8rem 2.8rem 2.8rem #6549d7,
                     inset -2.8rem -2.8rem 2.8rem #7b59ff;
       }
