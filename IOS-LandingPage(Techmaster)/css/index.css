@@ -1,0 +1,69 @@
+/* ------------ ------------ ------------ ------------ */
+/* --Navbar-- ------------ */
+.navbarbg
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8rem;
+    background: linear-gradient(269.34deg, #66D3FA -4.2%, #286BB2 80.75%);
+    box-shadow: 0px 4px 24px 4px rgba(0, 0, 0, 0.06);
+  }
+.navbar
+  {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.logo, .logo picture img
+  {
+    height: 100%;
+  }
+.menuItem, .menuItem a
+  {
+    margin-left: 2rem;
+    display: inline-block;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Main-- ------------ */
+.mainLandingPage
+  {
+    margin-top: 8rem;
+    height: 62rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.contentLandingPage
+  {
+    width: 48rem;
+  }
+.imageLandingPage
+  {
+    width: 56rem;
+  }
+.imageLandingPage picture img
+  {
+    width: 100%;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Background Deco-- ------------ */
+.bgdeco1
+  {
+    height: 6.4rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.bgdeco1
+  {
+    background-image: url(../images/background/backgroundDeco1.jpg);
+  }
