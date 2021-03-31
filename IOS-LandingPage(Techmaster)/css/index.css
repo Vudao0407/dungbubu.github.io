@@ -1,7 +1,46 @@
 /* ------------ ------------ ------------ ------------ */
-/* --Navbar-- ------------ */
-.navbarbg
+/* --Style Guide-- ------------ */
+li
   {
+    margin-left: 2rem;
+  }
+.layout1x1
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.content
+  {
+    width: 48rem;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Background Decor-- ------------ */
+.bgdecor1, .bgdecor2
+  {
+    height: 6.4rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.bgdecor1
+  {
+    background-image: url(../images/background/backgroundDecor1.jpg);
+  }
+.bgdecor2
+  {
+    background-image: url(../images/background/backgroundDecor2.jpg);
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Navbar-- ------------ */
+.navbarBg
+  {
+    z-index: 1;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -28,6 +67,10 @@
     color: #FFFFFF;
     text-transform: uppercase;
   }
+.menuItem a:hover .menuDecor
+  {
+    width: 100%;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -36,13 +79,6 @@
   {
     margin-top: 8rem;
     height: 62rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-.contentLandingPage
-  {
-    width: 48rem;
   }
 .imageLandingPage
   {
@@ -55,15 +91,137 @@
 
 
 /* ------------ ------------ ------------ ------------ */
-/* --Background Deco-- ------------ */
-.bgdeco1
+/* --Section 1 Giới Thiệu-- ------------ */
+.imageGioiThieu
   {
-    height: 6.4rem;
+    width: 58rem;
+  }
+.imageGioiThieu img
+  {
+    width: 100%;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Section 2 Giảng Viên-- ------------ */
+.cardGiangVien
+  {
+    margin: 0 4rem 4rem 0;
+    padding: 2.8rem 2.4rem 4.8rem 2.4rem;
+    width: 48rem;
+    /* height: 50rem; */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid #D5F3FE;
+    box-sizing: border-box;
+    box-shadow: 8px 12px 10px 2px rgba(213, 243, 254, 0.44);
+    border-radius: 12px;
+  }
+.cardGiangVien:hover
+  {
+    background: radial-gradient(102.39% 113.6% at 97.61% 1.34%, #4EAADE 0%, #0F5298 100%);
+  }
+.cardGiangVien:hover .txcl-primary,
+.cardGiangVien:hover li::marker,
+.cardGiangVien:hover li
+  {
+    color: #FFFFFF;
+  }
+.cardAva
+  {
+    width: 10rem;
+    height: 10rem;
+  }
+.cardAva img
+  {
+    width: 100%;
+    border-radius: 5rem;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Slick Carousel Giảng Viên-- ------------ */
+.carouselGiangVien .slick-dots li.slick-active button:before
+  {
+    opacity: 1;
+    color: #0F5298;
+  }
+.carouselGiangVien .slick-dots li button:before
+  {
+    font-size: 1rem;
+    color: #0F5298;
+  }
+.carouselGiangVien .slick-dots
+  {
+    width: 108.4rem; /* Bằng container */
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Section 3 Nội Dung-- ------------ */
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Section 4 Giáo Trình-- ------------ */
+.imageGiaoTrinh
+  {
+    width: 58rem;
+  }
+.imageGiaoTrinh img
+  {
+    width: 100%;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Section 5 Điều Kiện Theo Học-- ------------ */
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Section 6 Feedback Của Học Viên-- ------------ */
+.layoutCenter .decor
+  {
+    background-color: #FFFFFF;
+  }
+.cardFeedback
+  {
+    margin: 0 4rem 4rem 0;
+    width: 420px;
+    height: 416px;
+    background-image: url(../images/sectionFeedback/feedbackBG.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
   }
-.bgdeco1
+
+/* ------------ ------------ ------------ ------------ */
+/* --Slick Carousel Feedback-- ------------ */
+.carouselFeedback .slick-dots li.slick-active button:before
   {
-    background-image: url(../images/background/backgroundDeco1.jpg);
+    opacity: 1;
+    color: #FFFFFF;
   }
+.carouselFeedback .slick-dots li button:before
+  {
+    font-size: 1rem;
+    color: #FFFFFF;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Section 7 Liên Hệ-- ------------ */
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Map-- ------------ */
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Section 8 Blog Công Nghệ-- ------------ */
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Footer-- ------------ */
