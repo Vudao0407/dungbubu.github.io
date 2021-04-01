@@ -20,18 +20,12 @@ li
 /* --Background Decor-- ------------ */
 .bgdecor1, .bgdecor2
   {
+    width: 100vw;
     height: 6.4rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
-.bgdecor1
+.bgdecor1 img, .bgdecor2 img
   {
-    background-image: url(../images/background/backgroundDecor1.jpg);
-  }
-.bgdecor2
-  {
-    background-image: url(../images/background/backgroundDecor2.jpg);
+    width: 100%;
   }
 
 
@@ -183,13 +177,19 @@ li
 
 /* ------------ ------------ ------------ ------------ */
 /* --Section 6 Feedback Của Học Viên-- ------------ */
+.layoutCenter
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 .layoutCenter .decor
   {
     background-color: #FFFFFF;
   }
 .cardFeedback
   {
-    margin: 0 4rem 4rem 0;
+    margin: 0 4rem 4rem 4rem;
     width: 420px;
     height: 416px;
     background-image: url(../images/sectionFeedback/feedbackBG.png);
