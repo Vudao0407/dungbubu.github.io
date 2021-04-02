@@ -12,7 +12,7 @@ $('.carouselGiangVien').slick(
     variableWidth: true
   });
 
-$('.carouselFeedback').slick(
+$('.carouselFeedback, .carouselBlog').slick(
   {
     infinite: true,
     autoplay: true,
