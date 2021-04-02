@@ -31,6 +31,7 @@ li
 .bgdecor1 img, .bgdecor2 img
   {
     width: 100%;
+    height: 100%;
   }
 
 
@@ -303,11 +304,12 @@ li
 .cardFeedback
   {
     margin: 0 4rem 4rem 4rem;
-    width: 420px;
-    height: 416px;
+    width: 42rem;
+    height: 42rem;
     background-image: url(../images/sectionFeedback/feedbackBG.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
   }
 .cardFeedback:focus
   {
@@ -396,6 +398,7 @@ li
     align-items: center;
   }
 
+
 /* ------------ ------------ ------------ ------------ */
 /* --Slick Carousel Blog-- ------------ */
 .carouselBlog .slick-dots li.slick-active button:before
@@ -410,6 +413,16 @@ li
   }
   
 
-
 /* ------------ ------------ ------------ ------------ */
 /* --Footer-- ------------ */
+.footerNavbarBg
+  {
+    padding: 8rem 0 6rem 0;
+    background-color: #F6F6F6;
+  }
+.grid-container
+  {
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: 48rem 48rem;
+  }

@@ -297,9 +297,111 @@ input[type=number]
 
 @media (max-width: 1200px)
   {
+    .container-fix
+      {
+        padding-left: calc((100vw - 84rem) / 2);
+        width: 100vw;
+      }
     .container
       {
         width: 84rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    body
+      {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .header-160-120 /* Chỉ để trang trí */
+      {
+        margin-left: -10px;
+        font-size: 16.0rem;
+        line-height: 12.0rem;
+      }
+    .header-94-80 /* Chỉ để trang trí */
+      {
+        font-size: 9rem;
+        line-height: 7.0rem;
+      }
+    .header-62-80 /* Chỉ để trang trí */
+      {
+        font-size: 6.2rem;
+        line-height: 7.0rem;
+      }
+    .header-48-52
+      {
+        font-size: 4.2rem;
+        line-height: 4.8rem;
+      }
+    .header-32-36
+      {
+        font-size: 3rem;
+        line-height: 3.2rem;
+      }
+    .header-24-30
+      {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
+    .header-20-28
+      {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+      }
+    .header-16-22
+      {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .paragraph-20-28
+      {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+      }
+    .paragraph-16-24
+      {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .btn
+      {
+        padding: 1.8rem 2.4rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .break-120
+      {
+        height: 10rem;
+      }
+    .break-80
+      {
+        height: 7rem;
+      }
+    .break-60
+      {
+        height: 5rem;
+      }
+    .break-40
+      {
+        height: 2rem;
+      }
+    .break-24
+      {
+        height: 1.8rem;
+      }
+    .break-20
+      {
+        height: 1.2rem;
+      }
+    .break-12
+      {
+        height: 1rem;
+      }
+    .break-8
+      {
+        height: 0.4rem;
       }
   }
 
