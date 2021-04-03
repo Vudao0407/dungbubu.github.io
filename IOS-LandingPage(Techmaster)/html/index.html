@@ -13,11 +13,21 @@
     <link rel="stylesheet" href="../lib/Slick-1.8.1/slick/slick-theme.css">
     <!-- CSS Chung -->
     <link rel="stylesheet" href="../css/styleGuide.css">
+    <!-- Burger Menu -->
+    <link rel="stylesheet" href="../css/burger-menu.css">
     <!-- CSS Riêng -->
     <link rel="stylesheet" href="../css/index.css">
 
     <!-- Responsive max 1200px -->
     <link rel="stylesheet" href="../css/max1200.css">
+    <!-- Responsive max 992px -->
+    <link rel="stylesheet" href="../css/max992.css">
+    <!-- Responsive max 768px -->
+    <link rel="stylesheet" href="../css/max768.css">
+    <!-- Responsive max 576px -->
+    <link rel="stylesheet" href="../css/max576.css">
+    <!-- Responsive max 320px -->
+    <link rel="stylesheet" href="../css/max320.css">
   </head>
 
 
@@ -39,6 +49,7 @@
             <img src="../images/logo.png" alt="Techmaster">
           </picture>
         </a>
+
         <div class="menuItem header header-16-22">
           <a class="itemMenu" href="#idTrangChu">Trang chủ<div class="menuDecor"></div></a>
           <a class="itemMenu" href="#idGioiThieu">Giới thiệu<div class="menuDecor"></div></a>
@@ -48,8 +59,39 @@
           <a class="itemMenu" href="#idLienHe">Liên hệ<div class="menuDecor"></div></a>
           <a class="itemMenu" href="#idBaiViet">Bài viết<div class="menuDecor"></div></a>
         </div>
+
+        <div class="burger-menu" onclick="hamburgerFunction()">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
       </div>
     </header>
+
+
+    <!-- Burger Menu -->
+    <section>
+      <div class="burger-menu-blackscreen" onclick="hamburgerFunction()"></div>
+      <div class="burger-menu-content">
+        <div class="container">
+          <div class="break-120"></div>
+          <a class="burger-filling header header-16-22 txcl-primary" href="#idTrangChu"><span>></span> Trang chủ</a>
+          <div class="break-20"></div>
+          <a class="burger-filling header header-16-22 txcl-primary" href="#idGioiThieu"><span>></span> Giới thiệu</a>
+          <div class="break-20"></div>
+          <a class="burger-filling header header-16-22 txcl-primary" href="#idGiangVien"><span>></span> Giảng viên</a>
+          <div class="break-20"></div>
+          <a class="burger-filling header header-16-22 txcl-primary" href="#idNoiDung"><span>></span> Nội dung</a>
+          <div class="break-20"></div>
+          <a class="burger-filling header header-16-22 txcl-primary" href="#idHocVien"><span>></span> Học viên</a>
+          <div class="break-20"></div>
+          <a class="burger-filling header header-16-22 txcl-primary" href="#idLienHe"><span>></span> Liên hệ</a>
+          <div class="break-20"></div>
+          <a class="burger-filling header header-16-22 txcl-primary" href="#idBaiViet"><span>></span> Bài viết</a>
+          <div class="break-20"></div>
+        </div>
+      </div>
+    </section>
 
 
     <!-- Main -->
@@ -418,7 +460,7 @@
     <!-- Map -->
     <section class="container-fluid">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.858761266771!2d105.79250071541884!3d20.998297994192292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad5e6a49f693%3A0x13aeab8c73d00e0c!2sTechmaster!5e0!3m2!1svi!2s!4v1607153605280!5m2!1svi!2s" 
-      width="100%" height="480" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      width="100%" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
 
 

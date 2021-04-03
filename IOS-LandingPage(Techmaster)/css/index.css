@@ -39,8 +39,7 @@ li
 /* --Navbar-- ------------ */
 .navbarBg
   {
-    z-index: 1;
-
+    z-index: 5;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,9 +84,17 @@ li
   {
     width: 56rem;
   }
-.imageLandingPage picture img
+.imageLandingPage img
   {
     width: 100%;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Burger Menu-- ------------ */
+.burger-menu
+  {
+    display: none;
   }
 
 
@@ -370,6 +377,10 @@ li
 
 /* ------------ ------------ ------------ ------------ */
 /* --Map-- ------------ */
+iframe
+  {
+    height: 48rem;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */

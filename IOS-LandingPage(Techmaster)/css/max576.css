@@ -1,68 +1,67 @@
-@media (max-width: 1200px)
+@media (max-width: 576px)
   {
     /* ------------ ------------ ------------ ------------ */
     /* --Style Guide-- ------------ */
+    .layout1x1, .layout1x1fix
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     .content
       {
-        width: 42rem;
+        width: 100%;
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Background Decor-- ------------ */
     .bgdecor1, .bgdecor2
       {
-        height: 4.2rem;
-      }
-
-    /* ------------ ------------ ------------ ------------ */
-    /* --Navbar-- ------------ */
-    .navbarBg
-      {
-        height: 6rem;
-      }
-    .menuItem, .menuItem a
-      {
-        margin-left: 1.2rem;
+        height: 1.8rem;
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Main-- ------------ */
-    .mainLandingPage
-      {
-        margin-top: 6rem;
-        height: 52rem;
-      }
     .imageLandingPage
       {
-        width: 40rem;
+        display: none;
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 1 Giới Thiệu-- ------------ */
     .imageGioiThieu
       {
-        margin-top: -60px;
-        width: 44rem;
+        margin: 2rem 0 0 0;
+        width: 100%;
       }
     .boxGioiThieu
       {
-        padding: 0.2rem;
-        width: calc(30rem - 0.4rem);
-        height: 24rem;
-        bottom: -40px;
-        left: 20px;
+        height: 18rem;
+      }
+    .boxGioiThieu
+      {
+        bottom: -4rem;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 2 Giảng Viên-- ------------ */
     .cardGiangVien
       {
-        padding: 2.8rem 2.4rem 4rem 2.4rem;
-        width: 38rem;
+        margin: 0 2rem 1.2rem 0;
+        padding: 1.2rem;
+        width: 28rem;
       }
     .carouselGiangVien .slick-dots
       {
-        width: 84rem; /* Bằng container */
+        width: 28rem; /* Bằng container */
+      }
+    .cardGiangVien .cardAva
+      {
+        width: 6rem;
+        height: 6rem;
       }
 
     /* ------------ ------------ ------------ ------------ */
@@ -72,85 +71,58 @@
     /* --Section 4 Giáo Trình-- ------------ */
     .imageGiaoTrinh
       {
-        width: 40rem;
+        margin: 2rem 0;
+        width: 100%;
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 5 Điều Kiện Học-- ------------ */
-    .cardYeuCau
-      {
-        padding: 2rem 2.8rem;
-      }
-    .cardYeuCau .cardIcon
-      {
-        margin-right: 2rem;
-        width: 10rem;
-      }
     .imageYeuCau
       {
-        margin-right: -40px;
-        width: 42rem;
+        margin: 2rem 0 6rem 0;
+        width: 100%;
       }
     .boxYeuCau
       {
-        padding: 1rem 0.8rem;
-        width: calc(38rem - 1.6rem);
-        height: 42rem;
-        top: 6px;
-        left: 20px;
+        width: calc(100% - 0.4rem);
+        height: 34rem;
+        top: 10px;
+        left: 0px;
+      }
+    .boxYeuCauDecor
+      {
+        height: 6rem;
+        border-radius: 8px;
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 6 Feedback Của Học Viên-- ------------ */
     .cardFeedback
       {
-        margin: 0 2rem 2rem 2rem;
-        width: 38rem;
-        height: 38rem;
+        width: 26rem;
+        height: 26rem;
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 7 Liên Hệ-- ------------ */
-    .cardLienHe
-      {
-        padding: 1.8rem;
-        width: calc(100% - 3.6rem);
-      }
-    .cardLienHe img
-      {
-        width: 4rem;
-        height: 4rem;
-      }
     .boxLienHe
       {
-        padding: 2rem;
-        width: calc(38rem - 4rem);
-      }
-    .inputText
-      {
-        padding: 1.2rem 1rem;
-        width: calc(100% - 2rem - 2px);
+        margin-top: 2rem;
+        padding: 1.2rem;
+        width: calc(100% - 2.4rem);
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Map-- ------------ */
-    iframe
-      {
-        height: 40rem;
-      }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 8 Blog Công Nghệ-- ------------ */
 
     /* ------------ ------------ ------------ ------------ */
     /* --Footer-- ------------ */
-    .footerNavbarBg
-      {
-        padding: 6rem 0 4rem 0;
-      }
     .grid-container
       {
-        grid-gap: 4rem;
-        grid-template-columns: 40rem 40rem;
+        grid-gap: 2rem;
+        grid-template-columns: 100%;
       }
   }

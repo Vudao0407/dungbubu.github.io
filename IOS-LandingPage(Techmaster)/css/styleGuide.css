@@ -272,12 +272,12 @@ input[type=number]
 
 .container-fluid
   {
-    width: 100vw;
+    width: 100%;
   }
 .container-fix
   {
-    padding-left: calc((100vw - 108.4rem) / 2);
-    width: 100vw;
+    padding-left: calc((100% - 108.4rem) / 2);
+    width: 100%;
   }
 .container
   {
@@ -299,8 +299,8 @@ input[type=number]
   {
     .container-fix
       {
-        padding-left: calc((100vw - 84rem) / 2);
-        width: 100vw;
+        padding-left: calc((100% - 84rem) / 2);
+        width: 100%;
       }
     .container
       {
@@ -408,38 +408,190 @@ input[type=number]
 
 @media (max-width: 992px)
   {
+    .container-fix
+      {
+        padding-left: calc((100% - 64rem) / 2);
+        width: 100%;
+      }
     .container
       {
         width: 64rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .header-160-120 /* Chỉ để trang trí */
+      {
+        margin-left: -10px;
+        font-size: 12.0rem;
+        line-height: 9.0rem;
+      }
+    .header-94-80 /* Chỉ để trang trí */
+      {
+        font-size: 7.4rem;
+        line-height: 6.0rem;
+      }
+    .header-62-80 /* Chỉ để trang trí */
+      {
+        font-size: 6.2rem;
+        line-height: 6.0rem;
+      }
+    .header-48-52
+      {
+        font-size: 3.4rem;
+        line-height: 4rem;
+      }
+    .header-32-36
+      {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+      }
+    .header-24-30
+      {
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .paragraph-20-28
+      {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .btn
+      {
+        padding: 1.4rem 1.6rem;
+      }
+    .btn-secondary
+      {
+        margin-left: 1rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .break-120
+      {
+        height: 8rem;
+      }
+    .break-80
+      {
+        height: 4rem;
+      }
+    .break-60
+      {
+        height: 3rem;
+      }
+    .break-40
+      {
+        height: 2rem;
+      }
+    .break-24
+      {
+        height: 1.8rem;
       }
   }
 
 
 @media (max-width: 768px)
   {
+    .container-fix
+      {
+        padding-left: calc((100% - 58rem) / 2);
+        width: 100%;
+      }
     .container
       {
-        padding: 0 1.2rem;
-        width: 84rem;
+        padding: 0 2rem;
+        width: 54rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    body
+      {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .header-160-120 /* Chỉ để trang trí */
+      {
+        margin-left: -5px;
+        font-size: 10.0rem;
+        line-height: 8.0rem;
+      }
+    .header-94-80 /* Chỉ để trang trí */
+      {
+        font-size: 6rem;
+        line-height: 4.0rem;
+      }
+    .header-62-80 /* Chỉ để trang trí */
+      {
+        font-size: 4.2rem;
+        line-height: 4.0rem;
+      }
+    .header-48-52
+      {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        letter-spacing: -1px;
+      }
+    .header-20-28
+      {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .paragraph-20-28
+      {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .decor
+      {
+        width: 8.0rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .btn
+      {
+        padding: 1.2rem;
+      }
+    .btn-secondary
+      {
+        margin-left: 1rem;
+      }
+    /* ------------ ------------ ------------ ------------ */
+    .break-40
+      {
+        height: 1rem;
       }
   }
 
 
 @media (max-width: 576px)
   {
+    .container-fix
+      {
+        padding-left: calc((100% - 28rem) / 2);
+        width: 100%;
+      }
     .container
       {
-        padding: 0 0.8rem;
-        width: 32rem;
+        padding: 0 2rem;
+        width: 28rem;
       }
   }
 
 
 @media (max-width: 320px)
   {
+    .container-fluid
+      {
+        padding: 0 1rem;
+        width: calc(100% - 2rem);
+      }
+    .container-fix
+      {
+        padding: 0 1rem;
+        width: calc(100% - 2rem);
+      }
     .container
       {
-        padding: 0 0.4rem;
-        width: 100vw;
+        padding: 0 1rem;
+        width: calc(100% - 2rem);
       }
   }
