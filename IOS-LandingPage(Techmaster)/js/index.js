@@ -42,30 +42,30 @@ menuItemActive.forEach(function(element)
         
         var sibling = menuItemActive[0];
         while (sibling) 
-        {
+         {
             if (sibling.nodeType === 1 && sibling !== element) 
               {
                 sibling.classList.remove("active");
               }
             sibling = sibling.nextSibling
-        }
+         }
       });
   });
 
 
 // ------------ ------------ ------------ ------------ ------------ ------------
 // Hàm add/remove trạng thái Active khi "scroll" qua các vị trí trên trang
-let idOffSet = [document.getElementById("idTrangChu").getBoundingClientRect().top,
-                document.getElementById("idGioiThieu").getBoundingClientRect().top,
-                document.getElementById("idGiangVien").getBoundingClientRect().top,
-                document.getElementById("idNoiDung").getBoundingClientRect().top,
-                document.getElementById("idHocVien").getBoundingClientRect().top,
-                document.getElementById("idLienHe").getBoundingClientRect().top,
-                document.getElementById("idBaiViet").getBoundingClientRect().top];
+let idOffSet = [document.getElementById("idTrangChu").getBoundingClientRect().top + document.documentElement.scrollTop,
+                document.getElementById("idGioiThieu").getBoundingClientRect().top + document.documentElement.scrollTop,
+                document.getElementById("idGiangVien").getBoundingClientRect().top + document.documentElement.scrollTop,
+                document.getElementById("idNoiDung").getBoundingClientRect().top + document.documentElement.scrollTop,
+                document.getElementById("idHocVien").getBoundingClientRect().top + document.documentElement.scrollTop,
+                document.getElementById("idLienHe").getBoundingClientRect().top + document.documentElement.scrollTop,
+                document.getElementById("idBaiViet").getBoundingClientRect().top + document.documentElement.scrollTop];
 
 window.addEventListener("scroll",function()
   {
-    let windowViewpoint = window.pageYOffset;
+    let windowViewpoint = window.pageYOffset + 80;
 
     menuItemActive.forEach(function(element)
       {

@@ -1,17 +1,17 @@
 /* Burger menu ------------ ------------ */
 .burger-menu
   {
-    padding: 6px;
-    width: 32px;
-    height: 24px;
+    padding: 2px;
+    width: 28px;
+    height: 21px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     transition: all 400ms ease-out;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
   }
 .burger-menu:hover
   {

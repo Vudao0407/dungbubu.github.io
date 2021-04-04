@@ -311,12 +311,10 @@ li
 .cardFeedback
   {
     margin: 0 4rem 4rem 4rem;
+  }
+.cardFeedback picture img
+  {
     width: 42rem;
-    height: 42rem;
-    background-image: url(../images/sectionFeedback/feedbackBG.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 .cardFeedback:focus
   {

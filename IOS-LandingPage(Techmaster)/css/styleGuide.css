@@ -122,10 +122,10 @@ input[type=number]
     font-size: 2rem;
     line-height: 2.8rem;
   }
-.paragraph-16-24
+.paragraph-16-22
   {
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 2.2rem;
   }
 
 
@@ -360,10 +360,10 @@ input[type=number]
         font-size: 1.8rem;
         line-height: 2.4rem;
       }
-    .paragraph-16-24
+    .paragraph-16-22
       {
         font-size: 1.4rem;
-        line-height: 2.2rem;
+        line-height: 2rem;
       }
     /* ------------ ------------ ------------ ------------ */
     .btn

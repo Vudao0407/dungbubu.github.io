@@ -97,10 +97,9 @@
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 6 Feedback Của Học Viên-- ------------ */
-    .cardFeedback
+    .cardFeedback picture img
       {
         width: 26rem;
-        height: 26rem;
       }
 
     /* ------------ ------------ ------------ ------------ */

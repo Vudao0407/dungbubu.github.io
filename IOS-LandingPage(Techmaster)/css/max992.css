@@ -121,10 +121,9 @@
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 6 Feedback Của Học Viên-- ------------ */
-    .cardFeedback
+    .cardFeedback picture img
       {
         width: 30rem;
-        height: 30rem;
       }
 
     /* ------------ ------------ ------------ ------------ */
