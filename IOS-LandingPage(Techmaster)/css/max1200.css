@@ -105,21 +105,10 @@
     .cardFeedback
       {
         margin: 0 2rem 2rem 2rem;
-        position: relative;
       }
     .cardFeedback picture img
       {
         width: 38rem;
-      }
-    .cardFeedback .cardName
-      {
-        position: absolute;
-        bottom: 8px;
-        right: 32px;
-      }
-    .cardFeedback .cardName p
-      {
-        text-align: right;
       }
 
     /* ------------ ------------ ------------ ------------ */

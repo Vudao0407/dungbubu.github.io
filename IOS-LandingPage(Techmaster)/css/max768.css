@@ -14,24 +14,16 @@
     /* --Main-- ------------ */
     .imageLandingPage
       {
-        margin-right: -60px;
-        width: 32rem;
-      }
-    .imageLandingPage img
-      {
-        overflow: hidden;
+        margin-right: 0px;
+        width: calc(100% - 28rem);
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 1 Giới Thiệu-- ------------ */
     .imageGioiThieu
       {
-        margin-right: -60px;
-        width: 32rem;
-      }
-    .imageGioiThieu img
-      {
-        overflow: hidden;
+        margin-right: 0px;
+        width: calc(100% - 28rem);
       }
     .boxGioiThieu
       {
@@ -63,24 +55,16 @@
     /* --Section 4 Giáo Trình-- ------------ */
     .imageGiaoTrinh
       {
-        margin-right: -60px;
-        width: 32rem;
-      }
-    .imageGiaoTrinh img
-      {
-        overflow: hidden;
+        margin-right: 0px;
+        width: calc(100% - 28rem);
       }
 
     /* ------------ ------------ ------------ ------------ */
     /* --Section 5 Điều Kiện Học-- ------------ */
     .imageYeuCau
       {
-        margin-right: -20px;
-        width: 32rem;
-      }
-    .imageYeuCau img
-      {
-        overflow: hidden;
+        margin-right: 0px;
+        width: calc(100% - 28rem);
       }
     .boxYeuCau
       {
