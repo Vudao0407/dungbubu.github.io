@@ -218,6 +218,44 @@ li
 
 /* ------------ ------------ ------------ ------------ */
 /* --Section 3 Nội Dung-- ------------ */
+.collapsible 
+  {
+    padding: 1.2rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: #0F5298;
+    cursor: pointer;
+    background-color: #F6F6F6;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+.iconHide
+  {
+    display: none;
+  }
+.collapsible.active, .collapsible:hover 
+  {
+    background-color: #0F5298;
+    color: #FFFFFF;
+  }
+.collapsible.active .iconPlus
+  {
+    display: none;
+  }
+.collapsible.active .iconHide
+  {
+    display: inline;
+  }
+.listContent 
+  {
+    padding: 0 1.8rem;
+    display: none;
+    overflow: hidden;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -447,4 +485,19 @@ iframe
     display: grid;
     grid-gap: 6rem;
     grid-template-columns: 48rem 48rem;
+  }
+.boxFooter
+  {
+    display: flex;
+  }
+.boxFooter .cardAva
+  {
+    margin-right: 2rem;
+    width: 8rem;
+    height: 8rem;
+  }
+.boxFooter .cardAva picture img
+  {
+    width: 100%;
+    border-radius: 50%;
   }
