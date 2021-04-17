@@ -29,6 +29,21 @@
 
 
 /* ------------ ------------ ------------ ------------ */
+/* --Modal-- ------------ */
+.modal
+  {
+    z-index: 4;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: all 600ms ease-out;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
 .homePage
   {
@@ -161,6 +176,26 @@
       {
         width: 100%;
         transform-style: preserve-3d;
+      }
+
+    .modal.toggle
+      {
+        top: 0;
+        height: 100vh;
+        opacity: 1;
+        background-color: #F8F8F8;
+      }
+    .burgerFill
+      {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
       }
 
     .homePage
