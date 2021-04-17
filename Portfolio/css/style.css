@@ -63,8 +63,53 @@ body
 
 
 /* ------------ ------------ ------------ ------------ */
+/* --Header-- ------------ */
+.navbar
+  {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+  }
+.navItem
+  {
+    display: inline;
+    margin-left: 4rem;
+    color: #D2D2D2;
+  }
+.navItem:hover, .navItem.active
+  {
+    color: #121212;
+  }
+.burgerMenu
+  {
+    display: none;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Modal-- ------------ */
+.modal
+  {
+    z-index: 4;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: all 600ms ease-out;
+  }  
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
-.container, .navbar, .homePage
+.container, .navbar, .homePage, .contactPage
   {
     margin: 0 auto;
     padding: 0 12px;
@@ -73,7 +118,7 @@ body
 
 @media (max-width: 1152px)
   {
-    .container, .navbar, .homePage
+    .container, .navbar, .homePage, .contactPage
       {
         padding: 0 16px;
         width: 732px;
@@ -93,11 +138,98 @@ body
         font-size: 2.0rem;
         line-height: 2.6rem;
       }
+
+    /* --Header-- ------------ */
+    .navMenu
+      {
+        display: none;
+      }
+    .burgerMenu
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-pack: justify;
+        width: 32px;
+        height: 24px;
+        transition: all 400ms ease-out;
+      }
+    .line-1, .line-2, .line-3
+      {
+        margin-left: auto;
+        height: 2px;
+        background-color: #121212;
+        transition: all 240ms ease-out;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+        rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+      }
+    .line-1
+      {
+        width: 100%;
+        transform-origin: 0% 50%;
+      }
+    .line-2
+      {
+        width: 40%;
+        transform-origin: 100% 50%;
+      }
+    .line-3
+      {
+        width: 80%;
+        transform-origin: 0% 50%;
+      }
+    
+    .burgerMenu.toggle .line-1
+      {
+        transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1)
+        rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+      }
+    .burgerMenu.toggle .line-2
+      {
+        transform: translate3d(10px, 0px, 0px) scale3d(0, 1, 1)
+        rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      }
+    .burgerMenu.toggle .line-3
+      {
+        transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1)
+        rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
+      }
+    .burgerMenu.toggle .line-1,
+    .burgerMenu.toggle .line-2,
+    .burgerMenu.toggle .line-3
+      {
+        width: 100%;
+        transform-style: preserve-3d;
+      }
+
+    /* --Modal-- ------------ */
+    .modal.toggle
+      {
+        top: 0;
+        height: 100vh;
+        opacity: 1;
+        background-color: #F8F8F8;
+      }
+    .burgerFill
+      {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+      }
   }
 
 @media (max-width: 764px)
   {
-    .container, .navbar, .homePage
+    .container, .navbar, .homePage, .contactPage
       {
         padding: 0 16px;
         width: 288px;
@@ -118,11 +250,22 @@ body
         font-size: 2.0rem;
         line-height: 2.8rem;
       }
+
+    /* --Header-- ------------ */
+    .navbar
+      {
+        height: 5rem;
+      }
+    .burgerMenu
+      {
+        width: 24px;
+        height: 18px;
+      }
   }
 
 @media (max-width: 320px)
   {
-    .container, .navbar, .homePage
+    .container, .navbar, .homePage, .contactPage
       {
         width: calc(100% - 32px);
       }
