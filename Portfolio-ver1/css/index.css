@@ -1,0 +1,78 @@
+/* ------------ ------------ ------------ ------------ */
+/* --Header-- ------------ */
+.navbar
+  {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 8rem;
+  }
+.navItem
+  {
+    display: inline-block;
+
+    margin-left: 4rem;
+    color: #ABABAB;
+  }
+.navItem.active
+  {
+    color: #121212;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Main-- ------------ */
+.homePage
+  {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    margin-top: 2rem;
+  }
+
+.homePicture img
+  {
+    z-index: 0;
+    width: 552px;
+  }
+.homePicture .typo
+  {
+    z-index: 1;
+    position: absolute;
+    left: 24px;
+    bottom: 56px;
+  }
+.homePicture .typo p
+  {
+    margin-top: 36px;
+    color: #FFF;
+  }
+
+.homeContent
+  {
+    text-align: right;
+  }
+.homeContent .title
+  {
+    margin-bottom: 1.2rem;
+  }
+.homeContent a .arrow
+  {
+    display: none;
+  }
+.homeContent a:hover .arrow
+  {
+    display: inline;
+  }

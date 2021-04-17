@@ -1,0 +1,86 @@
+/* ------------ ------------ ------------ ------------ */
+/* --GENERAL-- ------------ */
+* 
+  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+html
+  {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+main 
+  {
+    display: block;
+  }
+a, a:hover
+  {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --FONTS-- ------------ */
+@font-face
+  {
+    font-family: Philosopher;
+    src: url(../font/Philosopher/Philosopher-Regular.ttf);
+  }
+body
+  {
+    font-family: 'Philosopher', serif;
+    font-size: 2.0rem;
+    line-height: 2.8rem;
+    color: #121212;
+    background-color: #F8F8F8;
+  }
+.tx120-60 /* for Decor only */
+  {
+    font-size: 12rem;
+    line-height: 6rem;
+  }
+.tx28-32 /* for Navbar & Title */
+  {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */
+.container, .navbar, .homePage
+  {
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 1128px;
+  }
+
+@media (max-width: 1152px)
+  {
+    .container, .navbar, .homePage
+      {
+        padding: 0 16px;
+        width: 732px;
+      }
+  }
+
+@media (max-width: 764px)
+  {
+    .container, .navbar, .homePage
+      {
+        padding: 0 16px;
+        width: 288px;
+      }
+  }
+
+@media (max-width: 320px)
+  {
+    .container, .navbar, .homePage
+      {
+        width: calc(100% - 32px);
+      }
+  }
