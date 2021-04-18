@@ -11,7 +11,7 @@
     <!-- CSS Chung -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- CSS Riêng -->
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/about.css">
   </head>
 
   <body>
@@ -47,27 +47,26 @@
 
 
 
-    <main class="homePage"> <!-- //////////// //////////// -->
-      <p class="title tx24-30" id="welcome1">Welcome to my portfolio</p>
+    <main class="aboutPage"> <!-- //////////// //////////// -->
+      <img id="pic1" src="./img/about/pic1.png" alt="Arrow">
+      <p id="text1a" class="tx120-60">about</p>
+      <p id="text1b">dob: 24 / 06 / 1996</p>
+      <p id="text1c">skill: HTML / CSS / DESIGN / POWERPOINT / ILLUSTRATOR / FIGMA</p>
+      <p id="text1d">MY NAME IS dungbu. I'VE BEEN a designer SINCE MARCH 2018. NOW I’M STUDYING 
+                    WEB DESIGN AND FRONT-END. MY GOAL IS TO BE A GOOD WEB DESIGNER. 
+                    BASICALLY I LOVE MAKING MINIMAL AND BUSINESS DESIGN. I'M NEW AND 
+                    INEXPERIENCED BUT I'LL DO MY BEST. THANKS FOR YOUR TIME.</p>
 
-      <div class="homePicture">
-        <img src="./img/home/dungbu.png" alt="I'am dungbu">
-        <div class="typography">
-          <p class="tx120-60 typo" id="typo1">Hello</p>
-          <p class="tx120-60 typo">i'am</p>
-          <p class="tx120-60 typo" id="typo3">dungbu</p>
-        </div>
-      </div>
+      <img id="pic2" src="./img/about/pic2.png" alt="Bad Blood">
+      <p id="text2a" class="tx24-30">EXPERIENCE</p>
+      <p id="text2b">9Slide - Khóa học thiết kế Powerpoint chuyên nghiệp</p>
 
-      <div class="homeContent">
-        <div>
-          <a href="#" id="homeContent1">all projects <span class="arrow">→</span></a>
-          <a href="#" id="homeContent2">my information <span class="arrow">→</span></a>
-          <a href="#" id="homeContent3">coffe and a chat? <span class="arrow">→</span></a>
-        </div>
+      <img id="pic3" src="./img/about/pic3.png" alt="The Forest">
+      <p id="text3a" class="tx24-30">EDUCATION</p>
+      <p id="text3b">Trường THPT Phan Đình Phùng</p>
+      <p id="text3c">Trường ĐH Công nghệ Giao thông vận tải</p>
 
-        <p class="title tx24-30" id="welcome2">Welcome to my portfolio</p>
-      </div>
+      <img id="pic4" src="./img/about/pic4.png" alt="Lotus">
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
 
@@ -88,7 +87,7 @@
       // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu ------------ ------------
       let navItem = [...document.getElementsByClassName("navItem")];
 
-      navItem[0].classList.add("active");
+      navItem[1].classList.add("active");
 
       navItem.forEach(function(element) 
         {

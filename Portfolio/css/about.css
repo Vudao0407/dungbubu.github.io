@@ -1,0 +1,189 @@
+/* ------------ ------------ ------------ ------------ */
+/* --Main-- ------------ */
+.aboutPage
+  {
+    position: relative;
+  }
+#pic1, #pic2, #pic3, #pic4,
+#text1a, #text1b, #text1c, #text1d,
+#text2a, #text2b,
+#text3a, #text3b, #text3c
+  {
+    position: absolute;
+  }
+#pic1, #pic3,
+#text1b, #text1c,
+#text2a, #text2b
+  {
+    right: 12px;
+    text-align: right;
+  }
+#pic2, #pic4,
+#text1a, #text1d,
+#text3a, #text3b, #text3c
+  {
+    left: 12px;
+    text-align: left;
+  }
+
+#pic1
+  {
+    top: 100px;
+  }
+#text1a
+  {
+    top: 600px;
+  }
+#text1b
+  {
+    top: 740px;
+  }
+#text1c
+  {
+    top: 780px;
+  }
+#text1d
+  {
+    top: 880px;
+    width: 744px;
+  }
+
+#pic2
+  {
+    top: 1100px;
+  }
+#text2a
+  {
+    top: 1500px;
+  }
+#text2b
+  {
+    top: 1600px;
+  }
+
+#pic3
+  {
+    top: 1800px;
+  }
+#text3a
+  {
+    top: 2700px;
+  }
+#text3b
+  {
+    top: 2800px;
+  }
+#text3c
+  {
+    top: 2840px;
+  }
+
+#pic4
+  {
+    top: 3000px;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */
+@media (max-width: 1152px)
+  {
+    #pic1, #pic3,
+    #text1b, #text1c,
+    #text2a, #text2b
+      {
+        right: 16px;
+      }
+    #pic2, #pic4,
+    #text1a, #text1d,
+    #text3a, #text3b, #text3c
+      {
+        left: 16px;
+      }
+
+    #pic1, #pic2
+      {
+        width: 354px;
+      }
+    #pic3
+      {
+        width: 496px;
+      }
+    #pic4
+      {
+        width: 732px;
+      }
+
+    #text1d
+      {
+        width: 606px;
+      }
+  }
+
+@media (max-width: 764px)
+  {
+    #pic1, #pic2, #pic3, #pic4,
+    #text1a, #text1b, #text1c, #text1d,
+    #text2a, #text2b,
+    #text3a, #text3b, #text3c
+      {
+        width: calc(100% - 32px);
+      }
+
+    #pic1
+      {
+        top: 80px;
+      }
+    #text1a
+      {
+        top: 420px;
+      }
+    #text1b
+      {
+        top: 640px;
+      }
+    #text1c
+      {
+        top: 680px;
+      }
+    #text1d
+      {
+        top: 780px;
+        width: 644px;
+      }
+    
+    #pic2
+      {
+        top: 1000px;
+      }
+    #text2a
+      {
+        top: 1400px;
+      }
+    #text2b
+      {
+        top: 1500px;
+      }
+    
+    #pic3
+      {
+        top: 1700px;
+      }
+    #text3a
+      {
+        top: 2600px;
+      }
+    #text3b
+      {
+        top: 2700px;
+      }
+    #text3c
+      {
+        top: 2740px;
+      }
+    
+    #pic4
+      {
+        top: 2900px;
+      }
+  }
