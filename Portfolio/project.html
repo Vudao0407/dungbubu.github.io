@@ -49,12 +49,26 @@
 
     <main class="projectPage"> <!-- //////////// //////////// -->
       <div class="projectMenu">
-        <p class="tx24-30">Web design</p>
-        <p class="tx24-30">Power Point</p>
+        <p id="menu1" class="tx24-30" onclick="showTab(event, 'webProject')">Web design</p>
+        <p id="menu2" class="tx24-30" onclick="showTab(event, 'pptProject')">Power Point</p>
       </div>
 
-      <div id="webDesign">
+      <div id="webProject">
+        <img src="./img/project/projectWeb/Web4.PNG" alt="Techmaster IOS course">
+        <img src="./img/project/projectWeb/Web3.PNG" alt="My Portfolio">
+        <img src="./img/project/projectWeb/Web2.PNG" alt="Instagram (clone)">
+        <img src="./img/project/projectWeb/Web1.PNG" alt="Cripto">
+      </div>
 
+      <div id="pptProject">
+        <img src="./img/project/FTA/Slide1.PNG" alt="FTA">
+        <img src="./img/project/FirstAlliances/Slide1.PNG" alt="FirstAlliances">
+        <img src="./img/project/Portfolio1/Slide1.PNG" alt="CV Lê Ánh Linh (Dark Theme)">
+        <img src="./img/project/Portfolio2/Slide1.PNG" alt="CV Lê Ánh Linh (Light Theme)">
+        <img src="./img/project/Growell/Slide1.PNG" alt="Growell VietNam">
+        <img src="./img/project/VAS/Slide1.PNG" alt="VAS">
+        <img src="./img/project/ITE/Slide1.PNG" alt="ITE">
+        <img src="./img/project/Netco/Slide1.PNG" alt="Netco Post">
       </div>
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
@@ -104,6 +118,29 @@
           document.querySelector(".burgerMenu").classList.toggle("toggle");
           document.querySelector(".modal").classList.toggle("toggle");
         }
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Project Menu ------------ ------------
+      let projectMenu = [document.getElementById("menu1"),
+                        document.getElementById("menu2")];
+      let projectGrid = [document.getElementById("webProject"),
+                        document.getElementById("pptProject")];
+
+      projectMenu[0].classList.add("active");
+      projectGrid[0].classList.add("active");
+    
+      function showTab(evt, tabName)
+       {
+          for (i = 0; i < 2; i++) 
+            {
+              projectGrid[i].classList.remove("active");
+              projectMenu[i].classList.remove("active");
+            }
+          
+          document.getElementById(tabName).classList.add("active");
+          evt.currentTarget.className += " active";
+       }
     </script>
   </body>
 </html>

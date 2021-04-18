@@ -1,8 +1,52 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar 
+  {
+    display: none;
+  }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body
+  {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
 /* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
-.projectPage
+.projectMenu
   {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 12rem auto 2rem auto;
+  }
+#menu1, #menu2
+  {
+    margin: 0 2rem;
+    color: #D2D2D2;
+  }
+#menu1:hover, #menu2:hover,
+#menu1.active, #menu2.active
+  {
+    cursor: pointer;
+    color: #121212;
+  }
+
+#webProject, #pptProject
+  {
+    display: none;
+  }
+#webProject.active, #pptProject.active
+  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 24px;
+    margin-bottom: 10rem;
+  }
+
+#webProject img, #pptProject img
+  {
+    width: 360px;
   }
 
 
@@ -10,10 +54,26 @@
 /* --RESPONSIVE-- ------ */
 @media (max-width: 1152px)
   {
-    
+    #webProject img, #pptProject img
+      {
+        width: 228px;
+      }
   }
 
 @media (max-width: 764px)
   {
-    
+    #menu1, #menu2
+      {
+        margin: 0 0.8rem;
+      }
+
+    #webProject.active, #pptProject.active
+      {
+        grid-template-columns: auto auto;
+        grid-gap: 16px;
+      }
+    #webProject img, #pptProject img
+      {
+        width: 136px;
+      }
   }
