@@ -111,7 +111,7 @@ body
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
 .container, .navbar, .homePage,
-.aboutPage, .contactPage
+.aboutPage, .projectPage, .contactPage
   {
     margin: 0 auto;
     padding: 0 12px;
@@ -121,7 +121,7 @@ body
 @media (max-width: 1152px)
   {
     .container, .navbar, .homePage,
-    .aboutPage, .contactPage
+    .aboutPage, .projectPage, .contactPage
       {
         padding: 0 16px;
         width: 732px;
@@ -233,7 +233,7 @@ body
 @media (max-width: 764px)
   {
     .container, .navbar, .homePage,
-    .aboutPage, .contactPage
+    .aboutPage, .projectPage, .contactPage
       {
         padding: 0 16px;
         width: 288px;
@@ -270,7 +270,7 @@ body
 @media (max-width: 320px)
   {
     .container, .navbar, .homePage,
-    .aboutPage, .contactPage
+    .aboutPage, .projectPage, .contactPage
       {
         width: calc(100% - 32px);
       }
