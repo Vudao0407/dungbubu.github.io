@@ -53,6 +53,38 @@ body
     width: 360px;
   }
 
+.projectItem
+  {
+    position: relative;
+  }
+.projectInfo
+  {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    opacity: 0;
+    transition: all 400ms ease;
+  }
+.projectInfo p
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+.projectItem:hover .projectInfo
+  {
+    opacity: 1;
+  }
+
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
