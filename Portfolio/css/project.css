@@ -32,7 +32,7 @@ body
 #menu1:hover, #menu2:hover,
 #menu1.active, #menu2.active
   {
-    cursor: pointer;
+    cursor: url('../img/logo/pointerHover.png'),auto;
     color: #121212;
   }
 
