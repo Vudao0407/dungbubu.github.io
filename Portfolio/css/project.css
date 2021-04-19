@@ -14,11 +14,15 @@ body
 
 /* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
+.projectPage
+  {
+    margin-top: 12rem;
+  }
 .projectMenu
   {
     display: flex;
     justify-content: center;
-    margin: 12rem auto 2rem auto;
+    margin-bottom: 4rem;
   }
 #menu1, #menu2
   {
@@ -54,9 +58,13 @@ body
 /* --RESPONSIVE-- ------ */
 @media (max-width: 1152px)
   {
+    #webProject.active, #pptProject.active
+      {
+        grid-template-columns: auto auto;
+      }
     #webProject img, #pptProject img
       {
-        width: 228px;
+        width: 354px;
       }
   }
 
@@ -69,11 +77,11 @@ body
 
     #webProject.active, #pptProject.active
       {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         grid-gap: 16px;
       }
     #webProject img, #pptProject img
       {
-        width: 136px;
+        width: 100%;
       }
   }
