@@ -1,0 +1,69 @@
+/* ------------ ------------ ------------ ------------ */
+/* --Main-- ------------ */
+.projectPage
+  {
+    margin-top: 10rem;
+  }
+
+.thumbnail
+  {
+    width: 100%;
+  }
+
+.intro
+  {
+    display: flex;
+    margin: 2rem 0 4rem 0;
+  }
+.introItem
+  {
+    margin-right: 6rem;
+  }
+
+.slider-nav
+  {
+    margin: 1rem 0 4rem 0;
+  }
+.slider-nav img
+  {
+    margin-right: 1rem;
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */
+@media (max-width: 1152px)
+  {
+    .slider-nav
+      {
+        margin: 1rem 0 4rem 0;
+      }
+  }
+
+@media (max-width: 764px)
+  {
+    .projectPage
+      {
+        margin-top: 6rem;
+      }
+
+    .intro
+      {
+        flex-direction: column;
+        margin: 0 0 2rem 0;
+      }
+    .introItem
+      {
+        display: flex;
+        margin-right: 0;
+      } 
+
+    .slider-nav
+      {
+        margin: 0.4rem 0 4rem 0;
+      }
+    .slider-nav img
+      {
+        margin-right: 0.4rem;
+      }
+  }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>DungBu - Le Anh Linh</title>
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
+  
+    <!-- CSS Chung - Slick -->
+    <link rel="stylesheet" href="../lib/Slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../lib/Slick-1.8.1/slick/slick-theme.css">
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS Riêng -->
+    <link rel="stylesheet" href="../css/projectSite.css">
+  </head>
+
+  <body>
+    <header class="navbar tx28-32"> <!-- //////////// //////////// -->
+      <a href="./index.html">.dungbu</a>
+
+      <div class="navMenu">
+        <a href="../index.html" class="navItem">home</a>
+        <a href="../about.html" class="navItem">about me</a>
+        <a href="../project.html" class="navItem">project</a>
+        <a href="../contact.html" class="navItem">contact</a>
+      </div>
+
+      <div class="burgerMenu" onclick="hamburgerFunction()">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+    </header> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <section class="modal"> <!-- //////////// //////////// -->
+      <div class="burgerFill">
+        <a href="../index.html" class="tx52-56">home</a>
+        <a href="../about.html" class="tx52-56">about me</a>
+        <a href="../project.html" class="tx52-56">project</a>
+        <a href="../contact.html" class="tx52-56">contact</a>
+      </div>
+    </section> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <main class="projectPage"> <!-- //////////// //////////// -->
+      <img class="thumbnail" src="../img/project/Portfolio2/Slide1.PNG" alt="">
+    
+      <div class="intro">
+          <div class="introItem">
+            <p style="margin-right: 6px;">Date:</p>
+            <p>1 / 2020</p>
+          </div>
+          <div class="introItem">
+            <p style="margin-right: 6px;">Days:</p>
+            <p>2 days</p>
+          </div>
+          <div class="introItem">
+            <p style="margin-right: 6px;">Client:</p>
+            <p>Personal</p>
+          </div>
+      </div>
+
+      <div class="slider-for">
+        <img src="../img/project/Portfolio2/Slide2.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide3.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide4.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide5.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide6.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide7.PNG" alt="">
+      </div>
+
+      <div class="slider-nav">
+        <img src="../img/project/Portfolio2/Slide2.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide3.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide4.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide5.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide6.PNG" alt="">
+        <img src="../img/project/Portfolio2/Slide7.PNG" alt="">
+      </div>
+    </main> <!-- //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- jQuerry library -->
+    <script src="../lib/jQuerry-3.5.1/jquery-3.5.1.js"></script>
+    <!-- Slick Carousel library -->
+    <script src="../lib/Slick-1.8.1/slick/slick.min.js"></script>
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- Javascript ------------------------------------------------------------------------------------------------ -->
+    <script>
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu ------------ ------------
+      let navItem = [...document.getElementsByClassName("navItem")];
+
+      navItem[2].classList.add("active");
+
+      navItem.forEach(function(element) 
+        {
+          element.addEventListener("click" ,function()
+            {
+              element.classList.add("active");
+              
+              var sibling = navItem[0];
+              while (sibling) 
+                {
+                  if (sibling.nodeType === 1 && sibling !== element) 
+                    {
+                      sibling.classList.remove("active");
+                    }
+                  sibling = sibling.nextSibling
+                }
+            });
+        });
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
+      function hamburgerFunction() 
+        {
+          document.querySelector(".burgerMenu").classList.toggle("toggle");
+          document.querySelector(".modal").classList.toggle("toggle");
+        }
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm chạy thư viện Slick ------------ ------------
+      $('.slider-for').slick(
+        {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          fade: true,
+          asNavFor: '.slider-nav'
+        });
+
+      $('.slider-nav').slick(
+        {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: false,
+          arrows: false,
+          centerMode: true,
+          focusOnSelect: true,
+          asNavFor: '.slider-for'
+        });
+    </script>
+  </body>
+</html>
