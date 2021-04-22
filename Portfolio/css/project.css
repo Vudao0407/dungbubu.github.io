@@ -8,7 +8,6 @@
   {
     display: flex;
     justify-content: center;
-    margin-bottom: 4rem;
   }
 #menu1, #menu2
   {
@@ -20,6 +19,12 @@
   {
     cursor: url('../img/logo/pointerHover.png'),auto;
     color: #121212;
+  }
+hr
+  {
+    margin: 1rem  0 2rem 0;
+    height: 1px;
+    background-color: #D2D2D2;
   }
 
 #webProject, #pptProject
