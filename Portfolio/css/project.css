@@ -48,6 +48,7 @@ hr
   {
     position: relative;
     height: 202.5px; /* Fix theo chiều cao của ảnh */
+    border: 1px solid #D2D2D2;
   }
 .projectInfo
   {
@@ -75,7 +76,6 @@ hr
 .projectItem:hover .projectInfo
   {
     opacity: 1;
-    border: 1px solid #D2D2D2;
   }
 
 
