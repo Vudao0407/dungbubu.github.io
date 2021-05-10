@@ -128,6 +128,10 @@
         margin-top: 10.5px;
         color: #121212;
       }
+    body.darkMode #typo3
+      {
+        color: #F8F8F8;
+      }
 
     .homeContent
       {
@@ -166,5 +170,15 @@
       {
         color: #FFF;
         background-color: #121212;
+      }
+    body.darkMode .btn
+      {
+        color: #F8F8F8;
+        border-color: #F8F8F8;
+      }
+    body.darkMode .btn:hover
+      {
+        color: #121212;
+        background-color: #F8F8F8;
       }
   }

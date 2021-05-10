@@ -121,7 +121,42 @@ body
     height: 0;
     opacity: 0;
     transition: all 600ms ease-out;
-  }  
+  } 
+  
+  
+/* ------------ ------------ ------------ ------------ */
+/* --Dark Mode-- ------------ */
+body.darkMode,
+body.darkMode .navbar,
+body.darkMode .modal.toggle
+  {
+    color: #F8F8F8;
+    background-color: #282828;
+    cursor: url('../img/logo/pointerDarkMode.png'),auto;
+  }
+body.darkMode a
+  {
+    color: #8B8B8B;
+  }
+body.darkMode a:hover
+  {
+    color: #F8F8F8;
+    cursor: url('../img/logo/pointerHoverDarkMode.png'),auto;
+  }
+
+body.darkMode .burgerMenu .line-1,
+body.darkMode .burgerMenu .line-2,
+body.darkMode .burgerMenu .line-3
+  {
+    background-color: #F8F8F8;
+  }
+
+body.darkMode .navbar #logo,
+body.darkMode .active,
+body.darkMode .burgerFill a
+  {
+    color: #F8F8F8;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */

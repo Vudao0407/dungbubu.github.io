@@ -16,7 +16,7 @@
 
   <body>
     <header class="navbar tx28-32"> <!-- //////////// //////////// -->
-      <a href="./index.html">.dungbu</a>
+      <a ID="logo" href="./index.html">.dungbu</a>
 
       <div class="navMenu">
         <a href="./index.html" class="navItem">home</a>
@@ -49,8 +49,9 @@
 
     <main class="projectPage"> <!-- //////////// //////////// -->
       <div class="projectMenu">
-        <p id="menu1" class="tx24-30" onclick="showTab(event, 'webProject')">Web design</p>
-        <p id="menu2" class="tx24-30" onclick="showTab(event, 'pptProject')">Power Point</p>
+        <p id="menu1" class="tx24-30" onclick="showTab(event, 'webProject')">Website</p>
+        <p id="menu2" class="tx24-30" onclick="showTab(event, 'pptProject')">PowerPoint</p>
+        <p id="menu3" class="tx24-30" onclick="showTab(event, 'otherProject')">Others</p>
       </div>
 
       <hr>
@@ -98,64 +99,73 @@
           </div>
         </a>
       </div>
+
       <!-- ------------ ------------ -->
       <!-- ------------ ------------ -->
+
       <div id="pptProject">
-        <a class="projectItem" href="./html/pptFTA.html">
+        <a class="projectItem" href="./html/pptFTA.html" target="_blank">
           <img src="./img/project/FTA/Slide1.PNG" alt="FTA" loading="lazy">
           <div class="projectInfo">
             <p>Client: FTA <br> Date: 4 / 2021</p>
           </div>
         </a>
 
-        <a class="projectItem" href="./html/pptFirstAlliances.html">
+        <a class="projectItem" href="./html/pptFirstAlliances.html" target="_blank">
           <img src="./img/project/FirstAlliances/Slide1.PNG" alt="FirstAlliances" loading="lazy">
           <div class="projectInfo">
             <p>Client: First Alliances <br> Date: 5 / 2020</p>
           </div>
         </a>
 
-        <a class="projectItem" href="./html/pptPortfolio2.html">
+        <a class="projectItem" href="./html/pptPortfolio2.html" target="_blank">
           <img src="./img/project/Portfolio2/Slide1.PNG" alt="CV Lê Ánh Linh (Dark Theme)" loading="lazy">
           <div class="projectInfo">
             <p>Client: Personal <br> Date: 1 / 2020</p>
           </div>
         </a>
 
-        <a class="projectItem" href="./html/pptPortfolio1.html">
+        <a class="projectItem" href="./html/pptPortfolio1.html" target="_blank">
           <img src="./img/project/Portfolio1/Slide1.PNG" alt="CV Lê Ánh Linh (Light Theme)" loading="lazy">
           <div class="projectInfo">
             <p>Client: Personal <br> Date: 1 / 2020</p>
           </div>
         </a>
 
-        <a class="projectItem" href="./html/pptGrowell.html">
+        <a class="projectItem" href="./html/pptGrowell.html" target="_blank">
           <img src="./img/project/Growell/Slide1.PNG" alt="Growell VietNam" loading="lazy">
           <div class="projectInfo">
             <p>Client: Growell VietNam <br> Date: 10 / 2019</p>
           </div>
         </a>
 
-        <a class="projectItem" href="./html/pptVVN.html">
+        <a class="projectItem" href="./html/pptVVN.html" target="_blank">
           <img src="./img/project/VAS/Slide1.PNG" alt="VAS" loading="lazy">
           <div class="projectInfo">
             <p>Client: VVN <br> Date: 8 / 2019</p>
           </div>
         </a>
 
-        <a class="projectItem" href="./html/pptITE.html">
+        <a class="projectItem" href="./html/pptITE.html" target="_blank">
           <img src="./img/project/ITE/Slide1.PNG" alt="ITE" loading="lazy">
           <div class="projectInfo">
             <p>Client: ITE <br> Date: 8 / 2019</p>
           </div>
         </a>
 
-        <a class="projectItem" href="./html/pptNetco.html">
+        <a class="projectItem" href="./html/pptNetco.html" target="_blank">
           <img src="./img/project/Netco/Slide1.PNG" alt="Netco Post" loading="lazy">
           <div class="projectInfo">
             <p>Client: Netco Post <br> Date: 1 / 2019</p>
           </div>
         </a>
+      </div>
+
+      <!-- ------------ ------------ -->
+      <!-- ------------ ------------ -->
+
+      <div id="otherProject">
+        <a class="projectName" href="#" target="_blank">A Little Project</a>
       </div>
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
@@ -165,6 +175,8 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuerry library -->
     <script src="./lib/jQuerry-3.5.1/jquery-3.5.1.js"></script>
+    <!-- JS Chung -->
+    <script src="./js/index.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
@@ -210,19 +222,22 @@
       // ------------ ------------ ------------ ------------ ------------ ------------
       // Hàm add/remove trạng thái Active khi "click" vào các nút trên Project Menu ------------ ------------
       let projectMenu = [document.getElementById("menu1"),
-                        document.getElementById("menu2")];
+                        document.getElementById("menu2"),
+                        document.getElementById("menu3")];
+
       let projectGrid = [document.getElementById("webProject"),
-                        document.getElementById("pptProject")];
+                        document.getElementById("pptProject"),
+                        document.getElementById("otherProject")];
 
       projectMenu[1].classList.add("active");
       projectGrid[1].classList.add("active");
     
       function showTab(evt, tabName)
        {
-          for (i = 0; i < 2; i++) 
+          for (i = 0; i < 3; i++) 
             {
-              projectGrid[i].classList.remove("active");
               projectMenu[i].classList.remove("active");
+              projectGrid[i].classList.remove("active");
             }
           
           document.getElementById(tabName).classList.add("active");

@@ -9,16 +9,32 @@
     display: flex;
     justify-content: center;
   }
-#menu1, #menu2
+#menu1, #menu2, #menu3
   {
     margin: 0 2rem;
     color: #D2D2D2;
   }
-#menu1:hover, #menu2:hover,
-#menu1.active, #menu2.active
+#menu1:hover, #menu2:hover, #menu3:hover,
+#menu1.active, #menu2.active, #menu3.active
   {
     cursor: url('../img/logo/pointerHover.png'),auto;
     color: #121212;
+  }
+body.darkMode #menu1,
+body.darkMode #menu2,
+body.darkMode #menu3
+  {
+    color: #8B8B8B;
+  }
+body.darkMode #menu1:hover,
+body.darkMode #menu2:hover,
+body.darkMode #menu3:hover,
+body.darkMode #menu1.active,
+body.darkMode #menu2.active,
+body.darkMode #menu3.active
+  {
+    cursor: url('../img/logo/pointerHoverDarkMode.png'),auto;
+    color: #F8F8F8;
   }
 hr
   {
@@ -27,7 +43,7 @@ hr
     background-color: #D2D2D2;
   }
 
-#webProject, #pptProject
+#webProject, #pptProject, #otherProject
   {
     display: none;
   }
@@ -37,6 +53,12 @@ hr
     grid-template-columns: auto auto auto;
     grid-gap: 24px;
     margin-bottom: 10rem;
+  }
+#otherProject.active
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 #webProject img, #pptProject img
@@ -77,6 +99,15 @@ hr
   {
     opacity: 1;
   }
+body.darkMode .projectInfo
+  {
+    background-color: #282828;
+  }
+.projectName
+  {
+    margin-bottom: 2rem;
+    color: #D2D2D2;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -100,7 +131,7 @@ hr
 
 @media (max-width: 764px)
   {
-    #menu1, #menu2
+    #menu1, #menu2, #menu3
       {
         margin: 0 0.8rem;
       }
