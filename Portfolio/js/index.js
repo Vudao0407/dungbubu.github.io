@@ -8,7 +8,7 @@ function updateTime()
     let hour = now.getHours();
     let minutes = now.getMinutes();
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches || hour >= 20 && minutes >= 0)
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches || hour >= 20 && minutes >= 0  || hour <= 4 && minutes <= 60)
     // Check xem Window có đang ở chế độ DarkMode hay không hoặc sau 10pm thì tự động chuyển chế độ
       {
         darkModeItem.forEach(function(element)
