@@ -1,102 +1,41 @@
 /* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
-.aboutPage
-  {
-    position: relative;
-  }
 #pic1, #pic2, #pic3, #pic4,
-#text1a, #text1b, #text1c, #text1d,
-#text2a, #text2b, #text2c,
-#text3a, #text3b, #text3c,
+#titleAboutMe, #textAboutMe,
+#titleExperience, #textExperience,
+#titleEducation, #textEducation,
 #resume
   {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
   }
-#pic1, #pic3,
-#text1b, #text1c,
-#text2a, #text2b, #text2c
+#pic1, #pic2, #pic3, #pic4
   {
-    right: 12px;
-    text-align: right;
+    margin-top: 120px;
+    margin-left: auto;
   }
-#pic2, #pic4,
-#text1a, #text1d,
-#text3a, #text3b, #text3c
+#titleAboutMe, #titleEducation, #titleExperience
   {
-    left: 12px;
-    text-align: left;
+    margin-top: 80px;
+  }
+#titleAboutMe
+  {
+    margin-bottom: 80px;
+  }
+#textAboutMe, #textEducation, #textExperience
+  {
+    margin-top: 40px;
+  }
+ul
+  {
+    margin-left: 20px;
+    width: 680px;
   }
 #resume
   {
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
+    margin-top: 120px;
     text-align: center;
-  }
-
-#pic1
-  {
-    top: 100px;
-  }
-#text1a
-  {
-    top: 600px;
-  }
-#text1b
-  {
-    top: 740px;
-  }
-#text1c
-  {
-    top: 780px;
-  }
-#text1d
-  {
-    top: 880px;
-    width: 744px;
-  }
-
-#pic2
-  {
-    top: 1100px;
-  }
-#text2a
-  {
-    top: 1500px;
-  }
-#text2b
-  {
-    top: 1600px;
-  }
-#text2c
-  {
-    top: 1660px;
-  }
-
-#pic3
-  {
-    top: 1800px;
-  }
-#text3a
-  {
-    top: 2700px;
-  }
-#text3b
-  {
-    top: 2800px;
-  }
-#text3c
-  {
-    top: 2860px;
-  }
-
-#resume
-  {
-    top: 3000px;
-  }
-
-#pic4
-  {
-    top: 3050px;
   }
 
 
@@ -104,114 +43,66 @@
 /* --RESPONSIVE-- ------ */
 @media (max-width: 1152px)
   {
-    #pic1, #pic3,
-    #text1b, #text1c,
-    #text2a, #text2b, #text2c
+    #pic1, #pic2, #pic3, #pic4
       {
-        right: 16px;
+        margin-top: 80px;
       }
-    #pic2, #pic4,
-    #text1a, #text1d,
-    #text3a, #text3b, #text3c
+    #titleAboutMe, #titleEducation, #titleExperience
       {
-        left: 16px;
+        margin-top: 60px;
       }
-
-    #pic1, #pic2
+    #titleAboutMe
       {
-        width: 354px;
+        margin-bottom: 40px;
       }
-    #pic3
+    #textAboutMe, #textEducation, #textExperience
       {
-        width: 496px;
+        margin-top: 20px;
       }
-    #pic4
+    ul
       {
-        width: 732px;
+        width: 620px;
       }
-
-    #text1d
+    #resume
       {
-        width: 606px;
+        margin-top: 80px;
       }
   }
 
 @media (max-width: 764px)
   {
     #pic1, #pic2, #pic3, #pic4,
-    #text1a, #text1b, #text1c, #text1d,
-    #text2a, #text2b, #text2c
-    #text3a, #text3b, #text3c
+    #titleAboutMe, #titleEducation, #titleExperience,
+    #textAboutMe, #textEducation, #textExperience, ul
       {
-        width: calc(100% - 32px);
+        width: 100%;
+        margin: auto;
       }
 
-    #pic1
+    #pic1, #pic2, #pic3, #pic4
       {
-        top: 80px;
+        margin: auto;
+        margin-top: 40px;
       }
-    #text1a
+    #titleAboutMe, #titleEducation, #titleExperience
       {
-        top: 420px;
+        margin-top: 20px;
       }
-    #text1b
+    #titleAboutMe
       {
-        top: 640px;
+        margin-bottom: 20px;
       }
-    #text1c
+    #textAboutMe, #textEducation, #textExperience
       {
-        top: 680px;
+        margin-top: 10px;
       }
-    #text1d
+    ul
       {
-        top: 780px;
+        margin-left: 20px;
+        width: calc(100% - 20px);
       }
-    
-    #pic2
-      {
-        top: 1000px;
-      }
-    #text2a
-      {
-        top: 1400px;
-      }
-    #text2b
-      {
-        top: 1500px;
-      }
-    #text2c
-      {
-        top: 1560px;
-      }
-    
-    #pic3
-      {
-        top: 1700px;
-      }
-    #text3a
-      {
-        top: 2600px;
-      }
-    #text3b
-      {
-        top: 2700px;
-      }
-    #text3c
-      {
-        top: 2760px;
-      }
-
     #resume
       {
-        top: 2900px;
-        left: 16px;
-        transform: translateX(0);
-        width: calc(100% - 32px);
-        text-align: center;
-      }
-    
-    #pic4
-      {
-        top: 2950px;
+        margin-top: 40px;
       }
   }
