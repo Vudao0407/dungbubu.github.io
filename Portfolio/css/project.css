@@ -1,4 +1,12 @@
 /* ------------ ------------ ------------ ------------ */
+/* --GENERAL-- ------------ */
+img
+  {
+    width: 100%; /* #webProject img, #pptProject img */
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
 .projectPage
   {
@@ -61,15 +69,11 @@ hr
     align-items: center;
   }
 
-#webProject img, #pptProject img
-  {
-    width: 360px;
-  }
-
 .projectItem
   {
     position: relative;
-    height: 203px; /* Fix theo chiều cao của ảnh */
+    width: 360px; /* Fix theo kích thước của ảnh */
+    height: 203px;
     border: 1px solid #D2D2D2;
   }
 .projectInfo
@@ -118,14 +122,11 @@ body.darkMode .projectInfo
       {
         grid-template-columns: auto auto;
       }
-    #webProject img, #pptProject img
-      {
-        width: 354px;
-      }
 
     .projectItem
       {
-        height: 199.13px; /* Fix theo chiều cao của ảnh */
+        width: 354px; /* Fix theo kích thước của ảnh */
+        height: 200px;
       }
   }
 
@@ -141,13 +142,10 @@ body.darkMode .projectInfo
         grid-template-columns: auto;
         grid-gap: 16px;
       }
-    #webProject img, #pptProject img
-      {
-        width: 100%;
-      }
 
     .projectItem
       { 
-        height: 162px; /* Fix theo chiều cao của ảnh */
+        width: 286px; /* Fix theo kích thước của ảnh */
+        height: 161px;
       }
   }

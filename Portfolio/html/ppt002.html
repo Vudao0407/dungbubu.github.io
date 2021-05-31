@@ -104,7 +104,7 @@
 
       <div class="outro">
         <a href="../project.html"><span class="arrow">←</span> go back</a>
-        <a href="./pptNetco.html" style="text-align: right;">next project <span class="arrow">→</span></a>
+        <a href="./ppt003.html" style="text-align: right;">next project <span class="arrow">→</span></a>
       </div>
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
@@ -118,72 +118,7 @@
     <script src="../lib/Slick-1.8.1/slick/slick.min.js"></script>
     <!-- JS Chung -->
     <script src="../js/index.js"></script>
+    <script src="../js/slickCarousel.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
-
-
-
-
-    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
-    <!-- Javascript ------------------------------------------------------------------------------------------------ -->
-    <script>
-      // ------------ ------------ ------------ ------------ ------------ ------------
-      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu ------------ ------------
-      let navItem = [...document.getElementsByClassName("navItem")];
-
-      navItem[2].classList.add("active");
-
-      navItem.forEach(function(element) 
-        {
-          element.addEventListener("click" ,function()
-            {
-              element.classList.add("active");
-              
-              var sibling = navItem[0];
-              while (sibling) 
-                {
-                  if (sibling.nodeType === 1 && sibling !== element) 
-                    {
-                      sibling.classList.remove("active");
-                    }
-                  sibling = sibling.nextSibling
-                }
-            });
-        });
-
-
-      // ------------ ------------ ------------ ------------ ------------ ------------
-      // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
-      function hamburgerFunction() 
-        {
-          document.querySelector(".burgerMenu").classList.toggle("toggle");
-          document.querySelector(".modal").classList.toggle("toggle");
-        }
-
-
-      // ------------ ------------ ------------ ------------ ------------ ------------
-      // Hàm chạy thư viện Slick ------------ ------------
-      $('.slider-for').slick(
-        {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false,
-          fade: true,
-          asNavFor: '.slider-nav'
-        });
-
-      $('.slider-nav').slick(
-        {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          dots: false,
-          arrows: false,
-          centerMode: true,
-          focusOnSelect: true,
-          asNavFor: '.slider-for'
-        });
-    </script>
   </body>
 </html>

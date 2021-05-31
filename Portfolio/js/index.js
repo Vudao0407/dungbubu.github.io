@@ -19,3 +19,35 @@ function updateTime()
   }
 updateTime();
 setInterval(updateTime, 1000); // Update theo từng giây
+
+
+// ------------ ------------ ------------ ------------ ------------ ------------
+// Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu ------------ ------------
+let navItem = [...document.getElementsByClassName("navItem")];
+
+navItem.forEach(function(element) 
+  {
+    element.addEventListener("click" ,function()
+      {
+        element.classList.add("active");
+        
+        var sibling = navItem[0];
+        while (sibling) 
+          {
+            if (sibling.nodeType === 1 && sibling !== element) 
+              {
+                sibling.classList.remove("active");
+              }
+            sibling = sibling.nextSibling
+          }
+      });
+  });
+
+
+// ------------ ------------ ------------ ------------ ------------ ------------
+// Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
+function hamburgerFunction() 
+  {
+    document.querySelector(".burgerMenu").classList.toggle("toggle");
+    document.querySelector(".modal").classList.toggle("toggle");
+  }

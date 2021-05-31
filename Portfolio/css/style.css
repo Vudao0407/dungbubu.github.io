@@ -96,7 +96,7 @@ body
 .navItem
   {
     display: inline;
-    margin-left: 4rem;
+    margin-left: 2.4rem;
     color: #D2D2D2;
   }
 .navItem:hover, .navItem.active
