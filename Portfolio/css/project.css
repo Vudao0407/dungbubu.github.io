@@ -69,7 +69,7 @@ hr
 .projectItem
   {
     position: relative;
-    height: 202.5px; /* Fix theo chiều cao của ảnh */
+    height: 203px; /* Fix theo chiều cao của ảnh */
     border: 1px solid #D2D2D2;
   }
 .projectInfo
