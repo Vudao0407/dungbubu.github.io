@@ -19,10 +19,6 @@
   {
     margin-top: 80px;
   }
-.aboutContent
-  {
-    margin-top: 40px;
-  }
 ul
   {
     margin-left: 20px;
@@ -34,8 +30,13 @@ ul
     margin-top: 120px;
     text-align: center;
   }
+#resume:hover
+  {
+    text-decoration: underline;
+  }
 #footerPicture
   {
+    margin-top: 40px;
     width: 100%;
   }
 
@@ -56,10 +57,6 @@ ul
       {
         margin-top: 60px;
       }
-    .aboutContent
-      {
-        margin-top: 20px;
-      }
     ul
       {
         width: 620px;
@@ -67,6 +64,10 @@ ul
     #resume
       {
         margin-top: 80px;
+      }
+    #footerPicture
+      {
+        margin-top: 20px;
       }
   }
 
@@ -90,10 +91,6 @@ ul
       {
         margin-top: 20px;
       }
-    .aboutContent
-      {
-        margin-top: 10px;
-      }
     ul
       {
         margin-left: 20px;
@@ -102,5 +99,9 @@ ul
     #resume
       {
         margin-top: 40px;
+      }
+    #footerPicture
+      {
+        margin-top: 10px;
       }
   }
