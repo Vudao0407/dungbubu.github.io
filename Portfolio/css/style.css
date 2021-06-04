@@ -10,6 +10,7 @@ html
   {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    cursor: url('../img/logo/pointer.png'),auto;
   }
 main 
   {
@@ -24,7 +25,6 @@ a, a:hover
 body
   {
     background-color: #F8F8F8;
-    cursor: url('../img/logo/pointer.png'),auto;
   }
 
   
@@ -96,7 +96,7 @@ body
 .navItem
   {
     display: inline;
-    margin-left: 2.4rem;
+    margin-left: 3.2rem;
     color: #D2D2D2;
   }
 .navItem:hover, .navItem.active
