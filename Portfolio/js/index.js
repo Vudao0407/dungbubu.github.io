@@ -13,7 +13,8 @@ function updateTime()
       {
         darkModeItem.forEach(function(element)
           {
-            element.classList.add("darkMode");
+            // element.classList.add("darkMode");
+            console.log("");
           });         
       }
   }

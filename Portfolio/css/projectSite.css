@@ -1,6 +1,6 @@
 /* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
-.projectPage
+.container
   {
     margin-top: 10rem;
   }
@@ -62,7 +62,7 @@
 
 @media (max-width: 764px)
   {
-    .projectPage
+    .container
       {
         margin-top: 6rem;
       }

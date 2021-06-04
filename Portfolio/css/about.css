@@ -1,28 +1,25 @@
 /* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
-#pic1, #pic2, #pic3, #pic4,
-#titleAboutMe, #textAboutMe,
-#titleExperience, #textExperience,
-#titleEducation, #textEducation,
-#resume
+.mb-8
+  {
+    margin-bottom: 8rem;
+  }
+.aboutPicture, .aboutTitle,
+.aboutContent, #resume
   {
     display: flex;
     flex-direction: column;
   }
-#pic1, #pic2, #pic3, #pic4
+.aboutPicture
   {
     margin-top: 120px;
     margin-left: auto;
   }
-#titleAboutMe, #titleEducation, #titleExperience
+.aboutTitle
   {
     margin-top: 80px;
   }
-#titleAboutMe
-  {
-    margin-bottom: 80px;
-  }
-#textAboutMe, #textEducation, #textExperience
+.aboutContent
   {
     margin-top: 40px;
   }
@@ -37,25 +34,29 @@ ul
     margin-top: 120px;
     text-align: center;
   }
+#footerPicture
+  {
+    width: 100%;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
 @media (max-width: 1152px)
   {
-    #pic1, #pic2, #pic3, #pic4
-      {
-        margin-top: 80px;
-      }
-    #titleAboutMe, #titleEducation, #titleExperience
-      {
-        margin-top: 60px;
-      }
-    #titleAboutMe
+    .mb-8
       {
         margin-bottom: 40px;
       }
-    #textAboutMe, #textEducation, #textExperience
+    .aboutPicture
+      {
+        margin-top: 80px;
+      }
+    .aboutTitle
+      {
+        margin-top: 60px;
+      }
+    .aboutContent
       {
         margin-top: 20px;
       }
@@ -71,28 +72,25 @@ ul
 
 @media (max-width: 764px)
   {
-    #pic1, #pic2, #pic3, #pic4,
-    #titleAboutMe, #titleEducation, #titleExperience,
-    #textAboutMe, #textEducation, #textExperience, ul
+    .mb-8
+      {
+        margin-bottom: 20px;
+      }
+    .aboutPicture, .aboutTitle, .aboutContent, ul
       {
         width: 100%;
         margin: auto;
       }
-
-    #pic1, #pic2, #pic3, #pic4
+    .aboutPicture
       {
         margin: auto;
         margin-top: 40px;
       }
-    #titleAboutMe, #titleEducation, #titleExperience
+    .aboutTitle
       {
         margin-top: 20px;
       }
-    #titleAboutMe
-      {
-        margin-bottom: 20px;
-      }
-    #textAboutMe, #textEducation, #textExperience
+    .aboutContent
       {
         margin-top: 10px;
       }

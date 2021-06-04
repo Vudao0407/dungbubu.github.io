@@ -1,6 +1,6 @@
 /* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
-.homePage
+.container
   {
     position: fixed;
     top: 50%;
@@ -72,7 +72,7 @@
 /* --RESPONSIVE-- ------ */
 @media (max-width: 1152px)
   {
-    .homePage
+    .container
       {
         margin-top: 0;
       }
@@ -98,7 +98,7 @@
 
 @media (max-width: 764px)
   {
-    .homePage
+    .container
       {
         top: 54%;
         flex-direction: column;
