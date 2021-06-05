@@ -1,5 +1,5 @@
 // ------------ ------------ ------------ ------------ ------------ ------------
-// Dark Mode ------------ ------------
+// Dark Mode (Coming soon) ------------ ------------
 let darkModeItem = [document.querySelector("body")];
 
 function updateTime() 
