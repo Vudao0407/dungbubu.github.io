@@ -8,6 +8,9 @@
     <title>DungBu - Blog</title>
     <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
   
+    <!-- CSS Chung - Slick -->
+    <link rel="stylesheet" href="./lib/Slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./lib/Slick-1.8.1/slick/slick-theme.css">
     <!-- CSS Chung -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- CSS Riêng -->
@@ -50,7 +53,18 @@
 
 
     <main class="container"> <!-- //////////// //////////// -->
-      <a style="margin:auto" href="#">Coming soon</a>
+      <div class="multiple-items">
+        <a class="blogItem" href="#" target="_blank">
+          <img class="blogPicture" src="./img/blog/blog1picture.png" alt="Sửa CV một chút (Part 1)" loading="lazy">
+          <div class="mt-4">
+            <b class="tx24-30">Sửa CV một chút (Part 1)</b>
+            <p>Ở phần 1 này mình sẽ đưa ra một vài 
+              quan điểm cá nhân cách chỉnh sửa một 
+              chiếc CV về mặt nội dung sao cho hợp 
+              lý nhất :></p>
+          </div>
+        </a>
+      </div>
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
 
@@ -59,19 +73,11 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuerry library -->
     <script src="./lib/jQuerry-3.5.1/jquery-3.5.1.js"></script>
+    <!-- Slick Carousel library -->
+    <script src="./lib/Slick-1.8.1/slick/slick.min.js"></script>
     <!-- JS Chung -->
     <script src="./js/index.js"></script>
+    <script src="./js/blogCarousel.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
-
-
-
-
-    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
-    <!-- Javascript ------------------------------------------------------------------------------------------------ -->
-    <script>
-      // ------------ ------------ ------------ ------------ ------------ ------------
-      // Thêm trạng thái Active cho Menu đang được mở ------------ ------------
-      navItem[3].classList.add("active");
-    </script>
   </body>
 </html>
