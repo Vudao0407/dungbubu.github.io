@@ -23,6 +23,10 @@ setInterval(updateTime, 1000); // Update theo từng giây
 
 
 // ------------ ------------ ------------ ------------ ------------ ------------
+// Drag to Scroll (Coming soon) ------------ ------------
+
+
+// ------------ ------------ ------------ ------------ ------------ ------------
 // Hàm add/remove trạng thái Active khi "click" vào các nút trên Menu ------------ ------------
 let navItem = [...document.getElementsByClassName("navItem")];
 
