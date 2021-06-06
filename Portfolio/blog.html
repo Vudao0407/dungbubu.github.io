@@ -8,9 +8,6 @@
     <title>DungBu - Blog</title>
     <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
   
-    <!-- CSS Chung - Slick -->
-    <link rel="stylesheet" href="./lib/Slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="./lib/Slick-1.8.1/slick/slick-theme.css">
     <!-- CSS Chung -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- CSS Riêng -->
@@ -53,18 +50,58 @@
 
 
     <main class="container"> <!-- //////////// //////////// -->
-      <div class="multiple-items">
+      <div class="blogMenu">
+        <p id="menu1" class="tx24-30" onclick="showTab(event, 'tipsBlog')">tips</p>
+        <!-- <p id="menu2" class="tx24-30" onclick="showTab(event, 'sourceBlog')">source</p> -->
+      </div>
+
+      <hr>
+
+      <div id="tipsBlog">
         <a class="blogItem" href="#" target="_blank">
-          <img class="blogPicture" src="./img/blog/blog1picture.png" alt="Sửa CV một chút (Part 1)" loading="lazy">
-          <div class="mt-4">
+          <img src="./img/blog/blog03/blog03.png" alt="Sửa CV một chút (Part 3)" loading="lazy">
+          <div class="blogInfo">
+            <b class="tx24-30">Sửa CV một chút (Part 3)</b>
+            <!-- <i class="tx16-24">24 / 06</i> -->
+            <p>Phần cuối của mục chia sẻ cách hoàn thiện 
+              một chiếc CV, mình sẽ đưa ra review về những 
+              nguồn tham khảo và những nguồn thiết kế CV 
+              miễn phí nha
+            </p>
+          </div>
+        </a>
+
+        <a class="blogItem" href="#" target="_blank">
+          <img src="./img/blog/blog02/blog02.png" alt="Sửa CV một chút (Part 2)" loading="lazy">
+          <div class="blogInfo">
+            <b class="tx24-30">Sửa CV một chút (Part 2)</b>
+            <!-- <i class="tx16-24">24 / 06</i> -->
+            <p>Trong phần 2, mình sẽ tiếp tục chia sẻ
+              về cách trình bày; bố cục cơ bản của một 
+              chiếc CV nên có
+            </p>
+          </div>
+        </a>
+
+        <a class="blogItem" href="#" target="_blank">
+          <img src="./img/blog/blog01/blog01.png" alt="Sửa CV một chút (Part 1)" loading="lazy">
+          <div class="blogInfo">
             <b class="tx24-30">Sửa CV một chút (Part 1)</b>
-            <p>Ở phần 1 này mình sẽ đưa ra một vài 
-              quan điểm cá nhân cách chỉnh sửa một 
-              chiếc CV về mặt nội dung sao cho hợp 
-              lý nhất :></p>
+            <!-- <i class="tx16-24">24 / 06</i> -->
+            <p>Ở phần 1 này, mình sẽ chia sẻ một vài
+              quan điểm cá nhân về cách chỉnh sửa CV
+              với nội dung sao cho phù hợp nhất nhé!
+            </p>
           </div>
         </a>
       </div>
+
+      <!-- ------------ ------------ -->
+      <!-- ------------ ------------ -->
+
+      <!-- <div id="sourceBlog">
+        <a href="#"><i>(Coming soon)</i></a>
+      </div> -->
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
 
@@ -73,11 +110,49 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuerry library -->
     <script src="./lib/jQuerry-3.5.1/jquery-3.5.1.js"></script>
-    <!-- Slick Carousel library -->
-    <script src="./lib/Slick-1.8.1/slick/slick.min.js"></script>
     <!-- JS Chung -->
     <script src="./js/index.js"></script>
-    <script src="./js/blogCarousel.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+
+
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- Javascript ------------------------------------------------------------------------------------------------ -->
+    <script>
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Thêm trạng thái Active cho Menu đang được mở ------------ ------------
+      navItem[3].classList.add("active");
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Project Menu (Coming soon) ------------ ------------
+      // let blogMenu = [document.getElementById("menu1"),
+      //                 document.getElementById("menu2")];
+
+      // let blogGrid = [document.getElementById("tipsBlog"),
+      //                 document.getElementById("sourceBlog")];
+
+      // blogMenu[0].classList.add("active");
+      // blogGrid[0].classList.add("active");
+    
+      // function showTab(evt, tabName)
+      //  {
+      //     for (i = 0; i < 2; i++) 
+      //       {
+      //         blogMenu[i].classList.remove("active");
+      //         blogGrid[i].classList.remove("active");
+      //       }
+          
+      //     document.getElementById(tabName).classList.add("active");
+      //     evt.currentTarget.className += " active";
+      //  }
+
+
+      // ------------ ------------ ------------ ------------ ------------ ------------
+      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Project Menu ------------ ------------
+      document.getElementById("menu1").classList.add("active");
+      document.getElementById("tipsBlog").classList.add("active");
+    </script>
   </body>
 </html>

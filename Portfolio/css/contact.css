@@ -40,6 +40,10 @@ body.darkMode #typo
     margin-top: 8rem;
     width: 100%;
   }
+.contactLink:hover
+  {
+    text-decoration: underline;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
