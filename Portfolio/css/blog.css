@@ -112,12 +112,16 @@ hr
     #tipsBlog.active, #tipsBlog.active
       {
         grid-template-columns: auto;
-        grid-gap: 16px;
+        grid-gap: 40px;
       }
 
     .blogItem
       { 
         width: 286px; /* Fix theo kích thước của ảnh */
         /* height: 161px; */
+    }
+      .blogInfo
+      {
+        margin-top: 0px;
       }
   }
