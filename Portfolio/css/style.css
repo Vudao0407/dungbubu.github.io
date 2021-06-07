@@ -81,6 +81,11 @@ body, button
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+.tx12-20 /* for Sub Title */
+  {
+    font-size: 1.2rem;
+    line-height: 2.0rem;
+  }
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -158,6 +163,18 @@ body, button
     opacity: 0;
     transition: all 600ms ease-out;
   } 
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Box shadow-- ------------ */
+.boxShadow
+  {
+    box-shadow: 2px 2px 8px #E6E6E6;
+  }
+.boxShadow:hover
+  {
+    box-shadow: 0px 10px 25px #E6E6E6;
+  }
   
   
 /* ------------ ------------ ------------ ------------ */
@@ -230,6 +247,11 @@ body.darkMode .burgerFill a
       {
         font-size: 1.2rem;
         line-height: 2.0rem;
+      }
+    .tx12-20
+      {
+        font-size: 1.0rem;
+        line-height: 1.8rem;
       }
 
     /* --Header-- ------------ */
@@ -342,6 +364,21 @@ body.darkMode .burgerFill a
       {
         font-size: 2.0rem;
         line-height: 2.8rem;
+      }
+    .tx24-30
+      {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+      }
+    .tx16-24
+      {
+        font-size: 1.0rem;
+        line-height: 1.8rem;
+      }
+    .tx12-20
+      {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
       }
 
     /* --Header-- ------------ */

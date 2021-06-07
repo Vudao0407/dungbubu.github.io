@@ -12,108 +12,78 @@ img
   {
     margin-top: 12rem;
   }
-.blogMenu
+
+#typo
   {
-    display: flex;
-    justify-content: center;
-  }
-#menu1, #menu2
-  {
-    margin: 0 2rem;
-    color: #D2D2D2;
-  }
-#menu1:hover, #menu2:hover,
-#menu1.active, #menu2.active
-  {
-    cursor: url('../img/logo/pointerHover.png'),auto;
-    color: #121212;
-  }
-body.darkMode #menu1,
-body.darkMode #menu2
-  {
-    color: #8B8B8B;
-  }
-body.darkMode #menu1:hover,
-body.darkMode #menu2:hover,
-body.darkMode #menu1.active,
-body.darkMode #menu2.active
-  {
-    cursor: url('../img/logo/pointerHoverDarkMode.png'),auto;
-    color: #F8F8F8;
-  }
-hr
-  {
-    margin: 1rem  0 2rem 0;
-    height: 1px;
-    background-color: #D2D2D2;
+    margin: 20rem 0 6rem 0;
+    text-align: right;
   }
 
-#tipsBlog, #sourceBlog
-  {
-    display: none;
-  }
-#tipsBlog.active, #sourceBlog.active
+.blogGrid
   {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 24px;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
   }
 
 .blogItem
   {
-    width: 360px; /* Fix theo kích thước của ảnh */
-    /* height: 203px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 360px;
+    height: 360px;
+    background-color: #FFF;
     transition: all 400ms ease;
-  }
-.blogItem:hover 
-  {
-    transform: translateY(-6px);
   }
 .blogInfo
   {
-    margin-top: 12px;
-    width: 100%;
-  }
-.blogInfo b
-  {
-    margin-bottom: 4px;
-  }
-.blogInfo i,p
-  {
     display: block;
-    text-align: justify;
+    margin: auto 24px 12px 24px;
   }
+hr
+  {
+    margin: 12px 0 8px 0;
+    width: 46px;
+    height: 1px;
+    background-color: #B2B2B2;
+    transition: all 400ms ease;
+  }
+.tx12-20
+  {
+    color: #B2B2B2;
+  }
+.blogItem:hover 
+  {
+    transform: translateY(-4px);
+  }
+.blogItem:hover hr
+{
+  width: 60px;
+}
 
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
 @media (max-width: 1152px)
   {
-    #tipsBlog.active, #tipsBlog.active
+    .blogGrid
       {
         grid-template-columns: auto auto;
       }
 
     .blogItem
       {
-        width: 354px; /* Fix theo kích thước của ảnh */
-        /* height: 200px; */
-      }
-    .blogInfo
-      {
-        margin-top: 0px;
+        width: 354px;
+        height: 354px;
       }
   }
 
 @media (max-width: 764px)
   {
-    #menu1, #menu2
-      {
-        margin: 0 0.8rem;
-      }
-
-    #tipsBlog.active, #tipsBlog.active
+    .blogGrid
       {
         grid-template-columns: auto;
         grid-gap: 40px;
@@ -121,7 +91,7 @@ hr
 
     .blogItem
       { 
-        width: 286px; /* Fix theo kích thước của ảnh */
-        /* height: 161px; */
+        width: 286px;
+        height: 286px;
       }
   }
