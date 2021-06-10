@@ -14,19 +14,6 @@ li
   {
     list-style: none;
   }
-  
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar 
-  {
-    display: auto;
-  }
-
-/* Hide scrollbar for IE, Edge and Firefox */
-body
-  {
-    -ms-overflow-style: auto;  /* IE and Edge */
-    scrollbar-width: auto;  /* Firefox */
-  }
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -35,6 +22,10 @@ body
   {
     font-family: Montserrat;
     src: url(../font/Montserrat/Montserrat-Regular.ttf);
+  }
+main
+  {
+    font-family: 'Montserrat', sans-serif;
   }
 
 
@@ -50,16 +41,24 @@ hr
   {
     margin: 10rem 0;
   }
-
-p
+p, ul
   {
-    margin: 2rem 0;
+    margin: 2rem auto;
+  }
+ul
+  {
+    text-align: justify;
+  }
+
+main a, main a:hover
+  {
+    text-decoration: underline;
   }
 
 .blockContent
   {
-    font-family: 'Montserrat', sans-serif;
-    margin: 8rem 0;
+    width: 80%;
+    margin: 8rem auto;
   }
 
 
@@ -67,6 +66,15 @@ p
 /* --RESPONSIVE-- ------ */
 @media (max-width: 1152px)
   {
+    .container
+      {
+        margin-top: 10rem;
+        margin-bottom: 8rem;
+      }
+    hr
+      {
+        margin: 6rem 0;
+      }
   }
 
 @media (max-width: 764px)
@@ -74,5 +82,15 @@ p
     .container
       {
         margin-top: 6rem;
+        margin-bottom: 6rem;
+      }
+    hr
+      {
+        margin: 4rem 0;
+      }
+    .blockContent
+      {
+        width: 100%;
+        margin: 4rem auto;
       }
   }
