@@ -12,7 +12,15 @@ hr
   }
 li
   {
-    list-style: none;
+    list-style: '-  ';
+    list-style-position: outside;
+  }
+body
+  {
+    background-image: url("../img/blog/textureBG.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
   }
 
 
@@ -49,6 +57,10 @@ ul
   {
     text-align: justify;
   }
+li
+  {
+    margin-left: 20px;
+  }
 
 main a, main a:hover
   {
@@ -68,12 +80,16 @@ main a, main a:hover
   {
     .container
       {
-        margin-top: 10rem;
+        margin-top: 16rem;
         margin-bottom: 8rem;
       }
     hr
       {
         margin: 6rem 0;
+      }
+    li
+      {
+        margin-left: 15px;
       }
   }
 
@@ -81,7 +97,7 @@ main a, main a:hover
   {
     .container
       {
-        margin-top: 6rem;
+        margin-top: 12rem;
         margin-bottom: 6rem;
       }
     hr
