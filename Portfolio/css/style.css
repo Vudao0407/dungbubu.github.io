@@ -219,7 +219,7 @@ body.darkMode .burgerFill a
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
-.container, .navbar
+.container, .navbar, .fixedContainer
   {
     margin: 0 auto;
     padding: 0 12px;
@@ -228,7 +228,7 @@ body.darkMode .burgerFill a
 
 @media (max-width: 1152px)
   {
-    .container, .navbar
+    .container, .navbar, .fixedContainer
       {
         padding: 0 16px;
         width: 732px;
@@ -349,7 +349,7 @@ body.darkMode .burgerFill a
 
 @media (max-width: 764px)
   {
-    .container, .navbar
+    .container, .navbar, .fixedContainer
       {
         padding: 0 16px;
         width: 288px;
@@ -400,7 +400,7 @@ body.darkMode .burgerFill a
 
 @media (max-width: 320px)
   {
-    .container, .navbar
+    .container, .navbar, .fixedContainer
       {
         width: calc(100% - 32px);
       }

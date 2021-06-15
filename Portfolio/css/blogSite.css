@@ -18,8 +18,9 @@ li
 body
   {
     background-image: url("../img/blog/textureBG.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
-    background-repeat: repeat;
     background-size: cover;
   }
 
@@ -31,7 +32,7 @@ body
     font-family: Montserrat;
     src: url(../font/Montserrat/Montserrat-Regular.ttf);
   }
-main
+.fixedContainer, .container
   {
     font-family: 'Montserrat', sans-serif;
   }
@@ -39,16 +40,6 @@ main
 
 /* ------------ ------------ ------------ ------------ */
 /* --Main-- ------------ */
-.container
-  {
-    margin-top: 20rem;
-    margin-bottom: 10rem;
-  }
-
-hr
-  {
-    margin: 10rem 0;
-  }
 p, ul
   {
     margin: 2rem auto;
@@ -61,12 +52,32 @@ li
   {
     margin-left: 20px;
   }
+hr
+  {
+    margin: 10rem 0;
+  }
 
-main a, main a:hover
+.fixedContainer
+  {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    padding: 0 12px;
+  }
+
+.container
+  {
+    margin-top: 100vh;
+    margin-bottom: 10rem;
+    padding-top: 10rem;
+    background-color: #F8F8F8;
+  }
+.container a, .container a:hover
   {
     text-decoration: underline;
   }
-
 .blockContent
   {
     width: 80%;
@@ -80,8 +91,8 @@ main a, main a:hover
   {
     .container
       {
-        margin-top: 16rem;
         margin-bottom: 8rem;
+        padding-top: 6rem;
       }
     hr
       {
@@ -97,8 +108,8 @@ main a, main a:hover
   {
     .container
       {
-        margin-top: 12rem;
         margin-bottom: 6rem;
+        padding-top: 4rem;
       }
     hr
       {
