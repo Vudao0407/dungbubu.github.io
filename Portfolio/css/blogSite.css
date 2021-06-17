@@ -1,9 +1,5 @@
 /* ------------ ------------ ------------ ------------ */
 /* --GENERAL-- ------------ */
-img
-  {
-    text-align: center;
-  }
 hr
   {
     width: 100%;
@@ -36,6 +32,11 @@ body
   {
     -ms-overflow-style: auto;
     scrollbar-width: thin;
+  }
+body img
+  {
+    display: block;
+    text-align: center;
   }
 
 
@@ -90,15 +91,23 @@ hr
     padding-top: 10rem;
     padding-bottom: 4rem;
     background-color: #F8F8F8;
-    box-shadow: 12px -12px 12px rgba(200, 200, 200, 0.1);
+    box-shadow: 0px -8px 24px rgba(200, 200, 200, 0.1);
   }
 .container a, .container a:hover
   {
     text-decoration: underline;
   }
+
+.blockPicture, .blockContent
+  {
+    width: 90rem;
+  }
+.blockPicture
+  {
+    margin: 0 auto;
+  }
 .blockContent
   {
-    width: 80%;
     margin: 8rem auto;
   }
 
@@ -120,6 +129,10 @@ hr
       {
         margin-left: 15px;
       }
+    .blockPicture, .blockContent
+      {
+        width: 58rem;
+      }
   }
 
 @media (max-width: 764px)
@@ -134,9 +147,12 @@ hr
       {
         margin: 4rem 0;
       }
-    .blockContent
+    .blockPicture, .blockContent
       {
         width: 100%;
+      }
+    .blockContent
+      {
         margin: 4rem auto;
       }
   }
