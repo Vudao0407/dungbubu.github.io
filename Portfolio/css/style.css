@@ -51,6 +51,7 @@ body
 @font-face
   {
     font-family: Philosopher;
+    font-display: swap;
     src: url(../font/Philosopher/Philosopher-Regular.ttf);
   }
 body, button
