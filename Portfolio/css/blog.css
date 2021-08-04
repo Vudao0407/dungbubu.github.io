@@ -57,7 +57,7 @@ hr
   }
 .blogItem:hover 
   {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
   }
 .blogItem:hover hr
 {

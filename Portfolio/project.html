@@ -7,15 +7,16 @@
     
     <title>DungBu - Project</title>
     <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
-    <meta name="description" content="Tổng hợp những sản phẩm thiết website, slide powerpoint...của dungbubu." />
-    <meta name="keywords" content="Dũng Bự, Portfolio cá nhân, Thiết kế Website, Thiết kế Slide Powerpoint">
+    <meta name="description" content="Tổng hợp những sản phẩm thiết kế website, slide powerpoint...của dungbubu." />
+    <meta name="keywords" content="Dũng Bự, Portfolio cá nhân, Thiết kế Website, Thiết kế Slide Powerpoint, 
+                                   Thiết kế Marketing, Banner và Poster, Motion Graphic">
 
     <meta property="og:title" content="DungBu - Project" />
     <meta property="og:site_name" content="dungbubu" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://dungbubu.com/project.html" />
     <meta property="og:image" content="" />
-    <meta property="og:description" content="Tổng hợp những sản phẩm thiết website, slide powerpoint...của dungbubu." />
+    <meta property="og:description" content="Tổng hợp những sản phẩm thiết kế website, slide powerpoint...của dungbubu." />
 
     <meta property="fb:app_id" content="564999674494503"/>
     <meta property="fb:admins" content="100001250312137"/>
@@ -80,154 +81,35 @@
 
 
     <main class="container"> <!-- //////////// //////////// -->
-      <h1>Tổng hợp những sản phẩm thiết website, slide powerpoint...của dungbubu.</h1>
-      
-      <div class="projectMenu">
-        <p id="menu1" class="tx24-30" onclick="showTab(event, 'webProject')">Website</p>
-        <p id="menu2" class="tx24-30" onclick="showTab(event, 'pptProject')">PowerPoint</p>
-        <p id="menu3" class="tx24-30" onclick="showTab(event, 'otherProject')">Others</p>
+      <h1>Tổng hợp những sản phẩm thiết kế website, slide powerpoint...của dungbubu.</h1>
+
+      <p class="tx120-60" id="typo">project</p>
+
+      <div class="colMain">
+        <div id="projectMenu1" onmouseover="activeThis(event,'projectMenu1')" onmouseout="deactiveThis()">
+          <div class="decor"><p>01.</p><hr></div>
+          <a href="./project/webProject.html"><p class="tx52-56 option">Website Design</p></a>
+        </div>
+
+        <div id="projectMenu2" onmouseover="activeThis(event,'projectMenu2')" onmouseout="deactiveThis()">
+          <div class="decor"><p>02.</p><hr></div>
+          <a href="./project/pptProject.html"><p class="tx52-56 option">Presentation</p></a>
+        </div>
+
+        <div id="projectMenu3" onmouseover="activeThis(event,'projectMenu3')" onmouseout="deactiveThis()">
+          <div class="decor"><p>03.</p><hr></div>
+          <a href="./project/mktProject.html"><p class="tx52-56 option">Banner & Poster</p></a>
+        </div>
+
+        <div id="projectMenu4" onmouseover="activeThis(event,'projectMenu4')" onmouseout="deactiveThis()">
+          <div class="decor"><p>04.</p><hr></div>
+          <a href="./project/mgProject.html"><p class="tx52-56 option">Motion Graphic</p></a>
+        </div>
+        <hr>
       </div>
 
-      <hr>
-
-      <div id="webProject">
-        <a class="projectItem" href="https://bepage.vn" target="_blank">
-          <img src="./img/project/projectWeb/Web09.PNG" alt="BePage - Tạo Landing Page quảng cáo bán hàng hiệu quả" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Zozo <br> Role: Designer</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="http://manisonde.myzozo.net" target="_blank">
-          <img src="./img/project/projectWeb/Web08.PNG" alt="Zozo Premium Theme - Manison" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Zozo <br> Role: Designer</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="https://zozo.vn/giao-dien/cavana" target="_blank">
-          <img src="./img/project/projectWeb/Web07.PNG" alt="Zozo Theme - Cavana" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Zozo <br> Role: Designer</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="https://www.figma.com/proto/kG0tRol6TpIhOcYSfLCePm/Hoa-qua-say---ZOZO?page-id=0%3A1&node-id=1%3A2&viewport=653%2C453%2C0.630611777305603&scaling=min-zoom" target="_blank">
-          <img src="./img/project/projectWeb/Web06.PNG" alt="L'angfarm Store remake" loading="lazy">
-          <div class="projectInfo">
-            <p>Case study: L'ang Farm <br> Role: Designer</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="https://ftacorp.vn/" target="_blank">
-          <img src="./img/project/projectWeb/Web05.PNG" alt="FTA E&C., JSC" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: FTA E&C., JSC <br> Role: Layout Tester and Design Supporter</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="https://ios.techmaster.vn/" target="_blank">
-          <img src="./img/project/projectWeb/Web04.PNG" alt="Techmaster IOS course" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Techmaster <br> Role: FE Coder and Designer</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="https://dungbubu.github.io/PortfolioVer1/index.html" target="_blank">
-          <img src="./img/project/projectWeb/Web03.PNG" alt="My Portfolio" loading="lazy">
-          <div class="projectInfo">
-            <p>Personal <br> Role: FE Coder and Designer</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="https://dungbubu.github.io/Web10/Clone-Instagram/IG-Login.html" target="_blank">
-          <img src="./img/project/projectWeb/Web02.PNG" alt="Instagram (clone)" loading="lazy">
-          <div class="projectInfo">
-            <p>Case study: Instagram <br> Role: FE Coder</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="https://dungbubu.github.io/Web10/Clone-Crypto/Crypto.html" target="_blank">
-          <img src="./img/project/projectWeb/Web01.PNG" alt="Crypto (clone)" loading="lazy">
-          <div class="projectInfo">
-            <p>Case study: Crypto <br> Role: FE Coder</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- ------------ ------------ -->
-      <!-- ------------ ------------ -->
-
-      <div id="pptProject">
-      <a class="projectItem" href="./pptProject/ppt009.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT009.PNG" alt="FTA" loading="lazy">
-          <div class="projectInfo">
-            <p>Case study: Caraot <br> Date: 5 / 2021</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt008.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT008.PNG" alt="FTA" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: FTA <br> Date: 4 / 2021</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt007.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT007.PNG" alt="FirstAlliances" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: First Alliances <br> Date: 5 / 2020</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt006.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT006.PNG" alt="CV Lê Ánh Linh (Dark Theme)" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Personal <br> Date: 1 / 2020</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt005.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT005.PNG" alt="CV Lê Ánh Linh (Light Theme)" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Personal <br> Date: 1 / 2020</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt004.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT004.PNG" alt="Growell VietNam" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Growell VietNam <br> Date: 10 / 2019</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt003.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT003.PNG" alt="VAS" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: VVN <br> Date: 8 / 2019</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt002.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT002.PNG" alt="ITE" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: ITE <br> Date: 8 / 2019</p>
-          </div>
-        </a>
-
-        <a class="projectItem" href="./pptProject/ppt001.html" target="_blank">
-          <img src="./img/project/projectPPT/PPT001.PNG" alt="Netco Post" loading="lazy">
-          <div class="projectInfo">
-            <p>Client: Netco Post <br> Date: 1 / 2019</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- ------------ ------------ -->
-      <!-- ------------ ------------ -->
-
-      <div id="otherProject">
-        <a class="projectName" href="#">A Little Project <i>(Coming soon)</i></a>
+      <div class="colExtra">
+        <p class="tx12-20 verticalText">------ scroll down ------ ></p>
       </div>
     </main> <!-- //////////// //////////// //////////// //////////// -->
 
@@ -250,31 +132,30 @@
       // ------------ ------------ ------------ ------------ ------------ ------------
       // Thêm trạng thái Active cho Menu đang được mở ------------ ------------
       navItem[2].classList.add("active");
-
+      
 
       // ------------ ------------ ------------ ------------ ------------ ------------
-      // Hàm add/remove trạng thái Active khi "click" vào các nút trên Project Menu ------------ ------------
-      let projectMenu = [document.getElementById("menu1"),
-                        document.getElementById("menu2"),
-                        document.getElementById("menu3")];
-
-      let projectGrid = [document.getElementById("webProject"),
-                        document.getElementById("pptProject"),
-                        document.getElementById("otherProject")];
-
-      projectMenu[1].classList.add("active");
-      projectGrid[1].classList.add("active");
+      // Hàm add/remove trạng thái Active khi "hover" vào các mục Project ------------ ------------
+      let projectMenu = [document.getElementById("projectMenu1"),
+                        document.getElementById("projectMenu2"),
+                        document.getElementById("projectMenu3"),
+                        document.getElementById("projectMenu4")];
     
-      function showTab(evt, tabName)
+      function activeThis(evt,menuOrder)
        {
-          for (i = 0; i < 3; i++) 
+          for (i = 0; i < 4; i++) 
             {
-              projectMenu[i].classList.remove("active");
-              projectGrid[i].classList.remove("active");
+              projectMenu[i].classList.add("hide");
             }
-          
-          document.getElementById(tabName).classList.add("active");
-          evt.currentTarget.className += " active";
+          document.getElementById(menuOrder).classList.remove("hide");
+       }
+
+      function deactiveThis()
+       {
+          for (i = 0; i < 4; i++) 
+            {
+              projectMenu[i].classList.remove("hide");
+            }
        }
     </script>
   </body>

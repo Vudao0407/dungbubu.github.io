@@ -12,7 +12,7 @@ html
     scroll-behavior: smooth;
     cursor: url('../img/logo/pointer.png'),auto;
   }
-main 
+main, img
   {
     display: block;
   }
@@ -44,6 +44,19 @@ body
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Margin-- ------------ */
+.mt-12 {margin-top: 12px;}
+.mr-12 {margin-right: 12px;}
+.mb-12 {margin-bottom: 12px;}
+.ml-12 {margin-left: 12px;}
+
+.mt-8 {margin-top: 8px;}
+.mr-8 {margin-right: 8px;}
+.mb-8 {margin-bottom: 8px;}
+.ml-8 {margin-left: 8px;}
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -180,10 +193,11 @@ body, button
 .boxShadow
   {
     box-shadow: 2px 2px 8px #E6E6E6;
+    transition: all 400ms ease-out;
   }
 .boxShadow:hover
   {
-    box-shadow: 0px 10px 25px #E6E6E6;
+    box-shadow: 0px 10px 24px #D2D2D2;
   }
   
   
@@ -359,6 +373,16 @@ body.darkMode .burgerFill a
         padding: 0 16px;
         width: 288px;
       }
+
+    .mt-12 {margin-top: 8px;}
+    .mr-12 {margin-right: 8px;}
+    .mb-12 {margin-bottom: 8px;}
+    .ml-12 {margin-left: 8px;}
+
+    .mt-8 {margin-top: 4px;}
+    .mr-8 {margin-right: 4px;}
+    .mb-8 {margin-bottom: 4px;}
+    .ml-8 {margin-left: 4px;}
 
     .tx120-60
       {
