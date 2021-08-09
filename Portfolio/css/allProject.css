@@ -64,7 +64,6 @@ hr
     float: left;
     margin-bottom: 24px;
   }
-.grid-item-large,
 .grid-item-small-2
   {
     width: 552px;
@@ -161,7 +160,10 @@ body.darkMode .itemInfo
       {
         width: 228px;
       }
-    .grid-item-large,
+    .grid-item-large-2
+      {
+        width: 100%;
+      }
     .grid-item-small-2
       {
         width: 480px;
@@ -200,7 +202,6 @@ body.darkMode .itemInfo
     /* --Grid Item-- ------------ */
     .grid-item,
     .grid-sizer,
-    .grid-item-large,
     .grid-item-small-2
       {
         width: 100%;

@@ -199,6 +199,34 @@ body, button
   {
     box-shadow: 0px 10px 24px #D2D2D2;
   }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --Button-- ------------ */
+.btn
+  {
+    padding: 10px 24px;
+    font-family: inherit;
+    color: #121212;
+    background-color: unset;
+    border: 2px solid #121212;
+    border-radius: 4px;
+  }
+.btn:hover
+  {
+    color: #FFF;
+    background-color: #121212;
+  }
+body.darkMode .btn
+  {
+    color: #F8F8F8;
+    border-color: #F8F8F8;
+  }
+body.darkMode .btn:hover
+  {
+    color: #121212;
+    background-color: #F8F8F8;
+  }
   
   
 /* ------------ ------------ ------------ ------------ */
