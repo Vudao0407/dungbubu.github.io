@@ -122,6 +122,7 @@ body.darkMode .itemInfo
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    margin-bottom: 4.2rem;
   }
 .video-wrapper 
   {
@@ -212,6 +213,10 @@ body.darkMode .itemInfo
       }
 
     /* --Video-- ------------ */
+    .video-card
+      {
+        margin-bottom: 2.4rem;
+      }
     .video-wrapper,
     .video-credit
       {
