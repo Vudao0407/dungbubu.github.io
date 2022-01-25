@@ -20,7 +20,7 @@ a,a:hover{
 .textVertical p{writing-mode: vertical-rl;}
 
 /* ------------ ------------ ------------ ------------ */
-/* --HIDE SCROLLBAR-- ------------ */
+/* --SCROLLBAR-- ------------ */
 body::-webkit-scrollbar{
   display: none;  /* Chrome and Safari and Opera */
  }
@@ -50,6 +50,7 @@ h1,h2,h3,h4{
   font-family: 'Philosopher', sans-serif;
   font-weight: 400;
   margin: 0;
+  color: #242424;
 }
 h1{font-size: 20rem;}
 h2{font-size: 6.4rem;}
@@ -189,32 +190,39 @@ body{
 
 
 /* ------------ ------------ ------------ ------------ */
-/* --RESPONSIVE-- ------ */
+/* --HOME-- ------ */
+.container, section{
+  height: 100vh;
+}
 .container{
   position: fixed;
   margin: auto;
   width: 100vw;
-  height: 100vh;
   z-index: 1;
 }
 section{
-  height: 100vh;
   position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1320px;
+  z-index: 2;
 }
 
-/* ------------ ------------ */
-.heroSection{
+
+/* ------------ ------------ ------------ ------------ */
+/* --SECTION 1-- ------ */
+.sectionHero{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
-  z-index: 2;
 }
-
-.heroImage {position: relative;}
-.heroImage img{
+/* ------------ ------------ ------------ ------------ */
+.imageHero {position: relative;}
+.imageHero img{
   position: relative;
   z-index: 3;
   animation: flyUp 1200ms ease-out 0ms;
@@ -227,7 +235,7 @@ section{
     top: 0;
   }
 }
-.heroImage h2{
+.imageHero h2{
   position: absolute;
   left: 0;
   bottom: 0;
@@ -246,27 +254,27 @@ section{
     bottom: 0;
   }
 }
-.heroImage .decor{
+.imageHero .decor{
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%, -10%);
+  transform: translate(50%, -15%);
   display: grid;
   grid-template-columns: repeat(6, 0.6rem);
   grid-template-rows: repeat(12, 0.6rem);
   grid-gap: 2.4rem;
   z-index: 4;
 }
-.heroImage .decor .dot{
+.imageHero .decor .dot{
   border-radius: 100%;
   background-color: #FAFAFA;
 }
-
-.heroContent{
+/* ------------ ------------ ------------ ------------ */
+.contentHero{
   margin: auto 0 0 6rem;
   position: relative;
 }
-.heroContent div:first-child{
+.contentHero div:first-child{
   position: relative;
   bottom: 0;
   animation: moveUp 1200ms ease-out 0ms;
@@ -281,33 +289,132 @@ section{
     bottom: 0;
   }
 }
-.heroContent .textVertical{
+.contentHero .textVertical{
   position: relative;
   margin-top: 2rem;
 }
-.heroContent h2, .heroContent .textVertical{margin-left: -0.4rem;}
-.heroContent .decor{
+.contentHero h2, .contentHero .textVertical{margin-left: -0.4rem;}
+.contentHero .line{
   position: absolute;
   top: calc(100% + 1rem);
   width: 0.1rem;
   background-color: #919191;
-  animation: moveDown 1200ms linear 0ms infinite;
+  animation: moveDown 1200ms linear 0ms;
 }
 @keyframes moveDown{
-  0%{
+  from{
     opacity: 0;
-    top: calc(100% - 6rem);
+    top: calc(100% - 4rem);
   }
-  50%{
+  to{
     opacity: 1;
-    top: calc(100% - 3.5rem);
-  }
-  100%{
-    opacity: 0.5;
     top: calc(100% + 1rem);
   }
 }
 
 
-/* @media (min-width: 1400px){
-} */
+/* ------------ ------------ ------------ ------------ */
+/* --SECTION 3-- ------ */
+.sectionProject{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.sectionProject h2{
+  margin: 0 0 4rem auto;
+  text-align: right;
+  opacity: 1;
+}
+
+.projectMenu{
+  position: relative;
+  padding-bottom: 4rem;
+}
+.projectMenu h3{
+  position: relative;
+  left: 8rem;
+  transition: all 400ms ease-out;
+}
+.projectMenu:hover h3{transform: translateX(4rem);}
+.projectMenu .line{
+  width: 100%;
+  height: 0.1rem;
+  margin: 0.5rem 0 2rem 0;
+  background-color: #D8D8D8;
+}
+#projectMenu1.hide h3, #projectMenu2.hide h3, #projectMenu3.hide h3{color: #D8D8D8;}
+
+
+.sectionProject .decor{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(20%);
+  display: grid;
+  grid-template-columns: repeat(12, 0.6rem);
+  grid-template-rows: repeat(2, 0.6rem);
+  grid-gap: 2.4rem;
+  z-index: 3;
+}
+.sectionProject .decor .dot{
+  border-radius: 100%;
+  background-color: #919191;
+}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --SECTION 4-- ------ */
+.sectionContact{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.sectionContact .decor{
+  display: grid;
+  grid-template-columns: repeat(6, 0.6rem);
+  grid-template-rows: repeat(12, 0.6rem);
+  grid-gap: 2.4rem;
+  z-index: 4;
+}
+.sectionContact .decor .dot{
+  border-radius: 100%;
+  background-color: #919191;
+}
+
+.contentContact{
+  margin-left: 6rem;
+  display: grid;
+  row-gap: 4rem;
+}
+.socialMenu{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 4rem;
+}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */
+@media (max-width: 1660px){
+  section{width: 1140px;}
+}
+@media (max-width: 1200px){
+  section{width: 960px;}
+}
+@media (max-width: 992px){
+  section{width: 720px;}
+}
+@media (max-width: 768px){
+  section{width: 540px;}
+}
+@media (max-width: 579px){
+  section{width: calc(100vw - 20px);}
+}
