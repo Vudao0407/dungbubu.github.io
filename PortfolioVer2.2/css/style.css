@@ -1,0 +1,313 @@
+/* ------------ ------------ ------------ ------------ */
+/* --GENERAL-- ------------ */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+ }
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+ }
+img {display: block;}
+body p{color: #919191;}
+a,a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+.textVertical p{writing-mode: vertical-rl;}
+
+/* ------------ ------------ ------------ ------------ */
+/* --HIDE SCROLLBAR-- ------------ */
+body::-webkit-scrollbar{
+  display: none;  /* Chrome and Safari and Opera */
+ }
+body{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+ }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --FONTS-- ------------ */
+@font-face{
+    font-family: Philosopher, sans-serif;
+    font-display: swap;
+    src: url(../font/philosopher/Philosopher-Regular.ttf);
+  }
+@font-face{
+    font-family: Mulish, sans-serif;
+    font-display: swap;
+    src: url(../font/mulish/Mulish-Light.ttf);
+  }
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --TYPOGRAPHY-- ------------ */
+h1,h2,h3,h4{
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+h1{font-size: 20rem;}
+h2{font-size: 6.4rem;}
+h3{font-size: 3.2rem;}
+h4{
+  font-size: 2.0rem;
+  margin: 4rem;
+}
+body{
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.6rem;
+}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --WATERMARK-- ------ */
+#watermark{
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  color: #FAFAFA;
+  animation: fromRight 1200ms ease-out 0ms;
+}
+@keyframes fromRight{
+  from{
+    opacity: 0;
+    transform: translate(-40%, -50%);
+  }
+  to{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --HEADER & FOOTER-- ------ */
+#menuTopLeft, #menuTopRight, #menuBottomRight, #menuBottomLeft{position: absolute;}
+#menuTopRight, #menuBottomRight{right: 0;}
+#menuBottomRight, #menuBottomLeft{bottom: 0;}
+
+#menuTopLeft{animation: toTopLeft 1200ms ease-out 0ms;}
+@keyframes toTopLeft{
+  from{
+    opacity: 0;
+    top: 2rem;
+    left: 4rem;
+  }
+  to{
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+}
+#menuBottomLeft{animation: toBottomLeft 1200ms ease-out 0ms;}
+@keyframes toBottomLeft{
+  from{
+    opacity: 0;
+    left: 4rem;
+    bottom: 2rem;
+  }
+  to{
+    opacity: 1;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+#menuTopRight{animation: toTopRight 1200ms ease-out 0ms;}
+@keyframes toTopRight{
+  from{
+    opacity: 0;
+    top: 2rem;
+    right: 4rem;
+  }
+  to{
+    opacity: 1;
+    top: 0;
+    right: 0;
+  }
+}
+#menuBottomRight{animation: toBottomRight 1200ms ease-out 0ms;}
+@keyframes toBottomRight{
+  from{
+    opacity: 0;
+    right: 4rem;
+    bottom: 2rem;
+  }
+  to{
+    opacity: 1;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --SIDEMENU-- ------ */
+.sideMenu{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sideMenu p{padding: 1rem 0;}
+#sideMenuL p{transform: rotate(180deg);}
+
+#sideMenuL{
+  left: 4rem;
+  animation: swipeRight 1200ms ease-out 0ms;
+}
+@keyframes swipeRight{
+  from{
+    opacity: 0;
+    left: 0;
+  }
+  to{
+    opacity: 1;
+    left: 4rem;
+  }
+}
+
+#sideMenuR{
+  right: 4rem;
+  animation: swipeLeft 1200ms ease-out 0ms;
+}
+@keyframes swipeLeft{
+  from{
+    opacity: 0;
+    right: 0;
+  }
+  to{
+    opacity: 1;
+    right: 4rem;
+  }
+}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --RESPONSIVE-- ------ */
+.container{
+  position: fixed;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+section{
+  height: 100vh;
+  position: relative;
+}
+
+/* ------------ ------------ */
+.heroSection{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.heroImage {position: relative;}
+.heroImage img{
+  position: relative;
+  z-index: 3;
+  animation: flyUp 1200ms ease-out 0ms;
+}
+@keyframes flyUp{
+  from{
+    top: 4.8rem;
+  }
+  to{
+    top: 0;
+  }
+}
+.heroImage h2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-68%) rotate(180deg);
+  writing-mode: vertical-rl;
+  color: #919191;
+  animation: flyDown 1200ms ease-out 0ms;
+}
+@keyframes flyDown{
+  from{
+    opacity: 0;
+    bottom: 8rem;
+  }
+  to{
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.heroImage .decor{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -10%);
+  display: grid;
+  grid-template-columns: repeat(6, 0.6rem);
+  grid-template-rows: repeat(12, 0.6rem);
+  grid-gap: 2.4rem;
+  z-index: 4;
+}
+.heroImage .decor .dot{
+  border-radius: 100%;
+  background-color: #FAFAFA;
+}
+
+.heroContent{
+  margin: auto 0 0 6rem;
+  position: relative;
+}
+.heroContent div:first-child{
+  position: relative;
+  bottom: 0;
+  animation: moveUp 1200ms ease-out 0ms;
+}
+@keyframes moveUp{
+  from{
+    opacity: 0;
+    bottom: -6rem;
+  }
+  to{
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.heroContent .textVertical{
+  position: relative;
+  margin-top: 2rem;
+}
+.heroContent h2, .heroContent .textVertical{margin-left: -0.4rem;}
+.heroContent .decor{
+  position: absolute;
+  top: calc(100% + 1rem);
+  width: 0.1rem;
+  background-color: #919191;
+  animation: moveDown 1200ms linear 0ms infinite;
+}
+@keyframes moveDown{
+  0%{
+    opacity: 0;
+    top: calc(100% - 6rem);
+  }
+  50%{
+    opacity: 1;
+    top: calc(100% - 3.5rem);
+  }
+  100%{
+    opacity: 0.5;
+    top: calc(100% + 1rem);
+  }
+}
+
+
+/* @media (min-width: 1400px){
+} */
