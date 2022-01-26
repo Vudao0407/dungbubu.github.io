@@ -89,7 +89,8 @@ body{
 
 /* ------------ ------------ ------------ ------------ */
 /* --HEADER & FOOTER-- ------ */
-#menuTopLeft, #menuTopRight, #menuBottomRight, #menuBottomLeft{position: absolute;}
+#menuTopLeft, #menuTopRight,
+#menuBottomRight, #menuBottomLeft{position: absolute;}
 #menuTopRight, #menuBottomRight{right: 0;}
 #menuBottomRight, #menuBottomLeft{bottom: 0;}
 
@@ -211,6 +212,30 @@ section{
 
 
 /* ------------ ------------ ------------ ------------ */
+/* --BOX SHADOW-- ------ */
+.boxShadow{
+  box-shadow: -20px -20px 60px #FFFFFF99,
+              20px 20px 60px #D1D1D199;
+}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* --DECOR-- ------ */
+.decorDot{
+  display: grid;
+  grid-gap: 2.4rem;
+}
+.dot{
+  border-radius: 100%;
+  background-color: #919191;
+}
+.round{ 
+  border-radius: 100%;
+  border: solid 1px #919191;
+}
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --SECTION 1-- ------ */
 .sectionHero{
   position: absolute;
@@ -254,21 +279,17 @@ section{
     bottom: 0;
   }
 }
-.imageHero .decor{
+.imageHero .decorDot{
   position: absolute;
   top: 0;
   right: 0;
   transform: translate(50%, -15%);
-  display: grid;
   grid-template-columns: repeat(6, 0.6rem);
   grid-template-rows: repeat(12, 0.6rem);
-  grid-gap: 2.4rem;
   z-index: 4;
 }
-.imageHero .decor .dot{
-  border-radius: 100%;
-  background-color: #FAFAFA;
-}
+.imageHero .decorDot .dot{background-color: #FAFAFA;}
+.imageHero .decorDot .round{border-color: #FAFAFA;}
 /* ------------ ------------ ------------ ------------ */
 .contentHero{
   margin: auto 0 0 6rem;
@@ -314,6 +335,28 @@ section{
 
 
 /* ------------ ------------ ------------ ------------ */
+/* --SECTION 2-- ------ */
+.sectionAbout{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80vh;
+}
+.galleryItem{
+  position: absolute;
+  box-shadow: -20px -20px 60px #FFFFFF99,
+              20px 20px 60px #D1D1D199;
+}
+#galleryItem1{top :2%; right: 0; z-index: 4;}
+#galleryItem2{top :12%; left: 8%; z-index: 6;}
+#galleryItem3{top :50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;}
+#galleryItem4{right :15%; bottom: 4%; z-index: 7;}
+#galleryItem5{left :0; bottom: 2%; z-index: 5;}
+
+
+/* ------------ ------------ ------------ ------------ */
 /* --SECTION 3-- ------ */
 .sectionProject{
   position: absolute;
@@ -344,23 +387,18 @@ section{
   margin: 0.5rem 0 2rem 0;
   background-color: #D8D8D8;
 }
-#projectMenu1.hide h3, #projectMenu2.hide h3, #projectMenu3.hide h3{color: #D8D8D8;}
+#projectMenu1.hide h3, #projectMenu2.hide h3,
+#projectMenu3.hide h3{color: #D8D8D8;}
 
 
-.sectionProject .decor{
+.sectionProject .decorDot{
   position: absolute;
   right: 0;
   bottom: 0;
   transform: translateX(20%);
-  display: grid;
   grid-template-columns: repeat(12, 0.6rem);
   grid-template-rows: repeat(2, 0.6rem);
-  grid-gap: 2.4rem;
   z-index: 3;
-}
-.sectionProject .decor .dot{
-  border-radius: 100%;
-  background-color: #919191;
 }
 
 
@@ -377,16 +415,10 @@ section{
   
 }
 
-.sectionContact .decor{
-  display: grid;
+.sectionContact .decorDot{
   grid-template-columns: repeat(6, 0.6rem);
   grid-template-rows: repeat(12, 0.6rem);
-  grid-gap: 2.4rem;
   z-index: 4;
-}
-.sectionContact .decor .dot{
-  border-radius: 100%;
-  background-color: #919191;
 }
 
 .contentContact{
@@ -394,11 +426,19 @@ section{
   display: grid;
   row-gap: 4rem;
 }
+.contentContact p{
+  position: relative;
+  left: 0;
+  transition: all 400ms ease-out;
+}
+.contentContact a{transition: all 400ms ease-out;}
 .socialMenu{
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 4rem;
 }
+#contactMenu1.hide a, #contactMenu2.hide a,
+#contactMenu3.hide a, #contactMenu4.hide a{color: #D8D8D8;}
 
 
 /* ------------ ------------ ------------ ------------ */
