@@ -188,11 +188,21 @@
     <div class="sectionAbout">
       <h2>about</h2>
 
-      <div id="galleryItem1" class="galleryItem"><img src="./img/about/mountainPattern.png" alt="Mountain Pattern"></div>
-      <div id="galleryItem2" class="galleryItem"><img src="./img/about/moonlightDrawnByClouds.png" alt="Moon Light Drawn By Clouds"></div>
-      <div id="galleryItem3" class="galleryItem"><img src="./img/about/arrow.png" alt="Arrow"></div>
-      <div id="galleryItem4" class="galleryItem"><img src="./img/about/badBlood.png" alt=" Bad Blood"></div>
-      <div id="galleryItem5" class="galleryItem"><img src="./img/about/theForest.png" alt="The Forest"></div>
+      <div id="galleryItem1" class="galleryItem">
+        <img src="./img/about/mountainPattern.png" alt="Mountain Pattern">
+      </div>
+      <div id="galleryItem2" class="galleryItem">
+        <img src="./img/about/moonlightDrawnByClouds.png" alt="Moon Light Drawn By Clouds">
+      </div>
+      <div id="galleryItem3" class="galleryItem">
+        <img src="./img/about/arrow.png" alt="Arrow">
+      </div>
+      <div id="galleryItem4" class="galleryItem">
+        <img src="./img/about/badBlood.png" alt=" Bad Blood">
+      </div>
+      <div id="galleryItem5" class="galleryItem">
+        <img src="./img/about/theForest.png" alt="The Forest">
+      </div>
     </div>
     
   </section>
@@ -384,8 +394,22 @@
 
 
   // ------------ ------------ ------------ ------------ ------------ ------------
+  // Hiệu ứng di chuyển ngang cho Watermark
+  $(document).scroll(function(){
+    var a = $(window).height()*3;
+    var b = $(window).scrollTop()/a*99;
+    var c = 100-b;
+    console.log(c)
+    if (b < a) {$('#watermark').css({left:c+"%"});}
+  });
+
+
+  // ------------ ------------ ------------ ------------ ------------ ------------
   // Ảnh mục About có thể "dragable"
-  $(function(){$('.galleryItem').draggable();});  
+  $("#galleryItem1").draggable();
+  $("#galleryItem2").draggable();
+  $("#galleryItem4").draggable();
+  $("#galleryItem5").draggable();
 
 
   // ------------ ------------ ------------ ------------ ------------ ------------

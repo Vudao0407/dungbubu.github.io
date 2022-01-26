@@ -1,30 +1,35 @@
 /* ------------ ------------ ------------ ------------ */
 /* --GENERAL-- ------------ */
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
  }
-html{
+html {
   font-size: 62.5%;
   scroll-behavior: smooth;
  }
 img {display: block;}
-body p{color: #919191;}
-a,a:hover{
+body p {color: #919191;}
+a,a:hover {
   text-decoration: none;
   color: inherit;
 }
+::selection {
+  background: #242424;
+  color: #FFFFFF;
+  text-shadow: none;
+}
 
-.textVertical p{writing-mode: vertical-rl;}
+.textVertical p {writing-mode: vertical-rl;}
 
 /* ------------ ------------ ------------ ------------ */
 /* --SCROLLBAR-- ------------ */
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;  /* Chrome and Safari and Opera */
  }
-body{
+body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
  }
@@ -32,12 +37,12 @@ body{
 
 /* ------------ ------------ ------------ ------------ */
 /* --FONTS-- ------------ */
-@font-face{
+@font-face {
     font-family: Philosopher, sans-serif;
     font-display: swap;
     src: url(../font/philosopher/Philosopher-Regular.ttf);
   }
-@font-face{
+@font-face {
     font-family: Mulish, sans-serif;
     font-display: swap;
     src: url(../font/mulish/Mulish-Light.ttf);
@@ -46,20 +51,17 @@ body{
 
 /* ------------ ------------ ------------ ------------ */
 /* --TYPOGRAPHY-- ------------ */
-h1,h2,h3,h4{
+h1,h2,h3,h4 {
   font-family: 'Philosopher', sans-serif;
   font-weight: 400;
   margin: 0;
   color: #242424;
 }
-h1{font-size: 20rem;}
-h2{font-size: 6.4rem;}
-h3{font-size: 3.2rem;}
-h4{
-  font-size: 2.0rem;
-  margin: 4rem;
-}
-body{
+h1 {font-size: 20rem;}
+h2 {font-size: 6.4rem;}
+h3 {font-size: 3.2rem;}
+h4 {font-size: 2.0rem; margin: 4rem;}
+body {
   font-family: 'Mulish', sans-serif;
   font-size: 1.6rem;
 }
@@ -67,7 +69,7 @@ body{
 
 /* ------------ ------------ ------------ ------------ */
 /* --WATERMARK-- ------ */
-#watermark{
+#watermark {
   position: absolute;
   top: 50%;
   left: 100%;
@@ -75,12 +77,12 @@ body{
   color: #FAFAFA;
   animation: fromRight 1200ms ease-out 0ms;
 }
-@keyframes fromRight{
-  from{
+@keyframes fromRight {
+  from {
     opacity: 0;
     transform: translate(-40%, -50%);
   }
-  to{
+  to {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
@@ -90,58 +92,58 @@ body{
 /* ------------ ------------ ------------ ------------ */
 /* --HEADER & FOOTER-- ------ */
 #menuTopLeft, #menuTopRight,
-#menuBottomRight, #menuBottomLeft{position: absolute;}
-#menuTopRight, #menuBottomRight{right: 0;}
-#menuBottomRight, #menuBottomLeft{bottom: 0;}
+#menuBottomRight, #menuBottomLeft {position: absolute;}
+#menuTopRight, #menuBottomRight {right: 0;}
+#menuBottomRight, #menuBottomLeft {bottom: 0;}
 
-#menuTopLeft{animation: toTopLeft 1200ms ease-out 0ms;}
-@keyframes toTopLeft{
-  from{
+#menuTopLeft {animation: toTopLeft 1200ms ease-out 0ms;}
+@keyframes toTopLeft {
+  from {
     opacity: 0;
     top: 2rem;
     left: 4rem;
   }
-  to{
+  to {
     opacity: 1;
     top: 0;
     left: 0;
   }
 }
-#menuBottomLeft{animation: toBottomLeft 1200ms ease-out 0ms;}
-@keyframes toBottomLeft{
-  from{
+#menuBottomLeft {animation: toBottomLeft 1200ms ease-out 0ms;}
+@keyframes toBottomLeft {
+  from {
     opacity: 0;
     left: 4rem;
     bottom: 2rem;
   }
-  to{
+  to {
     opacity: 1;
     left: 0;
     bottom: 0;
   }
 }
 
-#menuTopRight{animation: toTopRight 1200ms ease-out 0ms;}
-@keyframes toTopRight{
-  from{
+#menuTopRight {animation: toTopRight 1200ms ease-out 0ms;}
+@keyframes toTopRight {
+  from {
     opacity: 0;
     top: 2rem;
     right: 4rem;
   }
-  to{
+  to {
     opacity: 1;
     top: 0;
     right: 0;
   }
 }
-#menuBottomRight{animation: toBottomRight 1200ms ease-out 0ms;}
-@keyframes toBottomRight{
-  from{
+#menuBottomRight {animation: toBottomRight 1200ms ease-out 0ms;}
+@keyframes toBottomRight {
+  from {
     opacity: 0;
     right: 4rem;
     bottom: 2rem;
   }
-  to{
+  to {
     opacity: 1;
     right: 0;
     bottom: 0;
@@ -151,39 +153,39 @@ body{
 
 /* ------------ ------------ ------------ ------------ */
 /* --SIDEMENU-- ------ */
-.sideMenu{
+.sideMenu {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-.sideMenu p{padding: 1rem 0;}
-#sideMenuL p{transform: rotate(180deg);}
+.sideMenu p {padding: 1rem 0;}
+#sideMenuL p {transform: rotate(180deg);}
 
 #sideMenuL{
   left: 4rem;
   animation: swipeRight 1200ms ease-out 0ms;
 }
-@keyframes swipeRight{
-  from{
+@keyframes swipeRight {
+  from {
     opacity: 0;
     left: 0;
   }
-  to{
+  to {
     opacity: 1;
     left: 4rem;
   }
 }
 
-#sideMenuR{
+#sideMenuR {
   right: 4rem;
   animation: swipeLeft 1200ms ease-out 0ms;
 }
-@keyframes swipeLeft{
-  from{
+@keyframes swipeLeft {
+  from {
     opacity: 0;
     right: 0;
   }
-  to{
+  to {
     opacity: 1;
     right: 4rem;
   }
@@ -192,16 +194,14 @@ body{
 
 /* ------------ ------------ ------------ ------------ */
 /* --HOME-- ------ */
-.container, section{
-  height: 100vh;
-}
-.container{
+.container, section {height: 100vh;}
+.container {
   position: fixed;
   margin: auto;
   width: 100vw;
   z-index: 1;
 }
-section{
+section {
   position: relative;
   top: 0;
   left: 50%;
@@ -213,7 +213,7 @@ section{
 
 /* ------------ ------------ ------------ ------------ */
 /* --BOX SHADOW-- ------ */
-.boxShadow{
+.boxShadow {
   box-shadow: -20px -20px 60px #FFFFFF99,
               20px 20px 60px #D1D1D199;
 }
@@ -221,15 +221,15 @@ section{
 
 /* ------------ ------------ ------------ ------------ */
 /* --DECOR-- ------ */
-.decorDot{
+.decorDot {
   display: grid;
   grid-gap: 2.4rem;
 }
-.dot{
+.dot {
   border-radius: 100%;
   background-color: #919191;
 }
-.round{ 
+.round { 
   border-radius: 100%;
   border: solid 1px #919191;
 }
@@ -237,7 +237,7 @@ section{
 
 /* ------------ ------------ ------------ ------------ */
 /* --SECTION 1-- ------ */
-.sectionHero{
+.sectionHero {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -247,20 +247,20 @@ section{
 }
 /* ------------ ------------ ------------ ------------ */
 .imageHero {position: relative;}
-.imageHero img{
+.imageHero img {
   position: relative;
   z-index: 3;
   animation: flyUp 1200ms ease-out 0ms;
 }
-@keyframes flyUp{
-  from{
+@keyframes flyUp {
+  from {
     top: 4.8rem;
   }
-  to{
+  to {
     top: 0;
   }
 }
-.imageHero h2{
+.imageHero h2 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -269,17 +269,17 @@ section{
   color: #919191;
   animation: flyDown 1200ms ease-out 0ms;
 }
-@keyframes flyDown{
-  from{
+@keyframes flyDown {
+  from {
     opacity: 0;
     bottom: 8rem;
   }
-  to{
+  to {
     opacity: 1;
     bottom: 0;
   }
 }
-.imageHero .decorDot{
+.imageHero .decorDot {
   position: absolute;
   top: 0;
   right: 0;
@@ -288,46 +288,46 @@ section{
   grid-template-rows: repeat(12, 0.6rem);
   z-index: 4;
 }
-.imageHero .decorDot .dot{background-color: #FAFAFA;}
-.imageHero .decorDot .round{border-color: #FAFAFA;}
+.imageHero .decorDot .dot {background-color: #FAFAFA;}
+.imageHero .decorDot .round {border-color: #FAFAFA;}
 /* ------------ ------------ ------------ ------------ */
-.contentHero{
+.contentHero {
   margin: auto 0 0 6rem;
   position: relative;
 }
-.contentHero div:first-child{
+.contentHero div:first-child {
   position: relative;
   bottom: 0;
   animation: moveUp 1200ms ease-out 0ms;
 }
-@keyframes moveUp{
-  from{
+@keyframes moveUp {
+  from {
     opacity: 0;
     bottom: -6rem;
   }
-  to{
+  to {
     opacity: 1;
     bottom: 0;
   }
 }
-.contentHero .textVertical{
+.contentHero .textVertical {
   position: relative;
   margin-top: 2rem;
 }
-.contentHero h2, .contentHero .textVertical{margin-left: -0.4rem;}
-.contentHero .line{
+.contentHero h2, .contentHero .textVertical {margin-left: -0.4rem;}
+.contentHero .line {
   position: absolute;
   top: calc(100% + 1rem);
   width: 0.1rem;
   background-color: #919191;
   animation: moveDown 1200ms linear 0ms;
 }
-@keyframes moveDown{
-  from{
+@keyframes moveDown {
+  from {
     opacity: 0;
     top: calc(100% - 4rem);
   }
-  to{
+  to {
     opacity: 1;
     top: calc(100% + 1rem);
   }
@@ -336,7 +336,7 @@ section{
 
 /* ------------ ------------ ------------ ------------ */
 /* --SECTION 2-- ------ */
-.sectionAbout{
+.sectionAbout {
   position: relative;
   top: 50%;
   left: 50%;
@@ -344,54 +344,54 @@ section{
   width: 100%;
   height: 80vh;
 }
-.galleryItem{
+.galleryItem {
   position: absolute;
   box-shadow: -20px -20px 60px #FFFFFF99,
               20px 20px 60px #D1D1D199;
 }
-#galleryItem1{top :2%; right: 0; z-index: 4;}
-#galleryItem2{top :12%; left: 8%; z-index: 6;}
-#galleryItem3{top :50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;}
-#galleryItem4{right :15%; bottom: 4%; z-index: 7;}
-#galleryItem5{left :0; bottom: 2%; z-index: 5;}
+#galleryItem1 {top :2%; right: 0; z-index: 4;}
+#galleryItem2 {top :12%; left: 8%; z-index: 6;}
+#galleryItem3 {top :50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;}
+#galleryItem4 {right :15%; bottom: 4%; z-index: 7;}
+#galleryItem5 {left :0; bottom: 2%; z-index: 5;}
 
 
 /* ------------ ------------ ------------ ------------ */
 /* --SECTION 3-- ------ */
-.sectionProject{
+.sectionProject {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
 }
-.sectionProject h2{
+.sectionProject h2 {
   margin: 0 0 4rem auto;
   text-align: right;
   opacity: 1;
 }
 
-.projectMenu{
+.projectMenu {
   position: relative;
   padding-bottom: 4rem;
 }
-.projectMenu h3{
+.projectMenu h3 {
   position: relative;
   left: 8rem;
   transition: all 400ms ease-out;
 }
-.projectMenu:hover h3{transform: translateX(4rem);}
-.projectMenu .line{
+.projectMenu:hover h3 {transform: translateX(4rem);}
+.projectMenu .line {
   width: 100%;
   height: 0.1rem;
   margin: 0.5rem 0 2rem 0;
   background-color: #D8D8D8;
 }
 #projectMenu1.hide h3, #projectMenu2.hide h3,
-#projectMenu3.hide h3{color: #D8D8D8;}
+#projectMenu3.hide h3 {color: #D8D8D8;}
 
 
-.sectionProject .decorDot{
+.sectionProject .decorDot {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -404,7 +404,7 @@ section{
 
 /* ------------ ------------ ------------ ------------ */
 /* --SECTION 4-- ------ */
-.sectionContact{
+.sectionContact {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -415,46 +415,46 @@ section{
   
 }
 
-.sectionContact .decorDot{
+.sectionContact .decorDot {
   grid-template-columns: repeat(6, 0.6rem);
   grid-template-rows: repeat(12, 0.6rem);
   z-index: 4;
 }
 
-.contentContact{
+.contentContact {
   margin-left: 6rem;
   display: grid;
   row-gap: 4rem;
 }
-.contentContact p{
+.contentContact p {
   position: relative;
   left: 0;
   transition: all 400ms ease-out;
 }
-.contentContact a{transition: all 400ms ease-out;}
-.socialMenu{
+.contentContact a {transition: all 400ms ease-out;}
+.socialMenu {
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 4rem;
 }
 #contactMenu1.hide a, #contactMenu2.hide a,
-#contactMenu3.hide a, #contactMenu4.hide a{color: #D8D8D8;}
+#contactMenu3.hide a, #contactMenu4.hide a {color: #D8D8D8;}
 
 
 /* ------------ ------------ ------------ ------------ */
 /* --RESPONSIVE-- ------ */
-@media (max-width: 1660px){
-  section{width: 1140px;}
+@media (max-width: 1660px) {
+  section {width: 1140px;}
 }
-@media (max-width: 1200px){
-  section{width: 960px;}
+@media (max-width: 1200px) {
+  section {width: 960px;}
 }
-@media (max-width: 992px){
-  section{width: 720px;}
+@media (max-width: 992px) {
+  section {width: 720px;}
 }
-@media (max-width: 768px){
-  section{width: 540px;}
+@media (max-width: 768px) {
+  section {width: 540px;}
 }
-@media (max-width: 579px){
-  section{width: calc(100vw - 20px);}
+@media (max-width: 579px) {
+  section {width: calc(100vw - 20px);}
 }
