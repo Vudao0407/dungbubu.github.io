@@ -60,10 +60,10 @@
     <h1 id="watermark">dungbubu</h1>
 
     <!-- //////////// HEADER & FOOTER //////////// -->
-    <h4 id="menuTopLeft">.dungbubu</h4>
-    <h4 id="menuTopRight">contact</h4>
-    <h4 id="menuBottomRight">project</h4>
-    <h4 id="menuBottomLeft">about</h4>
+    <h4 id="menuTopLeft"><a href="#section1">.dungbubu</a></h4>
+    <h4 id="menuTopRight"><a href="#section4">contact</a></h4>
+    <h4 id="menuBottomRight"><a href="#section3">project</a></h4>
+    <h4 id="menuBottomLeft"><a href="#section2">about</a></h4>
 
     <!-- //////////// SIDEMENU //////////// -->
     <div id="sideMenuL" class="sideMenu textVertical">
@@ -213,19 +213,25 @@
 
       <div>
         <div id="projectMenu1" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-          <p>01.</p>
-          <div class="line"></div>
-          <h3>Website Design</h3>
+          <a href="#section3">
+            <p>01.</p>
+            <div class="line"></div>
+            <h3>Website Design</h3>
+          </a>
         </div>
         <div id="projectMenu2" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-          <p>02.</p>
-          <div class="line"></div>
-          <h3>Presentation</h3>
+          <a href="#section3">
+            <p>02.</p>
+            <div class="line"></div>
+            <h3>Presentation</h3>
+          </a>
         </div>
         <div id="projectMenu3" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-          <p>03.</p>
-          <div class="line"></div>
-          <h3>Motion Graphic</h3>
+          <a href="#section3">
+            <p>03.</p>
+            <div class="line"></div>
+            <h3>Motion Graphic</h3>
+          </a>
         </div>
 
         <div class="decorDot">
@@ -370,85 +376,75 @@
   </section>
   
 
-<!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
-<!-- jQuery library -->
-<script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
-<!-- jQuery Ui library -->
-<script src="./lib/jQueryUi-1.3.1.1/jquery-ui.js"></script>
-<!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+  <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+  <!-- jQuery library -->
+  <script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
+  <!-- jQuery Ui library -->
+  <script src="./lib/jQueryUi-1.3.1.1/jquery-ui.js"></script>
+  <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
-<script>
-  // Animation khi Loading
-  // $(document).ready(function(){
-  //   $('#menuTopLeft').addClass('abc');
-  // });
-
-  // ------------ ------------ ------------ ------------ ------------ ------------
-  // Thiết lập tốc độ scroll
-
-  
-  // ------------ ------------ ------------ ------------ ------------ ------------
-  // Đo kích thước cho đường kẻ dọc chỗ scroll
-  $('.sectionHero .line').height(($(window).height() - $('.sectionHero').height()) / 2 - 10);
+  <script>
+    // ------------ ------------ ------------ ------------ ------------ ------------
+    // Đo kích thước cho đường kẻ dọc chỗ scroll
+    $('.sectionHero .line').height(($(window).height() - $('.sectionHero').height()) / 2 - 10);
 
 
-  // ------------ ------------ ------------ ------------ ------------ ------------
-  // Hiệu ứng di chuyển ngang cho Watermark
-  $(document).scroll(function(){
-    var a = $(window).height()*3;
-    var b = $(window).scrollTop()/a*99;
-    var c = 100-b;
-    console.log(c)
-    if (b < a) {$('#watermark').css({left:c+"%"});}
-  });
+    // ------------ ------------ ------------ ------------ ------------ ------------
+    // Hiệu ứng di chuyển ngang cho Watermark
+    $(document).scroll(function(){
+      var a = $(window).height()*3;
+      var b = $(window).scrollTop()/a*99;
+      var c = 100-b;
+      if (b < a) {$('#watermark').css({left:c+"%"});}
+    });
 
 
-  // ------------ ------------ ------------ ------------ ------------ ------------
-  // Ảnh mục About có thể "dragable"
-  $("#galleryItem1").draggable();
-  $("#galleryItem2").draggable();
-  $("#galleryItem4").draggable();
-  $("#galleryItem5").draggable();
+    // ------------ ------------ ------------ ------------ ------------ ------------
+    // Ảnh mục About có thể "dragable"
+    $("#galleryItem1").draggable();
+    $("#galleryItem2").draggable();
+    $("#galleryItem4").draggable();
+    $("#galleryItem5").draggable();
 
 
-  // ------------ ------------ ------------ ------------ ------------ ------------
-  // Hàm add/remove trạng thái .hide khi "hover" vào các mục Project
-  var projectMenu = [document.getElementById("projectMenu1"),
-                     document.getElementById("projectMenu2"),
-                     document.getElementById("projectMenu3")];
+    // ------------ ------------ ------------ ------------ ------------ ------------
+    // Hàm add/remove trạng thái .hide khi "hover" vào các mục Project
+    var projectMenu = [document.getElementById("projectMenu1"),
+                      document.getElementById("projectMenu2"),
+                      document.getElementById("projectMenu3")];
 
-  function activeThis(id){
-    for (i = 0; i < projectMenu.length; i++){
-      projectMenu[i].classList.add("hide");
+    function activeThis(id){
+      for (i = 0; i < projectMenu.length; i++){
+        projectMenu[i].classList.add("hide");
+      }
+      document.getElementById(id).classList.remove("hide");
     }
-    document.getElementById(id).classList.remove("hide");
-  }
-  function deactiveAll(){
-    for (i = 0; i < projectMenu.length; i++) {
-      projectMenu[i].classList.remove("hide");
+    function deactiveAll(){
+      for (i = 0; i < projectMenu.length; i++) {
+        projectMenu[i].classList.remove("hide");
+      }
     }
-  }
 
 
-  // ------------ ------------ ------------ ------------ ------------ ------------
-  // Hàm add/remove trạng thái .hide khi "hover" vào các mục Contact
-  var contactMenu = [document.getElementById("contactMenu1"),
-                     document.getElementById("contactMenu2"),
-                     document.getElementById("contactMenu3"),
-                     document.getElementById("contactMenu4")];
+    // ------------ ------------ ------------ ------------ ------------ ------------
+    // Hàm add/remove trạng thái .hide khi "hover" vào các mục Contact
+    var contactMenu = [document.getElementById("contactMenu1"),
+                      document.getElementById("contactMenu2"),
+                      document.getElementById("contactMenu3"),
+                      document.getElementById("contactMenu4")];
 
-  function showThis(id){
-    for (i = 0; i < contactMenu.length; i++){
-      contactMenu[i].classList.add("hide");
+    function showThis(id){
+      for (i = 0; i < contactMenu.length; i++){
+        contactMenu[i].classList.add("hide");
+      }
+      document.getElementById(id).classList.remove("hide");
     }
-    document.getElementById(id).classList.remove("hide");
-  }
-  function hideAll(){
-    for (i = 0; i < contactMenu.length; i++) {
-      contactMenu[i].classList.remove("hide");
+    function hideAll(){
+      for (i = 0; i < contactMenu.length; i++) {
+        contactMenu[i].classList.remove("hide");
+      }
     }
-  }
-</script>
+  </script>
 </body>
 </html>

@@ -92,7 +92,7 @@ body {
 /* ------------ ------------ ------------ ------------ */
 /* --HEADER & FOOTER-- ------ */
 #menuTopLeft, #menuTopRight,
-#menuBottomRight, #menuBottomLeft {position: absolute;}
+#menuBottomRight, #menuBottomLeft {position: absolute; z-index: 50;}
 #menuTopRight, #menuBottomRight {right: 0;}
 #menuBottomRight, #menuBottomLeft {bottom: 0;}
 
@@ -346,8 +346,8 @@ section {
 }
 .galleryItem {
   position: absolute;
-  box-shadow: -20px -20px 60px #FFFFFF99,
-              20px 20px 60px #D1D1D199;
+  box-shadow: 0px -20px 60px #FFFFFF99,
+              0px 20px 60px #D1D1D199;
 }
 #galleryItem1 {top :2%; right: 0; z-index: 4;}
 #galleryItem2 {top :12%; left: 8%; z-index: 6;}
