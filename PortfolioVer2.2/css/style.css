@@ -1,38 +1,18 @@
 /* ------------ ------------ ------------ ------------ */
 /* --GENERAL-- ------------ */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
- }
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
- }
+* {margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+html { font-size: 62.5%; scroll-behavior: smooth;}
 img {display: block;}
 body p {color: #919191;}
-a,a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-::selection {
-  background: #242424;
-  color: #FFFFFF;
-  text-shadow: none;
-}
+a,a:hover {text-decoration: none; color: inherit;}
+::selection {background: #242424; color: #FFFFFF; text-shadow: none;}
 
 .textVertical p {writing-mode: vertical-rl;}
 
 /* ------------ ------------ ------------ ------------ */
 /* --SCROLLBAR-- ------------ */
-body::-webkit-scrollbar {
-  display: none;  /* Chrome and Safari and Opera */
- }
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
- }
+body::-webkit-scrollbar {display: none;}
+body {-ms-overflow-style: none; scrollbar-width: none;}
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -52,19 +32,16 @@ body {
 /* ------------ ------------ ------------ ------------ */
 /* --TYPOGRAPHY-- ------------ */
 h1,h2,h3,h4 {
-  font-family: 'Philosopher', sans-serif;
-  font-weight: 400;
-  margin: 0;
-  color: #242424;
-}
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    color: #242424;
+  }
 h1 {font-size: 20rem;}
 h2 {font-size: 6.4rem;}
 h3 {font-size: 3.2rem;}
-h4 {font-size: 2.0rem; margin: 4rem;}
-body {
-  font-family: 'Mulish', sans-serif;
-  font-size: 1.6rem;
-}
+h4 {font-size: 2.0rem;}
+body {font-family: 'Mulish', sans-serif; font-size: 1.6rem;}
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -91,8 +68,7 @@ body {
 
 /* ------------ ------------ ------------ ------------ */
 /* --HEADER & FOOTER-- ------ */
-#menuTopLeft, #menuTopRight,
-#menuBottomRight, #menuBottomLeft {position: absolute; z-index: 50;}
+.menuFixed {position: absolute; z-index: 50; margin: 4rem;}
 #menuTopRight, #menuBottomRight {right: 0;}
 #menuBottomRight, #menuBottomLeft {bottom: 0;}
 
@@ -157,6 +133,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 50;
 }
 .sideMenu p {padding: 1rem 0;}
 #sideMenuL p {transform: rotate(180deg);}
@@ -240,7 +217,7 @@ section {
 .sectionHero {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: calc(50% + 1.2rem);
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
@@ -346,14 +323,16 @@ section {
 }
 .galleryItem {
   position: absolute;
-  box-shadow: 0px -20px 60px #FFFFFF99,
-              0px 20px 60px #D1D1D199;
+  /* box-shadow: 0px -20px 60px #FFFFFF99,
+              0px 20px 60px #D1D1D199; */
+  z-index: 4;
+  border: 1px solid #D8D8D8;
 }
-#galleryItem1 {top :2%; right: 0; z-index: 4;}
-#galleryItem2 {top :12%; left: 8%; z-index: 6;}
-#galleryItem3 {top :50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;}
-#galleryItem4 {right :15%; bottom: 4%; z-index: 7;}
-#galleryItem5 {left :0; bottom: 2%; z-index: 5;}
+#galleryItem1 {left :0; bottom: 0;}
+#galleryItem2 {top :30%; left: 8%;}
+#galleryItem3 {top :50%; left: 50%; transform: translate(-50%, -50%);}
+#galleryItem4 {right :8%; bottom: 30%;}
+#galleryItem5 {top :0; right: 0;}
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -456,5 +435,64 @@ section {
   section {width: 540px;}
 }
 @media (max-width: 579px) {
-  section {width: calc(100vw - 20px);}
+  section {width: calc(100vw - 60px);}
+  img {width: 50vw;}
+  h1 {font-size: 10rem;}
+  h2 {font-size: 2.0rem;}
+  h3 {font-size: 1.6rem;}
+  h4 {font-size: 1.6rem;}
+  body {font-size: 1.4rem;}
+  .menuFixed {margin: 1.2rem;}
+  #menuTopRight, #menuBottomRight, #menuBottomLeft {display: none;}
+  #sideMenuL, #sideMenuR {display: none;}
+  @keyframes swipeRight {
+    from {
+      opacity: 0;
+      left: 0;
+    }
+    to {
+      opacity: 1;
+      left: 1.2rem;
+    }
+  }
+  #sideMenuR {right: 1.2rem; display: none;}
+  @keyframes swipeLeft {
+    from {
+      opacity: 0;
+      right: 0;
+    }
+    to {
+      opacity: 1;
+      right: 1.2rem;
+    }
+  }
+  .decorDot {grid-gap: 1.2rem;}
+  .imageHero .decorDot {
+    grid-template-columns: repeat(6, 0.2rem);
+    grid-template-rows: repeat(12, 0.2rem);
+  }
+  .contentHero {margin: auto 0 0 1rem;}
+
+
+  #section2 {display: none;}
+
+
+  .projectMenu {padding-bottom: 2.4rem;}
+  .projectMenu h3 {left: 2rem;}
+  .projectMenu .line {margin: 0.5rem 0 1rem 0;}
+  .sectionProject .decorDot {
+    grid-template-columns: repeat(12, 0.2rem);
+    grid-template-rows: repeat(2, 0.2rem);
+  }
+
+
+  .sectionContact .decorDot {
+    grid-template-columns: repeat(6, 0.2rem);
+    grid-template-rows: repeat(12, 0.2rem);
+  }
+  .contentContact {
+    margin-left: 1rem;
+    row-gap: 1rem;
+  }
+  .socialMenu {column-gap: 2rem;}
 }
