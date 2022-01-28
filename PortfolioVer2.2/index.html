@@ -39,8 +39,6 @@
 
     <!-- CSS Chung -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- CSS Riêng -->
-    <!-- <link rel="stylesheet" href="./css/index.css"> -->
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -84,6 +82,25 @@
       <p>darkmode</p>
       <p>sound</p>
     </div> -->
+  </div>
+
+  <div class="navbar">
+    <!-- //////////// NAVBAR (Responsive) //////////// -->
+    <h4 id="logoTopLeft" class="menuFixed"><a href="#section1">.d</a></h4>
+    <button id="burgerTopRight" class="menuFixed burgerMenu" onclick="hamburgerFunction()">
+      <span class="line-1"></span>
+      <span class="line-2"></span>
+      <span class="line-3"></span>
+    </button>
+  </div>
+
+  <div class="modal">
+    <div class="burgerFill">
+      <h3><a href="#section1">home</a></h3>
+      <h3><a href="#section2">about</a></h3>
+      <h3><a href="#section3">project</a></h3>
+      <h3><a href="#section4">contact</a></h3>
+    </div>
   </div>
 
   <section id="section1">
@@ -176,6 +193,7 @@
           <div class="dot"></div>
           <div class="round"></div>
         </div>
+        <div id="mahHeart"><img src="./img/home/mangosteen.png" alt="Quả Măng Cụt xinh đẹp"></div>
       </div>
   
       <div class="contentHero">
@@ -195,20 +213,39 @@
     <div class="sectionAbout">
       <h2>about</h2>
 
-      <div id="galleryItem3" class="galleryItem">
-        <img src="./img/about/arrow.png" alt="Arrow">
+      <div id="galleryItem1" class="flip-box">
+        <div class="galleryItem">
+          <div class="frontContent"><img src="./img/about/arrow.png" alt="Arrow"></div>
+          <div class="backContent"><p>credit</p></div>
+        </div>
       </div>
-      <div id="galleryItem5" class="galleryItem">
-        <img src="./img/about/mountainPattern.png" alt="Mountain Pattern">
+
+      <div id="galleryItem2" class="flip-box">
+        <div class="galleryItem">
+          <div class="frontContent"><img src="./img/about/mountainPattern.png" alt="Mountain Pattern"></div>
+          <div class="backContent"><p>credit</p></div>
+        </div>
       </div>
-      <div id="galleryItem1" class="galleryItem">
-        <img src="./img/about/theForest.png" alt="The Forest">
+
+      <div id="galleryItem3" class="flip-box">
+        <div class="galleryItem">
+          <div class="frontContent"><img src="./img/about/badBlood.png" alt=" Bad Blood"></div>
+          <div class="backContent"><p>credit</p></div>
+        </div>
       </div>
-      <div id="galleryItem2" class="galleryItem">
-        <img src="./img/about/moonlightDrawnByClouds.png" alt="Moon Light Drawn By Clouds">
+
+      <div id="galleryItem4" class="flip-box">
+        <div class="galleryItem">
+          <div class="frontContent"><img src="./img/about/moonlightDrawnByClouds.png" alt="Moon Light Drawn By Clouds"></div>
+          <div class="backContent"><p>credit</p></div>
+        </div>
       </div>
-      <div id="galleryItem4" class="galleryItem">
-        <img src="./img/about/badBlood.png" alt=" Bad Blood">
+
+      <div id="galleryItem5" class="flip-box">
+        <div class="galleryItem">
+          <div class="frontContent"><img src="./img/about/theForest.png" alt="The Forest"></div>
+          <div class="backContent"><p>credit</p></div>
+        </div>
       </div>
     </div>
     
@@ -408,41 +445,32 @@
 
 
     // ------------ ------------ ------------ ------------ ------------ ------------
-    // Ảnh mục About có thể "draggable"
-    $("#galleryItem1").draggable({
-    drag: function( event, ui ) {
-          $(this).css({
-            top: $(this).position().top,
-            bottom: "auto"
-          });
-        }
-      });
-    $("#galleryItem2").draggable();
-    $("#galleryItem3").draggable({
+    // Hàm tạo hiệu ứng cho Humburger menu ------------ ------------
+    function hamburgerFunction() {
+      document.querySelector(".burgerMenu").classList.toggle("toggle");
+      document.querySelector(".modal").classList.toggle("toggle");
+    }
+
+
+    // ------------ ------------ ------------ ------------ ------------ ------------
+    // Ỏ
+    // Hàm này dùng cho những Object đang để Transform Translate
+    $(".imageHero img").draggable({
     drag: function( event, ui ) {
           $(this).css({
             transform: "none"
           });
         }
       });
-    $("#galleryItem4").draggable({
-    drag: function( event, ui ) {
-          $(this).css({
-            top: $(this).position().top,
-            bottom: "auto",
-            left: $(this).position().left,
-            right: "auto"
-          });
-        }
-      });
-    $("#galleryItem5").draggable({
-    drag: function( event, ui ) {
-          $(this).css({
-            left: $(this).position().left,
-            right: "auto"
-          });
-        }
-      });
+    // 2 Hàm này dùng cho những Object đang căn theo Right và Bottom
+    $(".imageHero img").droppable({
+      over: function( event, ui ) {
+        ui.helper.addClass('ui-droppable-over')
+      },
+    });
+    $(".imageHero img").draggable({
+      stop: function( event, ui ) {}
+    });
 
 
     // ------------ ------------ ------------ ------------ ------------ ------------
