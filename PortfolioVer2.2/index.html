@@ -83,10 +83,10 @@
 
     <!-- //////////// SIDEMENU LEFT //////////// -->
     <div id="sideMenuL" class="sideMenu textVertical">
-      <p><a href="mailto:nguyenmanhdung1996@gmail.com">email</a></p>
-      <p><a href="https://www.facebook.com/NguyenManhDung1996" target="_blank">fbook</a></p>
-      <p><a href="https://www.instagram.com/dungbubu" target="_blank">insta</a></p>
-      <p><a href="https://www.youtube.com/channel/UCfZnbGb9cABlL5dtnE6QV_A" target="_blank">utube</a></p>
+      <a href="https://dungbubu.com/youtube" target="_blank"><p>utube</p></a>
+      <a href="https://dungbubu.com/instagram" target="_blank"><p>insta</p></a>
+      <a href="https://dungbubu.com/behance" target="_blank"><p>behance</p></a>
+      <a href="https://dungbubu.com/dribbble" target="_blank"><p>dribble</p></a>
     </div>
 
     <!-- //////////// SIDEMENU RIGHT //////////// -->
@@ -212,9 +212,7 @@
         <div>
           <h2>Hi!</h2>
           <p>I'm DungBu</p>
-          <div class="textVertical">
-            <p>scroll down</p>
-          </div>
+          <p class="textVertical">scroll down</p>
         </div>
         <div class="line"></div>
       </div>
@@ -439,19 +437,25 @@
 
         <div>
           <p>email:</p>
-          <h3 id="contactMenu1" onmouseover="showThis(id)" onmouseout="hideAll()">
-            <a href="mailto:nguyenmanhdung1996@gmail.com">nguyenmanhdung1996@gmail.com</a></h3>
+
+          <a id="contactMenu1" href="mailto:nguyenmanhdung1996@gmail.com" onmouseover="showThis(id)" onmouseout="hideAll()">
+            <h3>nguyenmanhdung1996@gmail.com</h3></a>
         </div>
 
         <div>
           <p>or follow me:</p>
+
           <div class="socialMenu">
-            <h3 id="contactMenu2" onmouseover="showThis(id)" onmouseout="hideAll()">
-              <a href="https://www.youtube.com/channel/UCfZnbGb9cABlL5dtnE6QV_A" target="_blank">youtube</a></h3>
-            <h3 id="contactMenu3" onmouseover="showThis(id)" onmouseout="hideAll()">
-              <a href="https://www.instagram.com/dungbubu" target="_blank">instagram</a></h3>
-            <h3 id="contactMenu4" onmouseover="showThis(id)" onmouseout="hideAll()">
-              <a href="https://www.facebook.com/NguyenManhDung1996" target="_blank">facebook</a></h3>
+            <a id="contactMenu2" href="https://dungbubu.com/youtube" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <h3 target="_blank">youtube</h3></a>
+            <a id="contactMenu3" href="https://dungbubu.com/facebook" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <h3 target="_blank">facebook</h3></a>
+            <a id="contactMenu4"3 href="https://dungbubu.com/instagram" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <h3 target="_blank">instagram</h3></a>
+            <a id="contactMenu5" href="https://dungbubu.com/behance" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <h3 target="_blank">behance</h3></a>
+            <a id="contactMenu6" href="https://dungbubu.com/dribbble" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <h3 target="_blank">dribbble</h3></a>
           </div>
         </div>
       </div>
@@ -536,7 +540,9 @@
     var contactMenu = [document.getElementById("contactMenu1"),
                       document.getElementById("contactMenu2"),
                       document.getElementById("contactMenu3"),
-                      document.getElementById("contactMenu4")];
+                      document.getElementById("contactMenu4"),
+                      document.getElementById("contactMenu5"),
+                      document.getElementById("contactMenu6")];
 
     function showThis(id){
       for (i = 0; i < contactMenu.length; i++){
