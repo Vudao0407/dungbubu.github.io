@@ -56,12 +56,27 @@ h1 {font-size: 20rem;}
 h2 {font-size: 6.4rem;}
 h3 {font-size: 3.2rem;}
 h4 {font-size: 2.0rem;}
-body {
+body, button {
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: var(--clContent);
 }
+
+/* ------------ --HOME-- ------------ */
+.container, section {height: 100vh;}
+section {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 320px);
+  max-width: 1320px;
+  z-index: 2;
+}
+.container, .navbar {position: fixed; margin: auto; width: 100vw;}
+.container {z-index: 1;}
+.navbar {z-index: 50; }
 
 /* ------------ --WATERMARK-- ------------ */
 .watermark {
@@ -83,9 +98,16 @@ body {
 }
 
 /* ------------ --HEADER & FOOTER-- ------------ */
-.menuFixed {position: absolute; margin: 4rem;}
-#menuTopRight, #menuBottomRight {right: 0; padding-left: 2rem;}
+.menuFixed {position: absolute; margin: 4rem; z-index: 10;}
+#menuTopRight, #menuBottomRight {right: 0;}
 #menuBottomRight, #menuBottomLeft {bottom: 0;}
+
+.menuFixed h4 {padding: 0.5rem; transition: all 200ms ease-out;}
+.menuFixed:hover h4 {
+  padding: 0.5rem 1rem;
+  color: var(--clwmBackground);
+  background-color: var(--clwmTitle);
+}
 
 .menuFixed .decorBullet {
   position: absolute;
@@ -95,18 +117,11 @@ body {
   background-color: var(--clwmTitle);
   transition: all 200ms ease-out;
 }
-.menuFixed h4 {padding: 0.5rem; transition: all 200ms ease-out;}
 #menuTopLeft .decorBullet, #menuBottomLeft .decorBullet {left: 0;}
-#menuTopRight .decorBullet, #menuBottomRight .decorBullet {right: 0;}
-
-#menuTopLeft:hover .decorBullet, 
-#menuBottomLeft:hover .decorBullet {opacity: 1; left: -1rem;}
-#menuTopRight:hover .decorBullet, 
-#menuBottomRight:hover .decorBullet {opacity: 1; right: -1rem;}
-.menuFixed:hover h4 {
-  color: var(--clwmBackground);
-  background-color: var(--clwmTitle);
-}
+#menuTopRight .decorBullet,#menuBottomRight .decorBullet {right: 0;}
+.menuFixed:hover .decorBullet {opacity: 1;}
+#menuTopLeft:hover .decorBullet, #menuBottomLeft:hover .decorBullet {left: -1rem;}
+#menuTopRight:hover .decorBullet, #menuBottomRight:hover .decorBullet {right: -1rem;}
 
 #menuTopLeft {animation: toTopLeft 1200ms ease-out 0ms;}
 @keyframes toTopLeft {
@@ -118,7 +133,6 @@ body {
   from {opacity: 0; bottom: 2rem; left: 4rem;}
   to   {opacity: 1; bottom: 0;    left: 0;}
 }
-
 #menuTopRight {animation: toTopRight 1200ms ease-out 0ms;}
 @keyframes toTopRight {
   from {opacity: 0; top: 2rem; right: 4rem;}
@@ -130,22 +144,40 @@ body {
   to   {opacity: 1; right: 0;    bottom: 0;}
 }
 
+/* ------------ --SIDEMENU-- ------ */
+.sideMenu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-flow: row nowrap;
+}
+.sideMenu a {padding: 1rem 0; transition: all 400ms ease-out;}
+.sideMenu a:hover {padding: 2rem 0; color: var(--clwmTitle); font-weight: 800;}
+
+#sideMenuL a {transform: rotate(180deg);}
+#sideMenuL{left: 4rem; animation: swipeRight 1200ms ease-out 0ms;}
+@keyframes swipeRight {
+  from {opacity: 0; left: 0;}
+  to   {opacity: 1; left: 4rem;}
+}
+
+#sideMenuR {right: 4rem; animation: swipeLeft 1200ms ease-out 0ms;}
+@keyframes swipeLeft {
+  from {opacity: 0; right: 0;}
+  to   {opacity: 1; right: 4rem;}
+}
+
 /* ------------ --NAVBAR (Responsive)-- ------------ */
-#logoTopLeft, #burgerTopRight {display: none;}
-#burgerTopRight {right: 0;}
-#logoTopLeft {animation: toLeft 1200ms ease-out 0ms;}
+.logoFavicon, .burgerMenu {display: none;}
+.logoFavicon {animation: toLeft 1200ms ease-out 0ms;}
 @keyframes toLeft {
   from {opacity: 0; left: 4rem;}
   to   {opacity: 1; left: 0;}
 }
-#burgerTopRight {animation: toRight 1200ms ease-out 0ms;}
-@keyframes toRight {
-  from {opacity: 0; right: 4rem;}
-  to   {opacity: 1; right: 0;}
-}
 
 .burgerMenu {
-  display: flex;
+  right: 0;
   flex-direction: column;
   justify-content: space-between;
   -webkit-box-orient: vertical;
@@ -153,41 +185,35 @@ body {
   -webkit-box-pack: justify;
   width: 24px;
   height: 18px;
+  animation: toRight 1200ms ease-out 0ms;
   transition: all 400ms ease-out;
 }
+@keyframes toRight {
+  from {opacity: 0; right: 4rem;}
+  to   {opacity: 1; right: 0;}
+}
+
 .line-1, .line-2, .line-3 {
   margin-left: auto;
   height: 1.5px;
   background-color: var(--clwmTitle);
   transition: all 240ms ease-out;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
-  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 0, 0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
 }
 .line-1 {width: 100%; transform-origin: 0% 50%;}
 .line-2 {width: 40%; transform-origin: 100% 50%;}
 .line-3 {width: 80%; transform-origin: 0% 50%;}
 
-.burgerMenu.toggle .line-1 {
-  transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1)
-  rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
-}
-.burgerMenu.toggle .line-2 {
-  transform: translate3d(10px, 0px, 0px) scale3d(0, 1, 1)
-  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-}
-.burgerMenu.toggle .line-3 {
-  transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1)
-  rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
-}
-.burgerMenu.toggle .line-1,
-.burgerMenu.toggle .line-2,
-.burgerMenu.toggle .line-3 {
+.burgerMenu.toggle .line-1 {transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 1, 45deg)  skew(0deg, 0deg);}
+.burgerMenu.toggle .line-2 {transform: translate3d(10px, 0px, 0px) scale3d(0, 1, 1) rotate3d(0, 0, 0, 0deg)   skew(0deg, 0deg);}
+.burgerMenu.toggle .line-3 {transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 1, -45deg) skew(0deg, 0deg);}
+.burgerMenu.toggle .line-1, .burgerMenu.toggle .line-2, .burgerMenu.toggle .line-3 {
   width: 100%;
   transform-style: preserve-3d;
 }
 
-/* ------------ --Modal-- ------------ */
+/* ------------ --MOMAL-- ------------ */
 .modal{
   position: fixed;
   top: -100vh;
@@ -206,73 +232,12 @@ body {
 }
 .burgerFill {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
 }
 .burgerFill h3{ margin-bottom: 1rem;}
-
-/* ------------ --SIDEMENU-- ------ */
-.sideMenu {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: row;
-}
-.sideMenu p {
-  padding: 1rem 0;
-  transition: all 400ms ease-out;
-}
-.sideMenu p:hover {
-  padding: 2rem 0;
-  color: var(--clwmTitle);
-  font-weight: 600;
-}
-#sideMenuL a {transform: rotate(180deg);}
-
-#sideMenuL{
-  left: 4rem;
-  animation: swipeRight 1200ms ease-out 0ms;
-}
-@keyframes swipeRight {
-  from {opacity: 0; left: 0;}
-  to   {opacity: 1; left: 4rem;}
-}
-
-#sideMenuR {
-  right: 4rem;
-  animation: swipeLeft 1200ms ease-out 0ms;
-}
-@keyframes swipeLeft {
-  from {opacity: 0; right: 0;}
-  to   {opacity: 1; right: 4rem;}
-}
-
-/* ------------ --HOME-- ------------ */
-.container, section {height: 100vh;}
-section {width: calc(100vw - 320px);}
-.container {
-  position: fixed;
-  margin: auto;
-  width: 100vw;
-  z-index: 1;
-}
-section {
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1320px;
-  z-index: 2;
-}
-.navbar{
-  position: fixed;
-  margin: auto;
-  width: 100vw;
-  z-index: 50;
-}
 
 /* ------------ --SECTION 1-- ------------ */
 .sectionHero {
@@ -283,27 +248,22 @@ section {
   display: flex;
   flex-direction: row;
 }
+
 /* ------------ */
-.imageHero {position: relative;}
-.imageHero img {
-  position: relative;
-  z-index: 3;
-  animation: flyUp 1200ms ease-out 0ms;
-}
+
+.imageHero, .imageHero img {position: relative;}
+.imageHero img {z-index: 3; animation: flyUp 1200ms ease-out 0ms;}
 @keyframes flyUp {
   from {top: 4.8rem;}
   to   {top: 0;}
 }
-.imageHero img.ui-droppable-over{
-  right: inherit;
-  bottom: inherit;
-}
+.imageHero img.ui-droppable-over{right: inherit; bottom: inherit;}
+
 .imageHero h2 {
   position: absolute;
   left: 0;
   bottom: 0;
   transform: translate(-68%) rotate(180deg);
-  writing-mode: vertical-rl;
   color: var(--clContent);
   animation: flyDown 1200ms ease-out 0ms;
 }
@@ -311,6 +271,7 @@ section {
   from {opacity: 0; bottom: 8rem;}
   to   {opacity: 1; bottom: 0;}
 }
+
 .imageHero .decorDot {
   position: absolute;
   top: 0;
@@ -330,10 +291,8 @@ section {
 }
 
 /* ------------ */
-.contentHero {
-  margin: auto 0 0 6rem;
-  position: relative;
-}
+
+.contentHero {position: relative; margin: auto 0 0 6rem;}
 .contentHero div:first-child {
   position: relative;
   bottom: 0;
@@ -343,11 +302,13 @@ section {
   from {opacity: 0; bottom: -6rem;}
   to   {opacity: 1; bottom: 0;}
 }
+
+.contentHero h2, .contentHero .textVertical {margin-left: -0.4rem;}
 .contentHero .textVertical {
   position: relative;
   margin-top: 2rem;
 }
-.contentHero h2, .contentHero .textVertical {margin-left: -0.4rem;}
+
 .contentHero .line {
   position: absolute;
   top: calc(100% + 1rem);
@@ -374,26 +335,22 @@ section {
   grid-gap: 0;
 }
 .sectionAbout h2 { grid-area: 1 / 1 / 1 / 1; }
-#galleryItem1 { grid-area: 2 / 1 / span 2 / 1; }
-#galleryItem2 { grid-area: 1 / 2 / span 2 / span 2; }
-#galleryItem3 { grid-area: 3 / 2 / 3 / 2; }
-#galleryItem4 { grid-area: 3 / 3 / 3 / 3; }
-#galleryItem5 { grid-area: 1 / 4 / span 3 / 4; }
+#galleryItem1    { grid-area: 2 / 1 / span 2 / 1; }
+#galleryItem2    { grid-area: 1 / 2 / span 2 / span 2; }
+#galleryItem3    { grid-area: 3 / 2 / 3 / 2; }
+#galleryItem4    { grid-area: 3 / 3 / 3 / 3; }
+#galleryItem5    { grid-area: 1 / 4 / span 3 / 4; }
 
 /* ------------ */
-.frontContent, .backContent, .galleryItem, .galleryItem img {
-  width: 100%;
-  height: 100%;   
-}
+
+.frontContent, .backContent, .galleryItem, .galleryItem img {width: 100%; height: 100%;   }
 .galleryItem {
   position: relative;
-  text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-.flip-box:hover .galleryItem {
-  transform: rotateY(180deg);
-}
+.flip-box:hover .galleryItem {transform: rotateY(180deg);}
+
 .frontContent, .backContent{
   position: absolute;   
   -webkit-backface-visibility: hidden;
@@ -404,6 +361,7 @@ section {
   object-fit: cover;
   object-position: center;
 }
+
 .backContent {
   padding: 2rem;
   display: flex;
@@ -421,31 +379,28 @@ section {
   transform: translate(-50%, -50%);
   width: 100%;
 }
+
 .sectionProject h2 {
   margin: 0 0 4rem auto;
   text-align: right;
   opacity: 1;
 }
 
-.projectMenu {
-  position: relative;
-  padding-bottom: 4rem;
-}
+.projectMenu {position: relative; padding-bottom: 4rem;}
 .projectMenu h3 {
   position: relative;
   left: 8rem;
   transition: all 400ms ease-out;
 }
 .projectMenu:hover h3 {transform: translateX(4rem);}
+#projectMenu1.hide h3, #projectMenu2.hide h3, #projectMenu3.hide h3 {color: var(--clwmHideState);}
+
 .projectMenu .line {
   width: 100%;
   height: 0.1rem;
   margin: 0.5rem 0 2rem 0;
   background-color: var(--clwmHideState);
 }
-#projectMenu1.hide h3, #projectMenu2.hide h3,
-#projectMenu3.hide h3 {color: var(--clwmHideState);}
-
 
 .sectionProject .decorDot {
   position: absolute;
@@ -497,21 +452,14 @@ section {
 
 /* ------------ ------------ ------------ ------------ */
 /* ------------ --RESPONSIVE-- ------------ */
-@media (max-width: 1660px) {
-  section {max-width: 1140px;}
-}
-@media (max-width: 1200px) {
-  section {max-width: 960px;}
-}
+/* @media (max-width: 1660px) {section {max-width: 1140px;}} */
+
+@media (max-width: 1200px) {section {max-width: 960px;}}
+
 @media (max-width: 992px) {
-  section {max-width: 720px;}
-}
-@media (max-width: 768px) {
-  section {max-width: 540px;}
-}
-@media (max-width: 579px) {
+  section {width: calc(100vw - 120px); max-width: 870px;}
+
   /* --GENERAL-- */
-  section {width: calc(100vw - 60px);}
   img {width: 50vw;}
   h1 {font-size: 10rem;}
   h2 {font-size: 2.0rem;}
@@ -525,7 +473,7 @@ section {
   #sideMenuL, #sideMenuR {display: none;}
   
   /* --NAVBAR (Responsive)-- */
-  #logoTopLeft, #burgerTopRight {display: flex;}
+  .logoFavicon, .burgerMenu {display: flex;}
 
   /* --SECTION 1-- */
   .decorDot {grid-gap: 1.2rem;}
@@ -540,18 +488,9 @@ section {
 
   /* --SECTION 2-- */
   .sectionAbout h2 {margin-right: 2rem;}
-  .sectionAbout {
-    display: flex;
-    flex-flow: row nowrap;
-    overflow-y: hidden;
-  }
-  .flip-box{
-    flex-shrink: 0;
-    width: 95%;
-  }
-  .frontContent img {
-    padding: 0 2rem 0 0;
-  }
+  .sectionAbout {display: flex; flex-flow: row nowrap; overflow-y: hidden;}
+  .flip-box{flex-shrink: 0; width: 95%;}
+  .frontContent img {padding: 0 2rem 0 0; }
 
   /* --SECTION 3-- */
   .projectMenu {padding-bottom: 2.4rem;}
@@ -567,9 +506,10 @@ section {
     grid-template-columns: repeat(6, 0.2rem);
     grid-template-rows: repeat(12, 0.2rem);
   }
-  .contentContact {
-    margin-left: 1rem;
-    row-gap: 1rem;
-  }
+  .contentContact {margin-left: 1rem; row-gap: 1rem;}
   .socialMenu {column-gap: 2rem;}
 }
+
+@media (max-width: 768px) {section {max-width: 540px;}}
+
+@media (max-width: 579px) {section {width: calc(100vw - 60px);}}
