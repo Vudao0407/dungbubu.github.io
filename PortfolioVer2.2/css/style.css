@@ -1,12 +1,12 @@
 /* ------------ --FONTS-- ------------ */
 @font-face {
   font-family: Philosopher, sans-serif;
-  font-display: swap;
+  font-display: block;
   src: url(../font/philosopher/Philosopher-Regular.ttf);
 }
 @font-face {
   font-family: Mulish, sans-serif;
-  font-display: swap;
+  font-display: block;
   src: url(../font/mulish/Mulish-Light.ttf);
 }
 
@@ -240,7 +240,7 @@ section {
 @media (max-width: 579px) {section {width: calc(100vw - 100px);}
 
   /* --GENERAL-- */
-  img {width: 50vw;}
+  img {width: 50vmin;}
   h1 {font-size: 10rem;}
   h2 {font-size: 2.0rem;}
   h3 {font-size: 1.6rem;}

@@ -212,7 +212,7 @@
   .contentContact {
     margin-left: 6rem;
     display: grid;
-    row-gap: 4rem;
+    row-gap: 2.8rem;
   }
   .contentContact p {
     position: relative;
