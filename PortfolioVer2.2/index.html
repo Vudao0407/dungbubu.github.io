@@ -485,12 +485,16 @@
     <script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
     <!-- jQuery Ui library -->
     <script src="./lib/jQueryUi-1.3.1.1/jquery-ui.js"></script>
-    <!-- Hamburger Menu -->
-    <script src="./js/hamburger.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
     <script>
+      // Hàm tạo hiệu ứng cho Humburger menu
+      function hamburgerFunction() {
+        document.querySelector(".burgerMenu").classList.toggle("toggle");
+        document.querySelector(".modal").classList.toggle("toggle");
+      }
+
       // Đo kích thước cho đường kẻ dọc chỗ scroll
       $('.sectionHero .line').height(($(window).height() - $('.sectionHero').height()) / 2 - 10);
 
@@ -525,7 +529,6 @@
       var projectMenu = [document.getElementById("projectMenu1"),
                         document.getElementById("projectMenu2"),
                         document.getElementById("projectMenu3")];
-
       function activeThis(id){
         for (i = 0; i < projectMenu.length; i++){
           projectMenu[i].classList.add("hide");
@@ -546,7 +549,6 @@
                         document.getElementById("contactMenu5"),
                         document.getElementById("contactMenu6"),
                         document.getElementById("contactMenu7")];
-
       function showThis(id){
         for (i = 0; i < contactMenu.length; i++){
           contactMenu[i].classList.add("hide");
