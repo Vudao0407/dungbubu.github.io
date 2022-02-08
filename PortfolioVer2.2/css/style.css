@@ -1,12 +1,12 @@
 /* ------------ --FONTS-- ------------ */
 @font-face {
-  font-family: Philosopher, sans-serif;
-  font-display: block;
+  font-family: Philosopher;
+  font-display: swap;
   src: url(./font/philosopher/Philosopher-Regular.ttf);
 }
 @font-face {
-  font-family: Mulish, sans-serif;
-  font-display: block;
+  font-family: Mulish;
+  font-display: swap;
   src: url(./font/mulish/Mulish-Light.ttf);
 }
 
