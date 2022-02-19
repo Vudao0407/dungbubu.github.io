@@ -63,19 +63,19 @@
 
     <div class="container">
       <!-- //////////// HEADER & FOOTER //////////// -->
-      <a id="menuTopLeft" class="menuFixed" href="#section1">
+      <a id="menuTopLeft" class="menuFixed" href="./index.html">
         <div class="decorBullet"></div>
         <h4>.dungbubu</h4>
       </a>
-      <a id="menuTopRight" class="menuFixed" href="#section4">
+      <a id="menuTopRight" class="menuFixed" href="./index.html#section4">
         <div class="decorBullet"></div>
         <h4>contact</h4>
       </a>
-      <a id="menuBottomRight" class="menuFixed" href="#section3">
+      <a id="menuBottomRight" class="menuFixed" href="./index.html#section3">
         <div class="decorBullet"></div>
         <h4>project</h4>
       </a>
-      <a id="menuBottomLeft" class="menuFixed" href="#section2">
+      <a id="menuBottomLeft" class="menuFixed" href="./index.html#section2">
         <div class="decorBullet"></div>
         <h4>about</h4>
       </a>
@@ -109,10 +109,10 @@
 
     <div class="modal">
       <div class="burgerFill">
-        <h3><a href="#section1">home</a></h3>
-        <h3><a href="#section2">about</a></h3>
-        <h3><a href="#section3">project</a></h3>
-        <h3><a href="#section4">contact</a></h3>
+        <h3><a href="./index.html">home</a></h3>
+        <h3><a href="./index.html#section2">about</a></h3>
+        <h3><a href="./index.html#section3">project</a></h3>
+        <h3><a href="./index.html#section4">contact</a></h3>
       </div>
     </div>
 
@@ -123,48 +123,61 @@
         <div class="subMenu">
           <a href="" role="button">All</a>
           <a href="" role="button">Web . Landing page</a>
-          <a href="" role="button">Presentation</a>
-          <a href="" role="button">Motion graphic</a>
+          <a href="" role="button">PowerPoint</a>
+          <a href="https://dungbubu.com/youtube" target="_blank">Motion graphic</a>
         </div>
       </div>
 
       <div class="grid">
         <div class="grid-sizer"></div>
-        <div class="gutter-sizer"></div>
+        <!-- <div class="gutter-sizer"></div> -->
 
-        <div class="grid-item">
-          <img src="./img/home/dungbubu.png" alt="" loading="lazy">
-          <h4>Tên project</h4>
+        <div class="grid-item" loading="lazy">
+          <img src="./img/project/FirstAlliances.png" alt="FirstAlliances Powerpoint Design">
+          <div class="content">
+            <h4>FirstAlliances</h4>
+            <p>PowerPoint</p>
+          </div>
         </div>
 
-        <div class="grid-item">
-          <img src="./img/home/dungbubu.png" alt="" loading="lazy">
-          <h4>Tên project</h4>
+        <div class="grid-item" loading="lazy">
+          <img src="./img/project/iNETDomainWebsite.png" alt="iNET Domain .website Landing Page">
+          <div class="content">
+            <h4>Domain Website</h4>
+            <p>Landing Page</p>
+          </div>
         </div>
 
-        <div class="grid-item">
-          <img src="./img/home/dungbubu.png" alt="" loading="lazy">
-          <h4>Tên project</h4>
+        <div class="grid-item" loading="lazy">
+          <img src="./img/project/iNETDomainPress.png" alt="iNET Domain .press Landing Page">
+          <div class="content">
+            <h4>Domain Press</h4>
+            <p>Landing Page</p>
+          </div>
         </div>
 
-        <div class="grid-item">
-          <img src="./img/home/dungbubu.png" alt="" loading="lazy">
-          <h4>Tên project</h4>
+        <div class="grid-item" loading="lazy">
+          <img src="./img/project/iNETDomainSite.png" alt="iNET Domain .site Landing Page">
+          <div class="content">
+            <h4>Domain Site</h4>
+            <p>Landing Page</p>
+          </div>
         </div>
 
-        <div class="grid-item">
-          <img src="./img/home/dungbubu.png" alt="" loading="lazy">
-          <h4>Tên project</h4>
+        <div class="grid-item" loading="lazy">
+          <img src="./img/project/iNETDomainOnline.png" alt="iNET Domain .online Landing Page">
+          <div class="content">
+            <h4>Domain Online</h4>
+            <p>Landing Page</p>
+          </div>
         </div>
 
-        <div class="grid-item">
-          <img src="./img/home/dungbubu.png" alt="" loading="lazy">
-          <h4>Tên project</h4>
-        </div>
-
-        <div class="grid-item">
-          <img src="./img/home/dungbubu.png" alt="" loading="lazy">
-          <h4>Tên project</h4>
+        <div class="grid-item" loading="lazy">
+          <img src="./img/project/TetLandingPage.png" alt="Tết Landing Page">
+          <div class="content">
+            <h4>Tết 2022</h4>
+            <p>Landing Page</p>
+          </div>
         </div>
 
       </div>
@@ -204,31 +217,20 @@
         document.querySelector(".modal").classList.toggle("toggle");
       }
 
-      // Hàm add/remove trạng thái .hide khi "hover" vào các mục Project
-      var projectMenu = [document.getElementById("projectMenu1"),
-                        document.getElementById("projectMenu2"),
-                        document.getElementById("projectMenu3")];
-      function activeThis(id){
-        for (i = 0; i < projectMenu.length; i++){
-          projectMenu[i].classList.add("hide");
-        }
-        document.getElementById(id).classList.remove("hide");
-      }
-      function deactiveAll(){
-        for (i = 0; i < projectMenu.length; i++) {
-          projectMenu[i].classList.remove("hide");
-        }
-      }
-
       // Hàm chạy thư viện Masonry
       $('.grid').imagesLoaded(function(){
         $('.grid').masonry({
           columnWidth: '.grid-sizer',
-          gutter: '.gutter-sizer',
+          // gutter: '.gutter-sizer',
           itemSelector: '.grid-item',
           stagger: 20,
           percentPosition: true
         });
+      });
+  
+      $('.grid').on('click','.grid-item', function() {
+        $(this).toggleClass('grid-item-active');
+        $('.grid').masonry();
       });
     </script>
   </body>

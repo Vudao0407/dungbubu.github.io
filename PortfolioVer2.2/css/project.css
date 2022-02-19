@@ -1,14 +1,49 @@
 /* ------------ --PROJECT-- ------------ */
 section {padding-top: 12rem;}
-img {width: 100%; box-sizing: border-box;}
+img {width: 100%; border-radius: 2px;}
 
-.title {display: flex; flex-direction: column; align-items: center;}
+.title {display: flex; flex-direction: column; align-items: center; text-align: center;}
 .subMenu {margin: 1rem 0 12rem 0;}
 .subMenu a {margin: 0 2rem; transition: all 400ms ease-out;}
 .subMenu a:hover {color: var(--clwmTitle); font-weight: 800;}
 
 .grid {width: 100%;}
 .grid:after {content: ''; display: block; clear: both;} /* Clear fix */
-.grid-item, .grid-sizer {width: 24%;} /* Độ rộng cột */
-.gutter-sizer {width: calc(4% / 3);} /* Khoảng cách ngang giữa các đối tượng */
-.grid-item {position: relative; float: left; margin-bottom: 2rem;}
+.grid-item, .grid-sizer {width: calc(100% / 6);} /* Độ rộng cột */
+/*.gutter-sizer {width: 2rem;}  Khoảng cách ngang giữa các đối tượng */
+
+.grid-item {
+  position: relative;
+  float: left;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+/* .grid-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+} */
+.grid-item-active {width: calc(100% / 4);}
+.grid-item .content {padding: 1.2rem;}
+
+
+/* ------------ ------------ ------------ ------------ */
+/* ------------ --RESPONSIVE-- ------------ */
+@media (max-width: 1600px) {
+  section {padding-top: 6rem;}
+  .subMenu {margin-bottom: 6rem;}
+  .subMenu a {margin: 0 0.5rem;}
+  .grid-item, .grid-sizer {width: calc(100% / 4); padding: 1.5rem;}
+  .grid-item-active {width: 50%;}
+  .grid-item .content {padding: .6rem;}
+}
+
+@media (max-width: 579px) {
+  section {padding-top: 4rem;}
+  .subMenu {margin-bottom: 4rem;}
+  .subMenu a {margin: 0 1rem;}
+  .grid-item, .grid-sizer {width: calc(100% / 2); padding: 1rem;}
+  .grid-item {margin-bottom: 1.5rem;}
+  .grid-item-active {width: 100%;}
+  .grid-item .content {padding: 0.2rem;}
+}
