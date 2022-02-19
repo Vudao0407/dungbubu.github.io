@@ -51,16 +51,16 @@
       gtag('js', new Date());
       gtag('config', 'G-D5K2K1N41X');
     </script>
-
-    <!-- Câu chào trong Console -->
-    <script>
-      console.log("%c😎 Hi there!","font-size: 24px;",);
-      console.log("%cDesigned & coded by myself.","font-size: 12px;");
-    </script>
   </head>
 
 
   <body>
+    <div class="cursorCustom">
+      <!-- //////////// CUSOR //////////// -->
+      <div class="cursor cursor-follower"></div>
+      <div class="cursor cursor-dot"></div>
+    </div>
+
     <div class="container">
       <!-- //////////// WATERMARK //////////// -->
       <h1 id="watermark">dungbubu</h1>
@@ -305,27 +305,30 @@
 
         <div>
           <div id="projectMenu1" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-            <a href="https://dungbubu.com/behance" target="_blank">
+            <a href="./project.html">
               <p>01.</p>
               <div class="line"></div>
               <h3>Website Design</h3>
             </a>
+            <img src="./img/home/dungbubu.png" alt="test">
           </div>
 
           <div id="projectMenu2" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-            <a href="https://dungbubu.com/dribbble" target="_blank">
+            <a href="./project.html">
               <p>02.</p>
               <div class="line"></div>
               <h3>Presentation</h3>
             </a>
+            <img src="./img/home/dungbubu.png" alt="test">
           </div>
 
           <div id="projectMenu3" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-            <a href="https://dungbubu.com/youtube" target="_blank">
+            <a href="https://dungbubu.com/youtube">
               <p>03.</p>
               <div class="line"></div>
               <h3>Motion Graphic</h3>
             </a>
+            <img src="./img/home/dungbubu.png" alt="test">
           </div>
 
           <div class="decorDot">
@@ -489,6 +492,23 @@
 
 
     <script>
+      // Câu chào trong Console
+      console.clear();
+      console.log("%c😎 Hi there!","font-size: 24px;",);
+      console.log("%cDesigned & coded by myself.","font-size: 12px;");
+
+      // Thay đổi con trỏ chuột
+      $(window).mousemove(function(e) { 
+        $('.cursor').css({
+          left: e.pageX,
+          top: e.pageY
+        })
+      })
+
+      $('a, .flip-box, .projectMenu')
+      .on('mouseenter', function() {$('.cursor').addClass('focus')})
+      .on('mouseleave', function() {$('.cursor').removeClass('focus')})
+
       // Hàm tạo hiệu ứng cho Humburger menu
       function hamburgerFunction() {
         document.querySelector(".burgerMenu").classList.toggle("toggle");
@@ -540,6 +560,13 @@
           projectMenu[i].classList.remove("hide");
         }
       }
+
+      // Hàm tạo hiệu ứng hình ảnh khi "hover" vào các mục Project
+      const sec3 = document.querySelector("#section3");
+      document.body.addEventListener("mousemove", (event) => {
+        sec3.style.setProperty("--x", event.clientX);
+        sec3.style.setProperty("--y", event.clientY);
+      });
 
       // Hàm add/remove trạng thái .hide khi "hover" vào các mục Contact
       var contactMenu = [document.getElementById("contactMenu1"),

@@ -1,0 +1,14 @@
+/* ------------ --PROJECT-- ------------ */
+section {padding-top: 12rem;}
+img {width: 100%; box-sizing: border-box;}
+
+.title {display: flex; flex-direction: column; align-items: center;}
+.subMenu {margin: 1rem 0 12rem 0;}
+.subMenu a {margin: 0 2rem; transition: all 400ms ease-out;}
+.subMenu a:hover {color: var(--clwmTitle); font-weight: 800;}
+
+.grid {width: 100%;}
+.grid:after {content: ''; display: block; clear: both;} /* Clear fix */
+.grid-item, .grid-sizer {width: 24%;} /* Độ rộng cột */
+.gutter-sizer {width: calc(4% / 3);} /* Khoảng cách ngang giữa các đối tượng */
+.grid-item {position: relative; float: left; margin-bottom: 2rem;}

@@ -146,6 +146,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: justify;
+    background-color: var(--clwmBackground);
     transform: rotateY(180deg);
   }
   .backContent h4 {text-align: right;}
@@ -172,13 +173,34 @@
     transition: all 400ms ease-out;
   }
   .projectMenu:hover h3 {transform: translateX(4rem);}
-  #projectMenu1.hide h3, #projectMenu2.hide h3, #projectMenu3.hide h3 {color: var(--clwmHideState);}
+  .projectMenu.hide h3 {color: var(--clwmHideState);}
   
   .projectMenu .line {
     width: 100%;
     height: 0.1rem;
     margin: 0.5rem 0 2rem 0;
     background-color: var(--clwmHideState);
+  }
+
+  .sectionProject img {
+    position: fixed;
+    max-width: 40%;
+    max-height: 60vh;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms linear;
+    z-index: 100;
+    /* Dùng Js để tính toán đoạn sau */
+    --x-px: calc(var(--x) * 0.8px);
+    --y-px: calc(var(--y) * 0.8px);
+    top: 0;
+    left: 0;
+    transform: translate(var(--x-px), var(--y-px)) translate(-50%, -50%);
+  }
+  .projectMenu:hover img {
+    visibility: visible;
+    opacity: 1;
   }
   
   .sectionProject .decorDot {
@@ -241,6 +263,7 @@
   
     /* --SECTION 3-- */
     .sectionProject .decorDot {transform: translate(10%, 20%);}
+    .projectMenu:hover h3 {transform: translateX(2rem);}
   
     /* --SECTION 4-- */
     .contentContact {margin-left: 2rem; row-gap: 1rem;}
