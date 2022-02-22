@@ -197,6 +197,8 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuery library -->
     <script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
+    <!-- ImagesLoaded library -->
+    <script src="./lib/ImagesLoaded-4.1.2/imagesloaded.pkgd.min.js"></script>
     <!-- Isotope library -->
     <script src="./lib/Isotope/isotope.pkgd.min.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
@@ -226,25 +228,17 @@
         document.querySelector(".modal").classList.toggle("toggle");
       }
 
-      // Hàm chạy thư viện Isotop - Layout Masonry
-      var $grid = $('.grid').isotope({
-        itemSelector: '.grid-item',
-        stagger: 20,
-        percentPosition: true,
-        masonry: {
-          columnWidth: '.grid-sizer',
-          gutter: '.gutter-sizer'
-        }
-      });
-
-      // layout Isotope after each image loads
-      // $grid.imagesLoaded().progress( function() {
-      //   $grid.isotope('layout');
-      // });
-  
-      $('.grid').on('click','.grid-item', function() {
-        $(this).toggleClass('grid-item-active');
-        $('.grid').masonry();
+      // Hàm chạy thư viện ImagesLoaded > Isotope > Masonry
+      var $grid = $('.grid').imagesLoaded( function() {
+        $grid.isotope({
+          itemSelector: '.grid-item',
+          stagger: 20,
+          percentPosition: true,
+          masonry: {
+            columnWidth: '.grid-sizer',
+            gutter: '.gutter-sizer'
+          }
+        });
       });
 
       // Hàm chạy filter Menu
@@ -253,13 +247,19 @@
         $grid.isotope({ filter: filterValue });
       });
 
-      // change is-checked class on buttons
+      // Hàm kiểm tra và thêm trạng thái Click cho các button
       $('.button-group').each( function( i, buttonGroup ) {
         var $buttonGroup = $( buttonGroup );
         $buttonGroup.on( 'click', 'button', function() {
           $buttonGroup.find('.is-checked').removeClass('is-checked');
           $( this ).addClass('is-checked');
         });
+      });
+  
+      // Hàm tạo hiệu ứng click để phóng to ảnh trong List Project
+      $('.grid').on('click','.grid-item', function() {
+        $(this).toggleClass('grid-item-active');
+        $grid.isotope();
       });
     </script>
   </body>
