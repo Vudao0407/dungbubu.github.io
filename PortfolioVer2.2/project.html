@@ -120,19 +120,29 @@
     <section id="sectionProject">
       <div class="title">
         <h2>project</h2>
-        <div class="subMenu">
-          <a href="" role="button">All</a>
-          <a href="" role="button">Web . Landing page</a>
-          <a href="" role="button">PowerPoint</a>
-          <a href="https://dungbubu.com/youtube" target="_blank">Motion graphic</a>
+        <div class="button-group filter-button-group">
+          <button class="button is-checked" data-filter="*">All</button>
+          <button class="button" data-filter=".grid-item--weblandingpage">Web . Landing page</button>
+          <button class="button" data-filter=".grid-item--powerpoint">PowerPoint</button>
+          <button class="button">
+            <a href="https://dungbubu.com/youtube" target="_blank">Motion graphic</a>
+          </button>
         </div>
       </div>
 
       <div class="grid">
         <div class="grid-sizer"></div>
-        <!-- <div class="gutter-sizer"></div> -->
+        <div class="gutter-sizer"></div>
 
-        <div class="grid-item" loading="lazy">
+        <div class="grid-item grid-item--weblandingpage" loading="lazy">
+          <img src="./img/project/iNETDomainXyz.png" alt="iNET Domain .xyz Landing Page">
+          <div class="content">
+            <h4>Domain Xyz</h4>
+            <p>Landing Page</p>
+          </div>
+        </div>
+
+        <div class="grid-item grid-item--powerpoint" loading="lazy">
           <img src="./img/project/FirstAlliances.png" alt="FirstAlliances Powerpoint Design">
           <div class="content">
             <h4>FirstAlliances</h4>
@@ -140,7 +150,7 @@
           </div>
         </div>
 
-        <div class="grid-item" loading="lazy">
+        <div class="grid-item grid-item--weblandingpage" loading="lazy">
           <img src="./img/project/iNETDomainWebsite.png" alt="iNET Domain .website Landing Page">
           <div class="content">
             <h4>Domain Website</h4>
@@ -148,7 +158,7 @@
           </div>
         </div>
 
-        <div class="grid-item" loading="lazy">
+        <div class="grid-item grid-item--weblandingpage" loading="lazy">
           <img src="./img/project/iNETDomainPress.png" alt="iNET Domain .press Landing Page">
           <div class="content">
             <h4>Domain Press</h4>
@@ -156,7 +166,7 @@
           </div>
         </div>
 
-        <div class="grid-item" loading="lazy">
+        <div class="grid-item grid-item--weblandingpage" loading="lazy">
           <img src="./img/project/iNETDomainSite.png" alt="iNET Domain .site Landing Page">
           <div class="content">
             <h4>Domain Site</h4>
@@ -164,7 +174,7 @@
           </div>
         </div>
 
-        <div class="grid-item" loading="lazy">
+        <div class="grid-item grid-item--weblandingpage" loading="lazy">
           <img src="./img/project/iNETDomainOnline.png" alt="iNET Domain .online Landing Page">
           <div class="content">
             <h4>Domain Online</h4>
@@ -172,7 +182,7 @@
           </div>
         </div>
 
-        <div class="grid-item" loading="lazy">
+        <div class="grid-item grid-item--weblandingpage" loading="lazy">
           <img src="./img/project/TetLandingPage.png" alt="Tết Landing Page">
           <div class="content">
             <h4>Tết 2022</h4>
@@ -187,9 +197,8 @@
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
     <!-- jQuery library -->
     <script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
-    <!-- Masonry library -->
-    <script src="./lib/Masonry-4.2.2/masonry.pkgd.min.js"></script>
-    <script src="./lib/ImagesLoaded-4.1.2/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope library -->
+    <script src="./lib/Isotope/isotope.pkgd.min.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
@@ -207,7 +216,7 @@
         })
       })
 
-      $('a, .flip-box, .projectMenu')
+      $('a, button')
       .on('mouseenter', function() {$('.cursor').addClass('focus')})
       .on('mouseleave', function() {$('.cursor').removeClass('focus')})
 
@@ -217,20 +226,40 @@
         document.querySelector(".modal").classList.toggle("toggle");
       }
 
-      // Hàm chạy thư viện Masonry
-      $('.grid').imagesLoaded(function(){
-        $('.grid').masonry({
+      // Hàm chạy thư viện Isotop - Layout Masonry
+      var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        stagger: 20,
+        percentPosition: true,
+        masonry: {
           columnWidth: '.grid-sizer',
-          // gutter: '.gutter-sizer',
-          itemSelector: '.grid-item',
-          stagger: 20,
-          percentPosition: true
-        });
+          gutter: '.gutter-sizer'
+        }
       });
+
+      // layout Isotope after each image loads
+      // $grid.imagesLoaded().progress( function() {
+      //   $grid.isotope('layout');
+      // });
   
       $('.grid').on('click','.grid-item', function() {
         $(this).toggleClass('grid-item-active');
         $('.grid').masonry();
+      });
+
+      // Hàm chạy filter Menu
+      $('.filter-button-group').on( 'click', '.button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+      });
+
+      // change is-checked class on buttons
+      $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          $( this ).addClass('is-checked');
+        });
       });
     </script>
   </body>
