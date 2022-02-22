@@ -166,7 +166,7 @@
     opacity: 1;
   }
   
-  .projectMenu {position: relative; padding-bottom: 4rem;}
+  .projectMenu {position: relative; padding-bottom: 2.5rem;}
   .projectMenu h3 {
     position: relative;
     left: 8rem;
@@ -285,7 +285,7 @@
     .frontContent img {padding: 0 2rem 0 0; }
   
     /* --SECTION 3-- */
-    .projectMenu {padding-bottom: 2.4rem;}
+    .projectMenu {padding-bottom: 1.5rem;}
     .projectMenu h3 {left: 2rem;}
     .projectMenu .line {margin: 0.5rem 0 1rem 0;}
     .sectionProject .decorDot {
