@@ -166,16 +166,17 @@
     opacity: 1;
   }
   
-  .projectMenu {display: block; position: relative; margin-bottom: 4rem;}
-  .projectMenu h3 {
+  .projectMenu {margin-left: auto; width: 90%;}
+  .project-item {display: block; position: relative; margin-bottom: 4rem;}
+  .project-item h3 {
     position: relative;
     left: 8rem;
     transition: all 400ms ease-out;
   }
-  .projectMenu:hover h3 {transform: translateX(4rem);}
-  .projectMenu.hide h3 {color: var(--clHideState);}
+  .project-item:hover h3 {transform: translateX(4rem);}
+  .project-item.hide h3 {color: var(--clHideState);}
   
-  .projectMenu .line {
+  .project-item .line {
     width: 100%;
     height: 0.1rem;
     margin: 0.5rem 0 2rem 0;
@@ -198,7 +199,7 @@
     left: 0;
     transform: translate(var(--x-px), var(--y-px)) translate(-50%, -50%);
   }
-  .projectMenu:hover img {
+  .project-item:hover img {
     visibility: visible;
     opacity: 1;
   }
@@ -259,8 +260,9 @@
     .flip-box{flex-shrink: 0; width: 95%;}
   
     /* --SECTION 3-- */
+    .projectMenu {width: 100%;}
     .sectionProject .decorDot {transform: translate(10%, 20%);}
-    .projectMenu:hover h3 {transform: translateX(2rem);}
+    .project-item:hover h3 {transform: translateX(2rem);}
   
     /* --SECTION 4-- */
     .contentContact {margin-left: 2rem; row-gap: 1rem;}
@@ -279,12 +281,13 @@
     .contentHero {margin: auto 0 0 1rem;}
   
     /* --SECTION 2-- */
+    .sectionAbout {height: 60vh;}
     .frontContent img {padding: 0 2rem 0 0; }
   
     /* --SECTION 3-- */
-    .projectMenu {margin-bottom: 2rem;}
-    .projectMenu h3 {left: 2rem;}
-    .projectMenu .line {margin: 0.5rem 0 1rem 0;}
+    .project-item {margin-bottom: 2rem;}
+    .project-item h3 {left: 2rem;}
+    .project-item .line {margin: 0.5rem 0 1rem 0;}
     .sectionProject .decorDot {
       grid-template-columns: repeat(12, 0.2rem);
       grid-template-rows: repeat(2, 0.2rem);

@@ -94,26 +94,39 @@
       <!-- //////////// SIDEMENU RIGHT //////////// -->
       <div id="sideMenuR" class="sideMenu textVertical">
         <a id="toggleDarkmode" role="button">darkmode</a>
-        <!-- <a href="" role="button">sound</a> -->
+        <!-- <a id="toggleSoundmode" role="button">sound</a> -->
       </div>
     </div>
 
     <div class="navbar">
       <!-- //////////// NAVBAR (Responsive) //////////// -->
-      <a class="logoFavicon menuFixed" href="#section1"><h4>.d</h4></a>
-      <button class="burgerMenu menuFixed" onclick="hamburgerFunction()">
+      <a class="logoFavicon" href="#section1"><h4>.d</h4></a>
+      <button class="burgerMenu" onclick="hamburgerFunction()">
         <span class="line-1"></span>
         <span class="line-2"></span>
         <span class="line-3"></span>
       </button>
-    </div>
 
-    <div class="modal">
-      <div class="burgerFill">
-        <h2><a href="#section1">home</a></h2>
-        <h2><a href="#section2">about</a></h2>
-        <h2><a href="#section3">project</a></h2>
-        <h2><a href="#section4">contact</a></h2>
+      <div class="modal">
+        <div class="burgerFill">
+          <h2><a href="#section1">home</a></h2>
+          <h2><a href="#section2">about</a></h2>
+          <h2><a href="#section3">project</a></h2>
+          <h2><a href="#section4">contact</a></h2>
+
+          <hr>
+
+          <h3><a href="https://dungbubu.com/youtube" target="_blank">utube</a></h3>
+          <h3><a href="https://dungbubu.com/instagram" target="_blank">insta</a></h3>
+          <h3><a href="https://dungbubu.com/behance" target="_blank">behance</a></h3>
+          <h3><a href="https://dungbubu.com/dribbble" target="_blank">dribble</a></h3>
+
+          <hr>
+
+          <a id="toggleDarkmode" role="button"><h3>darkmode</h3></a>
+          <!-- <a id="toggleSoundmode" role="button"><h3>sound</h3></a> -->
+          
+        </div>
       </div>
     </div>
 
@@ -301,22 +314,22 @@
       <div class="sectionProject">
         <h2>project</h2>
 
-        <div>
-          <a class="projectMenu" href="./project.html">
+        <div class="projectMenu">
+          <a class="project-item" href="./project.html">
               <p>01.</p>
               <div class="line"></div>
               <h3>Web . Landing page</h3>
             <img src="./img/home/dungbubu.png" alt="test">
           </a>
 
-          <a class="projectMenu" href="./project.html">
+          <a class="project-item" href="./project.html">
               <p>02.</p>
               <div class="line"></div>
               <h3>PowerPoint</h3>
             <img src="./img/home/dungbubu.png" alt="test">
           </a>
 
-          <a class="projectMenu" href="https://dungbubu.com/youtube" target="_blank">
+          <a class="project-item" href="https://dungbubu.com/youtube" target="_blank">
               <p>03.</p>
               <div class="line"></div>
               <h3>Motion Graphic</h3>
@@ -499,7 +512,7 @@
         if (b < a) {$('#watermark').css({left:c+"%"});}
       });
 
-      // Hàm thiếp lập tính năng kéo (di chuyển) ảnh
+      // Drag/Drop Image
       // Hàm này dùng cho những Object đang để Transform Translate
       $(".imageHero img").draggable({
       drag: function( event, ui ) {
@@ -508,7 +521,7 @@
             });
           }
         });
-      // 2 Hàm này dùng cho những Object đang căn theo Right và Bottom
+      // Hàm này dùng cho những Object đang căn theo Right và Bottom
       $(".imageHero img").droppable({
         over: function( event, ui ) {
           ui.helper.addClass('ui-droppable-over')
@@ -520,9 +533,9 @@
 
       // Add/Remove class '.hide' khi "hover"
       $(document).ready(function () {
-        $(".projectMenu").hover(function () {
+        $(".project-item").hover(function () {
           $(this).toggleClass('hide');
-          $(".projectMenu").toggleClass('hide');
+          $(".project-item").toggleClass('hide');
         });
 
         $(".contact-item").hover(function () {

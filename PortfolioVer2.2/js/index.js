@@ -14,7 +14,7 @@ $(window).mousemove(function(e) {
   $('.cursor').css({left: e.pageX, top: e.pageY })
 })
 
-$('a, .flip-box, .projectMenu')
+$('a, .flip-box')
 .on('mouseenter', function() {$('.cursor').addClass('focus')})
 .on('mouseleave', function() {$('.cursor').removeClass('focus')})
 

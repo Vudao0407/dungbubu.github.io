@@ -180,6 +180,15 @@ section {
 }
 
 /* ------------ --NAVBAR (Responsive)-- ------------ */
+.navbar {
+  padding: 0 2rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clBackground);
+}
 .logoFavicon, .burgerMenu {display: none;}
 .logoFavicon {animation: toLeft 1200ms ease-out 0ms;}
 @keyframes toLeft {
@@ -224,7 +233,7 @@ section {
   transform-style: preserve-3d;
 }
 
-/* ------------ --MOMAL-- ------------ */
+/* ------------ --MODAL-- ------------ */
 .modal{
   position: fixed;
   top: -100vh;
@@ -232,14 +241,14 @@ section {
   width: 100vw;
   height: 0;
   opacity: 0.6;
-  transition: all 600ms ease-out;
-  z-index: 49;
+  transition: all 600ms linear;
+  z-index: -1;
 } 
 .modal.toggle {
   top: 0;
   height: 100vh;
   opacity: 1;
-  background-color: #F8F8F8;
+  background-color: var(--clBackground);
 }
 .burgerFill {
   position: absolute;
@@ -248,7 +257,9 @@ section {
   transform: translate(-50%,-50%);
   text-align: center;
 }
-.burgerFill h2{ margin-bottom: 2.8rem;}
+.burgerFill h2 {margin: 2.8rem 0;}
+.burgerFill h3 {margin: 2rem 0;}
+.modal hr {margin: 0 auto; width: 40vw; height: 1px; background-color: var(--clHideState);}
 
 
 /* ------------ ------------ ------------ ------------ */
