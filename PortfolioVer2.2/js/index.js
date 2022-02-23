@@ -19,41 +19,36 @@ $('a, .flip-box, .projectMenu')
 .on('mouseleave', function() {$('.cursor').removeClass('focus')})
 
 //Chuyển đổi chế độ Darkmode
+var root = document.querySelector(':root');
+
+switch (localStorage.getItem("data-theme")) {
+  case null:
+    root.setAttribute('data-theme', 'light');
+    localStorage.setItem("data-theme", "light");
+    break;
+  case "dark":
+    root.setAttribute('data-theme', 'dark');
+    $("#toggleDarkmode").html('lightmode');
+    break;
+  case "light":
+    root.setAttribute('data-theme', 'light');
+    $("#toggleDarkmode").html('darkmode');
+}
+
 window.onload = function () {
   const toggleDarkmode = document.getElementById('toggleDarkmode');
   toggleDarkmode.addEventListener('click', function () {
-    // Lấy thuộc tính data-theme
-    const root = document.querySelector(':root');
-    const isLightMode = root.getAttribute('data-theme') === 'dark' ? false : true;
-    // Toggle theme mode
-    if (isLightMode) {
+    let theme = localStorage.getItem("data-theme");
+    
+    if (theme === "light") {
       root.setAttribute('data-theme', 'dark');
       $("#toggleDarkmode").html('lightmode');
+      localStorage.setItem("data-theme", "dark");
+    
     } else {
       root.setAttribute('data-theme', 'light');
       $("#toggleDarkmode").html('darkmode');
+      localStorage.setItem("data-theme", "light");
     }
-    // Thay đổi trạng thái của button
-    this.classList.toggle('active');
   });
 };
-
-// function toggleDark() {
-//     const container = document.body;
-//     const dataTheme = container.getAttribute("data-theme");
-//     let theme = localStorage.getItem("data-theme");
-  
-//   if (theme === "light") {
-//     container.setAttribute("data-theme", "dark");
-//     document.getElementById("night").style.display = "block";
-//     document.getElementById("light").style.display = "none";
-//     localStorage.setItem("data-theme", "dark");
-  
-//   } else {
-  
-//     container.setAttribute("data-theme", "light");
-//     document.getElementById("night").style.display = "none";
-//     document.getElementById("light").style.display = "block";
-//     localStorage.setItem("data-theme", "light");
-//     }
-//   }

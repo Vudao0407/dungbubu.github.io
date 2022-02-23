@@ -11,9 +11,8 @@
 }
 
 /* ------------ --COLOR STYLES-- ------------ */
-:root {
+[data-theme='light'] {
   --clContent: #919191;
-  /* for Normal mode */
   --clBackground: #FFFFFF;
   --clWatermark: #FAFAFA;
   --clTitle: #242424;
@@ -21,6 +20,7 @@
 }
 
 [data-theme='dark'] {
+  --clContent: #919191;
   --clBackground: #242424;
   --clWatermark: #292929;
   --clTitle: #FFFFFF;
