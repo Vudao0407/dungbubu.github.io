@@ -1,0 +1,36 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+Options +FollowSymlinks
+
+# Bổ sung https
+Options -Indexes
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Điều hướng trang www. sang không có www.
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.dungbubu.com [NC]
+RewriteRule ^(.*)$ https://dungbubu.com/$1 [L,R=301]
+
+# Điều hướng trang 404
+ErrorDocument 404 https://dungbubu.com/404.html
+
+# Loại bỏ .html khỏi url
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^youtube$ "https\:\/\/www\.youtube\.com\/channel\/UCfZnbGb9cABlL5dtnE6QV_A\?view_as\=subscriber" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^linkedin$ "https\:\/\/www\.linkedin\.com\/in\/dungbubu\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^facebook$ "https\:\/\/www\.facebook\.com\/NguyenManhDung1996\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^instagram$ "https\:\/\/www\.instagram\.com\/dungbubu\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^dribbble$ "https\:\/\/dribbble\.com\/dungbubu" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^behance$ "https\:\/\/www\.behance\.net\/dungbubu" [R=301,L]

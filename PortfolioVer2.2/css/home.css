@@ -9,7 +9,7 @@
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%);
-    color: var(--clwmWatermark);
+    color: var(--clWatermark);
     animation: fromRight 1200ms ease-out 0ms;
   }
   @keyframes fromRight {
@@ -59,8 +59,8 @@
     grid-template-rows: repeat(12, 0.6rem);
     z-index: 4;
   }
-  .imageHero .decorDot .dot {background-color: var(--clwmWatermark);}
-  .imageHero .decorDot .round {border-color: var(--clwmWatermark);}
+  .imageHero .decorDot .dot {background-color: var(--clWatermark);}
+  .imageHero .decorDot .round {border-color: var(--clWatermark);}
   #mahHeart{
     position: absolute;
     top: 55%;
@@ -146,7 +146,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: justify;
-    background-color: var(--clwmBackground);
+    background-color: var(--clBackground);
     transform: rotateY(180deg);
   }
   .backContent h4 {text-align: right;}
@@ -173,13 +173,13 @@
     transition: all 400ms ease-out;
   }
   .projectMenu:hover h3 {transform: translateX(4rem);}
-  .projectMenu.hide h3 {color: var(--clwmHideState);}
+  .projectMenu.hide h3 {color: var(--clHideState);}
   
   .projectMenu .line {
     width: 100%;
     height: 0.1rem;
     margin: 0.5rem 0 2rem 0;
-    background-color: var(--clwmHideState);
+    background-color: var(--clHideState);
   }
 
   .sectionProject img {
@@ -249,7 +249,7 @@
   #contactMenu1.hide h3, #contactMenu2.hide h3,
   #contactMenu3.hide h3, #contactMenu4.hide h3,
   #contactMenu5.hide h3, #contactMenu6.hide h3,
-  #contactMenu7.hide h3 {color: var(--clwmHideState);}
+  #contactMenu7.hide h3 {color: var(--clHideState);}
 
 
   /* ------------ ------------ ------------ ------------ */

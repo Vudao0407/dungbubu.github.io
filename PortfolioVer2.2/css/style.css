@@ -14,20 +14,22 @@
 :root {
   --clContent: #919191;
   /* for Normal mode */
-  --clwmBackground: #FFFFFF;
-  --clwmWatermark: #FAFAFA;
-  --clwmTitle: #242424;
-  --clwmHideState: #D8D8D8;
-  /* for Normal mode */
-  --cldmBackground: #242424;
-  --cldmWatermark: #292929;
-  --cldmTitle: #FFFFFF;
-  --cldmHideState: #4A4A4A;
+  --clBackground: #FFFFFF;
+  --clWatermark: #FAFAFA;
+  --clTitle: #242424;
+  --clHideState: #D8D8D8;
+}
+
+[data-theme='dark'] {
+  --clBackground: #242424;
+  --clWatermark: #292929;
+  --clTitle: #FFFFFF;
+  --clHideState: #4A4A4A;
 }
 
 /* ------------ --GENERAL-- ------------ */
 * {box-sizing: border-box; margin: 0; padding: 0; border: 0;}
-html {scroll-behavior: smooth; cursor: none; font-size: 62.5%;}
+html {scroll-behavior: smooth; cursor: none; font-size: 62.5%; background-color: var(--clBackground);}
 img {display: block;}
 a,a:hover {color: inherit; text-decoration: none; cursor: none;}
 button {font-size: inherit; background-color: transparent; cursor: none;}
@@ -37,13 +39,13 @@ body::-webkit-scrollbar {display: none;}
 body {-ms-overflow-style: none; scrollbar-width: none;}
 
 /* ------------ --SELECTION-- ------------ */
-::selection {background: var(--clwmTitle); color: var(--clwmBackground); text-shadow: none;}
+::selection {background: var(--clTitle); color: var(--clBackground); text-shadow: none;}
 
 /* ------------ --TYPOGRAPHY-- ------------ */
 h1,h2,h3,h4 {
   font-family: 'Philosopher', sans-serif;
   font-weight: 400;
-  color: var(--clwmTitle);
+  color: var(--clTitle);
 }
 h1 {font-size: 20rem;}
 h2 {font-size: 6.4rem;}
@@ -67,11 +69,11 @@ body, button {
   /* display: none; */
 }
 .cursor.cursor-dot {
-  background: var(--clwmTitle);
+  background: var(--clTitle);
   transition: width 500ms, height 500ms;
 }
 .cursor.cursor-follower {
-  background: var(--clwmHideState);
+  background: var(--clHideState);
   transition: top 250ms, left 250ms, width 500ms, height 500ms, opacity 500ms;
   transition-timing-function: ease-out;
 }
@@ -114,8 +116,8 @@ section {
 .menuFixed h4 {padding: 0.5rem; transition: all 200ms ease-out;}
 .menuFixed:hover h4 {
   padding: 0.5rem 1rem;
-  color: var(--clwmBackground);
-  background-color: var(--clwmTitle);
+  color: var(--clBackground);
+  background-color: var(--clTitle);
 }
 
 .menuFixed .decorBullet {
@@ -123,7 +125,7 @@ section {
   width: 0.4rem;
   height: 100%;
   opacity: 0;
-  background-color: var(--clwmTitle);
+  background-color: var(--clTitle);
   transition: all 200ms ease-out;
 }
 #menuTopLeft .decorBullet, #menuBottomLeft .decorBullet {left: 0;}
@@ -162,7 +164,7 @@ section {
   flex-flow: row nowrap;
 }
 .sideMenu a {padding: 1rem 0; transition: all 400ms ease-out;}
-.sideMenu a:hover {padding: 2rem 0; color: var(--clwmTitle); font-weight: 800;}
+.sideMenu a:hover {padding: 2rem 0; color: var(--clTitle); font-weight: 800;}
 
 #sideMenuL a {transform: rotate(180deg);}
 #sideMenuL{left: 4rem; animation: swipeRight 1200ms ease-out 0ms;}
@@ -205,7 +207,7 @@ section {
 .line-1, .line-2, .line-3 {
   margin-left: auto;
   height: 1.5px;
-  background-color: var(--clwmTitle);
+  background-color: var(--clTitle);
   transition: all 240ms ease-out;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 0, 0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;

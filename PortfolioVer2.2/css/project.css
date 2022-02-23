@@ -5,7 +5,7 @@ img {width: 100%; border-radius: 2px;}
 .title {display: flex; flex-direction: column; align-items: center; text-align: center;}
 .button-group {margin: 1rem 0 12rem 0;}
 .button {display: inline-block; margin: 0 1rem; transition: all 400ms ease-out;}
-.button:hover, .button.is-checked {margin: 0 2rem; color: var(--clwmTitle); font-weight: 800;}
+.button:hover, .button.is-checked {margin: 0 2rem; color: var(--clTitle); font-weight: 800;}
 
 .grid {width: 100%;}
 .grid:after {content: ''; display: block; clear: both;} /* Clear fix */
