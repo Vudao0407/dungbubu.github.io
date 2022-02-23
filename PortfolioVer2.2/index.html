@@ -302,32 +302,26 @@
         <h2>project</h2>
 
         <div>
-          <div id="projectMenu1" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-            <a href="./project.html">
+          <a class="projectMenu" href="./project.html">
               <p>01.</p>
               <div class="line"></div>
               <h3>Web . Landing page</h3>
-            </a>
             <img src="./img/home/dungbubu.png" alt="test">
-          </div>
+          </a>
 
-          <div id="projectMenu2" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-            <a href="./project.html">
+          <a class="projectMenu" href="./project.html">
               <p>02.</p>
               <div class="line"></div>
               <h3>PowerPoint</h3>
-            </a>
             <img src="./img/home/dungbubu.png" alt="test">
-          </div>
+          </a>
 
-          <div id="projectMenu3" class="projectMenu" onmouseover="activeThis(id)" onmouseout="deactiveAll()">
-            <a href="https://dungbubu.com/youtube">
+          <a class="projectMenu" href="https://dungbubu.com/youtube" target="_blank">
               <p>03.</p>
               <div class="line"></div>
               <h3>Motion Graphic</h3>
-            </a>
             <img src="./img/home/dungbubu.png" alt="test">
-          </div>
+          </a>
 
           <div class="decorDot">
             <div class="dot"></div>
@@ -454,7 +448,7 @@
           <div>
             <p>gmail:</p>
 
-            <a id="contactMenu1" href="mailto:nguyenmanhdung1996@gmail.com" onmouseover="showThis(id)" onmouseout="hideAll()">
+            <a class="contact-item" href="mailto:nguyenmanhdung1996@gmail.com" onmouseover="showThis(id)" onmouseout="hideAll()">
               <h3>nguyenmanhdung1996</h3></a>
           </div>
 
@@ -462,17 +456,17 @@
             <p>or follow me:</p>
 
             <div class="socialMenu">
-              <a id="contactMenu2" href="https://dungbubu.com/youtube" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <a class="contact-item" href="https://dungbubu.com/youtube" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
                 <h3>youtube</h3></a>
-              <a id="contactMenu3" href="https://dungbubu.com/facebook" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <a class="contact-item" href="https://dungbubu.com/facebook" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
                 <h3>facebook</h3></a>
-              <a id="contactMenu4" href="https://dungbubu.com/linkedin" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <a class="contact-item" href="https://dungbubu.com/linkedin" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
                 <h3>linkedin</h3></a>
-              <a id="contactMenu5" href="https://dungbubu.com/instagram" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <a class="contact-item" href="https://dungbubu.com/instagram" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
                 <h3>instagram</h3></a>
-              <a id="contactMenu6" href="https://dungbubu.com/behance" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <a class="contact-item" href="https://dungbubu.com/behance" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
                 <h3>behance</h3></a>
-              <a id="contactMenu7" href="https://dungbubu.com/dribbble" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
+              <a class="contact-item" href="https://dungbubu.com/dribbble" target="_blank" onmouseover="showThis(id)" onmouseout="hideAll()">
                 <h3>dribbble</h3></a>
             </div>
           </div>
@@ -486,33 +480,12 @@
     <script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
     <!-- jQuery Ui library -->
     <script src="./lib/jQueryUi-1.3.1.1/jquery-ui.js"></script>
+    <!-- JS Chung -->
+    <script src="./js/index.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
     <script>
-      // Câu chào trong Console
-      console.clear();
-      console.log("%c😎 Hi there!","font-size: 24px;",);
-      console.log("%cDesigned & coded by myself.","font-size: 12px;");
-
-      // Thay đổi con trỏ chuột
-      $(window).mousemove(function(e) { 
-        $('.cursor').css({
-          left: e.pageX,
-          top: e.pageY
-        })
-      })
-
-      $('a, .flip-box, .projectMenu')
-      .on('mouseenter', function() {$('.cursor').addClass('focus')})
-      .on('mouseleave', function() {$('.cursor').removeClass('focus')})
-
-      // Hàm tạo hiệu ứng cho Humburger menu
-      function hamburgerFunction() {
-        document.querySelector(".burgerMenu").classList.toggle("toggle");
-        document.querySelector(".modal").classList.toggle("toggle");
-      }
-
       // Đo kích thước cho đường kẻ dọc chỗ scroll
       $('.sectionHero .line').height(($(window).height() - $('.sectionHero').height()) / 2 - 10);
 
@@ -543,68 +516,25 @@
         stop: function( event, ui ) {}
       });
 
-      // Hàm add/remove trạng thái .hide khi "hover" vào các mục Project
-      var projectMenu = [document.getElementById("projectMenu1"),
-                        document.getElementById("projectMenu2"),
-                        document.getElementById("projectMenu3")];
-      function activeThis(id){
-        for (i = 0; i < projectMenu.length; i++){
-          projectMenu[i].classList.add("hide");
-        }
-        document.getElementById(id).classList.remove("hide");
-      }
-      function deactiveAll(){
-        for (i = 0; i < projectMenu.length; i++) {
-          projectMenu[i].classList.remove("hide");
-        }
-      }
+      // Add/Remove class '.hide' khi "hover"
+      $(document).ready(function () {
+        $(".projectMenu").hover(function () {
+          $(this).toggleClass('hide');
+          $(".projectMenu").toggleClass('hide');
+        });
 
-      // Hàm tạo hiệu ứng hình ảnh khi "hover" vào các mục Project
+        $(".contact-item").hover(function () {
+          $(this).toggleClass('hide');
+          $(".contact-item").toggleClass('hide');
+        });
+      });
+
+      // Image Hover Navigation
       const sec3 = document.querySelector("#section3");
       document.body.addEventListener("mousemove", (event) => {
         sec3.style.setProperty("--x", event.clientX);
         sec3.style.setProperty("--y", event.clientY);
       });
-
-      // Hàm add/remove trạng thái .hide khi "hover" vào các mục Contact
-      var contactMenu = [document.getElementById("contactMenu1"),
-                        document.getElementById("contactMenu2"),
-                        document.getElementById("contactMenu3"),
-                        document.getElementById("contactMenu4"),
-                        document.getElementById("contactMenu5"),
-                        document.getElementById("contactMenu6"),
-                        document.getElementById("contactMenu7")];
-      function showThis(id){
-        for (i = 0; i < contactMenu.length; i++){
-          contactMenu[i].classList.add("hide");
-        }
-        document.getElementById(id).classList.remove("hide");
-      }
-      function hideAll(){
-        for (i = 0; i < contactMenu.length; i++) {
-          contactMenu[i].classList.remove("hide");
-        }
-      }
-
-      //Chuyển đổi chế độ Darkmode
-      window.onload = function () {
-        const toggleDarkmode = document.getElementById('toggleDarkmode');
-        toggleDarkmode.addEventListener('click', function () {
-          // Lấy thuộc tính data-theme
-          const root = document.querySelector(':root');
-          const isLightMode = root.getAttribute('data-theme') === 'dark' ? false : true;
-          // toggle theme mode
-          if (isLightMode) {
-            root.setAttribute('data-theme', 'dark');
-            $("#toggleDarkmode").html('lightmode');
-          } else {
-            root.setAttribute('data-theme', 'light');
-            $("#toggleDarkmode").html('darkmode');
-          }
-          // thay đổi vị trí của button
-          this.classList.toggle('active');
-        });
-      };
     </script>
   </body>
 </html>

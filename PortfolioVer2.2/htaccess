@@ -22,6 +22,8 @@ RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# Redirect
 RewriteCond %{HTTP_HOST} ^.*$
 RewriteRule ^youtube$ "https\:\/\/www\.youtube\.com\/channel\/UCfZnbGb9cABlL5dtnE6QV_A\?view_as\=subscriber" [R=301,L]
 RewriteCond %{HTTP_HOST} ^.*$

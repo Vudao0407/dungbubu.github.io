@@ -90,8 +90,8 @@
 
       <!-- //////////// SIDEMENU RIGHT //////////// -->
       <div id="sideMenuR" class="sideMenu textVertical">
-        <a href="" role="button">darkmode</a>
-        <a href="" role="button">sound</a>
+        <a id="toggleDarkmode" role="button">darkmode</a>
+        <!-- <a href="" role="button">sound</a> -->
       </div>
     </div>
 
@@ -199,56 +199,32 @@
     <script src="./lib/ImagesLoaded-4.1.2/imagesloaded.pkgd.min.js"></script>
     <!-- Isotope library -->
     <script src="./lib/Isotope/isotope.pkgd.min.js"></script>
+    <!-- JS Chung -->
+    <script src="./js/index.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
     <script>
-      // Câu chào trong Console
-      console.clear();
-      console.log("%c😎 Hi there!","font-size: 24px;",);
-      console.log("%cDesigned & coded by myself.","font-size: 12px;");
-
-      // Thay đổi con trỏ chuột
-      $(window).mousemove(function(e) { 
-        $('.cursor').css({
-          left: e.pageX,
-          top: e.pageY
-        })
-      })
-
-      $('a, button')
-      .on('mouseenter', function() {$('.cursor').addClass('focus')})
-      .on('mouseleave', function() {$('.cursor').removeClass('focus')})
-
-      // Hàm tạo hiệu ứng cho Humburger menu
-      function hamburgerFunction() {
-        document.querySelector(".burgerMenu").classList.toggle("toggle");
-        document.querySelector(".modal").classList.toggle("toggle");
-      }
-
       // Hàm chạy thư viện ImagesLoaded > Isotope > Masonry
       var $grid = $('.grid').imagesLoaded( function() {
         $grid.isotope({
           itemSelector: '.grid-item',
           stagger: 20,
           percentPosition: true,
-          masonry: {
-            columnWidth: '.grid-sizer',
-            gutter: '.gutter-sizer'
-          }
+          masonry: {columnWidth: '.grid-sizer', gutter: '.gutter-sizer'}
         });
       });
 
       // Hàm chạy filter Menu
-      $('.filter-button-group').on( 'click', '.button', function() {
+      $('.filter-button-group').on('click', '.button', function() {
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
       });
 
       // Hàm kiểm tra và thêm trạng thái Click cho các button
-      $('.button-group').each( function( i, buttonGroup ) {
+      $('.button-group').each( function(i, buttonGroup) {
         var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'button', function() {
+        $buttonGroup.on('click', 'button', function() {
           $buttonGroup.find('.is-checked').removeClass('is-checked');
           $(this).addClass('is-checked');
         });

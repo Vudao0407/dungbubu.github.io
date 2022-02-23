@@ -166,7 +166,7 @@
     opacity: 1;
   }
   
-  .projectMenu {position: relative; padding-bottom: 2.5rem;}
+  .projectMenu {display: block; position: relative; margin-bottom: 4rem;}
   .projectMenu h3 {
     position: relative;
     left: 8rem;
@@ -246,10 +246,7 @@
     grid-template-columns: auto auto auto;
     column-gap: 4rem;
   }
-  #contactMenu1.hide h3, #contactMenu2.hide h3,
-  #contactMenu3.hide h3, #contactMenu4.hide h3,
-  #contactMenu5.hide h3, #contactMenu6.hide h3,
-  #contactMenu7.hide h3 {color: var(--clHideState);}
+  .contact-item.hide h3 {color: var(--clHideState);}
 
 
   /* ------------ ------------ ------------ ------------ */
@@ -285,7 +282,7 @@
     .frontContent img {padding: 0 2rem 0 0; }
   
     /* --SECTION 3-- */
-    .projectMenu {padding-bottom: 1.5rem;}
+    .projectMenu {margin-bottom: 2rem;}
     .projectMenu h3 {left: 2rem;}
     .projectMenu .line {margin: 0.5rem 0 1rem 0;}
     .sectionProject .decorDot {
