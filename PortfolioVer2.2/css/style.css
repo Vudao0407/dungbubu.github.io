@@ -180,7 +180,9 @@ section {
 }
 
 /* ------------ --NAVBAR (Responsive)-- ------------ */
-.navbar {
+.navbar { visibility: hidden; z-index: 50;}
+
+.nav {
   padding: 0 2rem;
   height: 5rem;
   display: flex;
@@ -188,16 +190,10 @@ section {
   justify-content: space-between;
   align-items: center;
   background-color: var(--clBackground);
+  z-index: 2;
 }
-.logoFavicon, .burgerMenu {display: none;}
-.logoFavicon {animation: toLeft 1200ms ease-out 0ms;}
-@keyframes toLeft {
-  from {opacity: 0; left: 4rem;}
-  to   {opacity: 1; left: 0;}
-}
-
 .burgerMenu {
-  right: 0;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   -webkit-box-orient: vertical;
@@ -205,15 +201,10 @@ section {
   -webkit-box-pack: justify;
   width: 24px;
   height: 18px;
-  animation: toRight 1200ms ease-out 0ms;
   transition: all 400ms ease-out;
 }
-@keyframes toRight {
-  from {opacity: 0; right: 4rem;}
-  to   {opacity: 1; right: 0;}
-}
 
-.line-1, .line-2, .line-3 {
+.burger1stlayer, .burger2ndlayer, .burger3rdlayer {
   margin-left: auto;
   height: 1.5px;
   background-color: var(--clTitle);
@@ -221,14 +212,14 @@ section {
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 0, 0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
 }
-.line-1 {width: 100%; transform-origin: 0% 50%;}
-.line-2 {width: 40%; transform-origin: 100% 50%;}
-.line-3 {width: 80%; transform-origin: 0% 50%;}
+.burger1stlayer {width: 100%; transform-origin: 0% 50%;}
+.burger2ndlayer {width: 40%; transform-origin: 100% 50%;}
+.burger3rdlayer {width: 80%; transform-origin: 0% 50%;}
 
-.burgerMenu.toggle .line-1 {transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 1, 45deg)  skew(0deg, 0deg);}
-.burgerMenu.toggle .line-2 {transform: translate3d(10px, 0px, 0px) scale3d(0, 1, 1) rotate3d(0, 0, 0, 0deg)   skew(0deg, 0deg);}
-.burgerMenu.toggle .line-3 {transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 1, -45deg) skew(0deg, 0deg);}
-.burgerMenu.toggle .line-1, .burgerMenu.toggle .line-2, .burgerMenu.toggle .line-3 {
+.burgerMenu.toggle .burger1stlayer {transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 1, 45deg)  skew(0deg, 0deg);}
+.burgerMenu.toggle .burger2ndlayer {transform: translate3d(10px, 0px, 0px) scale3d(0, 1, 1) rotate3d(0, 0, 0, 0deg)   skew(0deg, 0deg);}
+.burgerMenu.toggle .burger3rdlayer {transform: translate3d(10px, 0px, 0px) scale3d(1, 1, 1) rotate3d(0, 0, 1, -45deg) skew(0deg, 0deg);}
+.burgerMenu.toggle .burger1stlayer, .burgerMenu.toggle .burger2ndlayer, .burgerMenu.toggle .burger3rdlayer {
   width: 100%;
   transform-style: preserve-3d;
 }
@@ -275,7 +266,7 @@ section {
   #sideMenuL, #sideMenuR {display: none;}
   
   /* --NAVBAR (Responsive)-- */
-  .logoFavicon, .burgerMenu {display: flex;}
+  .navbar {visibility: visible;}
 }
 
 @media (max-width: 768px) {section {max-width: 528px;}}

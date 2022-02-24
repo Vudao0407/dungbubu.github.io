@@ -93,26 +93,29 @@
 
       <!-- //////////// SIDEMENU RIGHT //////////// -->
       <div id="sideMenuR" class="sideMenu textVertical">
-        <a id="toggleDarkmode" role="button">darkmode</a>
-        <!-- <a id="toggleSoundmode" role="button">sound</a> -->
+        <a class="toggleDarkmode" role="button">darkmode</a>
+        <!-- <a class="toggleSoundmode" role="button">sound</a> -->
       </div>
     </div>
 
     <div class="navbar">
       <!-- //////////// NAVBAR (Responsive) //////////// -->
-      <a class="logoFavicon" href="#section1"><h4>.d</h4></a>
-      <button class="burgerMenu" onclick="hamburgerFunction()">
-        <span class="line-1"></span>
-        <span class="line-2"></span>
-        <span class="line-3"></span>
-      </button>
+      <div class="nav">
+        <a href="#section1"><h4>.d</h4></a>
+
+        <div class="burgerMenu" onclick="hamburgerFunction()">
+          <span class="burger1stlayer"></span>
+          <span class="burger2ndlayer"></span>
+          <span class="burger3rdlayer"></span>
+        </div>
+      </div>
 
       <div class="modal">
         <div class="burgerFill">
-          <h2><a href="#section1">home</a></h2>
-          <h2><a href="#section2">about</a></h2>
-          <h2><a href="#section3">project</a></h2>
-          <h2><a href="#section4">contact</a></h2>
+          <h2><a href="#section1" onclick="hamburgerFunction()">home</a></h2>
+          <h2><a href="#section2" onclick="hamburgerFunction()">about</a></h2>
+          <h2><a href="#section3" onclick="hamburgerFunction()">project</a></h2>
+          <h2><a href="#section4" onclick="hamburgerFunction()">contact</a></h2>
 
           <hr>
 
@@ -123,8 +126,8 @@
 
           <hr>
 
-          <a id="toggleDarkmode" role="button"><h3>darkmode</h3></a>
-          <!-- <a id="toggleSoundmode" role="button"><h3>sound</h3></a> -->
+          <h3><a class="toggleDarkmode" role="button">darkmode</a></h3>
+          <!-- <h3><a class="toggleSoundmode" role="button"><h3>sound</a></h3> -->
           
         </div>
       </div>

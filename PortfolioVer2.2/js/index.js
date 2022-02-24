@@ -36,18 +36,17 @@ switch (localStorage.getItem("data-theme")) {
 }
 
 window.onload = function () {
-  const toggleDarkmode = document.getElementById('toggleDarkmode');
-  toggleDarkmode.addEventListener('click', function () {
+  $(".toggleDarkmode").on('click', function () {
     let theme = localStorage.getItem("data-theme");
     
     if (theme === "light") {
       root.setAttribute('data-theme', 'dark');
-      $("#toggleDarkmode").html('lightmode');
+      $(".toggleDarkmode").html('lightmode');
       localStorage.setItem("data-theme", "dark");
     
     } else {
       root.setAttribute('data-theme', 'light');
-      $("#toggleDarkmode").html('darkmode');
+      $(".toggleDarkmode").html('darkmode');
       localStorage.setItem("data-theme", "light");
     }
   });
