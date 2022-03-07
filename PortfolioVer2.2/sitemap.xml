@@ -9,146 +9,18 @@
 
 <url>
   <loc>https://dungbubu.com/</loc>
-  <lastmod>2021-07-11T07:01:32+00:00</lastmod>
+  <lastmod>2022-02-23T09:54:34+00:00</lastmod>
   <priority>1.00</priority>
 </url>
-
-<url>
-  <loc>https://dungbubu.com/index</loc>
-  <lastmod>2021-07-11T07:01:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/about</loc>
-  <lastmod>2021-07-11T07:02:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/img/about/cv_Nguyen_Manh_Dung.pdf</loc>
-  <lastmod>2021-06-08T09:55:34+00:00</lastmod>
-  <priority>0.10</priority>
-</url>
-
 <url>
   <loc>https://dungbubu.com/project</loc>
-  <lastmod>2021-07-11T07:01:15+00:00</lastmod>
+  <lastmod>2022-02-23T08:00:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 <url>
-  <loc>https://dungbubu.com/project/webProject</loc>
-  <lastmod>2021-08-04T08:43:41+00:00</lastmod>
+  <loc>https://dungbubu.com/index</loc>
+  <lastmod>2022-02-23T09:54:34+00:00</lastmod>
   <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/project/pptProject</loc>
-  <lastmod>2021-08-04T08:43:32+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/project/mktProject</loc>
-  <lastmod>2021-08-04T08:43:18+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/project/mgProject</loc>
-  <lastmod>2021-08-04T08:43:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt009</loc>
-  <lastmod>2021-07-11T07:05:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt008</loc>
-  <lastmod>2021-07-11T07:05:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt007</loc>
-  <lastmod>2021-07-11T07:05:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt006</loc>
-  <lastmod>2021-07-11T07:04:55+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt005</loc>
-  <lastmod>2021-07-11T07:04:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt004</loc>
-  <lastmod>2021-07-11T07:04:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt003</loc>
-  <lastmod>2021-07-11T07:04:17+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt002</loc>
-  <lastmod>2021-07-11T07:04:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/pptProject/ppt001</loc>
-  <lastmod>2021-07-11T07:03:53+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/blog</loc>
-  <lastmod>2021-07-11T07:02:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/blog/blog03</loc>
-  <lastmod>2021-07-11T07:03:31+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/blog/blog02</loc>
-  <lastmod>2021-07-11T07:03:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/img/blog/blog02/cv_template.pptx</loc>
-  <lastmod>2021-07-01T16:40:11+00:00</lastmod>
-  <priority>0.10</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/blog/blog01</loc>
-  <lastmod>2021-07-11T07:02:53+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>https://dungbubu.com/contact</loc>
-  <lastmod>2021-07-11T07:02:05+00:00</lastmod>
-  <priority>0.80</priority>
 </url>
 
 

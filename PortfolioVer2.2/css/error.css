@@ -1,0 +1,19 @@
+/* ------------ --Circle Text Animation-- ------------ */
+.circle-Text {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  user-select: none;
+  pointer-events: none;
+  animation: circleText 10000ms linear infinite;
+}
+@keyframes circleText {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+.circle-Text span {
+  position: absolute;
+  top: -100px;
+  display: inline-block;
+  transform-origin: 0 100px;  
+}
