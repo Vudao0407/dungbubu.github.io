@@ -64,21 +64,20 @@ body, button {
   border-radius: 100%;
   pointer-events: none;
   z-index: 100;
-  mix-blend-mode: difference;
-  /* display: none; */
 }
 .cursor.cursor-dot {
-  background-color: var(--clBackground);
   height: 1rem;
   width:  1rem;
   transition: width 500ms, height 500ms;
+  background-color: var(--clTitle);
 }
 .cursor.cursor-follower {
-  background-color: var(--clBackground);
   height: 2.4rem;
   width:  2.4rem;
   transition: top 250ms, left 250ms, width 400ms, height 400ms, opacity 400ms;
   transition-timing-function: ease-out;
+  background-color: var(--clTitle);
+  mix-blend-mode: difference;
 }
 .cursor-dot.focus {width: 0; height: 0;}
 .cursor-follower.focus {

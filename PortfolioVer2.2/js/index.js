@@ -3,21 +3,6 @@ console.clear();
 console.log("%c😎 Hi there!","font-size: 24px;",);
 console.log("%cDesigned & coded by myself.","font-size: 12px;");
 
-// Humburger menu
-function hamburgerFunction() {
-  $(".burgerMenu").toggleClass('toggle');
-  $(".modal").toggleClass('toggle');
-}
-
-// Thay đổi con trỏ chuột
-$(window).mousemove(function(e) { 
-  $('.cursor').css({left: e.pageX, top: e.pageY })
-})
-
-$('a, .flip-box')
-.on('mouseenter', function() {$('.cursor').addClass('focus')})
-.on('mouseleave', function() {$('.cursor').removeClass('focus')})
-
 //Chuyển đổi chế độ Darkmode
 var root = document.querySelector(':root');
 
@@ -51,3 +36,25 @@ window.onload = function () {
     }
   });
 };
+
+//Chuyển đổi chế độ Soundmode
+$(".toggleSoundmode").on('click', function () {
+  var song = new Audio();
+  song.src = './audio/Merry go round of life - Morunas.mp3';
+  song.play();
+});
+
+// Humburger menu
+function hamburgerFunction() {
+  $(".burgerMenu").toggleClass('toggle');
+  $(".modal").toggleClass('toggle');
+}
+
+// Thay đổi con trỏ chuột
+$(window).mousemove(function(e) { 
+  $('.cursor').css({left: e.pageX, top: e.pageY })
+})
+
+$('a, .flip-box')
+.on('mouseenter', function() {$('.cursor').addClass('focus')})
+.on('mouseleave', function() {$('.cursor').removeClass('focus')})

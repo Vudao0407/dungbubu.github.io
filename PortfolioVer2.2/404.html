@@ -91,7 +91,7 @@
       <!-- //////////// SIDEMENU RIGHT //////////// -->
       <div id="sideMenuR" class="sideMenu textVertical">
         <a class="toggleDarkmode" role="button">darkmode</a>
-        <!-- <a class="toggleSoundmode" role="button">sound</a> -->
+        <a class="toggleSoundmode" role="button">sound</a>
       </div>
     </div>
 
@@ -130,9 +130,20 @@
       </div>
     </div>
 
-    <section>
-      <h4 class="circle-Text">error 404 • error 404 • error 404 • error 404 •</h4>
-    </section>
+    <div class="watermark">
+      <p>01101100 01101111 01110110 01100101 00100000 01110101
+         00100000 01101101 01100001 01101110 01100111 01101111 
+         01110011 01110100 01100101 01100101 01101110 00001101 00001010
+      </p>
+    </div>
+
+    <div class="error-information">
+      <div class="title">404</div>
+      <h4 class="content">That page or resource appears to be missing, please, go
+        <a href="./index.html"><i>home</i></a>
+      </h4>
+      <h4 class="circle-Text">error 4o4 • error 404 • error 404 • error 404 •</h4>
+    </div>
     
 
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
@@ -140,19 +151,8 @@
     <script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
     <!-- JS Chung -->
     <script src="./js/index.js"></script>
+    <!-- JS Riêng -->
+    <script src="./js/error.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
-
-
-    <script>
-      const circleText = document.querySelector('.circle-Text');
-      circleText.innerHTML = circleText.textContent.replace(/\S/g,'' + <span class="sth">$&</span>);
-
-      const element = document.querySelectorAll('span');
-      for (let i = 0 ; i < element.length ; i++) {
-          element[i].style.transform = "rotate(" + i * (360 / element.length) + "deg)";
-          // console.log(circleText);
-          console.log(element);
-      }
-    </script>
   </body>
 </html>
