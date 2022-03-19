@@ -5,52 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
-    <title>DungBu - Project</title>
+    <title>DungBu • Project</title>
     <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
-    <meta name="description" content="My Portfolio, where I share about my work and design." />
-    <meta name="keywords" content="Dũng Bự, Portfolio, Web design, Slide design, Motion graphic">
-    <!-- <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"> -->
 
-    <link rel="canonical" href="https://dungbubu.com/">
-    <meta property = "og:locale" content = "vi_VN" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="DungBu - Project" />
-    <meta property="og:description" content="My Portfolio, where I share about my work and design." />
-    <meta property="og:url" content="https://dungbubu.com/" />
-    <meta property="og:site_name" content="Project" />
-    <meta property="og:image" content="https://dungbubu.com/img/home/thumbnail.png" /> 
-    <meta property="og:image:secure_url" content="https://dungbubu.com/img/home/thumbnail.png">
-    <meta property="og:image:width" content="450">
-    <meta property="og:image:height" content="600">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="My Portfolio, where I share about my work and design.">
-    <meta name="twitter:title" content="DungBu - Project">
-    <meta name="twitter:image" content="https://dungbubu.com/img/home/thumbnail.png">
-
-    <!-- <meta property="fb:app_id" content="564999674494503"/>
-    <meta property="fb:admins" content="100001250312137"/> -->
-    
-    <meta property="geo.region" content="VN-HN" />
-    <meta property="geo.placename" content="Hà Nội" />
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="./manifest.json">
-    <link rel="apple-touch-icon" href="./img/logo/apple-touch-icon.png">
-    
     <!-- CSS Chung -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- CSS Home -->
     <link rel="stylesheet" href="./css/project.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5K2K1N41X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D5K2K1N41X');
-    </script>
   </head>
 
 
@@ -62,6 +23,8 @@
     </div>
 
     <div class="container">
+      <div class="decorBg"></div>
+      
       <!-- //////////// HEADER & FOOTER //////////// -->
       <a id="menuTopLeft" class="menuFixed" href="./index.html">
         <div class="decorBullet"></div>
@@ -82,10 +45,10 @@
 
       <!-- //////////// SIDEMENU LEFT //////////// -->
       <div id="sideMenuL" class="sideMenu textVertical">
-        <a href="https://dungbubu.com/youtube" target="_blank"><p>utube</p></a>
-        <a href="https://dungbubu.com/instagram" target="_blank"><p>insta</p></a>
-        <a href="https://dungbubu.com/behance" target="_blank"><p>behance</p></a>
-        <a href="https://dungbubu.com/dribbble" target="_blank"><p>dribble</p></a>
+        <a href="https://dungbubu.com/youtube" target="_blank">utube</a>
+        <a href="https://dungbubu.com/instagram" target="_blank">insta</a>
+        <a href="https://dungbubu.com/behance" target="_blank">behance</a>
+        <a href="https://dungbubu.com/dribbble" target="_blank">dribble</a>
       </div>
 
       <!-- //////////// SIDEMENU RIGHT //////////// -->
@@ -134,11 +97,11 @@
       <div class="title">
         <h2>project</h2>
         <div class="button-group filter-button-group">
-          <button class="button is-checked" data-filter="*"><p>All</p></button>
-          <button class="button" data-filter=".grid-item--weblandingpage"><p>Web . Landing page</p></button>
-          <button class="button" data-filter=".grid-item--powerpoint"><p>Powerpoint</p></button>
+          <button class="button is-checked" data-filter="*">All</button>
+          <button class="button" data-filter=".grid-item--weblandingpage">Web . Landing page</button>
+          <button class="button" data-filter=".grid-item--powerpoint">Powerpoint</button>
           <button class="button">
-            <a href="https://dungbubu.com/youtube" target="_blank"><p>Motion graphic</p></a>
+            <a href="https://dungbubu.com/youtube" target="_blank">Motion graphic</a>
           </button>
         </div>
       </div>
@@ -147,8 +110,20 @@
         <div class="grid-sizer"></div>
         <div class="gutter-sizer"></div>
 
+        <!-- Ghi chú về cách đặt tên Class -->
+        <!-- grid-item--weblandingpage     : Đặt cho Web và Landing Page -->
+        <!-- grid-item--powerpoint         : Đặt cho Powerpoint -->
+
+        <div class="grid-item grid-item--weblandingpage" loading="lazy">
+          <img src="./img/project/iNETDomainSpace.webp" alt="iNET Domain .space Landing Page">
+          <div class="content">
+            <h4>Domain Space</h4>
+            <p>Landing Page</p>
+          </div>
+        </div>
+
         <div class="grid-item grid-item--powerpoint" loading="lazy">
-          <img src="./img/project/FTA.png" alt="FTA E&C Powerpoint Design">
+          <img src="./img/project/FTA.webp" alt="FTA E&C Powerpoint Design">
           <div class="content">
             <h4>FTA E&C</h4>
             <p>PowerPoint</p>
@@ -156,7 +131,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/ZozoMobile.png" alt="Zozo Mobile Landing Page">
+          <img src="./img/project/ZozoMobile.webp" alt="Zozo Mobile Landing Page">
           <div class="content">
             <h4>Zozo Mobile</h4>
             <p>Home Page</p>
@@ -164,7 +139,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainFun.png" alt="iNET Domain .fun Landing Page">
+          <img src="./img/project/iNETDomainFun.webp" alt="iNET Domain .fun Landing Page">
           <div class="content">
             <h4>Domain Fun</h4>
             <p>Landing Page</p>
@@ -172,7 +147,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainHost.png" alt="iNET Domain .host Landing Page">
+          <img src="./img/project/iNETDomainHost.webp" alt="iNET Domain .host Landing Page">
           <div class="content">
             <h4>Domain Host</h4>
             <p>Landing Page</p>
@@ -180,7 +155,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainTech.png" alt="iNET Domain .tech Landing Page">
+          <img src="./img/project/iNETDomainTech.webp" alt="iNET Domain .tech Landing Page">
           <div class="content">
             <h4>Domain Tech</h4>
             <p>Landing Page</p>
@@ -188,7 +163,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainStore.png" alt="iNET Domain .store Landing Page">
+          <img src="./img/project/iNETDomainStore.webp" alt="iNET Domain .store Landing Page">
           <div class="content">
             <h4>Domain Store</h4>
             <p>Landing Page</p>
@@ -196,7 +171,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainXyz.png" alt="iNET Domain .xyz Landing Page">
+          <img src="./img/project/iNETDomainXyz.webp" alt="iNET Domain .xyz Landing Page">
           <div class="content">
             <h4>Domain Xyz</h4>
             <p>Landing Page</p>
@@ -204,7 +179,7 @@
         </div>
 
         <div class="grid-item grid-item--powerpoint" loading="lazy">
-          <img src="./img/project/FirstAlliances.png" alt="FirstAlliances Powerpoint Design">
+          <img src="./img/project/FirstAlliances.webp" alt="FirstAlliances Powerpoint Design">
           <div class="content">
             <h4>FirstAlliances</h4>
             <p>PowerPoint</p>
@@ -212,7 +187,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainWebsite.png" alt="iNET Domain .website Landing Page">
+          <img src="./img/project/iNETDomainWebsite.webp" alt="iNET Domain .website Landing Page">
           <div class="content">
             <h4>Domain Website</h4>
             <p>Landing Page</p>
@@ -220,7 +195,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainPress.png" alt="iNET Domain .press Landing Page">
+          <img src="./img/project/iNETDomainPress.webp" alt="iNET Domain .press Landing Page">
           <div class="content">
             <h4>Domain Press</h4>
             <p>Landing Page</p>
@@ -228,7 +203,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainSite.png" alt="iNET Domain .site Landing Page">
+          <img src="./img/project/iNETDomainSite.webp" alt="iNET Domain .site Landing Page">
           <div class="content">
             <h4>Domain Site</h4>
             <p>Landing Page</p>
@@ -236,7 +211,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/iNETDomainOnline.png" alt="iNET Domain .online Landing Page">
+          <img src="./img/project/iNETDomainOnline.webp" alt="iNET Domain .online Landing Page">
           <div class="content">
             <h4>Domain Online</h4>
             <p>Landing Page</p>
@@ -244,7 +219,7 @@
         </div>
 
         <div class="grid-item grid-item--weblandingpage" loading="lazy">
-          <img src="./img/project/TetLandingPage.png" alt="Tết Landing Page">
+          <img src="./img/project/TetLandingPage.webp" alt="Tết Landing Page">
           <div class="content">
             <h4>Tết 2022</h4>
             <p>Landing Page</p>
