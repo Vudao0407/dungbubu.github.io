@@ -1,6 +1,6 @@
 {
     "short_name": "dungbubu",
-    "name": "Dungbubu Portfolio",
+    "name": "DungBu • Web Designer",
     "icons": [
       {
         "src": "/img/logo/faviconMini.png",
@@ -34,7 +34,8 @@
       }
     ],
     "start_url": "https://dungbubu.com",
-    "background_color": "#FFFFFF",
     "display": "standalone",
-    "theme_color": "#FFFFFF"
+    "orientation": "portrait",
+    "theme_color": "#242424", 
+    "background_color": "#FFFFFF"
   }

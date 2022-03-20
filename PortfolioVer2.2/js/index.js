@@ -4,27 +4,28 @@ console.log("%c😎 Hey, hi there!","font-size: 24px;",);
 console.log("%cWhatcha Doin'?","font-size: 12px;");
 console.log("%cWould you like a cup of coffee ☕?","font-size: 12px;");
 
+//Khai báo trạng thái chế độ Darkmode
+var root = document.querySelector(':root');
+
+switch (localStorage.getItem("data-theme")) {
+  case null:
+    $('.decorBg').css({"width":"0", "height":"0"});
+    root.setAttribute('data-theme', 'light');
+    localStorage.setItem("data-theme", "light");
+    break;
+  case "dark":
+    $('.decorBg').css({"width":"200vmax", "height":"200vmax"});
+    root.setAttribute('data-theme', 'dark');
+    $(".toggleDarkmode").html('lightmode');
+    break;
+  case "light":
+    $('.decorBg').css({"width":"0", "height":"0"});
+    root.setAttribute('data-theme', 'light');
+    $(".toggleDarkmode").html('darkmode');
+}
+
 window.onload = function () {
   //Chuyển đổi chế độ Darkmode
-  var root = document.querySelector(':root');
-
-  switch (localStorage.getItem("data-theme")) {
-    case null:
-      $('.decorBg').css({"width":"0", "height":"0"});
-      root.setAttribute('data-theme', 'light');
-      localStorage.setItem("data-theme", "light");
-      break;
-    case "dark":
-      $('.decorBg').css({"width":"200vmax", "height":"200vmax"});
-      root.setAttribute('data-theme', 'dark');
-      $("#toggleDarkmode").html('lightmode');
-      break;
-    case "light":
-      $('.decorBg').css({"width":"0", "height":"0"});
-      root.setAttribute('data-theme', 'light');
-      $("#toggleDarkmode").html('darkmode');
-  }
-
   $(".toggleDarkmode").on('click', function () {
     let theme = localStorage.getItem("data-theme");
     
