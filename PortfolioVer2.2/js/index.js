@@ -47,7 +47,7 @@ window.onload = function () {
   //Chuyển đổi chế độ Soundmode
   $(".toggleSoundmode").on('click', function () {
     var song = new Audio();
-    song.src = './audio/Merry go round of life - Morunas.mp3';
+    song.src = '../audio/Merry go round of life - Morunas.mp3';
     song.play();
   });
 };
