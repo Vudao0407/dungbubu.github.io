@@ -62,7 +62,7 @@
       <div class="sectionHero">
         
         <div class="imageHero">
-          <img src="./img/home/dungbubu.png" alt="dungbubu">
+          <img src="./img/home/dungbubu.webp" alt="dungbubu">
           <h2 class="textVertical">web designer</h2>
           <div class="decorDot">
             <div class="dot"></div>
@@ -149,7 +149,7 @@
             <div class="dot"></div>
             <div class="round"></div>
           </div>
-          <div id="mahHeart"><img src="./img/home/mangosteen.png" alt="Quả Măng Cụt xinh đẹp" loading="lazy"></div>
+          <div id="mahHeart"><img src="./img/home/mangosteen.webp" alt="Quả Măng Cụt xinh đẹp" loading="lazy"></div>
         </div>
     
         <div class="contentHero">
@@ -169,7 +169,7 @@
 
         <div id="galleryItem1" class="flip-box">
           <div class="galleryItem">
-            <div class="frontContent"><img src="./img/about/arrow.png" alt="Arrow"></div>
+            <div class="frontContent"><img src="./img/about/arrow.webp" alt="Arrow"></div>
 
             <div class="backContent">
               <p></p>
@@ -183,7 +183,7 @@
 
         <div id="galleryItem2" class="flip-box">
           <div class="galleryItem">
-            <div class="frontContent"><img src="./img/about/lotus.png" alt="Mountain Pattern"></div>
+            <div class="frontContent"><img src="./img/about/lotus.webp" alt="Mountain Pattern"></div>
             
             <div class="backContent">
               <p></p>
@@ -197,7 +197,7 @@
 
         <div id="galleryItem3" class="flip-box">
           <div class="galleryItem">
-            <div class="frontContent"><img src="./img/about/badBlood.png" alt=" Bad Blood"></div>
+            <div class="frontContent"><img src="./img/about/badBlood.webp" alt=" Bad Blood"></div>
           
             <div class="backContent">
               <p></p>
@@ -212,7 +212,7 @@
 
         <div id="galleryItem4" class="flip-box">
           <div class="galleryItem">
-            <div class="frontContent"><img src="./img/about/moonlightDrawnByClouds.png" alt="Moon Light Drawn By Clouds"></div>
+            <div class="frontContent"><img src="./img/about/moonlightDrawnByClouds.webp" alt="Moon Light Drawn By Clouds"></div>
           
             <div class="backContent">
               <p></p>
@@ -226,7 +226,7 @@
 
         <div id="galleryItem5" class="flip-box">
           <div class="galleryItem">
-            <div class="frontContent"><img src="./img/about/theForest.png" alt="The Forest"></div>
+            <div class="frontContent"><img src="./img/about/theForest.webp" alt="The Forest"></div>
         
             <div class="backContent">
               <p></p>
@@ -426,22 +426,25 @@
     <!-- ImagesLoaded library -->
     <script src="./lib/ImagesLoaded-4.1.2/imagesloaded.pkgd.min.js"></script>
     <!-- JS Chung -->
-    <script src="./js/index.js"></script>
     <script src="./js/includeHTML.js"></script>
+    <script src="./js/index.js"></script>
     <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
 
 
     <script>
-      // Đo kích thước cho đường kẻ dọc chỗ scroll
-      $('.sectionHero .line').height(($(window).height() - $('.sectionHero').height()) / 2 - 10);
+      // Content cho Watermark
+      $('.watermark').html('<h1>dungbubu</h1>');
 
       // Hiệu ứng di chuyển ngang cho Watermark
       $(document).scroll(function(){
         var a = $(window).height()*3;
         var b = $(window).scrollTop()/a*99;
         var c = 100-b;
-        if (b < a) {$('#watermark').css({left:c+"%"});}
+        if (b < a) {$('.watermark h1').css({left:c+"%"});}
       });
+
+      // Đo kích thước cho đường kẻ dọc chỗ scroll
+      $('.sectionHero .line').height(($(window).height() - $('.sectionHero').height()) / 2 - 10);
 
       // Drag/Drop Image
       // Hàm này dùng cho những Object đang để Transform Translate
@@ -462,7 +465,7 @@
         stop: function( event, ui ) {}
       });
 
-      // Add/Remove class '.hide' khi "hover"
+      // Add/Remove class ".hide" khi hover
       $(document).ready(function () {
         $(".project-item").hover(function () {
           $(this).toggleClass('hide');

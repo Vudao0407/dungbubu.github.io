@@ -114,6 +114,7 @@ body, button, p {
   background-color: var(--clBackground);
   border-radius: 100%;
   transition: all 400ms linear;
+  z-index: -1;
 }
 
 /* ------------ --HOME-- ------------ */
