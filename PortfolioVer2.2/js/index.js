@@ -6,7 +6,10 @@ console.log("%cWould you like a cup of coffee ☕?","font-size: 12px;");
 
 
 window.onload = function () {
-  //Khai báo trạng thái Theme Mode
+  // Gọi hàm đổ Content cho Watermark
+  watermarkContent();
+
+  // Khai báo trạng thái Theme Mode
   var root = document.querySelector(':root');
   switch (localStorage.getItem("data-theme")) {
     default: // case null:
@@ -27,7 +30,7 @@ window.onload = function () {
   }
 
 
-  //Chuyển đổi chế độ Darkmode
+  // Chuyển đổi chế độ Darkmode
   $('.toggleDarkmode').on('click', function () {
     let theme = localStorage.getItem("data-theme");
     
@@ -46,7 +49,7 @@ window.onload = function () {
   });
 
 
-  //Chuyển đổi chế độ Soundmode
+  // Chuyển đổi chế độ Soundmode
   $('.toggleSoundmode').on('click', function () {
     var song = new Audio();
     song.src = '../audio/Merry go round of life - Morunas.mp3';

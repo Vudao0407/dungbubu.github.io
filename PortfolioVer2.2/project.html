@@ -10,7 +10,7 @@
 
     <!-- CSS Chung -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- CSS Home -->
+    <!-- CSS Project -->
     <link rel="stylesheet" href="./css/project.css">
   </head>
 
@@ -170,6 +170,11 @@
 
 
     <script>
+      // Content cho Watermark
+      function watermarkContent() {
+        $('.watermark').append('<h1>dungbubu</h1>');
+      }
+
       // Hàm chạy thư viện ImagesLoaded > Isotope > Masonry
       var $grid = $('.grid').imagesLoaded( function() {
         $grid.isotope({
