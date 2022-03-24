@@ -250,24 +250,24 @@
 
         <div class="projectMenu">
           <a class="project-item" href="./project.html">
-              <p>01.</p>
-              <div class="line"></div>
-              <h3>Web . Landing page</h3>
-            <img src="./img/home/dungbubu.webp" alt="test">
+            <p>01.</p>
+            <div class="line"></div>
+            <h3>Web . Landing page</h3>
+            <!-- <img src="./img/home/dungbubu.webp" alt="test"> -->
           </a>
 
           <a class="project-item" href="./project.html">
-              <p>02.</p>
-              <div class="line"></div>
-              <h3>PowerPoint</h3>
-            <img src="./img/home/dungbubu.webp" alt="test">
+            <p>02.</p>
+            <div class="line"></div>
+            <h3>PowerPoint</h3>
+            <!-- <img src="./img/home/dungbubu.webp" alt="test"> -->
           </a>
 
           <a class="project-item" href="https://dungbubu.com/youtube" target="_blank">
-              <p>03.</p>
-              <div class="line"></div>
-              <h3>Motion Graphic</h3>
-            <img src="./img/home/dungbubu.webp" alt="test">
+            <p>03.</p>
+            <div class="line"></div>
+            <h3>Motion Graphic</h3>
+            <!-- <img src="./img/home/dungbubu.webp" alt="test"> -->
           </a>
 
           <div class="decorDot">
@@ -441,6 +441,7 @@
         $('.watermark').append('<h1>dungbubu</h1>');
       }
 
+
       // Hiệu ứng di chuyển ngang cho Watermark
       $(document).scroll(function(){
         var a = $(window).height()*3;
@@ -449,8 +450,10 @@
         if (b < a) {$('.watermark h1').css({left:c+"%"});}
       });
 
+
       // Đo kích thước cho đường kẻ dọc chỗ scroll
       $('.sectionHero .line').height(($(window).height() - $('.sectionHero').height()) / 2 - 10);
+
 
       // Drag/Drop Image
       // Hàm này dùng cho những Object đang để Transform Translate
@@ -471,6 +474,7 @@
         stop: function( event, ui ) {}
       });
 
+
       // Add/Remove class ".hide" khi hover
       $(document).ready(function () {
         $(".project-item").hover(function () {
@@ -483,6 +487,7 @@
           $(".contact-item").toggleClass('hide');
         });
       });
+
 
       // Image Hover Navigation
       const sec3 = document.querySelector("#section3");

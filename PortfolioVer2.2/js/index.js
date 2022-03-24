@@ -1,5 +1,5 @@
 // Câu chào trong Console
-console.clear();
+// console.clear();
 console.log("%c😎 Hey, hi there!","font-size: 24px;",);
 console.log("%cWhatcha Doin'?","font-size: 12px;");
 console.log("%cWould you like a cup of coffee ☕?","font-size: 12px;");
@@ -50,11 +50,11 @@ window.onload = function () {
 
 
   // Chuyển đổi chế độ Soundmode
-  $('.toggleSoundmode').on('click', function () {
-    var song = new Audio();
-    song.src = '../audio/Merry go round of life - Morunas.mp3';
-    song.play();
-  });
+//   $('.toggleSoundmode').on('click', function () {
+//     var song = new Audio();
+//     song.src = '../audio/MerryGoRoundOfLife-Morunas.mp3';
+//     song.play();
+//   });
 };
 
 
