@@ -9,7 +9,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Space",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainSpace.webp",
+    url:   "./img/project/iNETDomainSpace.webp",
   },
 
   {
@@ -17,7 +17,7 @@ let list_product = [
     class: "grid-item--powerpoint",
     name:  "FTA E&C",
     type:  "PowerPoint",
-    url:   "../img/project/FTA.webp",
+    url:   "./img/project/FTA.webp",
   },
 
   {
@@ -25,7 +25,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Zozo Mobile",
     type:  "Home Page",
-    url:   "../img/project/ZozoMobile.webp",
+    url:   "./img/project/ZozoMobile.webp",
   },
 
   {
@@ -33,7 +33,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Fun",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainFun.webp",
+    url:   "./img/project/iNETDomainFun.webp",
   },
 
   {
@@ -41,7 +41,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Host",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainHost.webp",
+    url:   "./img/project/iNETDomainHost.webp",
   },
 
   {
@@ -49,7 +49,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Tech",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainTech.webp",
+    url:   "./img/project/iNETDomainTech.webp",
   },
 
   {
@@ -57,7 +57,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Store",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainStore.webp",
+    url:   "./img/project/iNETDomainStore.webp",
   },
 
   {
@@ -65,7 +65,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Xyz",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainXyz.webp",
+    url:   "./img/project/iNETDomainXyz.webp",
   },
 
   {
@@ -73,7 +73,7 @@ let list_product = [
     class: "grid-item--powerpoint",
     name:  "FirstAlliances",
     type:  "PowerPoint",
-    url:   "../img/project/FirstAlliances.webp",
+    url:   "./img/project/FirstAlliances.webp",
   },
 
   {
@@ -81,7 +81,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Website",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainWebsite.webp",
+    url:   "./img/project/iNETDomainWebsite.webp",
   },
 
   {
@@ -89,7 +89,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Press",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainPress.webp",
+    url:   "./img/project/iNETDomainPress.webp",
   },
 
   {
@@ -97,7 +97,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Site",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainSite.webp",
+    url:   "./img/project/iNETDomainSite.webp",
   },
 
   {
@@ -105,7 +105,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Domain Online",
     type:  "Landing Page",
-    url:   "../img/project/iNETDomainOnline.webp",
+    url:   "./img/project/iNETDomainOnline.webp",
   },
 
   {
@@ -113,7 +113,7 @@ let list_product = [
     class: "grid-item--weblandingpage",
     name:  "Tết 2022",
     type:  "Landing Page",
-    url:   "../img/project/TetLandingPage.webp",
+    url:   "./img/project/TetLandingPage.webp",
   }
 
 ];
