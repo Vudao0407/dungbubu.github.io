@@ -55,16 +55,16 @@
 
 
     <script>
+      // Import List Project rồi Render ra HTML
       var html = '';
       list_product.forEach(function(item) {
-        console.log(item.name);
         html += `<div class="grid-item `+item.class+`" loading="lazy">
-          <img src="`+item.url+`" alt="`+item.name + item.type +`">
-          <div class="content">
-            <h4 class="name">`+item.name+`</h4>
-            <p class="type">`+item.type+`</p>
-          </div>
-        </div>`;
+                  <img src="`+item.url+`" alt="`+item.name + item.type +`">
+                  <div class="content">
+                    <h4 class="name">`+item.name+`</h4>
+                    <p class="type">`+item.type+`</p>
+                  </div>
+                </div>`;
       });
       $('.grid').append(html);
 
