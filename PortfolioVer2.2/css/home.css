@@ -231,7 +231,6 @@
 }
 
 .contact-item.hide h3 {color: var(--clHideState);}
-#emailMe:hover h3:before {content: 'Email me - ';}
 
 
 /* ------------ ------------ ------------ ------------ */
@@ -241,6 +240,7 @@
   /* --SECTION 1-- */
   .sectionHero {flex-direction: column;}
   .imageHero img {margin-bottom: 2rem; width: 70vmin;}
+  #mahHeart img {display: none;}
   .imageHero h2 {top: 0; bottom: auto;}
   @keyframes flyDown {
     from {opacity: 0; top: 8rem;}
@@ -272,8 +272,6 @@
 
   /* --SECTION 1-- */
   .decorDot {grid-gap: 1.2rem;}
-  #mahHeart {top: 65%; left: 50%;}
-  #mahHeart img {width: 8vw;}
   .contentHero {margin: auto 0 0 1rem;}
 
   /* --SECTION 2-- */

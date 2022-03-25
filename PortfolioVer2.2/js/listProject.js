@@ -1,4 +1,4 @@
-let list_product = [
+let list_project = [
 
   // Ghi chú về cách đặt tên Class
   //     grid-item--weblandingpage     : Đặt cho Web và Landing Page
