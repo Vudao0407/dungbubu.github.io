@@ -116,7 +116,7 @@ let list_project = [
     class: "motiongraphic",
     name:  "BePage",
     type:  "App Explainer",
-    url:   "./img/project/BePage.webp",
+    url:   "./img/project/Bepage.webp",
   },
 
   {
