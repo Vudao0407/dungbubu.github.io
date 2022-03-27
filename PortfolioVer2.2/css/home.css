@@ -112,7 +112,7 @@
 
 /* ------------ */
 
-.frontContent, .backContent, .galleryItem, .galleryItem img {width: 100%; height: 100%;   }
+.frontContent, .backContent, .galleryItem, .galleryItem img {width: 100%; height: 100%;}
 .galleryItem {
   position: relative;
   transition: transform 0.8s;
@@ -277,10 +277,11 @@
   /* --SECTION 2-- */
   .sectionAbout {height: 60vh;}
   .frontContent img {padding: 0 2rem 0 0; }
+  .backContent {padding: 2rem 4rem 2rem 2rem;}
 
   /* --SECTION 3-- */
   /* .project-item {margin-bottom: 2rem;} */
-  .project-item h3 {left: 2rem;}
+  .project-item h3 {left: 2.5rem;}
   .project-item .line {margin: 0.5rem 0 1rem 0;}
   .sectionProject .decorDot {
     grid-template-columns: repeat(12, 0.2rem);

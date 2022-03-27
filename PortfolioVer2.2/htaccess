@@ -1,4 +1,3 @@
-
 RewriteOptions inherit
 
 RewriteEngine on
@@ -30,19 +29,20 @@ RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 # Redirect
 RewriteCond %{HTTP_HOST} ^dungbubu\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.dungbubu\.com$
-RewriteRule ^facebook$ "https\:\/\/www\.facebook\.com\/NguyenManhDung1996\/" [R=301,L]
+RewriteRule ^youtube$ "https\:\/\/www\.youtube\.com\/channel\/UCfZnbGb9cABlL5dtnE6QV_A\?view_as\=subscriber" [R=301,L]
 RewriteCond %{HTTP_HOST} ^dungbubu\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.dungbubu\.com$
-RewriteRule ^youtube$ "https\:\/\/www\.youtube\.com\/channel\/UCfZnbGb9cABlL5dtnE6QV_A\?view_as\=subscriber" [R=301,L]
+RewriteRule ^facebook$ "https\:\/\/www\.facebook\.com\/NguyenManhDung1996\/" [R=301,L]
 RewriteCond %{HTTP_HOST} ^dungbubu\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.dungbubu\.com$
 RewriteRule ^linkedin$ "https\:\/\/www\.linkedin\.com\/in\/dungbubu\/" [R=301,L]
 RewriteCond %{HTTP_HOST} ^dungbubu\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.dungbubu\.com$
-RewriteRule ^instagram$ "https\:\/\/www\.instagram\.com\/" [R=301,L]
+RewriteRule ^instagram$ "https\:\/\/www\.instagram\.com\/dungbubu\/" [R=301,L]
 RewriteCond %{HTTP_HOST} ^dungbubu\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.dungbubu\.com$
 RewriteRule ^behance$ "https\:\/\/www\.behance\.net\/dungbubu" [R=301,L]
 RewriteCond %{HTTP_HOST} ^dungbubu\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.dungbubu\.com$
 RewriteRule ^dribbble$ "https\:\/\/dribbble\.com\/dungbubu" [R=301,L]
+

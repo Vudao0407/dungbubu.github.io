@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+    <title>DungBu • Product</title>
+    <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
+
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS Product -->
+    <link rel="stylesheet" href="./css/project.css">
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <!-- jQuery library -->
+    <script src="./lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
+    <!-- jQuery Ui library -->
+    <script src="./lib/jQueryUi-1.3.1.1/jquery-ui.js"></script>
+    <!-- ImagesLoaded library -->
+    <script src="./lib/ImagesLoaded-4.1.2/imagesloaded.pkgd.min.js"></script>
+    <!-- Isotope library -->
+    <script src="./lib/Isotope/isotope.pkgd.min.js"></script>
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+  </head>
+
+
+  <body>
+    
+    <div w3-include-HTML="module/body.html"></div>
+
+    <section id="sectionProduct">
+      <div class="title">
+        <h2>product</h2>
+        <div class="button-group filter-button-group">
+          <button class="button is-checked" data-filter="*">All</button>
+          <button class="button" data-filter=".slide">Presentation</button>
+          <button class="button" data-filter=".cv">Curriculum Vitae</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+      </div>
+    </section>
+
+
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+    <script src="./js/includeHTML.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/listProduct.js"></script>
+    <!-- //////////// //////////// //////////// //////////// //////////// //////////// -->
+
+
+    <script>
+      // Import List Product rồi Render ra HTML
+      // var html = '';
+      // list_product.forEach(function(item) {
+      //   html += `<div class="grid-item `+item.class+`" loading="lazy">
+      //             <img src="`+item.url+`" alt="`+item.name+` `+item.type+`">
+      //             <div class="content">
+      //               <h4 class="name">`+item.name+`</h4>
+      //               <p class="type">`+item.type+`</p>
+      //             </div>
+      //           </div>`;
+      // });
+      // $('.grid').append(html);
+
+
+      // Content cho Watermark
+      function watermarkContent() {
+        $('.watermark').append('<h1>dungbubu</h1>');
+      }
+
+
+      // Hàm chạy thư viện ImagesLoaded > Isotope > Masonry
+      var $grid = $('.grid').imagesLoaded( function() {
+        $grid.isotope({
+          itemSelector: '.grid-item',
+          stagger: 20,
+          percentPosition: true,
+          masonry: {columnWidth: '.grid-sizer', gutter: '.gutter-sizer'},
+        });
+      });
+
+
+      // Hàm filter
+      $('.filter-button-group').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+      });
+
+
+      // Hàm kiểm tra và thêm trạng thái Click cho các button
+      $('.button-group').each( function(i, buttonGroup) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on('click', 'button', function() {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          $(this).addClass('is-checked');
+        });
+      });
+    </script>
+  </body>
+</html>

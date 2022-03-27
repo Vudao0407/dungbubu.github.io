@@ -34,10 +34,10 @@
       <div class="title">
         <h2>project</h2>
         <div class="button-group filter-button-group">
-          <button class="button is-checked" data-filter="*">All</button>
-          <button class="button" data-filter=".grid-item--weblandingpage">Web . Landing page</button>
-          <button class="button" data-filter=".grid-item--powerpoint">Powerpoint</button>
-          <button class="button">
+          <button class="button" data-filter="*">All</button>
+          <button class="button" data-filter=".weblandingpage">Web . Landing page</button>
+          <button class="button" data-filter=".powerpoint">Powerpoint</button>
+          <button class="button" data-filter=".motiongraphic">
             <a href="https://dungbubu.com/youtube" target="_blank">Motion graphic</a>
           </button>
         </div>
@@ -78,32 +78,55 @@
       }
 
 
+      // Hàm cắt HashID để lọc
+      function getHashFilter() {
+        var matches = location.hash.match( /filter=([^&]+)/i );
+        var hashFilter = matches && matches[1];
+        return hashFilter && decodeURIComponent( hashFilter );
+      }
+
+
       // Hàm chạy thư viện ImagesLoaded > Isotope > Masonry
       var $grid = $('.grid').imagesLoaded( function() {
         $grid.isotope({
           itemSelector: '.grid-item',
           stagger: 20,
           percentPosition: true,
-          masonry: {columnWidth: '.grid-sizer', gutter: '.gutter-sizer'}
+          masonry: {columnWidth: '.grid-sizer', gutter: '.gutter-sizer'},
         });
       });
 
 
-      // Hàm chạy filter Menu
-      $('.filter-button-group').on('click', '.button', function() {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
+      // Thay đổi HashID khi click filter button
+      var $filters = $('.filter-button-group').on( 'click', 'button', function() {
+        var filterAttr = $(this).attr('data-filter');
+        // Đặt filter vào HashID
+        location.hash = 'filter=' + encodeURIComponent( filterAttr );
       });
 
 
-      // Hàm kiểm tra và thêm trạng thái Click cho các button
-      $('.button-group').each( function(i, buttonGroup) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on('click', 'button', function() {
-          $buttonGroup.find('.is-checked').removeClass('is-checked');
-          $(this).addClass('is-checked');
+      // Filter theo HashID
+      var isIsotopeInit = false;
+      function onHashchange() {
+        var hashFilter = getHashFilter();
+        if ( !hashFilter && isIsotopeInit ) {return; }
+        isIsotopeInit = true;
+        // Filter isotope theo HashID
+        $grid.isotope({
+          itemSelector: '.grid-item',
+          filter: hashFilter
         });
-      });
+        // Hàm kiểm tra và thêm trạng thái Click cho các button
+        if ( hashFilter ) {
+          $filters.find('.is-checked').removeClass('is-checked');
+          $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+        }
+      }
+
+
+      // Thay đổi và cập nhật HashID
+      $(window).on( 'hashchange', onHashchange );
+      onHashchange();
   
       
       // Hàm tạo hiệu ứng click để phóng to ảnh trong List Project
