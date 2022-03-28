@@ -5,64 +5,40 @@ console.log("%cWhatcha Doin'?","font-size: 12px;");
 console.log("%cWould you like a cup of coffee ☕?","font-size: 12px;");
 
 
+// Content cho Html
+includeHTML();
+
+
+var theme = localStorage.getItem('data-theme');
+var root = document.querySelector(':root');
+
+
 window.onload = function () {
-  // Gọi hàm đổ Content cho Watermark
+  // Gọi hàm lấy content cho Watermark
   watermarkContent();
 
+
   // Khai báo trạng thái Theme Mode
-  var root = document.querySelector(':root');
-  switch (localStorage.getItem("data-theme")) {
-    default: // case null:
+  switch (theme) {
+    // Case null: cần gán giá trị cho Local Storage
+    default:
       $('.decorBg').css({"width":"0", "height":"0"});
       $('.toggleDarkmode').html('darkmode');
+      root.setAttribute('data-theme', "light");
       localStorage.setItem("data-theme", "light");
-      root.setAttribute('data-theme', 'light');
-      break;
+    // Case có giá trị: chỉ cần set lại giá trị cho root
     case "dark":
       $('.decorBg').css({"width":"200vmax", "height":"200vmax"});
       $('.toggleDarkmode').html('lightmode');
-      root.setAttribute('data-theme', 'dark');
+      root.setAttribute('data-theme', "dark");
       break;
     case "light":
       $('.decorBg').css({"width":"0", "height":"0"});
       $('.toggleDarkmode').html('darkmode');
-      root.setAttribute('data-theme', 'light');
+      root.setAttribute('data-theme', "light");
+      break;
   }
-
-
-  // Chuyển đổi chế độ Darkmode
-  $('.toggleDarkmode').on('click', function () {
-    let theme = localStorage.getItem("data-theme");
-    
-    if (theme === "light") {
-      root.setAttribute('data-theme', 'dark');
-      $('.toggleDarkmode').html('lightmode');
-      localStorage.setItem("data-theme", "dark");
-      $('.decorBg').css({"width":"200vmax", "height":"200vmax"});
-    
-    } else {
-      root.setAttribute('data-theme', 'light');
-      $('.toggleDarkmode').html('darkmode');
-      localStorage.setItem("data-theme", "light");
-      $('.decorBg').css({"width":"0", "height":"0"});
-    }
-  });
-
-
-  // Chuyển đổi chế độ Soundmode
-//   $('.toggleSoundmode').on('click', function () {
-//     var song = new Audio();
-//     song.src = '../audio/MerryGoRoundOfLife-Morunas.mp3';
-//     song.play();
-//   });
 };
-
-
-// Humburger menu
-function hamburgerFunction() {
-  $('.burgerMenu').toggleClass('toggle');
-  $('.modal').toggleClass('toggle');
-}
 
 
 // Thay đổi con trỏ chuột
@@ -73,3 +49,39 @@ $(window).mousemove(function(e) {
   .on('mouseenter', function() {$('.cursor').addClass('focus')})
   .on('mouseleave', function() {$('.cursor').removeClass('focus')})
 })
+
+
+// Chuyển đổi chế độ Darkmode
+var flag=false;
+function toggleDarkmode () {
+  flag = !flag;
+  // Đang là theme light thì chuyển thành dark
+  if (flag) {
+    $('.decorBg').css({"width":"200vmax", "height":"200vmax"});
+    $('.toggleDarkmode').html('lightmode');
+    root.setAttribute('data-theme', "dark");
+    localStorage.setItem("data-theme", "dark");
+  }
+  // Đang là theme dark thì chuyển thành light
+  else {
+    $('.decorBg').css({"width":"0", "height":"0"});
+    $('.toggleDarkmode').html('darkmode');
+    root.setAttribute('data-theme', "light");
+    localStorage.setItem("data-theme", "light");
+  }
+};
+
+
+// Chuyển đổi chế độ Soundmode
+//   $('.toggleSoundmode').on('click', function () {
+//     var song = new Audio();
+//     song.src = '../audio/MerryGoRoundOfLife-Morunas.mp3';
+//     song.play();
+//   });
+
+
+// Humburger menu
+function hamburgerFunction() {
+  $('.burgerMenu').toggleClass('toggle');
+  $('.modal').toggleClass('toggle');
+};

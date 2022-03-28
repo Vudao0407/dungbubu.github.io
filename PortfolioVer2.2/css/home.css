@@ -257,6 +257,7 @@
   .sectionAbout h2 {display: none;}
   .sectionAbout {display: flex; flex-flow: row nowrap; overflow-y: hidden;}
   .flip-box{flex-shrink: 0; width: 95%;}
+  .backContent {text-align: left;}
 
   /* --SECTION 3-- */
   .sectionProject h2 {display: none;}

@@ -120,7 +120,7 @@
 
   <body>
 
-    <div w3-include-HTML="module/body.html"></div>
+    <div w3-include-HTML="./module/body.html"></div>
 
     <section id="section1">
       <div class="sectionHero">
@@ -501,12 +501,6 @@
 
 
     <script>
-      // For dduongggg only
-      $('#mahHeart').on( 'click', function() {
-        alert("Cái này dành riêng cho một quả măng cụt ^^ Mời quả măng cụt truy cập liên kết sau: dungbubu.com/(Tên tài khoản IG của bạn)/(3 số cuối trong tên Fb của bạn)");
-      });
-
-
       // Content cho Watermark
       function watermarkContent() {
         $('.watermark').append('<h1>dungbubu</h1>');
@@ -548,12 +542,12 @@
 
       // Add/Remove class ".hide" khi hover
       $(document).ready(function () {
-        $(".project-item").hover(function () {
+        $('.project-item').hover(function () {
           $(this).toggleClass('hide');
           $(".project-item").toggleClass('hide');
         });
 
-        $(".contact-item").hover(function () {
+        $('.contact-item').hover(function () {
           $(this).toggleClass('hide');
           $(".contact-item").toggleClass('hide');
         });
@@ -561,7 +555,7 @@
 
 
       // Image Hover Navigation
-      const sec3 = document.querySelector("#section3");
+      const sec3 = document.querySelector('#section3');
       document.body.addEventListener("mousemove", (event) => {
         sec3.style.setProperty("--x", event.clientX);
         sec3.style.setProperty("--y", event.clientY);
