@@ -2,6 +2,8 @@
 :root {
   --changeColorTime: 600ms;
   --changeBgColorTime: 400ms;
+  --clContent: #919191;
+  --clLink: #0040F0;
 }
 
 /* ------------ --FONTS-- ------------ */
@@ -18,7 +20,6 @@
 
 /* ------------ --COLOR STYLES-- ------------ */
 [data-theme='light'] {
-  --clContent: #919191;
   --clBackground: #FFFFFF;
   --clWatermark: #FAFAFA;
   --clTitle: #242424;
@@ -26,7 +27,6 @@
 }
 
 [data-theme='dark'] {
-  --clContent: #919191;
   --clBackground: #242424;
   --clWatermark: #292929;
   --clTitle: #FFFFFF;
@@ -38,6 +38,8 @@
 html {scroll-behavior: smooth; font-size: 62.5%;}
 img {display: block;}
 a, a:hover, a:focus, a:visited {color: inherit; text-decoration: none;}
+i {text-decoration: underline;}
+i:hover {color: var(--clLink); font-weight: 600;}
 button {font-size: inherit; background-color: transparent;}
 html,a,a:hover,button {cursor: default;}
 /* h1,h2,h3,h4,span,p {transition: color var(--changeColorTime) ease-in-out;} */

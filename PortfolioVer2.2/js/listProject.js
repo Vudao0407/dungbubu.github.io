@@ -1,6 +1,4 @@
 let list_project = [
-
-
   // Ghi chú về cách đặt tên Class
   //     weblandingpage     : Đặt cho Web và Landing Page
   //     powerpoint         : Đặt cho Powerpoint
@@ -150,5 +148,18 @@ let list_project = [
     type:  "App Explainer",
     url:   "./img/project/KDTech_LoyaltySystem.webp",
   }
-
 ];
+
+
+// Import List Project rồi Render ra HTML
+var html = '';
+list_project.forEach(function(item) {
+  html += `<div class="grid-item `+item.class+`">
+            <img src="`+item.url+`" alt="`+item.name+` `+item.type+`">
+            <div class="content">
+              <h4 class="name">`+item.name+`</h4>
+              <p class="type">`+item.type+`</p>
+            </div>
+          </div>`;
+});
+$('.grid').append(html);

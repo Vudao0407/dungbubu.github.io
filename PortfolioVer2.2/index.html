@@ -126,7 +126,7 @@
       <div class="sectionHero">
         
         <div class="imageHero">
-          <img src="./img/home/dungbubu.webp" alt="dungbubu">
+          <img src="./img/home/dungbubu.webp" alt="dungbubu" loading="eager">
           <h2 class="textVertical">web designer</h2>
           <div class="decorDot">
             <div class="dot"></div>
@@ -213,7 +213,7 @@
             <div class="dot"></div>
             <div class="round"></div>
           </div>
-          <div id="mahHeart"><img src="./img/home/mangosteen.webp" alt="Quả Măng Cụt xinh đẹp" loading="lazy"></div>
+          <!-- <div id="myHobby"><img src="" alt="" loading="lazy"></div> -->
         </div>
     
         <div class="contentHero">
@@ -339,6 +339,13 @@
             <p>03.</p>
             <div class="line"></div>
             <h3>Motion Graphic</h3>
+            <!-- <img src="./img/home/dungbubu.webp" alt="test"> -->
+          </a>
+
+          <a class="project-item" href="./product.html">
+            <p>04.</p>
+            <div class="line"></div>
+            <h3>My Store</h3>
             <!-- <img src="./img/home/dungbubu.webp" alt="test"> -->
           </a>
 
@@ -530,14 +537,14 @@
           }
         });
       // Hàm này dùng cho những Object đang căn theo Right và Bottom
-      $(".imageHero img").droppable({
-        over: function( event, ui ) {
-          ui.helper.addClass('ui-droppable-over')
-        },
-      });
-      $(".imageHero img").draggable({
-        stop: function( event, ui ) {}
-      });
+      // $(".imageHero img").droppable({
+      //   over: function( event, ui ) {
+      //     ui.helper.addClass('ui-droppable-over')
+      //   },
+      // });
+      // $(".imageHero img").draggable({
+      //   stop: function( event, ui ) {}
+      // });
 
 
       // Add/Remove class ".hide" khi hover
